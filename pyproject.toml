@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basket-hedging"
+version = "0.2.0"
+description = "Auditable research prototype for causal derivatives hedge backtests"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+learn = ["torch>=2.5,<3"]
+demo = ["matplotlib>=3.8,<4"]
+
+[project.scripts]
+basket-hedging = "basket_hedging.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
