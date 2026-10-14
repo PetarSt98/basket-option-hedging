@@ -1,0 +1,933 @@
+{
+  "label": "Real historical constituent prices and option surfaces; model-valued non-traded basket option. European lognormal ATM-IV basket proxy; frozen historical correlation; zero pricing rates and dividend yields; ACT/365.",
+  "model": "multi-asset VolGAN adaptation",
+  "split": {
+    "train_end": "2017-12-29",
+    "validation_start": "2018-01-02",
+    "validation_end": "2019-12-31",
+    "test_start": "2020-01-02",
+    "source_end": "2025-12-12"
+  },
+  "config": {
+    "holding_sessions": 20,
+    "capital": 100000.0,
+    "basket_initial_value": 300.0,
+    "multiplier": 100.0,
+    "half_spread": 0.0005,
+    "quote_size": 10000.0,
+    "borrow_rate": 0.01,
+    "safety_buffer": 1000.0,
+    "alpha": 0.1,
+    "scenarios": 256,
+    "pricing_samples": 512,
+    "pricing_seed": 731,
+    "scenario_seed": 9173
+  },
+  "data_manifest": {
+    "schema_version": 1,
+    "data_kind": "historical_etf_options_data_v1",
+    "symbols": [
+      "SPY",
+      "QQQ",
+      "IWM"
+    ],
+    "label": "Real historical constituent prices and option surfaces; model-valued non-traded basket option.",
+    "repository": "lambdaclass/options_portfolio_backtester",
+    "release": "data-v1",
+    "hash_source_commit": "e53ef86928777de6ee0721424762ea3dc133f993",
+    "source_file_hashes": {
+      "SPY_options.parquet": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "SPY_underlying.parquet": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "QQQ_options.parquet": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "QQQ_underlying.parquet": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "IWM_options.parquet": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "IWM_underlying.parquet": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940"
+    },
+    "prepared_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+    "common": {
+      "start": "2011-03-23",
+      "end": "2025-12-12",
+      "dates": 3693
+    },
+    "split": {
+      "train_end": "2017-12-29",
+      "validation_start": "2018-01-02",
+      "validation_end": "2019-12-31",
+      "test_start": "2020-01-02"
+    },
+    "grid": {
+      "moneyness": [
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        0.95,
+        1.0,
+        1.05,
+        1.1,
+        1.2,
+        1.3,
+        1.4
+      ],
+      "maturities_years": [
+        0.003968253968253968,
+        0.019230769230769232,
+        0.038461538461538464,
+        0.08333333333333333,
+        0.16666666666666666,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "flattening": "asset-major then maturity-major (all moneyness points per maturity)"
+    },
+    "smoothing": {
+      "method": "vega-weighted Nadaraya-Watson Gaussian",
+      "bandwidth_m": 0.01,
+      "bandwidth_tau": 0.01,
+      "kernel": "exp(-dm^2/(2*h_m)-dtau^2/(2*h_tau))",
+      "selection": "predeclared ETF adaptation; no calibration on validation or test data"
+    },
+    "cleaning": {
+      "SPY": {
+        "input_rows": 22860869,
+        "invalid_contract_terms": 0,
+        "nonfinite": 36,
+        "invalid_bid_ask": 10541,
+        "no_traded_volume": 12818422,
+        "nonpositive_iv_or_vega": 325246,
+        "expired": 172986,
+        "in_the_money": 2845609,
+        "retained": 6688029
+      },
+      "QQQ": {
+        "input_rows": 15308104,
+        "invalid_contract_terms": 0,
+        "nonfinite": 17,
+        "invalid_bid_ask": 34280,
+        "no_traded_volume": 9231830,
+        "nonpositive_iv_or_vega": 197810,
+        "expired": 129500,
+        "in_the_money": 1873106,
+        "retained": 3841561
+      },
+      "IWM": {
+        "input_rows": 12522205,
+        "invalid_contract_terms": 0,
+        "nonfinite": 2,
+        "invalid_bid_ask": 4268,
+        "no_traded_volume": 8658544,
+        "nonpositive_iv_or_vega": 104361,
+        "expired": 68726,
+        "in_the_money": 1133912,
+        "retained": 2552392
+      }
+    },
+    "missing_surface_dates": {
+      "SPY": [],
+      "QQQ": [],
+      "IWM": []
+    },
+    "nonconsecutive_common_dates": [
+      "2013-08-06",
+      "2013-10-15",
+      "2015-12-07",
+      "2016-01-15",
+      "2018-11-07",
+      "2019-08-30",
+      "2019-09-04",
+      "2020-06-24",
+      "2021-05-04",
+      "2021-05-18",
+      "2021-11-05",
+      "2024-10-10"
+    ],
+    "benchmark_ready": true,
+    "benchmark_blockers": [],
+    "limitations": [
+      "Original market-data vendor and IV/Greek estimation conventions are undocumented.",
+      "ETF option IVs are vendor estimates for American contracts; surfaces are model inputs, not executable quotes.",
+      "Dates are EOD labels, not verified historical publication or order-fill timestamps.",
+      "Underlying closes are unadjusted; missing dividends/splits remain NaN, never assumed zero/one.",
+      "No interest-rate curve or dividend forecast is supplied by these six files.",
+      "Extreme grid points can rely on distant observations; smoothing is not an arbitrage certificate."
+    ],
+    "common_date_gaps": [
+      {
+        "previous": "2013-08-02",
+        "resumed": "2013-08-06",
+        "missing_dates": [
+          "2013-08-05"
+        ]
+      },
+      {
+        "previous": "2013-10-11",
+        "resumed": "2013-10-15",
+        "missing_dates": [
+          "2013-10-14"
+        ]
+      },
+      {
+        "previous": "2015-12-03",
+        "resumed": "2015-12-07",
+        "missing_dates": [
+          "2015-12-04"
+        ]
+      },
+      {
+        "previous": "2016-01-13",
+        "resumed": "2016-01-15",
+        "missing_dates": [
+          "2016-01-14"
+        ]
+      },
+      {
+        "previous": "2018-11-05",
+        "resumed": "2018-11-07",
+        "missing_dates": [
+          "2018-11-06"
+        ]
+      },
+      {
+        "previous": "2019-08-28",
+        "resumed": "2019-08-30",
+        "missing_dates": [
+          "2019-08-29"
+        ]
+      },
+      {
+        "previous": "2019-08-30",
+        "resumed": "2019-09-04",
+        "missing_dates": [
+          "2019-09-03"
+        ]
+      },
+      {
+        "previous": "2020-06-22",
+        "resumed": "2020-06-24",
+        "missing_dates": [
+          "2020-06-23"
+        ]
+      },
+      {
+        "previous": "2021-04-30",
+        "resumed": "2021-05-04",
+        "missing_dates": [
+          "2021-05-03"
+        ]
+      },
+      {
+        "previous": "2021-05-14",
+        "resumed": "2021-05-18",
+        "missing_dates": [
+          "2021-05-17"
+        ]
+      },
+      {
+        "previous": "2021-11-03",
+        "resumed": "2021-11-05",
+        "missing_dates": [
+          "2021-11-04"
+        ]
+      },
+      {
+        "previous": "2024-10-08",
+        "resumed": "2024-10-10",
+        "missing_dates": [
+          "2024-10-09"
+        ]
+      }
+    ],
+    "corporate_action_supplement": {
+      "distributions_manifest": {
+        "symbol": "IWM",
+        "currency": "USD",
+        "source_url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+        "retrieved_at": "2026-10-04T08:08:35.661113+00:00",
+        "raw_sha256": "12db425d2b1cc4451adf07d48654769a8a7c5e168bc8cfa0b8060ccbe344de7e",
+        "distributions_sha256": "7e07e3a11542a756c4c14d393e437b745e8f1313f65750b328887fe1b97a9e9b",
+        "coverage_start": "2011-03-23",
+        "coverage_end": "2025-12-12",
+        "distribution_count": 59,
+        "source_distribution_count": 106,
+        "source_first_ex_date": "2000-06-21",
+        "source_last_ex_date": "2026-09-15",
+        "first_ex_date": "2011-03-24",
+        "last_ex_date": "2025-09-16",
+        "count_by_year": {
+          "2011": 4,
+          "2012": 4,
+          "2013": 4,
+          "2014": 4,
+          "2015": 4,
+          "2016": 4,
+          "2017": 4,
+          "2018": 4,
+          "2019": 4,
+          "2020": 4,
+          "2021": 4,
+          "2022": 4,
+          "2023": 4,
+          "2024": 4,
+          "2025": 3
+        },
+        "parsing_assumptions": [
+          "Parse complete distributionTableData from HTML-decoded componentprops JSON, not the first visible page.",
+          "Raw exDate/payableDate integers are calendar YYYYMMDD; filter inclusively on ex-date.",
+          "Use totalDistribution (all cash components), not incomeAmount; USD per ETF share as published.",
+          "Preserve decimal strings without rounding or price/split adjustment; reject duplicate ex-dates.",
+          "The full publisher history spans both boundaries; omitted days have no published distribution.",
+          "Payable dates are retained; the fixed benchmark books cash on ex-date using its pre-existing cash-timing proxy.",
+          "Future rows are excluded. Distribution amounts are accounting inputs released on ex-date, never strategy features."
+        ],
+        "yahoo_crosscheck": {
+          "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1300838400&period2=1765584000&interval=1mo&events=div%2Csplits",
+          "raw_sha256": "dbd24a878f817ba4daaefd349e284756574ee58734e1e743648401087a14a010",
+          "matching_date_count": 59,
+          "missing_from_yahoo": [],
+          "missing_from_ishares": [],
+          "amount_differences": [
+            {
+              "ex_date": "2011-03-24",
+              "ishares_cash_per_share": "0.168933",
+              "yahoo_cash_per_share": "0.169",
+              "yahoo_minus_ishares": "0.000067"
+            },
+            {
+              "ex_date": "2011-07-05",
+              "ishares_cash_per_share": "0.25183",
+              "yahoo_cash_per_share": "0.252",
+              "yahoo_minus_ishares": "0.00017"
+            },
+            {
+              "ex_date": "2011-09-23",
+              "ishares_cash_per_share": "0.249838",
+              "yahoo_cash_per_share": "0.25",
+              "yahoo_minus_ishares": "0.000162"
+            },
+            {
+              "ex_date": "2011-12-22",
+              "ishares_cash_per_share": "0.359546",
+              "yahoo_cash_per_share": "0.36",
+              "yahoo_minus_ishares": "0.000454"
+            },
+            {
+              "ex_date": "2012-03-23",
+              "ishares_cash_per_share": "0.251347",
+              "yahoo_cash_per_share": "0.251",
+              "yahoo_minus_ishares": "-0.000347"
+            },
+            {
+              "ex_date": "2012-06-26",
+              "ishares_cash_per_share": "0.377165",
+              "yahoo_cash_per_share": "0.377",
+              "yahoo_minus_ishares": "-0.000165"
+            },
+            {
+              "ex_date": "2012-09-24",
+              "ishares_cash_per_share": "0.331634",
+              "yahoo_cash_per_share": "0.332",
+              "yahoo_minus_ishares": "0.000366"
+            },
+            {
+              "ex_date": "2012-12-19",
+              "ishares_cash_per_share": "0.726609",
+              "yahoo_cash_per_share": "0.727",
+              "yahoo_minus_ishares": "0.000391"
+            },
+            {
+              "ex_date": "2013-07-02",
+              "ishares_cash_per_share": "0.430151",
+              "yahoo_cash_per_share": "0.43",
+              "yahoo_minus_ishares": "-0.000151"
+            },
+            {
+              "ex_date": "2013-09-24",
+              "ishares_cash_per_share": "0.283384",
+              "yahoo_cash_per_share": "0.283",
+              "yahoo_minus_ishares": "-0.000384"
+            },
+            {
+              "ex_date": "2013-12-23",
+              "ishares_cash_per_share": "0.436734",
+              "yahoo_cash_per_share": "0.437",
+              "yahoo_minus_ishares": "0.000266"
+            },
+            {
+              "ex_date": "2014-03-25",
+              "ishares_cash_per_share": "0.302091",
+              "yahoo_cash_per_share": "0.302",
+              "yahoo_minus_ishares": "-0.000091"
+            },
+            {
+              "ex_date": "2014-07-02",
+              "ishares_cash_per_share": "0.459278",
+              "yahoo_cash_per_share": "0.459",
+              "yahoo_minus_ishares": "-0.000278"
+            },
+            {
+              "ex_date": "2014-09-24",
+              "ishares_cash_per_share": "0.304608",
+              "yahoo_cash_per_share": "0.305",
+              "yahoo_minus_ishares": "0.000392"
+            },
+            {
+              "ex_date": "2014-12-24",
+              "ishares_cash_per_share": "0.445013",
+              "yahoo_cash_per_share": "0.445",
+              "yahoo_minus_ishares": "-0.000013"
+            },
+            {
+              "ex_date": "2015-03-25",
+              "ishares_cash_per_share": "0.383175",
+              "yahoo_cash_per_share": "0.383",
+              "yahoo_minus_ishares": "-0.000175"
+            },
+            {
+              "ex_date": "2015-07-02",
+              "ishares_cash_per_share": "0.529172",
+              "yahoo_cash_per_share": "0.529",
+              "yahoo_minus_ishares": "-0.000172"
+            },
+            {
+              "ex_date": "2015-09-25",
+              "ishares_cash_per_share": "0.324229",
+              "yahoo_cash_per_share": "0.324",
+              "yahoo_minus_ishares": "-0.000229"
+            },
+            {
+              "ex_date": "2015-12-24",
+              "ishares_cash_per_share": "0.495829",
+              "yahoo_cash_per_share": "0.496",
+              "yahoo_minus_ishares": "0.000171"
+            },
+            {
+              "ex_date": "2016-03-23",
+              "ishares_cash_per_share": "0.326642",
+              "yahoo_cash_per_share": "0.327",
+              "yahoo_minus_ishares": "0.000358"
+            },
+            {
+              "ex_date": "2016-07-06",
+              "ishares_cash_per_share": "0.620541",
+              "yahoo_cash_per_share": "0.621",
+              "yahoo_minus_ishares": "0.000459"
+            },
+            {
+              "ex_date": "2016-09-26",
+              "ishares_cash_per_share": "0.344256",
+              "yahoo_cash_per_share": "0.344",
+              "yahoo_minus_ishares": "-0.000256"
+            },
+            {
+              "ex_date": "2016-12-22",
+              "ishares_cash_per_share": "0.562956",
+              "yahoo_cash_per_share": "0.563",
+              "yahoo_minus_ishares": "0.000044"
+            },
+            {
+              "ex_date": "2017-03-24",
+              "ishares_cash_per_share": "0.386774",
+              "yahoo_cash_per_share": "0.387",
+              "yahoo_minus_ishares": "0.000226"
+            },
+            {
+              "ex_date": "2017-07-06",
+              "ishares_cash_per_share": "0.609105",
+              "yahoo_cash_per_share": "0.609",
+              "yahoo_minus_ishares": "-0.000105"
+            },
+            {
+              "ex_date": "2017-09-26",
+              "ishares_cash_per_share": "0.348518",
+              "yahoo_cash_per_share": "0.349",
+              "yahoo_minus_ishares": "0.000482"
+            },
+            {
+              "ex_date": "2017-12-21",
+              "ishares_cash_per_share": "0.5793",
+              "yahoo_cash_per_share": "0.579",
+              "yahoo_minus_ishares": "-0.0003"
+            },
+            {
+              "ex_date": "2018-03-22",
+              "ishares_cash_per_share": "0.362366",
+              "yahoo_cash_per_share": "0.362",
+              "yahoo_minus_ishares": "-0.000366"
+            },
+            {
+              "ex_date": "2018-07-03",
+              "ishares_cash_per_share": "0.595159",
+              "yahoo_cash_per_share": "0.595",
+              "yahoo_minus_ishares": "-0.000159"
+            },
+            {
+              "ex_date": "2018-09-26",
+              "ishares_cash_per_share": "0.450367",
+              "yahoo_cash_per_share": "0.45",
+              "yahoo_minus_ishares": "-0.000367"
+            },
+            {
+              "ex_date": "2018-12-17",
+              "ishares_cash_per_share": "0.469335",
+              "yahoo_cash_per_share": "0.469",
+              "yahoo_minus_ishares": "-0.000335"
+            },
+            {
+              "ex_date": "2019-03-20",
+              "ishares_cash_per_share": "0.412056",
+              "yahoo_cash_per_share": "0.412",
+              "yahoo_minus_ishares": "-0.000056"
+            },
+            {
+              "ex_date": "2019-06-17",
+              "ishares_cash_per_share": "0.532987",
+              "yahoo_cash_per_share": "0.533",
+              "yahoo_minus_ishares": "0.000013"
+            },
+            {
+              "ex_date": "2019-09-24",
+              "ishares_cash_per_share": "0.543712",
+              "yahoo_cash_per_share": "0.544",
+              "yahoo_minus_ishares": "0.000288"
+            },
+            {
+              "ex_date": "2019-12-16",
+              "ishares_cash_per_share": "0.597343",
+              "yahoo_cash_per_share": "0.597",
+              "yahoo_minus_ishares": "-0.000343"
+            },
+            {
+              "ex_date": "2020-03-25",
+              "ishares_cash_per_share": "0.41988",
+              "yahoo_cash_per_share": "0.42",
+              "yahoo_minus_ishares": "0.00012"
+            },
+            {
+              "ex_date": "2020-06-15",
+              "ishares_cash_per_share": "0.465775",
+              "yahoo_cash_per_share": "0.466",
+              "yahoo_minus_ishares": "0.000225"
+            },
+            {
+              "ex_date": "2020-09-23",
+              "ishares_cash_per_share": "0.566445",
+              "yahoo_cash_per_share": "0.566",
+              "yahoo_minus_ishares": "-0.000445"
+            },
+            {
+              "ex_date": "2020-12-14",
+              "ishares_cash_per_share": "0.592476",
+              "yahoo_cash_per_share": "0.592",
+              "yahoo_minus_ishares": "-0.000476"
+            },
+            {
+              "ex_date": "2021-03-25",
+              "ishares_cash_per_share": "0.398096",
+              "yahoo_cash_per_share": "0.398",
+              "yahoo_minus_ishares": "-0.000096"
+            },
+            {
+              "ex_date": "2021-06-10",
+              "ishares_cash_per_share": "0.34716",
+              "yahoo_cash_per_share": "0.347",
+              "yahoo_minus_ishares": "-0.00016"
+            },
+            {
+              "ex_date": "2021-09-24",
+              "ishares_cash_per_share": "0.678967",
+              "yahoo_cash_per_share": "0.679",
+              "yahoo_minus_ishares": "0.000033"
+            },
+            {
+              "ex_date": "2021-12-13",
+              "ishares_cash_per_share": "0.66552",
+              "yahoo_cash_per_share": "0.666",
+              "yahoo_minus_ishares": "0.00048"
+            },
+            {
+              "ex_date": "2022-03-24",
+              "ishares_cash_per_share": "0.399649",
+              "yahoo_cash_per_share": "0.4",
+              "yahoo_minus_ishares": "0.000351"
+            },
+            {
+              "ex_date": "2022-06-09",
+              "ishares_cash_per_share": "0.494057",
+              "yahoo_cash_per_share": "0.494",
+              "yahoo_minus_ishares": "-0.000057"
+            },
+            {
+              "ex_date": "2022-09-26",
+              "ishares_cash_per_share": "0.861438",
+              "yahoo_cash_per_share": "0.861",
+              "yahoo_minus_ishares": "-0.000438"
+            },
+            {
+              "ex_date": "2022-12-13",
+              "ishares_cash_per_share": "0.829513",
+              "yahoo_cash_per_share": "0.83",
+              "yahoo_minus_ishares": "0.000487"
+            },
+            {
+              "ex_date": "2023-03-23",
+              "ishares_cash_per_share": "0.630667",
+              "yahoo_cash_per_share": "0.631",
+              "yahoo_minus_ishares": "0.000333"
+            },
+            {
+              "ex_date": "2023-06-07",
+              "ishares_cash_per_share": "0.508675",
+              "yahoo_cash_per_share": "0.509",
+              "yahoo_minus_ishares": "0.000325"
+            },
+            {
+              "ex_date": "2023-09-26",
+              "ishares_cash_per_share": "0.828876",
+              "yahoo_cash_per_share": "0.829",
+              "yahoo_minus_ishares": "0.000124"
+            },
+            {
+              "ex_date": "2023-12-20",
+              "ishares_cash_per_share": "0.733879",
+              "yahoo_cash_per_share": "0.734",
+              "yahoo_minus_ishares": "0.000121"
+            },
+            {
+              "ex_date": "2024-03-21",
+              "ishares_cash_per_share": "0.522126",
+              "yahoo_cash_per_share": "0.522",
+              "yahoo_minus_ishares": "-0.000126"
+            },
+            {
+              "ex_date": "2024-06-11",
+              "ishares_cash_per_share": "0.562204",
+              "yahoo_cash_per_share": "0.562",
+              "yahoo_minus_ishares": "-0.000204"
+            },
+            {
+              "ex_date": "2024-09-25",
+              "ishares_cash_per_share": "0.752193",
+              "yahoo_cash_per_share": "0.752",
+              "yahoo_minus_ishares": "-0.000193"
+            },
+            {
+              "ex_date": "2024-12-17",
+              "ishares_cash_per_share": "0.694004",
+              "yahoo_cash_per_share": "0.694",
+              "yahoo_minus_ishares": "-0.000004"
+            },
+            {
+              "ex_date": "2025-03-18",
+              "ishares_cash_per_share": "0.459853",
+              "yahoo_cash_per_share": "0.46",
+              "yahoo_minus_ishares": "0.000147"
+            },
+            {
+              "ex_date": "2025-06-16",
+              "ishares_cash_per_share": "0.575625",
+              "yahoo_cash_per_share": "0.576",
+              "yahoo_minus_ishares": "0.000375"
+            },
+            {
+              "ex_date": "2025-09-16",
+              "ishares_cash_per_share": "0.676797",
+              "yahoo_cash_per_share": "0.677",
+              "yahoo_minus_ishares": "0.000203"
+            }
+          ],
+          "maximum_absolute_difference": 0.000487,
+          "interpretation": "Yahoo values are rounded to 0.001 USD; retain official iShares values."
+        }
+      },
+      "distributions_manifest_sha256": "530a5958b71ec21ee40c4dd4ec30a3b4287e494244fc74f64b5c6f26fe58be09",
+      "split_verification": {
+        "schema_version": 1,
+        "symbol": "IWM",
+        "coverage_start": "2011-03-23",
+        "coverage_end": "2025-12-12",
+        "verified_no_splits": true,
+        "split_factor": 1.0,
+        "in_period_events": [],
+        "last_known_split": {
+          "date": "2005-06-09",
+          "new_shares": 2,
+          "old_shares": 1
+        },
+        "sources": [
+          {
+            "publisher": "SplitHistory / BNK Invest",
+            "url": "https://www.splithistory.com/iwm/",
+            "retrieved_at_utc": "2026-10-04T08:06:00.677059+00:00",
+            "response_sha256": "d76f76658d931d8ae76078368b6025715df5d75d846fce76461d8d0e190be664",
+            "response_bytes": 53094,
+            "scope": "Public IWM lifetime split history, read after benchmark end",
+            "observed_events": [
+              {
+                "date": "2005-06-09",
+                "new_shares": 2,
+                "old_shares": 1
+              }
+            ],
+            "short_excerpt": "IWM Split History Table: 06/09/2005 2 for 1",
+            "parsing_assumptions": "Read the explicit lifetime split-count statement and IWM split table; require exactly one event and June 09, 2005, 2 for 1. The page carries 2026 data and copyright; the 2016 assets paragraph is not used to date split coverage."
+          },
+          {
+            "publisher": "Twelve Data",
+            "url": "https://twelvedata.com/markets/141255/etf/nyse/iwm/historical-data/splits",
+            "retrieved_at_utc": "2026-10-04T08:06:01.726994+00:00",
+            "response_sha256": "117470b5e7f8e32e6b06c1c8d490bda11a1411ce1b6b8d770779a72e5bd2fbe0",
+            "response_bytes": 145719,
+            "scope": "Public IWM lifetime split history, read after benchmark end",
+            "observed_events": [
+              {
+                "date": "2005-06-09",
+                "new_shares": 2,
+                "old_shares": 1
+              }
+            ],
+            "short_excerpt": "Jun 09, 2005 | 2-for-1 split",
+            "parsing_assumptions": "Read every tbody row of the public statistics-splits-table; require one row, Jun 09, 2005, 2-for-1 split. No date filter or pagination is exposed for this table; the surrounding page carries October market information and 2026 copyright."
+          }
+        ],
+        "primary_historical_corroboration": {
+          "publisher": "U.S. SEC, Boston Stock Exchange filing",
+          "url": "https://www.sec.gov/rules/sro/bse/2007/34-56051.pdf",
+          "publication_date": "2007-07-12",
+          "accessed_at_utc": "2026-10-04T08:06:01.728018+00:00",
+          "access_method": "Web text extraction; direct urllib download returned HTTP 403, so no response hash is claimed.",
+          "location": "Pages 2-3, June 2005 split discussion",
+          "finding": "IWM underwent a 2-for-1 split in June 2005.",
+          "limitation": "A 2007 filing corroborates the old event only; it does not establish absence of later splits."
+        },
+        "conclusion_basis": "Two independently operated public historical split tables agree on exactly one split, before the coverage interval. No split event is synthesized inside the interval.",
+        "limitations": [
+          "The two public providers are separate organizations, but upstream vendor independence is not established.",
+          "Public history tables are not a formal exchange completeness certificate. The conclusion is the documented research-data verification, not a guarantee for future dates."
+        ],
+        "integration_rule": "For dates within the closed verified interval only, supplement IWM split_coefficient with 1.0. Do not infer coverage outside this interval, insert dummy events, or change prices, options, basket units, or SPY/QQQ records."
+      },
+      "split_verification_sha256": "fd139269175d85c2630252a75596c28aefdf45bea929db527e33d3227e0fa51e",
+      "distributions_outside_joint_dates": [],
+      "accounting_timing": "existing ex-date opening cash convention; payable date retained as provenance",
+      "strategy_inputs": "unchanged: actions are released accounting inputs, not model features",
+      "parent_directory": "..\\prepared-etf-v1",
+      "parent_prepared_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+      "supplement_directory": "..\\..\\..\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions",
+      "unchanged_arrays_verified": true
+    }
+  },
+  "metrics": [
+    {
+      "policy": "unhedged",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 1174.4055952541412,
+      "hedge_error_rmse": 1184.642500763698,
+      "net_pnl_sd": 1174.4055952541412,
+      "cvar95": 2995.4454946841724,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 0.0,
+      "mean_transaction_costs": 0.0,
+      "mean_fills": 0.0,
+      "total_turnover_all_runs": 0.0,
+      "total_trading_costs_all_runs": 0.0,
+      "total_fills_all_runs": 0,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "delta",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 395.0448559513105,
+      "hedge_error_rmse": 392.0990740956876,
+      "net_pnl_sd": 400.86731104532294,
+      "cvar95": 1316.632416794433,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 61722.18220537254,
+      "mean_transaction_costs": 30.861043596258483,
+      "mean_fills": 59.95161290322581,
+      "total_turnover_all_runs": 4259882.740702831,
+      "total_trading_costs_all_runs": 2129.956385064879,
+      "total_fills_all_runs": 4101,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "parametric",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 428.92932913481894,
+      "hedge_error_rmse": 427.9163998805488,
+      "net_pnl_sd": 436.6627133756491,
+      "cvar95": 1345.6551075424104,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 56861.601029076715,
+      "mean_transaction_costs": 28.43076091079227,
+      "mean_fills": 45.66129032258065,
+      "total_turnover_all_runs": 3914353.406183761,
+      "total_trading_costs_all_runs": 1957.1872078304636,
+      "total_fills_all_runs": 3085,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "gaussian",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 418.2542482369941,
+      "hedge_error_rmse": 417.2028474450665,
+      "net_pnl_sd": 424.99161095028825,
+      "cvar95": 1298.9699994381954,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 45643.18064713081,
+      "mean_transaction_costs": 22.82155039250986,
+      "mean_fills": 35.403225806451616,
+      "total_turnover_all_runs": 3153012.0632007136,
+      "total_trading_costs_all_runs": 1576.5156227022192,
+      "total_fills_all_runs": 2399,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "volgan",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 407.8742132922784,
+      "hedge_error_rmse": 410.47784809987763,
+      "net_pnl_sd": 412.9276212628936,
+      "cvar95": 1017.3269909163319,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 67611.52021672718,
+      "mean_transaction_costs": 33.80572575234674,
+      "mean_fills": 22.983870967741936,
+      "total_turnover_all_runs": 4372086.86421578,
+      "total_trading_costs_all_runs": 2186.0657344621436,
+      "total_fills_all_runs": 1475,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 4,
+      "completion_rate": 0.8732394366197183
+    }
+  ],
+  "model_hashes": {
+    "gaussian": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+    "volgan": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b"
+  },
+  "source_hashes": {
+    "api.py": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+    "cli.py": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+    "contracts.py": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+    "corporate_actions.py": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+    "deterministic.py": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+    "engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "etf_data.py": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+    "generator_validation.py": "339584b11acb9faaec136605bf41ee8d20cc43a93fc5713231362ca3317246d4",
+    "historical.py": "d24a2aaa4d01909d181e31dff41b67bc5933def3ba875d9c46ba5644393a5472",
+    "historical_actions.py": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+    "historical_cli.py": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+    "historical_hedge.py": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+    "historical_plots.py": "bb5d758492d78ae34fba498aba36010a35fbc6964f33b7071c7f169795f2629e",
+    "historical_report.py": "566b2c6a86291299b6d5e3ae8a042293b0717f1774c1ca1b090a8f38966fa84e",
+    "historical_training.py": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+    "learned_model.py": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+    "learned_scenarios.py": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+    "learning_data.py": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+    "ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "optimization.py": "8f105bfcb7ffa8214313e1d3380f4b58b7aaf7c3dfa8d543d1af4648faa5ae82",
+    "orders.py": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+    "policies.py": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+    "replay.py": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+    "reporting.py": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+    "risk.py": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+    "scenarios.py": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+    "scenario_comparison.py": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+    "scenario_hedge.py": "b14c7d85d98dcbd96f7c5b3ccf188921d5f133ba18139ebe04241762f60fb22e",
+    "stage2.py": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+    "surfaces.py": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+    "synthetic.py": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+    "valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "volgan.py": "45a844e29f003ae8f8e79cc4bf7d0eb1fec01f3af8d2728c709b6e76461cbc3b",
+    "__init__.py": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "parametric_daily_log_mean": [
+    0.00029460394726874435,
+    0.0004156486228680659,
+    0.000264395162919057
+  ],
+  "parametric_daily_covariance": [
+    [
+      6.771755497180899e-05,
+      7.098734593184829e-05,
+      8.096734395448658e-05
+    ],
+    [
+      7.098734593184829e-05,
+      8.860657023734616e-05,
+      8.52087413370953e-05
+    ],
+    [
+      8.096734395448658e-05,
+      8.52087413370953e-05,
+      0.00011964455101010874
+    ]
+  ],
+  "frozen_pricing_correlation": [
+    [
+      1.0,
+      0.9164258720819448,
+      0.8995240853097923
+    ],
+    [
+      0.9164258720819448,
+      1.0,
+      0.8275699734760484
+    ],
+    [
+      0.8995240853097923,
+      0.8275699734760484,
+      1.0
+    ]
+  ],
+  "definitions": {
+    "hedge_error": "negative liability-plus-hedge P&L, including hedge dividends, before trading/funding costs",
+    "cvar95": "mean of largest ceil(5% * matched episodes) net P&L losses, not a fitted tail estimate",
+    "turnover": "sum of absolute executed stock cash notionals, USD",
+    "comparison": "identical matched completed episodes; all failures retained in episodes.csv and counts"
+  },
+  "assumptions": [
+    "daily bars released at assumed 09:30/16:00 America/New_York clocks; half-day timing not modeled",
+    "closing option chains assumed available at close; no certified vendor release timestamp",
+    "open fills use observed raw open plus/minus assumed 5bp, not observed stock bid/ask or depth",
+    "cash distributions posted at ex-date opening, payment-date financing not modeled",
+    "fractional shares; assumed locates and 10000-share quote/borrow capacity",
+    "zero cash/collateral rates and 1% annual stock borrow; uncalibrated research margin proxy",
+    "European ATM-IV basket proxy with frozen correlation and zero pricing rates/dividend yields",
+    "VolGAN predicts one observed trading-session transition, including weekends, without rescaling",
+    "Gaussian/parametric baselines predict returns and carry current IV; VolGAN also predicts IV",
+    "all optimizers use fixed alpha=0.1 and inception spread cost weights; no test-period tuning",
+    "daily scenario objective includes overnight exposure before a next-open fill; execution delay remains approximate"
+  ]
+}

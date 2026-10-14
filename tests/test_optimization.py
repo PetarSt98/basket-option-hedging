@@ -157,8 +157,11 @@ def test_highly_correlated_case_converges_to_independent_active_set_solution():
     assert 1 < result.iterations < 20000
 
 
-def test_nonconvergence_raises_instead_of_returning_unverified_holdings():
+def test_nonconvergence_raises_instead_of_returning_unverified_holdings(monkeypatch):
     response, design = correlated_case()
+    # Even a candidate offered by the polishing step needs the full KKT check.
+    monkeypatch.setattr("basket_hedging.optimization._active_set_candidates",
+                        lambda *args: iter([np.zeros(2)]))
     with pytest.raises(SolverConvergenceError, match="did not converge after 1 iterations"):
         solve_hedge(response, design, [0, 0], [1, 1], alpha=.02, max_iterations=1)
 

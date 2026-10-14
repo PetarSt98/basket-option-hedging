@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "instruments": [
+    {
+      "id": "S1",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "S2",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "S3",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "BASKET",
+      "kind": "basket_put",
+      "currency": "USD",
+      "multiplier": 100,
+      "strike": 100.0,
+      "expiry": "2026-02-02T16:00:00+00:00",
+      "underlying": null,
+      "coefficients": [
+        [
+          "S1",
+          0.3333333333333333
+        ],
+        [
+          "S2",
+          0.3333333333333333
+        ],
+        [
+          "S3",
+          0.3333333333333333
+        ]
+      ]
+    }
+  ],
+  "opening": {
+    "mode": "ORIGINATE",
+    "initial_capital": 10000,
+    "cash": 0.0,
+    "positions": {},
+    "marks": {},
+    "posted_margin_cash": 0.0,
+    "restricted_short_proceeds": 0.0,
+    "short_lots": [],
+    "opening_equity": null,
+    "liability_id": "BASKET",
+    "liability_quantity": -1,
+    "original_premium": null
+  },
+  "rules": {
+    "horizon": "2026-02-03T09:00:00+00:00",
+    "hedge_universe": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "safety_buffer": 50,
+    "funding": {
+      "cash_rate": 0.01,
+      "collateral_rate": 0.005,
+      "borrow_rates": {
+        "S1": 0.02,
+        "S2": 0.02,
+        "S3": 0.02
+      }
+    },
+    "borrow": {
+      "S1": {
+        "located": true,
+        "limit": 1000
+      },
+      "S2": {
+        "located": true,
+        "limit": 1000
+      },
+      "S3": {
+        "located": true,
+        "limit": 1000
+      }
+    },
+    "fee_per_order": 0.05,
+    "fee_per_unit": 0.0,
+    "slippage_per_unit": 0.0,
+    "origination_fee": 0.0,
+    "settlement_fee": 0.0,
+    "lot_sizes": {},
+    "maximum_order_quantities": {
+      "S1": 1000,
+      "S2": 1000,
+      "S3": 1000
+    },
+    "max_mark_age_seconds": 0.0,
+    "start_time": "2026-01-05T16:00:00+00:00",
+    "execution_delay_seconds": 0.0,
+    "order_lifetime_seconds": null,
+    "maximum_position_quantities": {},
+    "expected_stress_scenarios": [
+      "unchanged",
+      "spot_down_20pct",
+      "spot_up_20pct",
+      "vol_up_25pct"
+    ]
+  },
+  "events_file": "synthetic.jsonl",
+  "metadata": {
+    "source": "synthetic correlated GBM fixture v1; not historical market data",
+    "purpose": "mechanics only, no calibration or profitability claim",
+    "basket_kind": "put",
+    "replay_seed": 20260912,
+    "replay_rng": "NumPy PCG64",
+    "replay_drift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_volatilities": [
+      0.2,
+      0.225,
+      0.25
+    ],
+    "replay_correlation": [
+      [
+        1.0,
+        0.35,
+        0.35
+      ],
+      [
+        0.35,
+        1.0,
+        0.35
+      ],
+      [
+        0.35,
+        0.35,
+        1.0
+      ]
+    ],
+    "initial_spots": [
+      100.0,
+      80.0,
+      120.0
+    ],
+    "pricing_parameters": {
+      "stock_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "volatilities": [
+        0.2,
+        0.225,
+        0.25
+      ],
+      "correlation": [
+        [
+          1.0,
+          0.35,
+          0.35
+        ],
+        [
+          0.35,
+          1.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.35,
+          1.0
+        ]
+      ],
+      "risk_free_rate": 0.01,
+      "available_at": "2026-01-05T16:00:00+00:00",
+      "pricing_seed": 731,
+      "samples": 8192,
+      "bump_relative": 0.0001
+    },
+    "stress_scenarios": [
+      {
+        "name": "unchanged",
+        "spot_multiplier": 1.0,
+        "volatility_multiplier": 1.0
+      },
+      {
+        "name": "spot_down_20pct",
+        "spot_multiplier": 0.8,
+        "volatility_multiplier": 1.0
+      },
+      {
+        "name": "spot_up_20pct",
+        "spot_multiplier": 1.2,
+        "volatility_multiplier": 1.0
+      },
+      {
+        "name": "vol_up_25pct",
+        "spot_multiplier": 1.0,
+        "volatility_multiplier": 1.25
+      }
+    ],
+    "margin_label": "uncalibrated research margin proxy",
+    "numpy_version": "2.3.1",
+    "calendar": "twenty toy business days by default; weekdays only, no holiday calendar",
+    "days": 20,
+    "execution_half_spread": 0.02,
+    "scenario_timing": "Next scheduled business-day close, declared in the current event; no future prices",
+    "funding": "declared toy cash 1%, collateral 0.5%, stock borrow 2%; no proceeds rebate"
+  }
+}

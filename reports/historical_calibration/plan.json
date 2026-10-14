@@ -1,0 +1,92 @@
+{
+  "title": "Bounded VolGAN checkpoint-selection correction",
+  "written_before_candidate_training_at": "2026-10-04T14:19:24.735521+00:00",
+  "change": "Training architecture, losses, transforms and budget unchanged; select a checkpoint using 2018 joint diagnostics instead of the final epoch.",
+  "configurations": [
+    {
+      "name": "original_architecture_and_training",
+      "settings": {
+        "noise_dim": 32,
+        "hidden_dim": 16,
+        "calibration_epochs": 25,
+        "epochs": 10000,
+        "batch_size": 100,
+        "learning_rate": 0.0001
+      }
+    }
+  ],
+  "seeds": [
+    1729,
+    1731
+  ],
+  "checkpoint_epochs": [
+    100,
+    250,
+    500,
+    1000,
+    2500,
+    5000,
+    7500,
+    10000
+  ],
+  "train_end": "2017-12-29",
+  "development_year": 2018,
+  "confirmation_year": 2019,
+  "validation": {
+    "samples": 256,
+    "noise_seed": 1730,
+    "primary": "Mean empirical-distribution energy score of joint raw log returns; lower is better.",
+    "energy_score": "mean_i ||x_i-y|| - sum_ij ||x_i-x_j||/(2*N*N); Euclidean distance, diagonal pairs retained, identical ensemble sizes.",
+    "interval_score": "Central 90% interval: width + 20*(lower-y) if y<lower + 20*(y-upper) if y>upper.",
+    "references": [
+      "Frozen original VolGAN",
+      "Frozen Gaussian with original calendar-day scaling and carried-current IV"
+    ],
+    "reference_caveat": "Frozen Gaussian was already selected using combined 2018-2019 validation."
+  },
+  "acceptance": {
+    "energy_score_ratio": 0.98,
+    "coverage_error_improvement": 0.05,
+    "max_asset_coverage_deterioration": 0.03,
+    "max_diagnostic_ratio": 1.1,
+    "spread_interval_score_ratio": 0.95
+  },
+  "acceptance_definition": {
+    "energy_score": "At least 2% reduction versus original on the same dates and draws.",
+    "mean_coverage_error": "Mean across assets of abs(central90coverage-.9) improves by at least .05.",
+    "asset_coverage_errors": "No asset absolute coverage error worsens by more than .03.",
+    "diagnostic_ratios": "Each asset central90 interval score, mean-return forecast RMSE and mean-logIV forecast RMSE is at most 1.10 times original.",
+    "spread": "QQQ minus IWM central90 interval score is at most .95 times original."
+  },
+  "selection": "Among eligible checkpoints choose smallest 2018 energy score within each seed; tie by earlier epoch. Require an eligible checkpoint for both seeds, then choose smallest score across seeds; ties earlier epoch then smaller seed.",
+  "confirmation": "Freeze chosen checkpoint ID and SHA before loading 2019. Apply the identical gates against frozen original 2019 once. If inconsistent across seeds or confirmation fails, report NO CONFIRMED IMPROVEMENT and stop; no second candidate.",
+  "rejection": "Any nonfinite generated output or failed safeguard makes the checkpoint ineligible. No candidate accepted by adversarial loss or financial outcomes.",
+  "supporting_checks": [
+    "90% coverage and interval widths/scores",
+    "Return mean and conditional std",
+    "Conditional pairwise-correlation quantiles",
+    "QQQ minus IWM spread variation and intervals",
+    "Log-IV change dispersion, mean forecast RMSE and return/surface correlations",
+    "Separate conditional variation, conditional-mean variation and realized variation over dates"
+  ],
+  "data_discipline": "Only existing training labels fit weights. Training/development receives a prepared slice ending 2018; confirmation receives one ending 2019 after the freeze. No 2020-2025 hedge outcomes are loaded. Combined 2018-2019 was previously inspected: these are developmental checks, not an untouched holdout.",
+  "preservation": "Original data, action supplement, checkpoints, benchmark outputs and financial implementation unchanged. Solver reliability fix retained. No financial benchmark in this task.",
+  "inputs": {
+    "original_volgan_sha256": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+    "original_gaussian_sha256": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+    "prepared_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+    "prepared_manifest_sha256": "731964564a34bbf853fe42bc34f869b863edade838c1be96efb37a5d0476ca48",
+    "original_training_prepared_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+    "training_arrays_sha256": "338649efb84806a4da0b71c4d3b3b434826e3e3d9dede8765b4d0b33d74f2c7e",
+    "source_file_hashes": {
+      "SPY_options.parquet": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "SPY_underlying.parquet": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "QQQ_options.parquet": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "QQQ_underlying.parquet": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "IWM_options.parquet": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "IWM_underlying.parquet": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940"
+    },
+    "diagnosis_sha256": "75b9afb5d021ed384f6f1200b623e092e94db7f61645f65cf3406ecef4e9e978",
+    "prior_frozen_inventory": "C:/Users/petar/AppData/Local/Temp/volgan-calibration-0p93dlqc/before.json"
+  }
+}

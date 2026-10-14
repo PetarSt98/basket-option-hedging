@@ -1,0 +1,6 @@
+id,time,kind,cash_change,instrument_id,quantity,price,reference_mark,restriction_change
+origination,2026-01-05T16:00:00+00:00,origination,200,BASKET,-1,2,2,0.0
+origination:fee,2026-01-05T16:00:00+00:00,fee,-0.0,BASKET,0.0,0.0,0.0,0.0
+margin/hand/0/pretrade,2026-01-05T16:00:00+00:00,collateral,0.0,,0.0,0.0,0.0,400.0
+margin/hand/0/post_execution,2026-01-05T16:00:00+00:00,collateral,0.0,,0.0,0.0,0.0,0
+accrual/hand/1:interest,2026-01-06T09:00:00+00:00,interest,0.0,,0.0,0.0,0.0,0.0

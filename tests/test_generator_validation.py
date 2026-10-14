@@ -7,7 +7,56 @@ import numpy as np
 import pytest
 
 from basket_hedging.contracts import InputError
-from basket_hedging.generator_validation import compare_return_samples, validate_generator
+from basket_hedging.generator_validation import compare_return_samples, energy_score, validate_generator
+
+
+@pytest.mark.parametrize("observation,samples,expected", [
+    ([0.], [[0.], [2.]], 0.5),
+    ([3.], [[0.], [2.]], 1.5),
+    ([0., 0.], [[0., 0.], [3., 4.]], 1.25),
+    ([1., 2.], [[1., 2.], [1., 2.]], 0.),
+])
+def test_energy_score_hand_calculated_distances(observation, samples, expected):
+    # The two off-diagonal distances count in N**2, along with two zeros.
+    assert energy_score(observation, samples) == pytest.approx(expected)
+
+
+def test_energy_score_preserves_joint_geometry_raw_units_and_inputs():
+    observation = np.array([0.002, -0.01])
+    samples = np.array([[0.01, 0.02], [-0.03, 0.01], [0.004, -0.01]])
+    original_observation, original_samples = observation.copy(), samples.copy()
+    score = energy_score(observation, samples)
+    rotation = np.array([[0.6, -0.8], [0.8, 0.6]])
+    assert energy_score(observation, samples[[2, 0, 1]]) == pytest.approx(score)
+    assert energy_score(observation[::-1], samples[:, ::-1]) == pytest.approx(score)
+    assert energy_score(observation @ rotation, samples @ rotation) == pytest.approx(score)
+    assert energy_score(observation * 100, samples * 100) == pytest.approx(score * 100)
+    np.testing.assert_array_equal(observation, original_observation)
+    np.testing.assert_array_equal(samples, original_samples)
+
+
+def test_energy_score_distinguishes_dependence_with_identical_marginals():
+    positive = np.array([[-1., -1.], [1., 1.]])
+    negative = np.array([[-1., 1.], [1., -1.]])
+    np.testing.assert_array_equal(np.sort(positive, axis=0), np.sort(negative, axis=0))
+    matching = np.mean([energy_score(outcome, positive) for outcome in positive])
+    wrong_dependence = np.mean([energy_score(outcome, negative) for outcome in positive])
+    assert matching == pytest.approx(np.sqrt(2) / 2)
+    assert wrong_dependence == pytest.approx(2 - np.sqrt(2) / 2)
+    assert matching < wrong_dependence
+
+
+@pytest.mark.parametrize("observation,samples", [
+    (0., [[0.], [1.]]), ([[0.]], [[0.], [1.]]),
+    ([0.], [0., 1.]), ([0.], [[0.]]),
+    ([], [[], []]), ([0., 1.], [[0.], [1.]]),
+    ([np.nan], [[0.], [1.]]), ([np.inf], [[0.], [1.]]),
+    ([0.], [[0.], [np.nan]]), ([0.], [[0.], [-np.inf]]),
+    ([1e308], [[-1e308], [0.]]),
+])
+def test_energy_score_rejects_invalid_dimensions_or_nonfinite_arithmetic(observation, samples):
+    with pytest.raises(InputError):
+        energy_score(observation, samples)
 
 
 def test_independent_joint_and_basket_moments_quantiles_and_errors():

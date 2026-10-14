@@ -1,0 +1,60 @@
+{
+  "status": "READY_FOR_PREPARATION",
+  "repository": "lambdaclass/options_portfolio_backtester",
+  "release": "data-v1",
+  "hash_source_commit": "e53ef86928777de6ee0721424762ea3dc133f993",
+  "files": {
+    "SPY_options.parquet": {
+      "sha256": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "matches": true
+    },
+    "SPY_underlying.parquet": {
+      "sha256": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "matches": true
+    },
+    "QQQ_options.parquet": {
+      "sha256": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "matches": true
+    },
+    "QQQ_underlying.parquet": {
+      "sha256": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "matches": true
+    },
+    "IWM_options.parquet": {
+      "sha256": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "matches": true
+    },
+    "IWM_underlying.parquet": {
+      "sha256": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940",
+      "matches": true
+    }
+  },
+  "issues": [],
+  "coverage": {
+    "SPY": {
+      "start": "2008-01-02",
+      "end": "2025-12-12",
+      "dates": 4513
+    },
+    "QQQ": {
+      "start": "2011-03-23",
+      "end": "2025-12-15",
+      "dates": 3700
+    },
+    "IWM": {
+      "start": "2008-01-02",
+      "end": "2025-12-15",
+      "dates": 4509
+    }
+  },
+  "common": {
+    "start": "2011-03-23",
+    "end": "2025-12-12",
+    "dates": 3693
+  },
+  "benchmark_ready": false,
+  "benchmark_blockers": [
+    "IWM: missing dividend_amount",
+    "IWM: missing split_coefficient"
+  ]
+}

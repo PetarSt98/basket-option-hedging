@@ -1,0 +1,62 @@
+[
+  {
+    "policy": "volgan",
+    "decision": "2020-01-02T21:00:00+00:00",
+    "eligible": "2020-01-03T14:30:00+00:00",
+    "endpoint": "2020-01-03T21:00:00+00:00",
+    "calendar_days": 1.0,
+    "execution_delay_hours": 17.5,
+    "surface_rule": "generated, unrescaled one trading-session transition",
+    "independent_scaling_max_error": 0.0
+  },
+  {
+    "policy": "volgan",
+    "decision": "2020-01-03T21:00:00+00:00",
+    "eligible": "2020-01-06T14:30:00+00:00",
+    "endpoint": "2020-01-06T21:00:00+00:00",
+    "calendar_days": 3.0,
+    "execution_delay_hours": 65.5,
+    "surface_rule": "generated, unrescaled one trading-session transition",
+    "independent_scaling_max_error": 0.0
+  },
+  {
+    "policy": "gaussian",
+    "decision": "2020-01-02T21:00:00+00:00",
+    "eligible": "2020-01-03T14:30:00+00:00",
+    "endpoint": "2020-01-03T21:00:00+00:00",
+    "calendar_days": 1.0,
+    "execution_delay_hours": 17.5,
+    "surface_rule": "current surface carried forward unchanged",
+    "independent_scaling_max_error": 0.0
+  },
+  {
+    "policy": "gaussian",
+    "decision": "2020-01-03T21:00:00+00:00",
+    "eligible": "2020-01-06T14:30:00+00:00",
+    "endpoint": "2020-01-06T21:00:00+00:00",
+    "calendar_days": 3.0,
+    "execution_delay_hours": 65.5,
+    "surface_rule": "current surface carried forward unchanged",
+    "independent_scaling_max_error": 5.684341886080802e-14
+  },
+  {
+    "policy": "parametric",
+    "decision": "2020-01-02T21:00:00+00:00",
+    "eligible": "2020-01-03T14:30:00+00:00",
+    "endpoint": "2020-01-03T21:00:00+00:00",
+    "calendar_days": 1.0,
+    "execution_delay_hours": 17.5,
+    "surface_rule": "current surface carried forward unchanged",
+    "independent_scaling_max_error": 0.0
+  },
+  {
+    "policy": "parametric",
+    "decision": "2020-01-03T21:00:00+00:00",
+    "eligible": "2020-01-06T14:30:00+00:00",
+    "endpoint": "2020-01-06T21:00:00+00:00",
+    "calendar_days": 3.0,
+    "execution_delay_hours": 65.5,
+    "surface_rule": "current surface carried forward unchanged",
+    "independent_scaling_max_error": 0.0
+  }
+]

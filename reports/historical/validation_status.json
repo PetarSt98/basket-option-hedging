@@ -1,0 +1,559 @@
+{
+  "implementation_status": "HISTORICAL BENCHMARK COMPLETED",
+  "label": "Real historical constituent prices and option surfaces; model-valued non-traded basket option.",
+  "model": "multi-asset VolGAN adaptation",
+  "source": "https://github.com/lambdaclass/options_portfolio_backtester/releases/tag/data-v1",
+  "common_dates": {
+    "start": "2011-03-23",
+    "end": "2025-12-12",
+    "count": 3693
+  },
+  "prepared_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+  "split": {
+    "train_end": "2017-12-29",
+    "validation_start": "2018-01-02",
+    "validation_end": "2019-12-31",
+    "test_start": "2020-01-02",
+    "test_end": "2025-12-12"
+  },
+  "planned_test_episodes": 71,
+  "blocker": null,
+  "financial_benchmark_command": "python -B -m basket_hedging historical run --prepared \"$env:USERPROFILE\\.cache\\basket-hedging\\prepared-etf-v1-actions\" --models reports/historical/models --output reports/historical/benchmark",
+  "financial_benchmark_exit_code": 0,
+  "historical_results_generated": true,
+  "historical_figures_generated": true,
+  "volgan_training": {
+    "calibration_epochs": 25,
+    "main_epochs": 10000,
+    "seed": 1729,
+    "training_rows": 1592,
+    "validation_rows": 454,
+    "checkpoint_sha256": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+    "training_seconds": 27292.114667400005,
+    "timing_note": "Wall time includes an observed host pause of approximately 7.3 hours; not a compute-time estimate."
+  },
+  "gaussian_training": {
+    "epochs": 40,
+    "seed": 271828,
+    "selected_epoch": 26,
+    "validation_nll": 3.0039504263605976
+  },
+  "validation": {
+    "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+    "start": "2018-01-03",
+    "end": "2019-12-31",
+    "rows": 454,
+    "samples_per_condition": 256,
+    "seed": 1730,
+    "asset_ids": [
+      "SPY",
+      "QQQ",
+      "IWM"
+    ],
+    "return_mean_forecast_rmse": [
+      0.010667011947939687,
+      0.013367363157229431,
+      0.011302289934523892
+    ],
+    "return_5_95_percentile_coverage": [
+      0.4911894273127753,
+      0.6079295154185022,
+      0.6585903083700441
+    ],
+    "mean_generated_return_std": [
+      0.0036263875001327286,
+      0.006472865398058502,
+      0.006036905095402167
+    ],
+    "observed_return_std": [
+      0.009320424423067221,
+      0.012195304709251106,
+      0.010474063466179495
+    ],
+    "mean_generated_return_covariance": [
+      [
+        1.5339278905536426e-05,
+        2.424220454044533e-05,
+        2.2608033169756913e-05
+      ],
+      [
+        2.424220454044533e-05,
+        4.319026235909286e-05,
+        4.030867504063124e-05
+      ],
+      [
+        2.2608033169756913e-05,
+        4.030867504063124e-05,
+        3.770040257171336e-05
+      ]
+    ],
+    "observed_return_covariance": [
+      [
+        8.68703114261079e-05,
+        0.00010714775523254078,
+        8.612175893926103e-05
+      ],
+      [
+        0.00010714775523254078,
+        0.00014872545695148207,
+        0.00010607887403035255
+      ],
+      [
+        8.612175893926103e-05,
+        0.00010607887403035255,
+        0.00010970600549355599
+      ]
+    ],
+    "log_iv_mean_forecast_rmse": [
+      0.07155097327152812,
+      0.06515032618005874,
+      0.06587542876080835
+    ],
+    "checkpoint_selection": "none; fixed final training epoch retained"
+  },
+  "existing_fixture_checks": [
+    {
+      "fixture": "deterministic_complete",
+      "unhedged": [
+        "COMPLETED",
+        -200,
+        0
+      ],
+      "delta": [
+        "COMPLETED",
+        -371,
+        9
+      ]
+    },
+    {
+      "fixture": "synthetic",
+      "unhedged": [
+        "COMPLETED",
+        -55.381272,
+        0
+      ],
+      "delta": [
+        "COMPLETED",
+        -144.600523,
+        63
+      ]
+    },
+    {
+      "fixture": "deterministic_gap",
+      "unhedged": [
+        "STOP_WITH_BREACH",
+        -400,
+        0
+      ],
+      "delta": [
+        "STOP_WITH_BREACH",
+        -400,
+        0
+      ]
+    },
+    {
+      "fixture": "deterministic_missing_exit",
+      "unhedged": [
+        "COMPLETED",
+        -200,
+        0
+      ],
+      "delta": [
+        "INCOMPLETE_EXIT",
+        -362,
+        6
+      ]
+    },
+    {
+      "fixture": "deterministic_rejected_exit",
+      "unhedged": [
+        "COMPLETED",
+        -200,
+        0
+      ],
+      "delta": [
+        "INCOMPLETE_EXIT",
+        -362,
+        6
+      ]
+    }
+  ],
+  "fixture_value_units": [
+    "status",
+    "observed marked P&L in USD (not terminal for failed runs)",
+    "accepted hedge fills"
+  ],
+  "runtime": {
+    "python": "3.13.3",
+    "numpy": "2.3.1",
+    "pyarrow": "23.0.1",
+    "torch": "2.12.1+cpu"
+  },
+  "previous_partial_status": {
+    "implementation_status": "PARTIAL: model training completed; historical financial benchmark blocked",
+    "blocker": "IWM dividends and split coefficients are entirely null. No corporate-action supplement authorized or downloaded.",
+    "financial_benchmark_command": "python -B -m basket_hedging historical run --prepared \"$env:USERPROFILE\\.cache\\basket-hedging\\prepared-etf-v1\" --models reports/historical/models --output reports/historical/benchmark",
+    "financial_benchmark_exit_code": 2,
+    "historical_results_generated": false,
+    "historical_figures_generated": false
+  },
+  "previous_stage_checks": [
+    {
+      "command": "python -B -m pytest -p no:cacheprovider -q",
+      "result": "539 passed in 17.07s"
+    },
+    {
+      "command": "git diff --check",
+      "result": "exit 0; Git emitted only LF/CRLF conversion notices"
+    },
+    {
+      "check": "Additional whitespace inspection including untracked source/tests/docs",
+      "result": "no trailing-whitespace findings"
+    },
+    {
+      "check": "8 manufactured episodes times 5 policies; normal reports and four PNG/SVG pairs",
+      "result": "all completed in temporary test directory; not historical financial results"
+    },
+    {
+      "check": "Future prices/surfaces mutation and missing-session stop",
+      "result": "earlier decisions/orders/ledger unchanged; missing session stops before pending fill"
+    },
+    {
+      "check": "Saved real VolGAN checkpoint versus independent NumPy dense/Softplus reconstruction",
+      "result": "Torch samples agree within rtol=2e-6, atol=1e-6; repeated same-noise samples bitwise identical; prepared hash matches"
+    }
+  ],
+  "previous_stage_source_hashes": {
+    "__init__.py": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "api.py": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+    "cli.py": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+    "contracts.py": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+    "deterministic.py": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+    "engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "etf_data.py": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+    "generator_validation.py": "339584b11acb9faaec136605bf41ee8d20cc43a93fc5713231362ca3317246d4",
+    "historical.py": "74c0c56c042d1c103b603b0d1f249532c1bbdb7d0bd1e5ab7a5affdf0341e3a0",
+    "historical_cli.py": "7e9d3155af10e06f77a76e8fcd68415c517915f3358d0836b3c41f1fb2d46f0a",
+    "historical_hedge.py": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+    "historical_plots.py": "036053ecdb8d566ab5698e58411caf72f5460d5d701ef3e5598d60659fe428de",
+    "historical_training.py": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+    "learned_model.py": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+    "learned_scenarios.py": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+    "learning_data.py": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+    "ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "optimization.py": "8f105bfcb7ffa8214313e1d3380f4b58b7aaf7c3dfa8d543d1af4648faa5ae82",
+    "orders.py": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+    "policies.py": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+    "replay.py": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+    "reporting.py": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+    "risk.py": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+    "scenario_comparison.py": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+    "scenario_hedge.py": "b14c7d85d98dcbd96f7c5b3ccf188921d5f133ba18139ebe04241762f60fb22e",
+    "scenarios.py": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+    "stage2.py": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+    "surfaces.py": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+    "synthetic.py": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+    "valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "volgan.py": "45a844e29f003ae8f8e79cc4bf7d0eb1fec01f3af8d2728c709b6e76461cbc3b"
+  },
+  "updated_at": "2026-10-04T08:32:15.965817+00:00",
+  "supplemented_prepared_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+  "attempted_runs": 355,
+  "matched_completed_episodes": 62,
+  "status_counts": {
+    "unhedged": {
+      "COMPLETED": 66,
+      "STOP_DATA_GAP": 5
+    },
+    "delta": {
+      "COMPLETED": 66,
+      "STOP_DATA_GAP": 5
+    },
+    "parametric": {
+      "COMPLETED": 66,
+      "STOP_DATA_GAP": 5
+    },
+    "gaussian": {
+      "COMPLETED": 66,
+      "STOP_DATA_GAP": 5
+    },
+    "volgan": {
+      "COMPLETED": 62,
+      "STOP_DATA_GAP": 5,
+      "FAILED_OPTIMIZER": 4
+    }
+  },
+  "metrics": [
+    {
+      "policy": "unhedged",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 1174.4055952541412,
+      "hedge_error_rmse": 1184.642500763698,
+      "net_pnl_sd": 1174.4055952541412,
+      "cvar95": 2995.4454946841724,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 0.0,
+      "mean_transaction_costs": 0.0,
+      "mean_fills": 0.0,
+      "total_turnover_all_runs": 0.0,
+      "total_trading_costs_all_runs": 0.0,
+      "total_fills_all_runs": 0,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "delta",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 395.0448559513105,
+      "hedge_error_rmse": 392.0990740956876,
+      "net_pnl_sd": 400.86731104532294,
+      "cvar95": 1316.632416794433,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 61722.18220537254,
+      "mean_transaction_costs": 30.861043596258483,
+      "mean_fills": 59.95161290322581,
+      "total_turnover_all_runs": 4259882.740702831,
+      "total_trading_costs_all_runs": 2129.956385064879,
+      "total_fills_all_runs": 4101,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "parametric",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 428.92932913481894,
+      "hedge_error_rmse": 427.9163998805488,
+      "net_pnl_sd": 436.6627133756491,
+      "cvar95": 1345.6551075424104,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 56861.601029076715,
+      "mean_transaction_costs": 28.43076091079227,
+      "mean_fills": 45.66129032258065,
+      "total_turnover_all_runs": 3914353.406183761,
+      "total_trading_costs_all_runs": 1957.1872078304636,
+      "total_fills_all_runs": 3085,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "gaussian",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 418.2542482369941,
+      "hedge_error_rmse": 417.2028474450665,
+      "net_pnl_sd": 424.99161095028825,
+      "cvar95": 1298.9699994381954,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 45643.18064713081,
+      "mean_transaction_costs": 22.82155039250986,
+      "mean_fills": 35.403225806451616,
+      "total_turnover_all_runs": 3153012.0632007136,
+      "total_trading_costs_all_runs": 1576.5156227022192,
+      "total_fills_all_runs": 2399,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324
+    },
+    {
+      "policy": "volgan",
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 407.8742132922784,
+      "hedge_error_rmse": 410.47784809987763,
+      "net_pnl_sd": 412.9276212628936,
+      "cvar95": 1017.3269909163319,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 67611.52021672718,
+      "mean_transaction_costs": 33.80572575234674,
+      "mean_fills": 22.983870967741936,
+      "total_turnover_all_runs": 4372086.86421578,
+      "total_trading_costs_all_runs": 2186.0657344621436,
+      "total_fills_all_runs": 1475,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 4,
+      "completion_rate": 0.8732394366197183
+    }
+  ],
+  "independent_checks": "benchmark/independent_checks.json",
+  "fixed_core_and_original_file_checks": "corporate_action_validation.json",
+  "checks": [
+    {
+      "command": "python -B -m pytest -p no:cacheprovider -q",
+      "result": "566 passed in 16.88s (final code, including presentation corrections)"
+    },
+    {
+      "command": "python -B -m pytest -p no:cacheprovider -q tests/test_historical.py tests/test_historical_actions.py tests/test_corporate_actions.py tests/test_dividends.py tests/test_historical_report.py",
+      "result": "42 passed in 6.07s"
+    },
+    {
+      "command": "python -B -m basket_hedging historical figures --report reports/historical/benchmark",
+      "result": "exit 0; four PNG/SVG pairs; visually inspected"
+    },
+    {
+      "command": "git diff --check",
+      "result": "exit 0; LF/CRLF notices only"
+    },
+    {
+      "check": "Independent accounting, execution, summary and paired metrics audit",
+      "result": "1887 numeric comparisons; maximum absolute difference 2.33e-10"
+    }
+  ],
+  "source_hashes": {
+    "api.py": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+    "cli.py": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+    "contracts.py": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+    "corporate_actions.py": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+    "deterministic.py": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+    "engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "etf_data.py": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+    "generator_validation.py": "339584b11acb9faaec136605bf41ee8d20cc43a93fc5713231362ca3317246d4",
+    "historical.py": "d24a2aaa4d01909d181e31dff41b67bc5933def3ba875d9c46ba5644393a5472",
+    "historical_actions.py": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+    "historical_cli.py": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+    "historical_hedge.py": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+    "historical_plots.py": "7b9c09df3878413e7250b114d2683ed605be0d7e2e7cb37156b03e1d562913a4",
+    "historical_report.py": "566b2c6a86291299b6d5e3ae8a042293b0717f1774c1ca1b090a8f38966fa84e",
+    "historical_training.py": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+    "learned_model.py": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+    "learned_scenarios.py": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+    "learning_data.py": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+    "ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "optimization.py": "8f105bfcb7ffa8214313e1d3380f4b58b7aaf7c3dfa8d543d1af4648faa5ae82",
+    "orders.py": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+    "policies.py": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+    "replay.py": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+    "reporting.py": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+    "risk.py": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+    "scenarios.py": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+    "scenario_comparison.py": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+    "scenario_hedge.py": "b14c7d85d98dcbd96f7c5b3ccf188921d5f133ba18139ebe04241762f60fb22e",
+    "stage2.py": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+    "surfaces.py": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+    "synthetic.py": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+    "valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "volgan.py": "45a844e29f003ae8f8e79cc4bf7d0eb1fec01f3af8d2728c709b6e76461cbc3b",
+    "__init__.py": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "post_financial_run_presentation_change": {
+    "file": "historical_plots.py",
+    "scope": "Replace crowded point labels with a legend; clarify basket-value axis units only.",
+    "financial_run_sha256": "bb5d758492d78ae34fba498aba36010a35fbc6964f33b7071c7f169795f2629e",
+    "figure_generation_sha256": "7b9c09df3878413e7250b114d2683ed605be0d7e2e7cb37156b03e1d562913a4"
+  },
+  "limitations": [
+    "All metrics use the 62 common completed episodes; failures are not assigned fictional terminal values.",
+    "Five shared missing-data episodes and four additional VolGAN solver failures remain visible.",
+    "Every scenario policy skipped 42 decisions for unavailable conditioning history, including 33 in completed episodes.",
+    "VolGAN nominal 90% coverage remains SPY 49.12%, QQQ 60.79%, IWM 65.86%; no retuning.",
+    "Only four losses enter empirical CVaR95. All four excluded solver-failure periods lost money under the other policies.",
+    "Historical constituent data with model-valued basket and assumed execution; not original paper/SPX replication.",
+    "Ex-date cash distribution proxy, zero pricing rates/yields, frozen correlation, assumed borrow/liquidity and research margin remain unchanged."
+  ],
+  "files_changed_this_completion": [
+    "README.md",
+    "data/iwm_corporate_actions/README.md",
+    "data/iwm_corporate_actions/distributions.csv",
+    "data/iwm_corporate_actions/distributions_manifest.json",
+    "data/iwm_corporate_actions/split_verification.json",
+    "docs/etf_data.md",
+    "docs/historical_benchmark.md",
+    "docs/iwm_split_verification.md",
+    "reports/historical/benchmark/benchmark.md",
+    "reports/historical/benchmark/episodes.csv",
+    "reports/historical/benchmark/failed_runs.json",
+    "reports/historical/benchmark/figures/01_error_distribution.png",
+    "reports/historical/benchmark/figures/01_error_distribution.svg",
+    "reports/historical/benchmark/figures/02_error_through_time.png",
+    "reports/historical/benchmark/figures/02_error_through_time.svg",
+    "reports/historical/benchmark/figures/03_risk_cost.png",
+    "reports/historical/benchmark/figures/03_risk_cost.svg",
+    "reports/historical/benchmark/figures/04_representative_episode.png",
+    "reports/historical/benchmark/figures/04_representative_episode.svg",
+    "reports/historical/benchmark/independent_checks.json",
+    "reports/historical/benchmark/metrics.csv",
+    "reports/historical/benchmark/paired_differences.csv",
+    "reports/historical/benchmark/paired_differences.json",
+    "reports/historical/benchmark/representative.csv",
+    "reports/historical/benchmark/representative.jsonl",
+    "reports/historical/benchmark/representative/comparison.json",
+    "reports/historical/benchmark/representative/delta/account.csv",
+    "reports/historical/benchmark/representative/delta/orders.csv",
+    "reports/historical/benchmark/representative/delta/postings.csv",
+    "reports/historical/benchmark/representative/delta/settlements.csv",
+    "reports/historical/benchmark/representative/delta/summary.json",
+    "reports/historical/benchmark/representative/delta/valuation_audit.csv",
+    "reports/historical/benchmark/representative/gaussian/account.csv",
+    "reports/historical/benchmark/representative/gaussian/orders.csv",
+    "reports/historical/benchmark/representative/gaussian/postings.csv",
+    "reports/historical/benchmark/representative/gaussian/settlements.csv",
+    "reports/historical/benchmark/representative/gaussian/summary.json",
+    "reports/historical/benchmark/representative/gaussian/valuation_audit.csv",
+    "reports/historical/benchmark/representative/parametric/account.csv",
+    "reports/historical/benchmark/representative/parametric/orders.csv",
+    "reports/historical/benchmark/representative/parametric/postings.csv",
+    "reports/historical/benchmark/representative/parametric/settlements.csv",
+    "reports/historical/benchmark/representative/parametric/summary.json",
+    "reports/historical/benchmark/representative/parametric/valuation_audit.csv",
+    "reports/historical/benchmark/representative/unhedged/account.csv",
+    "reports/historical/benchmark/representative/unhedged/orders.csv",
+    "reports/historical/benchmark/representative/unhedged/postings.csv",
+    "reports/historical/benchmark/representative/unhedged/settlements.csv",
+    "reports/historical/benchmark/representative/unhedged/summary.json",
+    "reports/historical/benchmark/representative/unhedged/valuation_audit.csv",
+    "reports/historical/benchmark/representative/volgan/account.csv",
+    "reports/historical/benchmark/representative/volgan/orders.csv",
+    "reports/historical/benchmark/representative/volgan/postings.csv",
+    "reports/historical/benchmark/representative/volgan/settlements.csv",
+    "reports/historical/benchmark/representative/volgan/summary.json",
+    "reports/historical/benchmark/representative/volgan/valuation_audit.csv",
+    "reports/historical/benchmark/summary.json",
+    "reports/historical/corporate_action_validation.json",
+    "reports/historical/validation_status.json",
+    "src/basket_hedging/corporate_actions.py",
+    "src/basket_hedging/historical.py",
+    "src/basket_hedging/historical_actions.py",
+    "src/basket_hedging/historical_cli.py",
+    "src/basket_hedging/historical_plots.py",
+    "src/basket_hedging/historical_report.py",
+    "tests/test_corporate_actions.py",
+    "tests/test_historical.py",
+    "tests/test_historical_actions.py",
+    "tests/test_historical_report.py"
+  ],
+  "preserved_previous_artifacts": "All original raw Parquets, base preparation and model checkpoints preserved; old benchmark/blocked.json is a superseded prior-attempt record.",
+  "chart_hashes": {
+    "01_error_distribution.png": "728b74e60ec74c3dd3639bc327c28959cb346b299b9cd608be1ffae2d7e6bf92",
+    "01_error_distribution.svg": "b84cb49be8d2a81d67891e58f13345e5e4403b9fc835f52d31788b9db07f0d6b",
+    "02_error_through_time.png": "9cdb58edd2c48713d85eea9958a6917d089511872617793f06bc7fa5492e0999",
+    "02_error_through_time.svg": "49286ed09a91230e5593e606de77bafd44e05319208c31c8fcc3f39ad3184973",
+    "03_risk_cost.png": "76e9c9f8e32f40901a1e02f67cd63633ef16c8927b36a0ed44f12a34fbe5d5f8",
+    "03_risk_cost.svg": "8765ebd5d8445459fa6f098b7d5807941ec9b0e62ffb5c86ba38e3efbd3ad2cc",
+    "04_representative_episode.png": "6dd87ea40b17cd9f1e9e23f1989f5a36b217f06b63e2f137140d8c2664b1574d",
+    "04_representative_episode.svg": "6bdd309530eb46ef224840a1b135aca5771ee6635ccc286a1ece2022c62e1aa5"
+  }
+}

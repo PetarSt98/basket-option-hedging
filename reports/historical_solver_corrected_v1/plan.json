@@ -1,0 +1,65 @@
+{
+  "version": "solver-reliability-v1",
+  "written_at": "2026-10-04T15:05:36.097463+00:00",
+  "label": "Revised retrospective benchmark; solver reliability correction only",
+  "policies": [
+    "unhedged",
+    "delta",
+    "parametric",
+    "gaussian",
+    "volgan"
+  ],
+  "scheduled_episodes": 71,
+  "config": {
+    "holding_sessions": 20,
+    "capital": 100000.0,
+    "basket_initial_value": 300.0,
+    "multiplier": 100.0,
+    "half_spread": 0.0005,
+    "quote_size": 10000.0,
+    "borrow_rate": 0.01,
+    "safety_buffer": 1000.0,
+    "alpha": 0.1,
+    "scenarios": 256,
+    "pricing_samples": 512,
+    "pricing_seed": 731,
+    "scenario_seed": 9173
+  },
+  "model_hashes": {
+    "gaussian": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+    "volgan": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b"
+  },
+  "data_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+  "frozen_baseline": "reports/historical/benchmark",
+  "calibration": "NO CONFIRMED IMPROVEMENT; original frozen VolGAN only; epoch5000 excluded",
+  "bootstrap": {
+    "seed": 20261004,
+    "repetitions": 5000,
+    "block_length": 3,
+    "method": "Noncircular moving blocks sampled uniformly from full chronological71slot grid; concatenate and truncate to71; whole fivepolicy episode vectors shared across populations; filter declared membership only after resampling",
+    "interval": "2.5/97.5 percentile; undefined statistic draws excluded and counted",
+    "statistics": [
+      "mean_absolute_error_difference",
+      "hedge_error_sd_difference",
+      "hedge_error_rmse_difference",
+      "cvar95_difference",
+      "mean_trading_cost_difference",
+      "mean_turnover_difference"
+    ],
+    "references": [
+      "unhedged",
+      "delta",
+      "gaussian"
+    ]
+  },
+  "populations": [
+    "each policy completed separately",
+    "allfive common completed main operational comparison",
+    "original frozen common62 old and updated on identical IDs where available",
+    "common completed AND sufficient history sensitivity"
+  ],
+  "sufficient_history": "All20 pre-expiry scheduled closes have released complete21observation conditioning and valid joint IV; determined from input availability only, never P&L or status",
+  "decisions": "21scheduled close reviews including terminal unwind; actual callbacks and unavailable/notreached scheduled reviews recorded separately; open no_decision callbacks not counted as missed scheduled reviews",
+  "representative": "Original first scheduled episode2020-01-02",
+  "interpretation": "Exploratory retrospective inference; dependent episodes and smalltails; intervals containingzero not equivalence; no model/alpha selection"
+}

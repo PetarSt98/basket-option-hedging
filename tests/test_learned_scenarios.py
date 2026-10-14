@@ -119,7 +119,8 @@ def test_existing_policy_passes_exact_repriced_arrays_and_actual_holdings_to_opt
         assert previous == [-10, 2, 1] and costs == [.02, .1, .2]
         assert settings["alpha"] == .1 and settings["gross_scale"] == 400
         return SimpleNamespace(holdings=np.array([4., 5., 6.]), intercept=1234., mse=0., penalty=0.,
-                               objective=0., iterations=1, kkt_residual=0.)
+                               objective=0., iterations=1, kkt_residual=0.,
+                               polish_attempted=False, polish_succeeded=False)
 
     monkeypatch.setattr("basket_hedging.scenario_hedge.solve_hedge", inspect)
     strategy = ScenarioHedge(source(), ("S1", "P", "C"), {"S1": .02, "P": .1, "C": .2}, alpha=.1)

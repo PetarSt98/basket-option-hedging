@@ -211,7 +211,7 @@ class BasketValuator:
                 change = direction * coefficient * bump * growth[:, index]
                 plus = np.maximum(intrinsic + change, 0.0)
                 minus = np.maximum(intrinsic - change, 0.0)
-                result[key] = discount * float(np.mean(plus - minus)) / (2 * bump)
+                result[key] = float(discount * float(np.mean(plus - minus)) / (2 * bump))
         return value, result
 
     def packet(self, time: datetime, spots: Mapping[str, float], instruments: Mapping[str, Instrument],

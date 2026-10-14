@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "policy": "unhedged",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 10000,
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "equity": 9944.618728155023,
+      "marked_pnl": -55.381271844977164,
+      "terminal_pnl": -55.381271844977164,
+      "premium_retention_ratio": -0.29476148316254114,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\summary.json"
+    },
+    {
+      "policy": "delta",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 10000,
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "equity": 9855.399476999482,
+      "marked_pnl": -144.60052300051757,
+      "terminal_pnl": -144.60052300051757,
+      "premium_retention_ratio": -0.769622350765449,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\summary.json"
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2026-02-03T09:00:00+00:00",
+    "sequence": 41,
+    "event_id": "synthetic/41",
+    "phase": "pretrade",
+    "policies": {
+      "unhedged": {
+        "equity": 9944.618728155023,
+        "net_pnl": -55.381271844977164,
+        "pnl_components": {
+          "net_pnl": -55.381271844977164,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": 0.0,
+          "execution_cost": 0.0,
+          "fees": 0.0,
+          "trading_costs": 0.0,
+          "interest": 7.290485640303076,
+          "borrow_charges": 0.0,
+          "financing_costs": -7.290485640303076,
+          "stock_turnover": 0.0,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": -5.9969806898152456e-12
+        }
+      },
+      "delta": {
+        "equity": 9856.899482620609,
+        "net_pnl": -143.10051737939102,
+        "pnl_components": {
+          "net_pnl": -143.10051737939102,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": -75.29327762343917,
+          "execution_cost": 4.561732449821186,
+          "fees": 2.9999999999999973,
+          "trading_costs": 7.561732449821183,
+          "interest": 7.44550274743467,
+          "borrow_charges": 5.019252568332148,
+          "financing_costs": -2.4262501791025217,
+          "stock_turnover": 23092.21363719577,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 4.106937012693379e-11
+        }
+      }
+    }
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "case_configuration",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.json",
+        "sha256": "edb4d7ef8b66ba4ea56a708b1b365a3537041980132ca692a0d47d2807a9cf3f"
+      },
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.jsonl",
+        "sha256": "e674981af350b2bbec1c8c84fa0b2f0f09e7bffb9d58e614e72380c3ccef6cef"
+      }
+    ],
+    "metadata": {
+      "source": "synthetic correlated GBM fixture v1; not historical market data",
+      "purpose": "mechanics only, no calibration or profitability claim",
+      "basket_kind": "put",
+      "replay_seed": 20260912,
+      "replay_rng": "NumPy PCG64",
+      "replay_drift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "replay_volatilities": [
+        0.2,
+        0.225,
+        0.25
+      ],
+      "replay_correlation": [
+        [
+          1.0,
+          0.35,
+          0.35
+        ],
+        [
+          0.35,
+          1.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.35,
+          1.0
+        ]
+      ],
+      "initial_spots": [
+        100.0,
+        80.0,
+        120.0
+      ],
+      "pricing_parameters": {
+        "stock_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "volatilities": [
+          0.2,
+          0.225,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.35,
+            0.35
+          ],
+          [
+            0.35,
+            1.0,
+            0.35
+          ],
+          [
+            0.35,
+            0.35,
+            1.0
+          ]
+        ],
+        "risk_free_rate": 0.01,
+        "available_at": "2026-01-05T16:00:00+00:00",
+        "pricing_seed": 731,
+        "samples": 8192,
+        "bump_relative": 0.0001
+      },
+      "stress_scenarios": [
+        {
+          "name": "unchanged",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_down_20pct",
+          "spot_multiplier": 0.8,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_up_20pct",
+          "spot_multiplier": 1.2,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "vol_up_25pct",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.25
+        }
+      ],
+      "margin_label": "uncalibrated research margin proxy",
+      "numpy_version": "2.3.1",
+      "calendar": "twenty toy business days by default; weekdays only, no holiday calendar",
+      "days": 20,
+      "execution_half_spread": 0.02,
+      "scenario_timing": "Next scheduled business-day close, declared in the current event; no future prices",
+      "funding": "declared toy cash 1%, collateral 0.5%, stock borrow 2%; no proceeds rebate"
+    },
+    "configuration": {
+      "instruments": {
+        "S1": {
+          "id": "S1",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S2": {
+          "id": "S2",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S3": {
+          "id": "S3",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "BASKET": {
+          "id": "BASKET",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100,
+          "strike": 100.0,
+          "expiry": "2026-02-02T16:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "S1",
+              0.3333333333333333
+            ],
+            [
+              "S2",
+              0.3333333333333333
+            ],
+            [
+              "S3",
+              0.3333333333333333
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 10000,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "BASKET",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2026-02-03T09:00:00+00:00",
+        "hedge_universe": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "safety_buffer": 50,
+        "funding": {
+          "cash_rate": 0.01,
+          "collateral_rate": 0.005,
+          "borrow_rates": {
+            "S1": 0.02,
+            "S2": 0.02,
+            "S3": 0.02
+          }
+        },
+        "borrow": {
+          "S1": {
+            "located": true,
+            "limit": 1000
+          },
+          "S2": {
+            "located": true,
+            "limit": 1000
+          },
+          "S3": {
+            "located": true,
+            "limit": 1000
+          }
+        },
+        "fee_per_order": 0.05,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {
+          "S1": 1000,
+          "S2": 1000,
+          "S3": 1000
+        },
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2026-01-05T16:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20pct",
+          "spot_up_20pct",
+          "vol_up_25pct"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "comparison_rule": "Compare the latest common valid pretrade checkpoint. Outcome marked P&L and completed horizon P&L are separate; unequal stopping times are not ranked."
+}

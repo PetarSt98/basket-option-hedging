@@ -1,0 +1,231 @@
+{
+  "label": "Frozen Gaussian reference: calendar-day scaling and carried-current IV",
+  "start": "2018-01-03",
+  "end": "2018-12-31",
+  "year": 2018,
+  "rows": 227,
+  "samples_per_condition": 256,
+  "seed": 1730,
+  "asset_ids": [
+    "SPY",
+    "QQQ",
+    "IWM"
+  ],
+  "energy_score": 0.01169366343192133,
+  "return_mean_forecast_rmse": [
+    0.010534754298364042,
+    0.013930483849243551,
+    0.011018697586582584
+  ],
+  "return_5_95_percentile_coverage": [
+    0.6916299559471366,
+    0.6828193832599119,
+    0.7797356828193832
+  ],
+  "return_interval_width_90": [
+    0.01689122856086835,
+    0.02494461747686043,
+    0.023592400309003364
+  ],
+  "return_interval_score_90": [
+    0.05896514441120463,
+    0.08007309692247917,
+    0.05700554253907153
+  ],
+  "mean_generated_return": [
+    0.00035836613525650905,
+    0.0007268445605125629,
+    0.00027889973795785914
+  ],
+  "observed_return_mean": [
+    -0.00016753304389932635,
+    3.713847888206586e-05,
+    -0.00030867121972570627
+  ],
+  "conditional_return_mean_std": [
+    0.0008024741782339768,
+    0.001000539394426125,
+    0.0008058133743691937
+  ],
+  "mean_generated_return_std": [
+    0.005190851127432576,
+    0.007689067244809653,
+    0.0072596446701873015
+  ],
+  "observed_return_std": [
+    0.010472791677072161,
+    0.013828602239659845,
+    0.010867278961803518
+  ],
+  "mean_generated_return_covariance": [
+    [
+      2.9110901007528465e-05,
+      2.8034128592026668e-05,
+      2.2950275472233165e-05
+    ],
+    [
+      2.8034128592026668e-05,
+      6.320694766359905e-05,
+      2.5272591731027727e-05
+    ],
+    [
+      2.2950275472233165e-05,
+      2.5272591731027727e-05,
+      5.5464759002822916e-05
+    ]
+  ],
+  "covariance_of_conditional_means": [
+    [
+      6.411279573634311e-07,
+      4.763375280812768e-07,
+      1.8269870480546578e-07
+    ],
+    [
+      4.763375280812768e-07,
+      9.96669039799484e-07,
+      1.7706828834924597e-07
+    ],
+    [
+      1.8269870480546578e-07,
+      1.7706828834924597e-07,
+      6.464746868483355e-07
+    ]
+  ],
+  "generated_mixture_covariance": [
+    [
+      2.9638314507831236e-05,
+      2.840095780529534e-05,
+      2.3043324663475218e-05
+    ],
+    [
+      2.840095780529534e-05,
+      6.39567145640876e-05,
+      2.5350938957927648e-05
+    ],
+    [
+      2.3043324663475218e-05,
+      2.5350938957927648e-05,
+      5.5894574474816476e-05
+    ]
+  ],
+  "observed_return_covariance": [
+    [
+      0.00010967936551135194,
+      0.0001364434950670909,
+      0.00010071340949184496
+    ],
+    [
+      0.0001364434950670909,
+      0.0001912302399027254,
+      0.00012693786704346356
+    ],
+    [
+      0.00010071340949184496,
+      0.00012693786704346356,
+      0.00011809775203365737
+    ]
+  ],
+  "generated_pairwise_correlations": {
+    "SPY/QQQ": {
+      "quantiles_05_50_95": [
+        0.3358515338344514,
+        0.6258109813127404,
+        0.8605314003631995
+      ],
+      "undefined_states": 0
+    },
+    "SPY/IWM": {
+      "quantiles_05_50_95": [
+        0.3371110645271478,
+        0.5589122770633677,
+        0.7549112580347541
+      ],
+      "undefined_states": 0
+    },
+    "QQQ/IWM": {
+      "quantiles_05_50_95": [
+        0.05048760569543699,
+        0.4279454521622355,
+        0.6815864978806949
+      ],
+      "undefined_states": 0
+    }
+  },
+  "spread_qqq_minus_iwm": {
+    "observed_mean": 0.00034580969860777215,
+    "observed_std": 0.007446627280148754,
+    "generated_mean": 0.0004479448225547039,
+    "conditional_mean_std": 0.0011378535588595225,
+    "mean_conditional_std": 0.008013318275352836,
+    "coverage_90": 0.8810572687224669,
+    "interval_width_90": 0.026020067913632792,
+    "interval_score_90": 0.03443475789600616
+  },
+  "log_iv_mean_forecast_rmse": [
+    0.0768564035176863,
+    0.06910219908701298,
+    0.07168676872482976
+  ],
+  "surface_changes": {
+    "generated_mean": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_conditional_std": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "conditional_mean_std": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "observed_mean": [
+      0.0024656326650706302,
+      0.0023601845191127007,
+      0.0016927159389735122
+    ],
+    "observed_std": [
+      0.06612000903751074,
+      0.05794628372299657,
+      0.052805978852425224
+    ],
+    "return_mean_log_iv_change_correlations": [
+      {
+        "quantiles_05_50_95": [
+          null,
+          null,
+          null
+        ],
+        "undefined_states": 227
+      },
+      {
+        "quantiles_05_50_95": [
+          null,
+          null,
+          null
+        ],
+        "undefined_states": 227
+      },
+      {
+        "quantiles_05_50_95": [
+          null,
+          null,
+          null
+        ],
+        "undefined_states": 227
+      }
+    ]
+  },
+  "definitions": {
+    "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+    "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+    "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+    "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+    "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+  },
+  "checkpoint_selection": "fixed final training epoch",
+  "selection_caveat": "Original Gaussian checkpoint was selected using combined 2018-2019 validation."
+}

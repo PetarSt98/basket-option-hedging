@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "policy": "volgan",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2023-03-06T14:30:00+00:00",
+      "equity": 99802.12380651335,
+      "marked_pnl": -197.87619348664884,
+      "terminal_pnl": -197.87619348664884,
+      "premium_retention_ratio": -0.2584953636554879,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\summary.json"
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2023-03-06T14:30:00+00:00",
+    "sequence": 0,
+    "event_id": "2023-03-06/open",
+    "phase": "pretrade",
+    "policies": {
+      "volgan": {
+        "equity": 99814.84761624246,
+        "net_pnl": -185.15238375753688,
+        "pnl_components": {
+          "net_pnl": -185.15238375753688,
+          "liability_pnl": -266.7183304773142,
+          "hedge_pnl": 118.48448355923398,
+          "execution_cost": 18.754263605999313,
+          "fees": 0.0,
+          "trading_costs": 18.754263605999313,
+          "interest": 0.0,
+          "borrow_charges": 18.164273233489446,
+          "financing_costs": 18.164273233489446,
+          "stock_turnover": 37495.744160030496,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 3.211653165635653e-11
+        }
+      }
+    }
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\events.jsonl",
+        "sha256": "c8ead5422d70ba489354f1ecf6552b3a5c56f9710a58f808cf287f386df8200c"
+      }
+    ],
+    "metadata": {
+      "label": "Solver-polish validation; frozen experiment settings",
+      "original_benchmark": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark",
+      "episode": "2023-02-02"
+    },
+    "configuration": {
+      "instruments": {
+        "SPY": {
+          "id": "SPY",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "QQQ": {
+          "id": "QQQ",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "IWM": {
+          "id": "IWM",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "B": {
+          "id": "B",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100.0,
+          "strike": 300.0,
+          "expiry": "2023-03-03T21:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "SPY",
+              0.23993473775133164
+            ],
+            [
+              "QQQ",
+              0.32080071859360965
+            ],
+            [
+              "IWM",
+              0.5042355788624445
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 100000.0,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "B",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2023-03-06T14:30:00+00:00",
+        "hedge_universe": [
+          "SPY",
+          "QQQ",
+          "IWM"
+        ],
+        "safety_buffer": 1000.0,
+        "funding": {
+          "cash_rate": 0.0,
+          "collateral_rate": 0.0,
+          "borrow_rates": {
+            "SPY": 0.01,
+            "QQQ": 0.01,
+            "IWM": 0.01
+          }
+        },
+        "borrow": {
+          "SPY": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "QQQ": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "IWM": {
+            "located": true,
+            "limit": 10000.0
+          }
+        },
+        "fee_per_order": 0.0,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {},
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2023-02-02T21:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20",
+          "spot_up_20",
+          "vol_up_25"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "comparison_rule": "Compare the latest common valid pretrade checkpoint. Outcome marked P&L and completed horizon P&L are separate; unequal stopping times are not ranked."
+}

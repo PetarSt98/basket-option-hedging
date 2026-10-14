@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-10-04T15:20:06.538302+00:00",
+  "files_checked": 360,
+  "unchanged_files": 357,
+  "unexpected_changes": [],
+  "reporting_source_changes": [
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical.py",
+      "before_sha256": "d24a2aaa4d01909d181e31dff41b67bc5933def3ba875d9c46ba5644393a5472",
+      "after_sha256": "3d5be222acc36e136ff0c6e50d028fcf8c47df7e95bb1523d00aecabd96a5f27",
+      "allowed_reporting_change": true
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_plots.py",
+      "before_sha256": "0fc6265c7f16862646062271a773295481c27c17de955a24cfb9f922b8628cde",
+      "after_sha256": "7fed2e5db44198f0ce16b2c9bfa93ccbbafc05fdbc7ea1baf6e6de80a4a8f9ce",
+      "allowed_reporting_change": true
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_report.py",
+      "before_sha256": "c5b20003449cb6c824329d71bc1da13cf3514138b31a3f215eed6a26bc9ef716",
+      "after_sha256": "cbfc748118e2f09c5ee767b6c702731ccdacd5bd2be14bfc99b85140f6385b13",
+      "allowed_reporting_change": true
+    }
+  ],
+  "original_data_checkpoints_reports_preserved": true,
+  "plan_sha256": "54c2fdd5faafad4adb56372936fe425acdda468aa8b82424696585d2e2c0230c",
+  "source_hashes": {
+    "api.py": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+    "cli.py": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+    "contracts.py": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+    "corporate_actions.py": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+    "deterministic.py": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+    "engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "etf_data.py": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+    "generator_validation.py": "bfbb96e07b7bfff2d06cfe894199690a5bbd1a5fc5b80c45df3dbd3ca2a0e16c",
+    "historical.py": "3d5be222acc36e136ff0c6e50d028fcf8c47df7e95bb1523d00aecabd96a5f27",
+    "historical_actions.py": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+    "historical_cli.py": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+    "historical_hedge.py": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+    "historical_plots.py": "7fed2e5db44198f0ce16b2c9bfa93ccbbafc05fdbc7ea1baf6e6de80a4a8f9ce",
+    "historical_report.py": "cbfc748118e2f09c5ee767b6c702731ccdacd5bd2be14bfc99b85140f6385b13",
+    "historical_training.py": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+    "learned_model.py": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+    "learned_scenarios.py": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+    "learning_data.py": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+    "ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "optimization.py": "801d57194bbe5724646d9ecd30ac76baff2b7291d9423d97fba47167b60a8348",
+    "orders.py": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+    "policies.py": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+    "replay.py": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+    "reporting.py": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+    "risk.py": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+    "scenarios.py": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+    "scenario_comparison.py": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+    "scenario_hedge.py": "03a69b36d54a7cc3733b47126b29ada29fdf9fa11addf639073be75e1dc16e4b",
+    "stage2.py": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+    "surfaces.py": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+    "synthetic.py": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+    "valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "volgan.py": "5dfc35f89dd24067a2608633cbc23b769dca3b8233f7c14d5c25643ba7ab1115",
+    "__init__.py": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+    "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  "environment": {
+    "python": "3.13.3",
+    "numpy": "2.3.1",
+    "torch": "2.12.1+cpu"
+  }
+}

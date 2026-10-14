@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "policy": "unhedged",
+  "status": "STOP_WITH_BREACH",
+  "reason": "actual account infeasible at pretrade",
+  "currency": "USD",
+  "opening_mode": "ORIGINATE",
+  "pnl_baseline": 1000,
+  "horizon": "2026-01-08T09:00:00+00:00",
+  "margin_label": "uncalibrated research margin proxy",
+  "current": {
+    "as_of": "2026-01-06T09:00:00+00:00",
+    "event_id": "hand/1",
+    "valuation_valid": true,
+    "equity": 600.0,
+    "marked_pnl": -400.0,
+    "pnl_components": {
+      "net_pnl": -400.0,
+      "liability_pnl": -400.0,
+      "hedge_pnl": 0.0,
+      "execution_cost": 0.0,
+      "fees": 0.0,
+      "trading_costs": 0.0,
+      "interest": 0.0,
+      "borrow_charges": 0.0,
+      "financing_costs": 0.0,
+      "stock_turnover": 0.0,
+      "option_premium_turnover": 0.0,
+      "reconciliation_error": 0.0
+    },
+    "total_cash": 1200.0,
+    "posted_margin_cash": 400,
+    "restricted_stock_short_proceeds": 0,
+    "available_cash": 800.0,
+    "required_margin": 800,
+    "risk": {
+      "equity": 600.0,
+      "cash": 1200.0,
+      "posted_margin_cash": 400,
+      "restricted_short_proceeds": 0,
+      "available_cash": 800.0,
+      "eligible_cash_capacity": 1200.0,
+      "required_margin": 800,
+      "safety_buffer": 50,
+      "margin_equity_shortfall": 200.0,
+      "margin_cash_shortfall": 0.0,
+      "buffer_equity_shortfall": 50.0,
+      "buffer_cash_shortfall": 0.0,
+      "equity_requirement_shortfall": 250.0,
+      "cash_requirement_shortfall": 0.0,
+      "available_cash_deficit": 0.0,
+      "equity_deficit": 0.0,
+      "unencumbered_cash_deficit": 0.0,
+      "borrow_failures": [],
+      "maximum_shortfall": 250.0,
+      "feasible": false,
+      "position_failures": [],
+      "cash_requirement_shortfall_lower_bound": 0.0
+    },
+    "residual_delta": {
+      "S1": 10.0,
+      "S2": 10.0,
+      "S3": 10.0
+    }
+  },
+  "last_valid_checkpoint": {
+    "event_id": "hand/1",
+    "time": "2026-01-06T09:00:00+00:00",
+    "sequence": 1,
+    "phase": "pretrade",
+    "equity": 600.0,
+    "marked_pnl": -400.0,
+    "pnl_components": {
+      "net_pnl": -400.0,
+      "liability_pnl": -400.0,
+      "hedge_pnl": 0.0,
+      "execution_cost": 0.0,
+      "fees": 0.0,
+      "trading_costs": 0.0,
+      "interest": 0.0,
+      "borrow_charges": 0.0,
+      "financing_costs": 0.0,
+      "stock_turnover": 0.0,
+      "option_premium_turnover": 0.0,
+      "reconciliation_error": 0.0
+    },
+    "risk": {
+      "equity": 600.0,
+      "cash": 1200.0,
+      "posted_margin_cash": 400,
+      "restricted_short_proceeds": 0,
+      "available_cash": 800.0,
+      "eligible_cash_capacity": 1200.0,
+      "required_margin": 800,
+      "safety_buffer": 50,
+      "margin_equity_shortfall": 200.0,
+      "margin_cash_shortfall": 0.0,
+      "buffer_equity_shortfall": 50.0,
+      "buffer_cash_shortfall": 0.0,
+      "equity_requirement_shortfall": 250.0,
+      "cash_requirement_shortfall": 0.0,
+      "available_cash_deficit": 0.0,
+      "equity_deficit": 0.0,
+      "unencumbered_cash_deficit": 0.0,
+      "borrow_failures": [],
+      "maximum_shortfall": 250.0,
+      "feasible": false,
+      "position_failures": [],
+      "cash_requirement_shortfall_lower_bound": 0.0
+    },
+    "positions": {
+      "BASKET": -1
+    },
+    "residual_delta": {
+      "S1": 10.0,
+      "S2": 10.0,
+      "S3": 10.0
+    }
+  },
+  "terminal": null,
+  "original_gross_premium": 200,
+  "premium_normalization": "Completed economic P&L / known positive original gross premium; IMPORT premium is metadata only; ratio is not clamped.",
+  "costs": {
+    "execution_cost": 0.0,
+    "fees": 0.0,
+    "trading_costs": 0.0,
+    "interest": 0.0,
+    "borrow_charges": 0.0,
+    "financing_costs": 0.0
+  },
+  "accepted_hedge_fill_count": 0,
+  "turnover": {
+    "stock_currency_traded": 0.0,
+    "option_premium_currency_traded": 0.0,
+    "units": "Account currency; both trade sides counted; fees and liability origination/settlement excluded."
+  },
+  "usage": {
+    "minimum_total_cash": 1200.0,
+    "minimum_available_cash": 800.0,
+    "peak_posted_margin_cash": 400,
+    "peak_restricted_stock_short_proceeds": 0,
+    "peak_locked_cash": 400,
+    "peak_required_margin": 800,
+    "minimum_buffer_headroom_after_allocation": 750.0,
+    "observation_scope": "Released observations through this result's stopping time; mandatory-phase netting is respected."
+  },
+  "breaches": [
+    {
+      "event_id": "hand/1",
+      "time": "2026-01-06T09:00:00+00:00",
+      "phase": "pretrade",
+      "risk": {
+        "equity": 600.0,
+        "cash": 1200.0,
+        "posted_margin_cash": 400,
+        "restricted_short_proceeds": 0,
+        "available_cash": 800.0,
+        "eligible_cash_capacity": 1200.0,
+        "required_margin": 800,
+        "safety_buffer": 50,
+        "margin_equity_shortfall": 200.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 50.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 250.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 250.0,
+        "feasible": false,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "data_gap": false
+    }
+  ],
+  "max_observed_shortfall": 250.0,
+  "current_shortfall_unknown": false,
+  "max_known_unencumbered_cash_deficit": 0,
+  "settlements": [],
+  "remaining_obligations": [
+    {
+      "instrument_id": "BASKET",
+      "quantity": -1,
+      "multiplier": 100,
+      "expiry": "2026-01-07T16:00:00+00:00",
+      "settlement_status": "outstanding"
+    }
+  ],
+  "residual_inventory": [
+    {
+      "instrument_id": "BASKET",
+      "quantity": -1,
+      "quantity_unit": "contracts",
+      "multiplier": 100,
+      "current_unit_mark": 6,
+      "current_position_value": -600
+    }
+  ],
+  "rejections": [],
+  "decisions": [
+    {
+      "event_id": "hand/0",
+      "time": "2026-01-05T16:00:00+00:00",
+      "earliest_execution": "2026-01-06T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "targets",
+      "targets": {
+        "S1": 0.0,
+        "S2": 0.0,
+        "S3": 0.0
+      }
+    }
+  ],
+  "data_gaps": [],
+  "provenance": {
+    "files": [
+      {
+        "role": "case_configuration",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\deterministic_gap.json",
+        "sha256": "3948d02c8189be6cbe1a6847ef45e8c93937617b74197350838d536bcebf187a"
+      },
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\deterministic_gap.jsonl",
+        "sha256": "df8848f53bbd7298cf82e0923ece0e0cd8ddfdcd639480c986f76647e5f90ac5"
+      }
+    ],
+    "metadata": {
+      "source": "hand-authored deterministic fixture v1",
+      "kind": "gap",
+      "margin_label": "uncalibrated research margin proxy",
+      "stress": "unchanged; stocks +/-10%, option marks +/-2 floored at zero",
+      "purpose": "accounting and timing only; no profitability inference"
+    },
+    "configuration": {
+      "instruments": {
+        "S1": {
+          "id": "S1",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S2": {
+          "id": "S2",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S3": {
+          "id": "S3",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "BASKET": {
+          "id": "BASKET",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100,
+          "strike": 100,
+          "expiry": "2026-01-07T16:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "S1",
+              0.3333333333333333
+            ],
+            [
+              "S2",
+              0.3333333333333333
+            ],
+            [
+              "S3",
+              0.3333333333333333
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 1000,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "BASKET",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2026-01-08T09:00:00+00:00",
+        "hedge_universe": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "safety_buffer": 50,
+        "funding": {
+          "cash_rate": 0,
+          "collateral_rate": 0,
+          "borrow_rates": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        "borrow": {
+          "S1": {
+            "located": true,
+            "limit": 1000
+          },
+          "S2": {
+            "located": true,
+            "limit": 1000
+          },
+          "S3": {
+            "located": true,
+            "limit": 1000
+          }
+        },
+        "fee_per_order": 1,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {
+          "S1": 1000,
+          "S2": 1000,
+          "S3": 1000
+        },
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2026-01-05T16:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "toy_down",
+          "toy_up"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "valuation_configurations": {
+    "6cbbd4379870a0e3f3c079f6c1521cb8856a5937788edb1da5342ebe92fe5887": {
+      "model": "hand-authored ledger fixture"
+    }
+  },
+  "interpretation": "A single hand-authored or synthetic path validates mechanics; it does not establish profitability, tail protection or broker compliance."
+}

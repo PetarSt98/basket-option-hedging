@@ -1,0 +1,12 @@
+{
+  "status": "DEVELOPMENT_COMPLETE",
+  "seed": 1729,
+  "selected_epoch": 5000,
+  "selected_energy_score": 0.011764114499534553,
+  "selected_checkpoint_sha256": "a1bdb3aa45d04ce7678dc88fe9d6b6361cff7e997968845b9712d9018d51eb79",
+  "final_generator_sha256": "1712378f2eba7c08ce74d691a20e08273ceb41dfee591729b8a12edcd935cc36",
+  "final_discriminator_sha256": "3476ee7e6fb9627dbbb57f436a78f1c27423c85ce9f2052da8d608a8e34fdb6e",
+  "final_matches_original": true,
+  "checkpoint_count": 8,
+  "elapsed_seconds": 1168.7447720000055
+}

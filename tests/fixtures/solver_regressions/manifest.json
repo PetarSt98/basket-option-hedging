@@ -1,0 +1,119 @@
+{
+  "objective": "mean((delta_v - intercept - delta_h @ holdings)**2) + alpha*gross_scale*sum(cost_weights*abs(holdings-previous_holdings))",
+  "source": "Independent read-only historical VolGAN audit: historical-volgan-audit-lnphdcqq/solver; frozen reports/historical/benchmark/failed_runs.json",
+  "audit_method": "All 27 active-sign patterns, binary64 linear solves and independent 60-decimal-digit calculation of the same objective; original scenario arrays and rounded binary64 penalty weights retained.",
+  "cases": [
+    {
+      "episode": "2022-06-02",
+      "file": "2022-06-02_regression.npz",
+      "sha256": "3ff555b5a892dec188d8056fd37be8f472380b087f1f4172341d0baa622d1899",
+      "decision_time": "2022-06-09T20:00:00+00:00",
+      "scenario_seed": 178638222542869411128357876230345481241,
+      "hedge_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "kwargs": {
+        "alpha": 0.1,
+        "gross_scale": 900.1608898737626,
+        "tolerance": 1e-09,
+        "max_iterations": 20000
+      },
+      "original_iterations": 20000,
+      "original_kkt_residual": 1.5604606627775405e-08,
+      "reference_objective": "562.598157744481042187992002979419314220752573775253840093713",
+      "reference_changes": [
+        "0.0",
+        "-10.1247989773332502057446487371528033441184503671918488932298",
+        "-9.38654441585847834732676496718543925667081767037346850957948"
+      ],
+      "reference_scaled_kkt": 4.0914548863669766e-16,
+      "gram_condition": 20863.430320832183
+    },
+    {
+      "episode": "2022-09-01",
+      "file": "2022-09-01_regression.npz",
+      "sha256": "6512b6c22f1fd07d6a8921a4960bb9b30cf25d8e17da565f68ed23c31f6a4984",
+      "decision_time": "2022-09-01T20:00:00+00:00",
+      "scenario_seed": 244603779318400891634461175201097293448,
+      "hedge_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "kwargs": {
+        "alpha": 0.1,
+        "gross_scale": 863.1105997361319,
+        "tolerance": 1e-09,
+        "max_iterations": 20000
+      },
+      "original_iterations": 20000,
+      "original_kkt_residual": 4.725150301078445e-09,
+      "reference_objective": "1214.14156808244680995128988543028227011768420628193447652413",
+      "reference_changes": [
+        "0.0",
+        "-2.60698671212540522102352829995080680848666641968906775866327",
+        "-103.750249994047057405871138202669983232752161742490418354436"
+      ],
+      "reference_scaled_kkt": 5.937403104393458e-16,
+      "gram_condition": 15597.305481221687
+    },
+    {
+      "episode": "2022-12-01",
+      "file": "2022-12-01_regression.npz",
+      "sha256": "71ba190ddbc42e0e9392cdc28d02bc6ca75aeb896d42547478c34d2408201a38",
+      "decision_time": "2022-12-02T21:00:00+00:00",
+      "scenario_seed": 270112568271681844080323616809742376194,
+      "hedge_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "kwargs": {
+        "alpha": 0.1,
+        "gross_scale": 754.4907308997147,
+        "tolerance": 1e-09,
+        "max_iterations": 20000
+      },
+      "original_iterations": 20000,
+      "original_kkt_residual": 1.9445781939488943e-08,
+      "reference_objective": "237.717193363378001555378352438770484548378047821469040846818",
+      "reference_changes": [
+        "0.0",
+        "-1.3293670826906428108204909989560020941130819808681447733321",
+        "-6.00581585517936354304440377889065548676989004607728052498441"
+      ],
+      "reference_scaled_kkt": 2.456132735286226e-16,
+      "gram_condition": 15819.34900889474
+    },
+    {
+      "episode": "2023-02-02",
+      "file": "2023-02-02_regression.npz",
+      "sha256": "550681242a6f1733a6369387e874efada6d518f7fd0e6eed411fde6986b79163",
+      "decision_time": "2023-02-06T21:00:00+00:00",
+      "scenario_seed": 339109776259740233459528966153210931231,
+      "hedge_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "kwargs": {
+        "alpha": 0.1,
+        "gross_scale": 765.4922343225086,
+        "tolerance": 1e-09,
+        "max_iterations": 20000
+      },
+      "original_iterations": 20000,
+      "original_kkt_residual": 1.0757443896014757e-09,
+      "reference_objective": "314.988188939965292667797615960930545740437456879746137807138",
+      "reference_changes": [
+        "0.0",
+        "-4.21686157156860929237202104514881559605045919831046498708152",
+        "-10.084276790498293984315087201937140214632541976252112729447"
+      ],
+      "reference_scaled_kkt": 1.0983926190769207e-16,
+      "gram_condition": 13593.734929573606
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "policy": "volgan",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2022-10-03T13:30:00+00:00",
+      "equity": 99617.50596724448,
+      "marked_pnl": -382.4940327555232,
+      "terminal_pnl": -382.4940327555232,
+      "premium_retention_ratio": -0.4431576125614242,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\summary.json"
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2022-10-03T13:30:00+00:00",
+    "sequence": 0,
+    "event_id": "2022-10-03/open",
+    "phase": "pretrade",
+    "policies": {
+      "volgan": {
+        "equity": 99631.6914808056,
+        "net_pnl": -368.3085191943974,
+        "pnl_components": {
+          "net_pnl": -368.3085191943974,
+          "liability_pnl": -2113.727556974362,
+          "hedge_pnl": 1795.8046228731178,
+          "execution_cost": 30.951466164671842,
+          "fees": 0.0,
+          "trading_costs": 30.951466164671842,
+          "interest": 0.0,
+          "borrow_charges": 19.43411892851318,
+          "financing_costs": 19.43411892851318,
+          "stock_turnover": 61887.79727334784,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 3.183231456205249e-11
+        }
+      }
+    }
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\events.jsonl",
+        "sha256": "ba119c6ba14ce8451ba655c28b2f460fa2cfda090d761b8c985eded36d6ea619"
+      }
+    ],
+    "metadata": {
+      "label": "Solver-polish validation; frozen experiment settings",
+      "original_benchmark": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark",
+      "episode": "2022-09-01"
+    },
+    "configuration": {
+      "instruments": {
+        "SPY": {
+          "id": "SPY",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "QQQ": {
+          "id": "QQQ",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "IWM": {
+          "id": "IWM",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "B": {
+          "id": "B",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100.0,
+          "strike": 300.0,
+          "expiry": "2022-09-30T20:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "SPY",
+              0.2522577064729327
+            ],
+            [
+              "QQQ",
+              0.33400133600534404
+            ],
+            [
+              "IWM",
+              0.5509641873278237
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 100000.0,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "B",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2022-10-03T13:30:00+00:00",
+        "hedge_universe": [
+          "SPY",
+          "QQQ",
+          "IWM"
+        ],
+        "safety_buffer": 1000.0,
+        "funding": {
+          "cash_rate": 0.0,
+          "collateral_rate": 0.0,
+          "borrow_rates": {
+            "SPY": 0.01,
+            "QQQ": 0.01,
+            "IWM": 0.01
+          }
+        },
+        "borrow": {
+          "SPY": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "QQQ": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "IWM": {
+            "located": true,
+            "limit": 10000.0
+          }
+        },
+        "fee_per_order": 0.0,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {},
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2022-09-01T20:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20",
+          "spot_up_20",
+          "vol_up_25"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "comparison_rule": "Compare the latest common valid pretrade checkpoint. Outcome marked P&L and completed horizon P&L are separate; unequal stopping times are not ranked."
+}

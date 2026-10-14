@@ -1,0 +1,1978 @@
+[
+  {
+    "seed": 1731,
+    "epoch": 100,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": true,
+      "log_iv_mean_forecast_rmse": true,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.01731335275627409,
+      "return_mean_forecast_rmse": [
+        0.010611059148169857,
+        0.015768040817215886,
+        0.010841255899130944
+      ],
+      "return_5_95_percentile_coverage": [
+        0.0,
+        0.0,
+        0.004405286343612335
+      ],
+      "return_interval_width_90": [
+        4.756687378308279e-05,
+        8.279091231731875e-05,
+        6.786565803219156e-05
+      ],
+      "return_interval_score_90": [
+        0.14976923076418344,
+        0.22953215344075056,
+        0.1563100129356355
+      ],
+      "mean_generated_return": [
+        -0.0019874889795487407,
+        0.00765551735525411,
+        -0.00031383063182591263
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.0001445481003653735,
+        0.0002739348615268526,
+        0.00015471613011383214
+      ],
+      "mean_generated_return_std": [
+        1.4660247922257333e-05,
+        2.5371182701176587e-05,
+        2.090336909818366e-05
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          2.1654200339754474e-10,
+          -7.377285822848241e-11,
+          -8.987663007437977e-11
+        ],
+        [
+          -7.377285822848241e-11,
+          6.485981546723772e-10,
+          2.957610709563532e-10
+        ],
+        [
+          -8.987663007437977e-11,
+          2.957610709563532e-10,
+          4.38706187248729e-10
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          2.0802108590959506e-08,
+          -3.561299241508994e-08,
+          -9.392835031250173e-09
+        ],
+        [
+          -3.561299241508994e-08,
+          7.47097343140983e-08,
+          9.281129390746753e-09
+        ],
+        [
+          -9.392835031250173e-09,
+          9.281129390746753e-09,
+          2.383163122172888e-08
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          2.101780472715628e-08,
+          -3.5686477098090964e-08,
+          -9.482360580738324e-09
+        ],
+        [
+          -3.5686477098090964e-08,
+          7.535579888222899e-08,
+          9.575735145019683e-09
+        ],
+        [
+          -9.482360580738324e-09,
+          9.575735145019683e-09,
+          2.4268623712933668e-08
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            -0.31672243115864424,
+            -0.20581456122953173,
+            -0.08229881585331493
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            -0.39791361821142657,
+            -0.2927513853995234,
+            -0.18452696998104265
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            0.4742629052034242,
+            0.5628800473950859,
+            0.6188240795069487
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": 0.007969347987080029,
+        "conditional_mean_std": 0.0002834307615754315,
+        "mean_conditional_std": 2.2229340675023375e-05,
+        "coverage_90": 0.0,
+        "interval_width_90": 7.234708586980832e-05,
+        "interval_score_90": 0.172417214204466
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.08122253680745088,
+        0.07446948667958848,
+        0.07639983024934414
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.021189561677847066,
+          0.02012403434479389,
+          0.018956651483785038
+        ],
+        "mean_conditional_std": [
+          3.454279837150097e-05,
+          4.23628824263182e-05,
+          4.352338181948423e-05
+        ],
+        "conditional_mean_std": [
+          0.00035744626041831124,
+          0.0002629402533691942,
+          0.00029755251227357016
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.47121959145134595,
+              -0.3579304811812851,
+              -0.11179089860451877
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9293873083140587,
+              -0.9061175933679375,
+              -0.8421391293776826
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              0.3104525585333054,
+              0.4261139304057695,
+              0.5161467163784665
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "1bb87c51f14facc4b558ae74c2813153b41928f7fc053a41b7f77f539d1c72f5",
+    "discriminator_sha256": "bf79e590690c6feace531d7c4d1cda09c770a0559523d36d49d95e4b737b3cc0",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 250,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": false,
+      "log_iv_mean_forecast_rmse": false,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.09408529403385417,
+      "return_mean_forecast_rmse": [
+        0.0647180743342913,
+        0.02954004618356323,
+        0.0627356439930145
+      ],
+      "return_5_95_percentile_coverage": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "return_interval_width_90": [
+        0.0009162785055945615,
+        0.0005019108006541616,
+        0.0002581378658677461
+      ],
+      "return_interval_score_90": [
+        1.2671258025425247,
+        0.5293003388144889,
+        1.2313564832519692
+      ],
+      "mean_generated_return": [
+        -0.06392943947794612,
+        0.026090005183369052,
+        -0.061993079041976734
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.003724677485387693,
+        0.001907545637727736,
+        0.0038219330397957843
+      ],
+      "mean_generated_return_std": [
+        0.0002824409388755445,
+        0.00015411290333958372,
+        7.942218309602705e-05
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          7.997207498947389e-08,
+          -3.025054805142113e-08,
+          5.133149978398003e-09
+        ],
+        [
+          -3.025054805142113e-08,
+          2.3840207768591744e-08,
+          -2.994613286719089e-09
+        ],
+        [
+          5.133149978398003e-09,
+          -2.994613286719089e-09,
+          6.321089566862406e-09
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          1.381210685310485e-05,
+          -6.705129224924921e-06,
+          1.4124346948113923e-05
+        ],
+        [
+          -6.705129224924921e-06,
+          3.6227007108510584e-06,
+          -6.9056515804687895e-06
+        ],
+        [
+          1.4124346948113923e-05,
+          -6.9056515804687895e-06,
+          1.4542823384644392e-05
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          1.3891766537176396e-05,
+          -6.735261606773016e-06,
+          1.4129460046725217e-05
+        ],
+        [
+          -6.735261606773016e-06,
+          3.646447792808054e-06,
+          -6.908634496047358e-06
+        ],
+        [
+          1.4129460046725217e-05,
+          -6.908634496047358e-06,
+          1.4549119782455135e-05
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            -0.746036387655481,
+            -0.6931341148818213,
+            -0.6307961960686133
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.13970875546765182,
+            0.22476072545200704,
+            0.33010845772532776
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            -0.3480431969977808,
+            -0.2466468380930237,
+            -0.14487851959405784
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": 0.08808308422534579,
+        "conditional_mean_std": 0.005667302501413125,
+        "mean_conditional_std": 0.00018987092015020548,
+        "coverage_90": 0.0,
+        "interval_width_90": 0.0006192791583487693,
+        "interval_score_90": 1.7491834401051136
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.1908287876437421,
+        0.20258917484567865,
+        0.2203584060871104
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.013204694630636145,
+          -0.003646280003253924,
+          -0.018471618692923977
+        ],
+        "mean_conditional_std": [
+          0.0005490569603020236,
+          0.0004518266346192192,
+          0.0003166254715686037
+        ],
+        "conditional_mean_std": [
+          0.0020914643126013215,
+          0.0033331132958629027,
+          0.004867850915779966
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.7994873422136886,
+              -0.7527871114190767,
+              -0.6960542051751447
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.7978062730043411,
+              -0.6800749421106272,
+              -0.5822456509914749
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              0.3165200661792279,
+              0.40830566699714493,
+              0.5002106056207075
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "95f8175f5afa9c660ddfed9bd612de463e852d70e0a41469c7a4678570bb255c",
+    "discriminator_sha256": "11c4167f65f93db4fae6efef4a010da6c58c015f4a43b33ae919f26addc5eb66",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 500,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": true,
+      "log_iv_mean_forecast_rmse": true,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.01848366321246008,
+      "return_mean_forecast_rmse": [
+        0.011969888008421942,
+        0.014107260087617418,
+        0.013339411239342949
+      ],
+      "return_5_95_percentile_coverage": [
+        0.13215859030837004,
+        0.048458149779735685,
+        0.02643171806167401
+      ],
+      "return_interval_width_90": [
+        0.0022031014997670306,
+        0.0007620800230807802,
+        0.0012221509520841743
+      ],
+      "return_interval_score_90": [
+        0.1409640967353922,
+        0.1893105136964008,
+        0.21297395623810264
+      ],
+      "mean_generated_return": [
+        0.004605548154518575,
+        0.0030924618183053774,
+        -0.007823899207669033
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.003638965838994266,
+        0.0014597827819005503,
+        0.0018724177939722243
+      ],
+      "mean_generated_return_std": [
+        0.0006775048818162513,
+        0.00023447214143392382,
+        0.0003767237764328555
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          4.599617561745312e-07,
+          1.58289296663202e-07,
+          2.548390493036242e-07
+        ],
+        [
+          1.58289296663202e-07,
+          5.5100570740400784e-08,
+          8.747084689386e-08
+        ],
+        [
+          2.548390493036242e-07,
+          8.747084689386e-08,
+          1.423784352564296e-07
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          1.3183737256762105e-05,
+          5.108645720019829e-06,
+          6.6547721433172745e-06
+        ],
+        [
+          5.108645720019829e-06,
+          2.121578255926555e-06,
+          2.5088249128902394e-06
+        ],
+        [
+          6.6547721433172745e-06,
+          2.5088249128902394e-06,
+          3.4905036885970995e-06
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          1.364190228732658e-05,
+          5.2663166991179404e-06,
+          6.908615727584556e-06
+        ],
+        [
+          5.2663166991179404e-06,
+          2.1764635900625014e-06,
+          2.5959540767884205e-06
+        ],
+        [
+          6.908615727584556e-06,
+          2.5959540767884205e-06,
+          3.6323259580908086e-06
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            0.9931229752919379,
+            0.9944291677525351,
+            0.9955333001475457
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.9950140947876479,
+            0.9961700604396785,
+            0.9970007657038514
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            0.9853881141401447,
+            0.9882602521312192,
+            0.9908915370309618
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": 0.010916361025974415,
+        "conditional_mean_std": 0.0007726980971615523,
+        "mean_conditional_std": 0.00014945259333431604,
+        "coverage_90": 0.00881057268722467,
+        "interval_width_90": 0.0004863203888811173,
+        "interval_score_90": 0.2191551768542346
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.07777468033095006,
+        0.07007208141047339,
+        0.07177953426593285
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.0024487366542488586,
+          0.0020042094303641903,
+          0.000884152018861233
+        ],
+        "mean_conditional_std": [
+          0.002449173644109508,
+          0.002709788085603367,
+          0.0012636277484021994
+        ],
+        "conditional_mean_std": [
+          0.016666855100339193,
+          0.017805923891684367,
+          0.009709456569417269
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.9938562035456493,
+              -0.9923472947610948,
+              -0.9903128296451802
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9970773847470856,
+              -0.9963064876102317,
+              -0.9954731491697807
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9812189761579293,
+              -0.9767661529868371,
+              -0.9709958200465664
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "eace7bc32ab37c9a2d8735dce2590af7e02098d6c5802a04ea431e6349ea7abc",
+    "discriminator_sha256": "aa0533e50ca79b66a40a887199b0723e22363fc8033d8054130b95caceed0fd1",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 1000,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": false,
+      "log_iv_mean_forecast_rmse": false,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.021138258630691284,
+      "return_mean_forecast_rmse": [
+        0.011005538689974134,
+        0.014090433068668045,
+        0.017827657788461154
+      ],
+      "return_5_95_percentile_coverage": [
+        0.02643171806167401,
+        0.05726872246696035,
+        0.02643171806167401
+      ],
+      "return_interval_width_90": [
+        0.0010257009794119383,
+        0.0016850467355107558,
+        0.0024743777947651775
+      ],
+      "return_interval_score_90": [
+        0.15641618815188468,
+        0.18725003719822123,
+        0.2705861158055512
+      ],
+      "mean_generated_return": [
+        -0.003266065006265233,
+        -0.0015448570168495118,
+        0.013685908821495615
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.0015222582714505665,
+        0.0013646945120570507,
+        0.002593907204218363
+      ],
+      "mean_generated_return_std": [
+        0.00031609836616695896,
+        0.0005191004255632737,
+        0.0007598281020392943
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          1.0013507027398273e-07,
+          -8.88767978876826e-08,
+          1.7239088880777404e-07
+        ],
+        [
+          -8.88767978876826e-08,
+          2.703122699245174e-07,
+          -3.850935001116948e-07
+        ],
+        [
+          1.7239088880777404e-07,
+          -3.850935001116948e-07,
+          5.788847180100132e-07
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          2.3070620060349104e-06,
+          -1.0334227244793946e-06,
+          3.33674204390403e-06
+        ],
+        [
+          -1.0334227244793946e-06,
+          1.854186745109827e-06,
+          -3.09318965123647e-06
+        ],
+        [
+          3.33674204390403e-06,
+          -3.09318965123647e-06,
+          6.698714255531625e-06
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          2.4068059236906355e-06,
+          -1.1219523473753284e-06,
+          3.508459530802399e-06
+        ],
+        [
+          -1.1219523473753284e-06,
+          2.123443107729952e-06,
+          -3.4767788798633536e-06
+        ],
+        [
+          3.508459530802399e-06,
+          -3.4767788798633536e-06,
+          7.275337705111911e-06
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            -0.6069980476535862,
+            -0.5411346204739036,
+            -0.46122853751253917
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.6648369853788539,
+            0.7172502816257756,
+            0.7614962715865246
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            -0.9796670881957125,
+            -0.9742760109398831,
+            -0.9658994490048968
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": -0.015230765838345128,
+        "conditional_mean_std": 0.0038476614140998617,
+        "mean_conditional_std": 0.0012707630272819717,
+        "coverage_90": 0.04405286343612335,
+        "interval_width_90": 0.004139245239016731,
+        "interval_score_90": 0.2775183834140812
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.09835484399741418,
+        0.09570409086883974,
+        0.07969160890035326
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.005156246563420016,
+          0.03913711561284787,
+          -0.007902069674624111
+        ],
+        "mean_conditional_std": [
+          0.004800693769426965,
+          0.00263598439672919,
+          0.004153669889683383
+        ],
+        "conditional_mean_std": [
+          0.01376195492590515,
+          0.006934694222919403,
+          0.01275312489760003
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              0.5459635462151193,
+              0.6132382421319544,
+              0.6678512472284125
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.974866940533045,
+              -0.9681023049221852,
+              -0.9574787618008891
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              0.9961500506268599,
+              0.9969301994764138,
+              0.9975444528656435
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "49e42f94899d5a28a64c4177393faa75a5aabe30c04a3ed98e7ff5b76992ee6e",
+    "discriminator_sha256": "a34a57737e37c180443def8b74b8b1c277693250bf1d74aa206ff8ab5b5f6c62",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 2500,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": false,
+      "log_iv_mean_forecast_rmse": false,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 3.9476472973477037,
+      "return_mean_forecast_rmse": [
+        1.8464521596120398,
+        0.30316924292931335,
+        3.5174393671508093
+      ],
+      "return_5_95_percentile_coverage": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "return_interval_width_90": [
+        0.09595395226533847,
+        0.04230218069602767,
+        0.012325078398381916
+      ],
+      "return_interval_score_90": [
+        35.897938572353084,
+        5.653921313054337,
+        69.91571923647415
+      ],
+      "mean_generated_return": [
+        -1.838135474984952,
+        0.30176722721444454,
+        3.501101479801304
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.1770164279945976,
+        0.026146222531942535,
+        0.33569316486957257
+      ],
+      "mean_generated_return_std": [
+        0.029599812932670506,
+        0.01303759996887464,
+        0.003804335492577201
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          0.0008779695669335322,
+          0.00038542555416893866,
+          -7.20473454932677e-05
+        ],
+        [
+          0.00038542555416893866,
+          0.00017043754322588152,
+          -2.8958171218859884e-05
+        ],
+        [
+          -7.20473454932677e-05,
+          -2.8958171218859884e-05,
+          1.4534758048161823e-05
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          0.031196776943931463,
+          -0.004500561110078443,
+          -0.0591009184872496
+        ],
+        [
+          -0.004500561110078443,
+          0.0006806133890216217,
+          0.008609328657848171
+        ],
+        [
+          -0.0591009184872496,
+          0.008609328657848171,
+          0.11219346965847539
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          0.03207131694224416,
+          -0.004116641124480477,
+          -0.05917268439779953
+        ],
+        [
+          -0.004116641124480477,
+          0.0008503851605942772,
+          0.008580483604485635
+        ],
+        [
+          -0.05917268439779953,
+          0.008580483604485635,
+          0.11220794764012493
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            0.9959367310834862,
+            0.9967048878436812,
+            0.9973772562190503
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            -0.7289188102975273,
+            -0.6327113066503707,
+            -0.5478943218484248
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            -0.6834212984847662,
+            -0.578226088239333,
+            -0.48014895477948366
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": -3.1993342525868615,
+        "conditional_mean_std": 0.3099656107182845,
+        "mean_conditional_std": 0.015562444967467882,
+        "coverage_90": 0.0,
+        "interval_width_90": 0.05070294821243382,
+        "interval_score_90": 63.5323479539035
+      },
+      "log_iv_mean_forecast_rmse": [
+        30.13161174107712,
+        5.351160853936956,
+        6.772427558013423
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          23.969536883980055,
+          3.196551012056122,
+          5.162517891571998
+        ],
+        "mean_conditional_std": [
+          0.31836601146806714,
+          0.11758800670324938,
+          0.19833274854690255
+        ],
+        "conditional_mean_std": [
+          2.3029200585635974,
+          0.31396022722599365,
+          0.4921440845449467
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.9995103488931654,
+              -0.9993912968561018,
+              -0.9992546509860049
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9974619965275544,
+              -0.9968006093993927,
+              -0.9961147489519586
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              0.5655364374591382,
+              0.648474354481987,
+              0.7417444651426619
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "65fc74b4d1206ae2b2224a42f90c45858c4227094c38b25d9a78204b8798292f",
+    "discriminator_sha256": "4d79ed307490854d0bc1f5d8445860ee2e3b4a36160d22dad8dbe6af169ea7b6",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 5000,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": false,
+      "log_iv_mean_forecast_rmse": false,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.047251571797912485,
+      "return_mean_forecast_rmse": [
+        0.011454338165180322,
+        0.04692385099390439,
+        0.015920162873444995
+      ],
+      "return_5_95_percentile_coverage": [
+        0.17180616740088106,
+        0.0,
+        0.13215859030837004
+      ],
+      "return_interval_width_90": [
+        0.004389067336180538,
+        0.005144666617623859,
+        0.00873893121607358
+      ],
+      "return_interval_score_90": [
+        0.13181590121548498,
+        0.8509475319617634,
+        0.19834035221391277
+      ],
+      "mean_generated_return": [
+        -0.0015755698240161584,
+        0.04484345945993746,
+        -0.009212042648265565
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.005055482381363298,
+        0.004209238952920119,
+        0.007713129110315465
+      ],
+      "mean_generated_return_std": [
+        0.0013482927041285825,
+        0.0015808010160783801,
+        0.0026883030660374988
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          1.8216226165739145e-06,
+          2.1144206675059808e-06,
+          3.5196238860178497e-06
+        ],
+        [
+          2.1144206675059808e-06,
+          2.5040783695802198e-06,
+          4.188468160544891e-06
+        ],
+        [
+          3.5196238860178497e-06,
+          4.188468160544891e-06,
+          7.242321120921823e-06
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          2.5445312231145762e-05,
+          1.2815280092313492e-05,
+          3.5968618751126716e-05
+        ],
+        [
+          1.2815280092313492e-05,
+          1.7639641053692922e-05,
+          2.5416986134982722e-05
+        ],
+        [
+          3.5968618751126716e-05,
+          2.5416986134982722e-05,
+          5.9230279788376495e-05
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          2.7259819134373684e-05,
+          1.4921441304087028e-05,
+          3.947449410633981e-05
+        ],
+        [
+          1.4921441304087028e-05,
+          2.013393786714197e-05,
+          2.9589093091775483e-05
+        ],
+        [
+          3.947449410633981e-05,
+          2.9589093091775483e-05,
+          6.644431059241972e-05
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            0.9877369153537101,
+            0.9902356825805391,
+            0.9918722943928696
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.9623366614047173,
+            0.9690354323681795,
+            0.9747239846938652
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            0.9798350544172404,
+            0.9834209718607368,
+            0.986641435628373
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": 0.054055502108203014,
+        "conditional_mean_std": 0.0051138196961146255,
+        "mean_conditional_std": 0.0011689842106139357,
+        "coverage_90": 0.0,
+        "interval_width_90": 0.003810414132874767,
+        "interval_score_90": 1.0400217299978167
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.22643502961075374,
+        0.22004378603483682,
+        0.21904446489713955
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.04312695355271628,
+          -0.02754334813974296,
+          -0.08409372171011152
+        ],
+        "mean_conditional_std": [
+          0.006601041752622329,
+          0.0050513075192909675,
+          0.003914729182970876
+        ],
+        "conditional_mean_std": [
+          0.03618291250657046,
+          0.027536016968599492,
+          0.012086772910933232
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.9833487603237301,
+              -0.9796676986042963,
+              -0.9751912089797614
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9797349962671976,
+              -0.9751461920784246,
+              -0.9695030572646296
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.8942570759377267,
+              -0.8714764446995277,
+              -0.8433076602264972
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "82dfb1ac0e69f8b73e495fddee23c2b2d092263921ec63f16e82a1193f0febad",
+    "discriminator_sha256": "360251294c9c867e7e986fcb4af916513c45e5e1970bc8408eef7b867319da08",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 7500,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": false,
+      "log_iv_mean_forecast_rmse": false,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.02495659356061483,
+      "return_mean_forecast_rmse": [
+        0.023361872984806763,
+        0.017087763264042297,
+        0.013995340174996289
+      ],
+      "return_5_95_percentile_coverage": [
+        0.05286343612334802,
+        0.5418502202643172,
+        0.42731277533039647
+      ],
+      "return_interval_width_90": [
+        0.010436285884785783,
+        0.026157310476248044,
+        0.02015736182097741
+      ],
+      "return_interval_score_90": [
+        0.3431393939200795,
+        0.10853370670981145,
+        0.10033242967607595
+      ],
+      "mean_generated_return": [
+        -0.021003025112228634,
+        -0.009650002391568139,
+        -0.007656868167219546
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.0016081450735988122,
+        0.002226309005362205,
+        0.0055071937735288725
+      ],
+      "mean_generated_return_std": [
+        0.0032108645032889248,
+        0.008052652620807468,
+        0.006211858449667304
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          1.033272564126012e-05,
+          2.585696198176378e-05,
+          1.988599711786317e-05
+        ],
+        [
+          2.585696198176378e-05,
+          6.501628398643582e-05,
+          5.006801645501009e-05
+        ],
+        [
+          1.988599711786317e-05,
+          5.006801645501009e-05,
+          3.8694415739791144e-05
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          2.5747379320232113e-06,
+          -8.448406112577991e-07,
+          4.997947855076769e-06
+        ],
+        [
+          -8.448406112577991e-07,
+          4.934617197985234e-06,
+          -1.000710235992932e-05
+        ],
+        [
+          4.997947855076769e-06,
+          -1.000710235992932e-05,
+          3.019557452237054e-05
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          1.286710136374716e-05,
+          2.4911117612764718e-05,
+          2.4806265296698285e-05
+        ],
+        [
+          2.4911117612764718e-05,
+          6.969693132509904e-05,
+          3.986533590580339e-05
+        ],
+        [
+          2.4806265296698285e-05,
+          3.986533590580339e-05,
+          6.873884020067812e-05
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            0.997045946510675,
+            0.9977267141951549,
+            0.9982234541080379
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.9933878462926565,
+            0.994658049451692,
+            0.9955322173206015
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            0.9978313138607633,
+            0.9982284424363054,
+            0.9985195560101927
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": -0.0019931342243485793,
+        "conditional_mean_std": 0.0074423382209071,
+        "mean_conditional_std": 0.0018883723677506198,
+        "coverage_90": 0.29955947136563876,
+        "interval_width_90": 0.006137942986891309,
+        "interval_score_90": 0.10990431591759599
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.11389483384774884,
+        0.12403720897127088,
+        0.10493346758506261
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.04071838368875034,
+          0.05862126948996081,
+          0.04597224982829104
+        ],
+        "mean_conditional_std": [
+          0.024887164948890404,
+          0.02549304148745569,
+          0.029318270781001986
+        ],
+        "conditional_mean_std": [
+          0.007285040080530397,
+          0.013909818382912366,
+          0.014128082145372934
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.9990427938647921,
+              -0.9987909734131224,
+              -0.9984275612755624
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9987129337060059,
+              -0.9984351781950135,
+              -0.9980485335404204
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9991674292750221,
+              -0.9989837670801442,
+              -0.9987564642680657
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "6e166e3e88e547dec67cba19ba6397bdf991e690c2596a388b7e3a96321e2579",
+    "discriminator_sha256": "7bc33f9a2af6f237dae95a24de9ee45c6178b7adee8947befde9943e7ce22f4e",
+    "error": null
+  },
+  {
+    "seed": 1731,
+    "epoch": 10000,
+    "eligible": false,
+    "gates": {
+      "energy_score": false,
+      "mean_coverage_error": false,
+      "asset_coverage_errors": false,
+      "return_interval_score_90": false,
+      "return_mean_forecast_rmse": true,
+      "log_iv_mean_forecast_rmse": true,
+      "spread_interval_score": false
+    },
+    "diagnostics": {
+      "label": "frozen VolGAN validation diagnostics; not hedge performance or independent test paths",
+      "start": "2018-01-03",
+      "end": "2018-12-31",
+      "year": 2018,
+      "rows": 227,
+      "samples_per_condition": 256,
+      "seed": 1730,
+      "asset_ids": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "energy_score": 0.01577764836918603,
+      "return_mean_forecast_rmse": [
+        0.010903802186423884,
+        0.014958210773453454,
+        0.011849001141542805
+      ],
+      "return_5_95_percentile_coverage": [
+        0.08370044052863436,
+        0.1013215859030837,
+        0.1277533039647577
+      ],
+      "return_interval_width_90": [
+        0.0016834395161230207,
+        0.0024494683421178685,
+        0.0023291824149634143
+      ],
+      "return_interval_score_90": [
+        0.13815289034692543,
+        0.18759100360004793,
+        0.1500219254387746
+      ],
+      "mean_generated_return": [
+        -0.0005243448150553886,
+        0.0018835115337342428,
+        0.0010127957197650004
+      ],
+      "observed_return_mean": [
+        -0.00016753304389932635,
+        3.713847888206586e-05,
+        -0.00030867121972570627
+      ],
+      "conditional_return_mean_std": [
+        0.003639867519175773,
+        0.005705026065082428,
+        0.005220202886167786
+      ],
+      "mean_generated_return_std": [
+        0.0005159135814896647,
+        0.0007516258249702797,
+        0.0007144685901117123
+      ],
+      "observed_return_std": [
+        0.010472791677072161,
+        0.013828602239659845,
+        0.010867278961803518
+      ],
+      "mean_generated_return_covariance": [
+        [
+          2.699803531467297e-07,
+          3.925796478115088e-07,
+          3.703480365234271e-07
+        ],
+        [
+          3.925796478115088e-07,
+          5.762772189740313e-07,
+          5.448816042093347e-07
+        ],
+        [
+          3.703480365234271e-07,
+          5.448816042093347e-07,
+          5.250676118023992e-07
+        ]
+      ],
+      "covariance_of_conditional_means": [
+        [
+          1.3190271523859388e-05,
+          2.06053685692831e-05,
+          1.8691271544032266e-05
+        ],
+        [
+          2.06053685692831e-05,
+          3.240394212836563e-05,
+          2.9254755939319193e-05
+        ],
+        [
+          1.8691271544032266e-05,
+          2.9254755939319193e-05,
+          2.7130471837191676e-05
+        ]
+      ],
+      "generated_mixture_covariance": [
+        [
+          1.3459197266251639e-05,
+          2.0996414702845344e-05,
+          1.9060172908538023e-05
+        ],
+        [
+          2.0996414702845344e-05,
+          3.2977968264453045e-05,
+          2.9797509099762086e-05
+        ],
+        [
+          1.9060172908538023e-05,
+          2.9797509099762086e-05,
+          2.765348840363547e-05
+        ]
+      ],
+      "observed_return_covariance": [
+        [
+          0.00010967936551135194,
+          0.0001364434950670909,
+          0.00010071340949184496
+        ],
+        [
+          0.0001364434950670909,
+          0.0001912302399027254,
+          0.00012693786704346356
+        ],
+        [
+          0.00010071340949184496,
+          0.00012693786704346356,
+          0.00011809775203365737
+        ]
+      ],
+      "generated_pairwise_correlations": {
+        "SPY/QQQ": {
+          "quantiles_05_50_95": [
+            0.9937203563220186,
+            0.9960095394363958,
+            0.9969628633237547
+          ],
+          "undefined_states": 0
+        },
+        "SPY/IWM": {
+          "quantiles_05_50_95": [
+            0.9809501626696245,
+            0.9859726121264063,
+            0.9890520247519076
+          ],
+          "undefined_states": 0
+        },
+        "QQQ/IWM": {
+          "quantiles_05_50_95": [
+            0.9883660857928959,
+            0.9909681158343563,
+            0.9931150944454559
+          ],
+          "undefined_states": 0
+        }
+      },
+      "spread_qqq_minus_iwm": {
+        "observed_mean": 0.00034580969860777215,
+        "observed_std": 0.007446627280148754,
+        "generated_mean": 0.0008707158139692421,
+        "conditional_mean_std": 0.001014611773983178,
+        "mean_conditional_std": 0.00010672465067929085,
+        "coverage_90": 0.01762114537444934,
+        "interval_width_90": 0.00034781683425825734,
+        "interval_score_90": 0.11370410270334506
+      },
+      "log_iv_mean_forecast_rmse": [
+        0.08000464780161279,
+        0.07270660511226876,
+        0.07556025592326024
+      ],
+      "surface_changes": {
+        "generated_mean": [
+          0.0004597124769960945,
+          0.0011068093042835988,
+          -0.005164348729096049
+        ],
+        "mean_conditional_std": [
+          0.0028385857284843386,
+          0.002832600079537216,
+          0.0030036791987894298
+        ],
+        "conditional_mean_std": [
+          0.021401358672314526,
+          0.021006691374162917,
+          0.024238871216919956
+        ],
+        "observed_mean": [
+          0.0024656326650706302,
+          0.0023601845191127007,
+          0.0016927159389735122
+        ],
+        "observed_std": [
+          0.06612000903751074,
+          0.05794628372299657,
+          0.052805978852425224
+        ],
+        "return_mean_log_iv_change_correlations": [
+          {
+            "quantiles_05_50_95": [
+              -0.9991871739905118,
+              -0.9988000395175586,
+              -0.9965283996331947
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9964095262730032,
+              -0.995403295001396,
+              -0.9940855790694787
+            ],
+            "undefined_states": 0
+          },
+          {
+            "quantiles_05_50_95": [
+              -0.9963446339819584,
+              -0.9929674233562986,
+              -0.9895735495488818
+            ],
+            "undefined_states": 0
+          }
+        ]
+      },
+      "definitions": {
+        "energy_score": "Euclidean empirical joint energy score; lower is better, raw log-return units",
+        "interval_score_90": "width + 20 times distance outside the central 90% interval; lower is better",
+        "conditional_covariance": "average within-state sample covariance, not unconditional realized covariance",
+        "mixture_covariance": "within-state population covariance plus population covariance of conditional means",
+        "surface_changes": "per-asset grid-average log-IV changes; correlations computed within each state"
+      },
+      "checkpoint_selection": "scheduled snapshot"
+    },
+    "generator_sha256": "15fd9297dbaa5db1de04c6143b9f2b3ba7bdefcda0983746c70efab923d906c8",
+    "discriminator_sha256": "9c521d5da1f6ca177bf8a7aeb59b57dac7a91912bad51e862341c340aecac742",
+    "error": null
+  }
+]

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "policy": "unhedged",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 10000,
+      "observed_at": "2026-01-08T09:00:00+00:00",
+      "equity": 9800.0,
+      "marked_pnl": -200.0,
+      "terminal_pnl": -200.0,
+      "premium_retention_ratio": -1.0,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\summary.json"
+    },
+    {
+      "policy": "delta",
+      "status": "INCOMPLETE_EXIT",
+      "reason": "unsettled liability or residual inventory at horizon",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 10000,
+      "observed_at": "2026-01-08T09:00:00+00:00",
+      "equity": 9638.0,
+      "marked_pnl": -362.0,
+      "terminal_pnl": null,
+      "premium_retention_ratio": null,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\summary.json"
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2026-01-08T09:00:00+00:00",
+    "sequence": 5,
+    "event_id": "hand/5",
+    "phase": "pretrade",
+    "policies": {
+      "unhedged": {
+        "equity": 9800.0,
+        "net_pnl": -200.0,
+        "pnl_components": {
+          "net_pnl": -200.0,
+          "liability_pnl": -200.0,
+          "hedge_pnl": 0.0,
+          "execution_cost": 0.0,
+          "fees": 0.0,
+          "trading_costs": 0.0,
+          "interest": 0.0,
+          "borrow_charges": 0.0,
+          "financing_costs": 0.0,
+          "stock_turnover": 0.0,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 0.0
+        }
+      },
+      "delta": {
+        "equity": 9638.0,
+        "net_pnl": -362.0,
+        "pnl_components": {
+          "net_pnl": -362.0,
+          "liability_pnl": -200.0,
+          "hedge_pnl": -150.0,
+          "execution_cost": 6.0,
+          "fees": 6.0,
+          "trading_costs": 12.0,
+          "interest": 0.0,
+          "borrow_charges": 0.0,
+          "financing_costs": 0.0,
+          "stock_turnover": 5904.0,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 0.0
+        }
+      }
+    }
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "case_configuration",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\deterministic_missing_exit.json",
+        "sha256": "6df48a9059c3881013c35db2ac776deac928e71160ff82b0f728d65f4b63e0c7"
+      },
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\deterministic_missing_exit.jsonl",
+        "sha256": "a0e587b0e1aa9ddcc9a509f8944ea7bd35b91153b966e3cc798f4a4cf220b016"
+      }
+    ],
+    "metadata": {
+      "source": "hand-authored deterministic fixture v1",
+      "kind": "missing_exit",
+      "margin_label": "uncalibrated research margin proxy",
+      "stress": "unchanged; stocks +/-10%, option marks +/-2 floored at zero",
+      "purpose": "accounting and timing only; no profitability inference"
+    },
+    "configuration": {
+      "instruments": {
+        "S1": {
+          "id": "S1",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S2": {
+          "id": "S2",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S3": {
+          "id": "S3",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "BASKET": {
+          "id": "BASKET",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100,
+          "strike": 100,
+          "expiry": "2026-01-07T16:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "S1",
+              0.3333333333333333
+            ],
+            [
+              "S2",
+              0.3333333333333333
+            ],
+            [
+              "S3",
+              0.3333333333333333
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 10000,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "BASKET",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2026-01-08T09:00:00+00:00",
+        "hedge_universe": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "safety_buffer": 50,
+        "funding": {
+          "cash_rate": 0,
+          "collateral_rate": 0,
+          "borrow_rates": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        "borrow": {
+          "S1": {
+            "located": true,
+            "limit": 1000
+          },
+          "S2": {
+            "located": true,
+            "limit": 1000
+          },
+          "S3": {
+            "located": true,
+            "limit": 1000
+          }
+        },
+        "fee_per_order": 1,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {
+          "S1": 1000,
+          "S2": 1000,
+          "S3": 1000
+        },
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2026-01-05T16:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "toy_down",
+          "toy_up"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "comparison_rule": "Compare the latest common valid pretrade checkpoint. Outcome marked P&L and completed horizon P&L are separate; unequal stopping times are not ranked."
+}

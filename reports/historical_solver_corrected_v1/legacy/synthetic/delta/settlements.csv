@@ -1,0 +1,2 @@
+id,time,instrument_id,quantity,payoff,cashflow,funded,funding_convention,official_fixing_id,fixing_observed_at,fixing_available_at,official_spots
+settlement/BASKET,2026-02-02T16:00:00+00:00,BASKET,-1,2.505567933820373,-250.5567933820373,True,"atomic same-event net cash, released old margin available",synthetic/official/BASKET,2026-02-02T16:00:00+00:00,2026-02-02T16:00:00+00:00,"{""S1"":103.66479170142684,""S2"":74.93487163102488,""S3"":113.88363286608715}"

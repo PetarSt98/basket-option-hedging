@@ -1,0 +1,903 @@
+{
+  "schema_version": 1,
+  "policy": "cont_vuletic_l1",
+  "status": "COMPLETED",
+  "reason": "settled, zero inventory",
+  "currency": "USD",
+  "opening_mode": "ORIGINATE",
+  "pnl_baseline": 10000,
+  "horizon": "2026-02-03T09:00:00+00:00",
+  "margin_label": "uncalibrated research margin proxy",
+  "current": {
+    "as_of": "2026-02-03T09:00:00+00:00",
+    "event_id": "synthetic/41",
+    "valuation_valid": true,
+    "equity": 9853.48111043785,
+    "marked_pnl": -146.51888956215043,
+    "pnl_components": {
+      "net_pnl": -146.51888956215043,
+      "liability_pnl": -62.67175748527424,
+      "hedge_pnl": -77.09631751144025,
+      "execution_cost": 6.06851295858612,
+      "fees": 3.099999999999997,
+      "trading_costs": 9.168512958586117,
+      "interest": 7.444883673373987,
+      "borrow_charges": 5.02718528026257,
+      "financing_costs": -2.417698393111417,
+      "stock_turnover": 30520.09779019773,
+      "option_premium_turnover": 0.0,
+      "reconciliation_error": 3.873878995364066e-11
+    },
+    "total_cash": 9853.48111043785,
+    "posted_margin_cash": 0.0,
+    "restricted_stock_short_proceeds": 0,
+    "available_cash": 9853.48111043785,
+    "required_margin": 0.0,
+    "risk": {
+      "equity": 9853.48111043785,
+      "cash": 9853.48111043785,
+      "posted_margin_cash": 0.0,
+      "restricted_short_proceeds": 0,
+      "available_cash": 9853.48111043785,
+      "eligible_cash_capacity": 9853.48111043785,
+      "required_margin": 0.0,
+      "safety_buffer": 50,
+      "margin_equity_shortfall": 0.0,
+      "margin_cash_shortfall": 0.0,
+      "buffer_equity_shortfall": 0.0,
+      "buffer_cash_shortfall": 0.0,
+      "equity_requirement_shortfall": 0.0,
+      "cash_requirement_shortfall": 0.0,
+      "available_cash_deficit": 0.0,
+      "equity_deficit": 0.0,
+      "unencumbered_cash_deficit": 0.0,
+      "borrow_failures": [],
+      "maximum_shortfall": 0.0,
+      "feasible": true,
+      "position_failures": [],
+      "cash_requirement_shortfall_lower_bound": 0.0
+    },
+    "residual_delta": {
+      "S1": 0.0,
+      "S2": 0.0,
+      "S3": 0.0
+    }
+  },
+  "last_valid_checkpoint": {
+    "event_id": "synthetic/41",
+    "time": "2026-02-03T09:00:00+00:00",
+    "sequence": 41,
+    "phase": "event",
+    "equity": 9853.48111043785,
+    "marked_pnl": -146.51888956215043,
+    "pnl_components": {
+      "net_pnl": -146.51888956215043,
+      "liability_pnl": -62.67175748527424,
+      "hedge_pnl": -77.09631751144025,
+      "execution_cost": 6.06851295858612,
+      "fees": 3.099999999999997,
+      "trading_costs": 9.168512958586117,
+      "interest": 7.444883673373987,
+      "borrow_charges": 5.02718528026257,
+      "financing_costs": -2.417698393111417,
+      "stock_turnover": 30520.09779019773,
+      "option_premium_turnover": 0.0,
+      "reconciliation_error": 3.873878995364066e-11
+    },
+    "risk": {
+      "equity": 9853.48111043785,
+      "cash": 9853.48111043785,
+      "posted_margin_cash": 0.0,
+      "restricted_short_proceeds": 0,
+      "available_cash": 9853.48111043785,
+      "eligible_cash_capacity": 9853.48111043785,
+      "required_margin": 0.0,
+      "safety_buffer": 50,
+      "margin_equity_shortfall": 0.0,
+      "margin_cash_shortfall": 0.0,
+      "buffer_equity_shortfall": 0.0,
+      "buffer_cash_shortfall": 0.0,
+      "equity_requirement_shortfall": 0.0,
+      "cash_requirement_shortfall": 0.0,
+      "available_cash_deficit": 0.0,
+      "equity_deficit": 0.0,
+      "unencumbered_cash_deficit": 0.0,
+      "borrow_failures": [],
+      "maximum_shortfall": 0.0,
+      "feasible": true,
+      "position_failures": [],
+      "cash_requirement_shortfall_lower_bound": 0.0
+    },
+    "positions": {},
+    "residual_delta": {
+      "S1": 0.0,
+      "S2": 0.0,
+      "S3": 0.0
+    }
+  },
+  "terminal": {
+    "time": "2026-02-03T09:00:00+00:00",
+    "equity": 9853.48111043785,
+    "cash": 9853.48111043785,
+    "net_pnl": -146.51888956215043,
+    "net_premium_retained": -146.51888956215043,
+    "premium_retention_ratio": -0.7798326719465725
+  },
+  "original_gross_premium": 187.88503589676307,
+  "premium_normalization": "Completed economic P&L / known positive original gross premium; IMPORT premium is metadata only; ratio is not clamped.",
+  "costs": {
+    "execution_cost": 6.06851295858612,
+    "fees": 3.099999999999997,
+    "trading_costs": 9.168512958586117,
+    "interest": 7.444883673373987,
+    "borrow_charges": 5.02718528026257,
+    "financing_costs": -2.417698393111417
+  },
+  "accepted_hedge_fill_count": 62,
+  "turnover": {
+    "stock_currency_traded": 30520.09779019773,
+    "option_premium_currency_traded": 0.0,
+    "units": "Account currency; both trade sides counted; fees and liability origination/settlement excluded."
+  },
+  "usage": {
+    "minimum_total_cash": 9853.48111043785,
+    "minimum_available_cash": 8195.564922552592,
+    "peak_posted_margin_cash": 1992.32011334417,
+    "peak_restricted_stock_short_proceeds": 7032.011719060393,
+    "peak_locked_cash": 8424.883503455301,
+    "peak_required_margin": 1992.32011334417,
+    "minimum_buffer_headroom_after_allocation": 8145.564922552592,
+    "observation_scope": "Released observations through this result's stopping time; mandatory-phase netting is respected."
+  },
+  "breaches": [],
+  "max_observed_shortfall": 0.0,
+  "current_shortfall_unknown": false,
+  "max_known_unencumbered_cash_deficit": 0,
+  "settlements": [
+    {
+      "record": {
+        "id": "settlement/BASKET",
+        "time": "2026-02-02T16:00:00+00:00",
+        "instrument_id": "BASKET",
+        "quantity": -1,
+        "payoff": 2.505567933820373,
+        "cashflow": -250.5567933820373
+      },
+      "fixing": {
+        "id": "synthetic/official/BASKET",
+        "instrument_id": "BASKET",
+        "observed_at": "2026-02-02T16:00:00+00:00",
+        "available_at": "2026-02-02T16:00:00+00:00",
+        "spots": {
+          "S1": 103.66479170142684,
+          "S2": 74.93487163102488,
+          "S3": 113.88363286608715
+        }
+      },
+      "funded": true,
+      "funding_convention": "atomic same-event net cash, released old margin available"
+    }
+  ],
+  "remaining_obligations": [],
+  "residual_inventory": [],
+  "rejections": [],
+  "decisions": [
+    {
+      "event_id": "synthetic/0",
+      "time": "2026-01-05T16:00:00+00:00",
+      "earliest_execution": "2026-01-06T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-06T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -15.961954348264735,
+        "S2": -15.64127678953258,
+        "S3": -16.128594445785307
+      }
+    },
+    {
+      "event_id": "synthetic/1",
+      "time": "2026-01-06T09:00:00+00:00",
+      "earliest_execution": "2026-01-06T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/2",
+      "time": "2026-01-06T16:00:00+00:00",
+      "earliest_execution": "2026-01-07T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-07T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -11.954217819284235,
+        "S2": -11.894967153069132,
+        "S3": -11.51745700027736
+      }
+    },
+    {
+      "event_id": "synthetic/3",
+      "time": "2026-01-07T09:00:00+00:00",
+      "earliest_execution": "2026-01-07T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/4",
+      "time": "2026-01-07T16:00:00+00:00",
+      "earliest_execution": "2026-01-08T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-08T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -9.977950938962405,
+        "S2": -9.91839511627316,
+        "S3": -9.66513185678233
+      }
+    },
+    {
+      "event_id": "synthetic/5",
+      "time": "2026-01-08T09:00:00+00:00",
+      "earliest_execution": "2026-01-08T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/6",
+      "time": "2026-01-08T16:00:00+00:00",
+      "earliest_execution": "2026-01-09T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-09T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -10.006779938676026,
+        "S2": -9.873425229793604,
+        "S3": -9.61157976048224
+      }
+    },
+    {
+      "event_id": "synthetic/7",
+      "time": "2026-01-09T09:00:00+00:00",
+      "earliest_execution": "2026-01-09T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/8",
+      "time": "2026-01-09T16:00:00+00:00",
+      "earliest_execution": "2026-01-12T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-12T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -9.616597426160126,
+        "S2": -10.201851139334149,
+        "S3": -9.748176236626058
+      }
+    },
+    {
+      "event_id": "synthetic/9",
+      "time": "2026-01-12T09:00:00+00:00",
+      "earliest_execution": "2026-01-12T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/10",
+      "time": "2026-01-12T16:00:00+00:00",
+      "earliest_execution": "2026-01-13T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-13T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -14.549298682973316,
+        "S2": -13.711939472370357,
+        "S3": -13.876400343296961
+      }
+    },
+    {
+      "event_id": "synthetic/11",
+      "time": "2026-01-13T09:00:00+00:00",
+      "earliest_execution": "2026-01-13T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/12",
+      "time": "2026-01-13T16:00:00+00:00",
+      "earliest_execution": "2026-01-14T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-14T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -15.81011000188071,
+        "S2": -15.330615265324578,
+        "S3": -15.929771343769524
+      }
+    },
+    {
+      "event_id": "synthetic/13",
+      "time": "2026-01-14T09:00:00+00:00",
+      "earliest_execution": "2026-01-14T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/14",
+      "time": "2026-01-14T16:00:00+00:00",
+      "earliest_execution": "2026-01-15T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-15T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -16.670334049594977,
+        "S2": -16.582881561785996,
+        "S3": -16.22515102028404
+      }
+    },
+    {
+      "event_id": "synthetic/15",
+      "time": "2026-01-15T09:00:00+00:00",
+      "earliest_execution": "2026-01-15T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/16",
+      "time": "2026-01-15T16:00:00+00:00",
+      "earliest_execution": "2026-01-16T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-16T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -17.09174013380732,
+        "S2": -16.88490563932953,
+        "S3": -16.837558005333165
+      }
+    },
+    {
+      "event_id": "synthetic/17",
+      "time": "2026-01-16T09:00:00+00:00",
+      "earliest_execution": "2026-01-16T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/18",
+      "time": "2026-01-16T16:00:00+00:00",
+      "earliest_execution": "2026-01-19T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-19T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -16.02447899138958,
+        "S2": -17.908526684880727,
+        "S3": -18.161036075761167
+      }
+    },
+    {
+      "event_id": "synthetic/19",
+      "time": "2026-01-19T09:00:00+00:00",
+      "earliest_execution": "2026-01-19T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/20",
+      "time": "2026-01-19T16:00:00+00:00",
+      "earliest_execution": "2026-01-20T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-20T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -5.431559869465195,
+        "S2": -5.51962667936996,
+        "S3": -4.987450571544727
+      }
+    },
+    {
+      "event_id": "synthetic/21",
+      "time": "2026-01-20T09:00:00+00:00",
+      "earliest_execution": "2026-01-20T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/22",
+      "time": "2026-01-20T16:00:00+00:00",
+      "earliest_execution": "2026-01-21T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-21T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -7.96408638481277,
+        "S2": -6.456335171741448,
+        "S3": -6.882064332386437
+      }
+    },
+    {
+      "event_id": "synthetic/23",
+      "time": "2026-01-21T09:00:00+00:00",
+      "earliest_execution": "2026-01-21T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/24",
+      "time": "2026-01-21T16:00:00+00:00",
+      "earliest_execution": "2026-01-22T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-22T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -5.831036681142353,
+        "S2": -6.456335171741448,
+        "S3": -6.346799667150956
+      }
+    },
+    {
+      "event_id": "synthetic/25",
+      "time": "2026-01-22T09:00:00+00:00",
+      "earliest_execution": "2026-01-22T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/26",
+      "time": "2026-01-22T16:00:00+00:00",
+      "earliest_execution": "2026-01-23T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-23T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -3.0734017389327644,
+        "S2": -3.960240839879272,
+        "S3": -3.2424995916789587
+      }
+    },
+    {
+      "event_id": "synthetic/27",
+      "time": "2026-01-23T09:00:00+00:00",
+      "earliest_execution": "2026-01-23T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/28",
+      "time": "2026-01-23T16:00:00+00:00",
+      "earliest_execution": "2026-01-26T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-26T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -2.2629224897971354,
+        "S2": -2.6762592818710287,
+        "S3": -2.362883394995367
+      }
+    },
+    {
+      "event_id": "synthetic/29",
+      "time": "2026-01-26T09:00:00+00:00",
+      "earliest_execution": "2026-01-26T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/30",
+      "time": "2026-01-26T16:00:00+00:00",
+      "earliest_execution": "2026-01-27T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-27T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -5.8310951335877075,
+        "S2": -7.366575933294653,
+        "S3": -6.2398703286224055
+      }
+    },
+    {
+      "event_id": "synthetic/31",
+      "time": "2026-01-27T09:00:00+00:00",
+      "earliest_execution": "2026-01-27T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/32",
+      "time": "2026-01-27T16:00:00+00:00",
+      "earliest_execution": "2026-01-28T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-28T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -2.6697137985293518,
+        "S2": -3.121107156478912,
+        "S3": -2.8084017305032787
+      }
+    },
+    {
+      "event_id": "synthetic/33",
+      "time": "2026-01-28T09:00:00+00:00",
+      "earliest_execution": "2026-01-28T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/34",
+      "time": "2026-01-28T16:00:00+00:00",
+      "earliest_execution": "2026-01-29T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-29T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -5.846646627130367,
+        "S2": -4.893418191871791,
+        "S3": -5.808896614436801
+      }
+    },
+    {
+      "event_id": "synthetic/35",
+      "time": "2026-01-29T09:00:00+00:00",
+      "earliest_execution": "2026-01-29T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/36",
+      "time": "2026-01-29T16:00:00+00:00",
+      "earliest_execution": "2026-01-30T09:00:00+00:00",
+      "next_rebalance_time": "2026-01-30T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -14.341714282682133,
+        "S2": -14.288089455750864,
+        "S3": -14.237422829620371
+      }
+    },
+    {
+      "event_id": "synthetic/37",
+      "time": "2026-01-30T09:00:00+00:00",
+      "earliest_execution": "2026-01-30T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/38",
+      "time": "2026-01-30T16:00:00+00:00",
+      "earliest_execution": "2026-02-02T09:00:00+00:00",
+      "next_rebalance_time": "2026-02-02T16:00:00+00:00",
+      "status": "targets",
+      "targets": {
+        "S1": -23.2674309357246,
+        "S2": -24.615173008860534,
+        "S3": -23.1097626469044
+      }
+    },
+    {
+      "event_id": "synthetic/39",
+      "time": "2026-02-02T09:00:00+00:00",
+      "earliest_execution": "2026-02-02T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "no_decision"
+    },
+    {
+      "event_id": "synthetic/40",
+      "time": "2026-02-02T16:00:00+00:00",
+      "earliest_execution": "2026-02-03T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "targets",
+      "targets": {
+        "S1": 0.0,
+        "S2": 0.0,
+        "S3": 0.0
+      }
+    },
+    {
+      "event_id": "synthetic/41",
+      "time": "2026-02-03T09:00:00+00:00",
+      "earliest_execution": "2026-02-03T09:00:00+00:00",
+      "next_rebalance_time": null,
+      "status": "targets",
+      "targets": {
+        "S1": 0.0,
+        "S2": 0.0,
+        "S3": 0.0
+      }
+    }
+  ],
+  "data_gaps": [],
+  "provenance": {
+    "files": [
+      {
+        "role": "case_configuration",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.json",
+        "sha256": "edb4d7ef8b66ba4ea56a708b1b365a3537041980132ca692a0d47d2807a9cf3f"
+      },
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.jsonl",
+        "sha256": "e674981af350b2bbec1c8c84fa0b2f0f09e7bffb9d58e614e72380c3ccef6cef"
+      }
+    ],
+    "metadata": {
+      "source": "synthetic correlated GBM fixture v1; not historical market data",
+      "purpose": "mechanics only, no calibration or profitability claim",
+      "basket_kind": "put",
+      "replay_seed": 20260912,
+      "replay_rng": "NumPy PCG64",
+      "replay_drift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "replay_volatilities": [
+        0.2,
+        0.225,
+        0.25
+      ],
+      "replay_correlation": [
+        [
+          1.0,
+          0.35,
+          0.35
+        ],
+        [
+          0.35,
+          1.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.35,
+          1.0
+        ]
+      ],
+      "initial_spots": [
+        100.0,
+        80.0,
+        120.0
+      ],
+      "pricing_parameters": {
+        "stock_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "volatilities": [
+          0.2,
+          0.225,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.35,
+            0.35
+          ],
+          [
+            0.35,
+            1.0,
+            0.35
+          ],
+          [
+            0.35,
+            0.35,
+            1.0
+          ]
+        ],
+        "risk_free_rate": 0.01,
+        "available_at": "2026-01-05T16:00:00+00:00",
+        "pricing_seed": 731,
+        "samples": 8192,
+        "bump_relative": 0.0001
+      },
+      "stress_scenarios": [
+        {
+          "name": "unchanged",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_down_20pct",
+          "spot_multiplier": 0.8,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_up_20pct",
+          "spot_multiplier": 1.2,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "vol_up_25pct",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.25
+        }
+      ],
+      "margin_label": "uncalibrated research margin proxy",
+      "numpy_version": "2.3.1",
+      "calendar": "twenty toy business days by default; weekdays only, no holiday calendar",
+      "days": 20,
+      "execution_half_spread": 0.02,
+      "scenario_timing": "Next scheduled business-day close, declared in the current event; no future prices",
+      "funding": "declared toy cash 1%, collateral 0.5%, stock borrow 2%; no proceeds rebate"
+    },
+    "configuration": {
+      "instruments": {
+        "S1": {
+          "id": "S1",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S2": {
+          "id": "S2",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S3": {
+          "id": "S3",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "BASKET": {
+          "id": "BASKET",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100,
+          "strike": 100.0,
+          "expiry": "2026-02-02T16:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "S1",
+              0.3333333333333333
+            ],
+            [
+              "S2",
+              0.3333333333333333
+            ],
+            [
+              "S3",
+              0.3333333333333333
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 10000,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "BASKET",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2026-02-03T09:00:00+00:00",
+        "hedge_universe": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "safety_buffer": 50,
+        "funding": {
+          "cash_rate": 0.01,
+          "collateral_rate": 0.005,
+          "borrow_rates": {
+            "S1": 0.02,
+            "S2": 0.02,
+            "S3": 0.02
+          }
+        },
+        "borrow": {
+          "S1": {
+            "located": true,
+            "limit": 1000
+          },
+          "S2": {
+            "located": true,
+            "limit": 1000
+          },
+          "S3": {
+            "located": true,
+            "limit": 1000
+          }
+        },
+        "fee_per_order": 0.05,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {
+          "S1": 1000,
+          "S2": 1000,
+          "S3": 1000
+        },
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2026-01-05T16:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20pct",
+          "spot_up_20pct",
+          "vol_up_25pct"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "valuation_configurations": {
+    "e127e493bf3b850289de8e5a17590bcaa3ee7455859160c356d29816ea4ee28d": {
+      "model_version": "arithmetic-basket-crn-v1",
+      "parameters": {
+        "stock_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "volatilities": [
+          0.2,
+          0.225,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.35,
+            0.35
+          ],
+          [
+            0.35,
+            1.0,
+            0.35
+          ],
+          [
+            0.35,
+            0.35,
+            1.0
+          ]
+        ],
+        "risk_free_rate": 0.01,
+        "available_at": "2026-01-05T16:00:00+00:00",
+        "pricing_seed": 731,
+        "samples": 8192,
+        "bump_relative": 0.0001
+      },
+      "seed_derivation": "SHA256(seed, UTC event time, model version), first 128 bits",
+      "rng": "NumPy PCG64; local generator independent of replay",
+      "antithetic_draws": true,
+      "common_random_numbers": "same draws across spot bumps, options and named stresses",
+      "correlation_eigenvalue_tolerance": 1e-12,
+      "correlation_minimum_eigenvalue": 0.6499999999999997,
+      "correlation_roundoff_clipped": false,
+      "scenarios": [
+        {
+          "name": "unchanged",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_down_20pct",
+          "spot_multiplier": 0.8,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_up_20pct",
+          "spot_multiplier": 1.2,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "vol_up_25pct",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.25
+        }
+      ],
+      "conventions": "zero dividends; ACT/365; unit marks/deltas; exact official expiry fixing"
+    }
+  },
+  "interpretation": "A single hand-authored or synthetic path validates mechanics; it does not establish profitability, tail protection or broker compliance."
+}

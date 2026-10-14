@@ -247,6 +247,22 @@ class Ledger:
             self._post(Posting(key + ":proceeds", time, "short_proceeds", instrument_id=instrument_id,
                                restriction_change=restriction))
 
+    def dividend(self, key: str, time: datetime, stock_id: str, per_share: float) -> None:
+        """Released cash distribution on pretrade holdings; shorts owe the amount.
+
+        The replay declares payment timing. No historical distribution is inferred
+        from adjusted prices, and the same operation cannot be paid twice.
+        """
+        timestamp(time)
+        if self._instrument(stock_id).kind != "stock":
+            raise InputError("cash distributions require a stock instrument")
+        number(per_share, "cash dividend per share", minimum=0)
+        if not self._new_operation(key, ("dividend", time, stock_id, per_share)):
+            return
+        quantity = self.positions.get(stock_id, 0.0)
+        self._post(Posting(key, time, "dividend", quantity * per_share,
+                           stock_id, quantity, per_share))
+
     def allocate_margin(self, key: str, time: datetime, required: float) -> None:
         timestamp(time)
         number(required, "posted margin", minimum=0)
@@ -331,6 +347,8 @@ class Ledger:
                     option_turnover += abs(posting.cash_change)
             elif posting.kind == "fee":
                 fees -= posting.cash_change
+            elif posting.kind == "dividend":
+                hedge += posting.cash_change
             elif posting.kind == "interest":
                 interest += posting.cash_change
             elif posting.kind == "borrow":

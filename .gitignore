@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 build/
 dist/
+
+# Local presentation reruns duplicate the versioned research reports.
+/reports/presentation/

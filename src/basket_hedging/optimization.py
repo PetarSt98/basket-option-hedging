@@ -5,15 +5,28 @@ the liability/hedge sign convention and returns the resulting holdings to the
 engine; the regression intercept is never an account cash balance.
 """
 
-from dataclasses import dataclass
+from collections.abc import Iterator
+from dataclasses import dataclass, replace
+from itertools import product
 
 import numpy as np
 
 from .contracts import InputError, number
 
 
+_MAX_POLISH_INSTRUMENTS = 3
+
+
 class SolverConvergenceError(ArithmeticError):
     """The solver could not verify the requested first-order tolerance."""
+
+    def __init__(self, message: str, *, polish_attempted: bool = False,
+                 iterations: int | None = None, kkt_residual: float | None = None):
+        super().__init__(message)
+        self.polish_attempted = polish_attempted
+        self.polish_succeeded = False
+        self.iterations = iterations
+        self.kkt_residual = kkt_residual
 
 
 @dataclass(frozen=True)
@@ -26,6 +39,8 @@ class HedgeSolution:
     objective: float
     iterations: int
     kkt_residual: float
+    polish_attempted: bool = False
+    polish_succeeded: bool = False
 
     def __post_init__(self) -> None:
         for name in ("holdings", "changes"):
@@ -55,6 +70,32 @@ def _kkt_residual(gradient: np.ndarray, changes: np.ndarray,
     return float(np.max(violation / scales))
 
 
+def _active_set_candidates(x: np.ndarray, y: np.ndarray,
+                           penalties: np.ndarray) -> Iterator[np.ndarray]:
+    """At most 27 sign patterns; candidates still require the full KKT check."""
+    scenarios, instruments = x.shape
+    if instruments > _MAX_POLISH_INSTRUMENTS:
+        return
+    for pattern in product((-1, 0, 1), repeat=instruments):
+        signs = np.asarray(pattern)
+        active = np.flatnonzero(signs)
+        changes = np.zeros(instruments)
+        if active.size:
+            try:
+                q, r = np.linalg.qr(x[:, active], mode="reduced")
+                # A redundant optimum has an independent-support representative.
+                # QR avoids forming the more poorly conditioned normal matrix.
+                if r.shape[0] != active.size or np.linalg.matrix_rank(r) < active.size:
+                    continue
+                adjustment = np.linalg.solve(r.T, scenarios * penalties[active] * signs[active] / 2)
+                changes[active] = np.linalg.solve(r, q.T @ y - adjustment)
+            except (np.linalg.LinAlgError, FloatingPointError):
+                continue
+            if not np.isfinite(changes).all() or np.any(changes[active] * signs[active] <= 0):
+                continue
+        yield changes
+
+
 def solve_hedge(delta_v, delta_h, previous_holdings, cost_weights, *,
                 alpha: float = 0.0, gross_scale: float = 1.0,
                 tolerance: float = 1e-9, max_iterations: int = 20000) -> HedgeSolution:
@@ -69,6 +110,9 @@ def solve_hedge(delta_v, delta_h, previous_holdings, cost_weights, *,
     holdings. Otherwise deterministic cyclic coordinate descent uses the
     weighted soft threshold lambda/2 for this mean-square normalization.
     No feature standardization, ridge, rounding or position constraints apply.
+    Only failed, budget-exhausted penalized solves with at most three columns
+    receive active-set polishing. Successful solves and zero penalties retain
+    their original path. ``iterations`` remains the coordinate-descent count.
 
     Convergence requires each KKT violation divided by
     max(1, abs(2*X_centered.T*y_centered/N), lambda) to be <= tolerance.
@@ -138,15 +182,38 @@ def _solve(response, design, previous, costs, alpha, gross_scale, tolerance, max
             gradient = -2 * (x.T @ residual) / scenarios
             kkt = _kkt_residual(gradient, changes, penalties, scales)
 
-    holdings = previous + changes
-    intercept = mean_adjusted - float(mean_design @ changes)
-    residual = response - intercept - design @ holdings
-    gradient = -2 * (x.T @ residual) / scenarios
-    kkt = _kkt_residual(gradient, changes, penalties, scales)
-    if not np.isfinite(kkt) or kkt > tolerance:
+    def assess(candidate: np.ndarray) -> HedgeSolution:
+        holdings = previous + candidate
+        intercept = mean_adjusted - float(mean_design @ candidate)
+        residual = response - intercept - design @ holdings
+        gradient = -2 * (x.T @ residual) / scenarios
+        kkt = _kkt_residual(gradient, candidate, penalties, scales)
+        mse = float(residual @ residual / scenarios)
+        penalty = float(penalties @ np.abs(candidate))
+        return HedgeSolution(holdings, candidate, intercept, mse, penalty, mse + penalty, iterations, kkt)
+
+    solution = assess(changes)
+    if not np.isfinite(solution.kkt_residual) or solution.kkt_residual > tolerance:
+        attempted = bool(np.any(penalties) and iterations == max_iterations
+                         and instruments <= _MAX_POLISH_INSTRUMENTS)
+        best = None
+        if attempted:
+            for candidate in _active_set_candidates(x, y, penalties):
+                try:
+                    polished = assess(candidate)
+                except FloatingPointError:
+                    continue
+                # Includes inactive inequalities and the original uncentered
+                # residual after converting changes back to absolute holdings.
+                if (np.isfinite(polished.objective) and np.isfinite(polished.kkt_residual)
+                        and polished.kkt_residual <= tolerance
+                        and (best is None or polished.objective < best.objective)):
+                    best = polished
+        if best is not None:
+            return replace(best, polish_attempted=True, polish_succeeded=True)
         raise SolverConvergenceError(
             f"hedge regression did not converge after {iterations} iterations: "
-            f"scaled KKT residual {kkt:.6g} exceeds {tolerance:.6g}")
-    mse = float(residual @ residual / scenarios)
-    penalty = float(penalties @ np.abs(changes))
-    return HedgeSolution(holdings, changes, intercept, mse, penalty, mse + penalty, iterations, kkt)
+            f"scaled KKT residual {solution.kkt_residual:.6g} exceeds {tolerance:.6g}; "
+            f"polishing attempted={attempted}, succeeded=False",
+            polish_attempted=attempted, iterations=iterations, kkt_residual=solution.kkt_residual)
+    return solution

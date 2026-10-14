@@ -1,0 +1,232 @@
+{
+  "rows": [
+    {
+      "episode": "2020-01-02",
+      "policy": "unhedged",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "hedge_error": -181.295419682408,
+      "net_pnl": 181.29541968239937,
+      "turnover": 0.0,
+      "trading_costs": 0.0,
+      "fills": 0,
+      "rejected_orders": 0,
+      "skipped_decisions": 0,
+      "dividend_cashflow": 0,
+      "borrow_charges": 0.0
+    },
+    {
+      "episode": "2020-01-02",
+      "policy": "delta",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "hedge_error": 359.2001853988852,
+      "net_pnl": -399.5594983470073,
+      "turnover": 64166.685103010226,
+      "trading_costs": 32.0832074276008,
+      "fills": 63,
+      "rejected_orders": 0,
+      "skipped_decisions": 0,
+      "dividend_cashflow": 0,
+      "borrow_charges": 8.27610552057492
+    },
+    {
+      "episode": "2020-01-02",
+      "policy": "parametric",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "hedge_error": 342.0629949527911,
+      "net_pnl": -380.7353453747055,
+      "turnover": 61109.61808605878,
+      "trading_costs": 30.554678203422654,
+      "fills": 47,
+      "rejected_orders": 0,
+      "skipped_decisions": 0,
+      "dividend_cashflow": 0,
+      "borrow_charges": 8.117672218467984
+    },
+    {
+      "episode": "2020-01-02",
+      "policy": "gaussian",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "hedge_error": 376.3485939911518,
+      "net_pnl": -413.608029564115,
+      "turnover": 58863.91230587846,
+      "trading_costs": 29.431816741932128,
+      "fills": 48,
+      "rejected_orders": 0,
+      "skipped_decisions": 0,
+      "dividend_cashflow": 0,
+      "borrow_charges": 7.827618831018355
+    },
+    {
+      "episode": "2020-01-02",
+      "policy": "volgan",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "hedge_error": 384.94421498865586,
+      "net_pnl": -439.3082866727491,
+      "turnover": 87251.26054601395,
+      "trading_costs": 43.62548871309059,
+      "fills": 23,
+      "rejected_orders": 0,
+      "skipped_decisions": 0,
+      "dividend_cashflow": 0,
+      "borrow_charges": 10.738582971007643
+    }
+  ],
+  "all_frozen_row_fields_equal": true,
+  "csv_checks": [
+    {
+      "policy": "unhedged",
+      "file": "account.csv",
+      "rows": 126,
+      "exact_row_match": true
+    },
+    {
+      "policy": "unhedged",
+      "file": "orders.csv",
+      "rows": 0,
+      "exact_row_match": true
+    },
+    {
+      "policy": "unhedged",
+      "file": "postings.csv",
+      "rows": 129,
+      "exact_row_match": true
+    },
+    {
+      "policy": "unhedged",
+      "file": "settlements.csv",
+      "rows": 1,
+      "exact_row_match": true
+    },
+    {
+      "policy": "unhedged",
+      "file": "valuation_audit.csv",
+      "rows": 42,
+      "exact_row_match": true
+    },
+    {
+      "policy": "delta",
+      "file": "account.csv",
+      "rows": 189,
+      "exact_row_match": true
+    },
+    {
+      "policy": "delta",
+      "file": "orders.csv",
+      "rows": 126,
+      "exact_row_match": true
+    },
+    {
+      "policy": "delta",
+      "file": "postings.csv",
+      "rows": 501,
+      "exact_row_match": true
+    },
+    {
+      "policy": "delta",
+      "file": "settlements.csv",
+      "rows": 1,
+      "exact_row_match": true
+    },
+    {
+      "policy": "delta",
+      "file": "valuation_audit.csv",
+      "rows": 42,
+      "exact_row_match": true
+    },
+    {
+      "policy": "parametric",
+      "file": "account.csv",
+      "rows": 173,
+      "exact_row_match": true
+    },
+    {
+      "policy": "parametric",
+      "file": "orders.csv",
+      "rows": 94,
+      "exact_row_match": true
+    },
+    {
+      "policy": "parametric",
+      "file": "postings.csv",
+      "rows": 437,
+      "exact_row_match": true
+    },
+    {
+      "policy": "parametric",
+      "file": "settlements.csv",
+      "rows": 1,
+      "exact_row_match": true
+    },
+    {
+      "policy": "parametric",
+      "file": "valuation_audit.csv",
+      "rows": 42,
+      "exact_row_match": true
+    },
+    {
+      "policy": "gaussian",
+      "file": "account.csv",
+      "rows": 174,
+      "exact_row_match": true
+    },
+    {
+      "policy": "gaussian",
+      "file": "orders.csv",
+      "rows": 96,
+      "exact_row_match": true
+    },
+    {
+      "policy": "gaussian",
+      "file": "postings.csv",
+      "rows": 441,
+      "exact_row_match": true
+    },
+    {
+      "policy": "gaussian",
+      "file": "settlements.csv",
+      "rows": 1,
+      "exact_row_match": true
+    },
+    {
+      "policy": "gaussian",
+      "file": "valuation_audit.csv",
+      "rows": 42,
+      "exact_row_match": true
+    },
+    {
+      "policy": "volgan",
+      "file": "account.csv",
+      "rows": 149,
+      "exact_row_match": true
+    },
+    {
+      "policy": "volgan",
+      "file": "orders.csv",
+      "rows": 46,
+      "exact_row_match": true
+    },
+    {
+      "policy": "volgan",
+      "file": "postings.csv",
+      "rows": 282,
+      "exact_row_match": true
+    },
+    {
+      "policy": "volgan",
+      "file": "settlements.csv",
+      "rows": 1,
+      "exact_row_match": true
+    },
+    {
+      "policy": "volgan",
+      "file": "valuation_audit.csv",
+      "rows": 42,
+      "exact_row_match": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Accept CRLF in byte-preserved artifacts while retaining whitespace checks.
+* whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# These files are referenced by hashes; preserve their exact bytes on checkout.
+/data/** -text
+/fixtures/** -text
+/reports/** -text
+/tests/fixtures/** -text
+
+# Matplotlib emits trailing spaces in generated SVG path coordinates.
+*.svg -whitespace

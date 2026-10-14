@@ -1,0 +1,2017 @@
+[
+  {
+    "episode": "2022-06-02",
+    "policy": "volgan",
+    "status": "FAILED_OPTIMIZER",
+    "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.56046e-08 exceeds 1e-09",
+    "last_valid_checkpoint": {
+      "event_id": "2022-06-09/close",
+      "time": "2022-06-09T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "post_execution",
+      "positions": {
+        "B": -1,
+        "QQQ": -57.35285174732669,
+        "IWM": -2.8865344043095353
+      },
+      "risk": {
+        "equity": 99937.62196157024,
+        "cash": 119153.03499523972,
+        "posted_margin_cash": 3554.134856174392,
+        "restricted_short_proceeds": 18259.481967770367,
+        "available_cash": 97339.41817129496,
+        "eligible_cash_capacity": 100893.55302746936,
+        "required_margin": 3554.134856174392,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -62.378038429757,
+        "liability_pnl": -613.9272100470008,
+        "hedge_pnl": 565.7402238782215,
+        "execution_cost": 11.06589703638366,
+        "fees": 0.0,
+        "trading_costs": 11.06589703638366,
+        "interest": 0.0,
+        "borrow_charges": 3.1251552246251357,
+        "financing_costs": 3.1251552246251357,
+        "stock_turnover": 22122.659827129824,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 3.1093350116861984e-11
+      },
+      "residual_delta": {
+        "SPY": 16.563921339723763,
+        "QQQ": -35.54754827623333,
+        "IWM": 33.582944313428776
+      }
+    },
+    "baseline": 100000.0,
+    "cash": 119153.03499523972,
+    "positions": {
+      "B": -1,
+      "QQQ": -57.35285174732669,
+      "IWM": -2.8865344043095353
+    },
+    "marks": {
+      "SPY": 401.44,
+      "QQQ": 299.4,
+      "IWM": 183.57,
+      "B": 15.140880999207633
+    },
+    "posted_margin_cash": 3554.134856174392,
+    "restricted_short_proceeds": 18259.481967770367,
+    "available_cash": 97339.41817129496,
+    "short_lots": [
+      {
+        "id": "fill/2022-06-02/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 50.49093633785976,
+        "sale_price": 308.87548499999997,
+        "opened_at": "2022-06-03T13:30:00+00:00"
+      },
+      {
+        "id": "fill/2022-06-03/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 5.825371529370237,
+        "sale_price": 310.594625,
+        "opened_at": "2022-06-06T13:30:00+00:00"
+      },
+      {
+        "id": "fill/2022-06-06/close/IWM:lot",
+        "stock_id": "IWM",
+        "quantity": 2.8865344043095353,
+        "sale_price": 186.316795,
+        "opened_at": "2022-06-07T13:30:00+00:00"
+      },
+      {
+        "id": "fill/2022-06-08/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 1.0365438800966942,
+        "sale_price": 305.75704500000006,
+        "opened_at": "2022-06-09T13:30:00+00:00"
+      }
+    ],
+    "pending_orders": [],
+    "postings": [
+      {
+        "id": "origination",
+        "time": "2022-06-02T20:00:00+00:00",
+        "kind": "origination",
+        "cash_change": 900.1608898737626,
+        "instrument_id": "B",
+        "quantity": -1,
+        "price": 9.001608898737626,
+        "reference_mark": 9.001608898737626,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "origination:fee",
+        "time": "2022-06-02T20:00:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "B",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-02/close/pretrade",
+        "time": "2022-06-02T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 5999.817865119096
+      },
+      {
+        "id": "margin/2022-06-02/close/post_execution",
+        "time": "2022-06-02T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-03/open:interest",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-03/open/pretrade",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 287.7523455324608
+      },
+      {
+        "id": "fill/2022-06-02/close/QQQ",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 17525.97308181447,
+        "instrument_id": "QQQ",
+        "quantity": -56.741223997801164,
+        "price": 308.87548499999997,
+        "reference_mark": 309.03,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-02/close/QQQ:fee",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-02/close/QQQ:proceeds",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 17525.97308181447
+      },
+      {
+        "id": "margin/2022-06-03/open/postfill/2022-06-02/close/QQQ",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -2761.320403488482
+      },
+      {
+        "id": "margin/2022-06-03/open/post_execution",
+        "time": "2022-06-03T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-03/close:interest",
+        "time": "2022-06-03T20:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-03/close:borrow:QQQ",
+        "time": "2022-06-03T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.13010937550030047,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-03/close/pretrade",
+        "time": "2022-06-03T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -38.75025279708643
+      },
+      {
+        "id": "margin/2022-06-03/close/post_execution",
+        "time": "2022-06-03T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-06/open:interest",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-06/open:borrow:QQQ",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -1.2990955052765978,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-06/open/pretrade",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 44.10904358844891
+      },
+      {
+        "id": "fill/2022-06-03/close/QQQ",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 1809.3290856504252,
+        "instrument_id": "QQQ",
+        "quantity": -5.825371529370237,
+        "price": 310.594625,
+        "reference_mark": 310.75,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-03/close/QQQ:fee",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-03/close/QQQ:proceeds",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 1809.3290856504245
+      },
+      {
+        "id": "margin/2022-06-06/open/postfill/2022-06-03/close/QQQ",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 362.04684055035614
+      },
+      {
+        "id": "margin/2022-06-06/open/post_execution",
+        "time": "2022-06-06T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-06/close:interest",
+        "time": "2022-06-06T20:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-06/close:borrow:QQQ",
+        "time": "2022-06-06T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.14426564171283712,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-06/close/pretrade",
+        "time": "2022-06-06T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -49.31354293327422
+      },
+      {
+        "id": "margin/2022-06-06/close/post_execution",
+        "time": "2022-06-06T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-07/open:interest",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-07/open:borrow:QQQ",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.383995337742589,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-07/open/pretrade",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -36.93655470724025
+      },
+      {
+        "id": "fill/2022-06-06/close/IWM",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 537.8098388681868,
+        "instrument_id": "IWM",
+        "quantity": -2.8865344043095353,
+        "price": 186.316795,
+        "reference_mark": 186.41,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-06/close/IWM:fee",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-06/close/IWM:proceeds",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 537.8098388681865
+      },
+      {
+        "id": "margin/2022-06-07/open/postfill/2022-06-06/close/IWM",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 107.61577566146661
+      },
+      {
+        "id": "margin/2022-06-07/open/post_execution",
+        "time": "2022-06-07T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-07/close:interest",
+        "time": "2022-06-07T20:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-07/close:borrow:QQQ",
+        "time": "2022-06-07T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.14104374773540482,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-07/close:borrow:IWM",
+        "time": "2022-06-07T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.003992594416664056,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-07/close/pretrade",
+        "time": "2022-06-07T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 75.44382446174859
+      },
+      {
+        "id": "margin/2022-06-07/close/post_execution",
+        "time": "2022-06-07T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/open:interest",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/open:borrow:QQQ",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.38730758188365355,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/open:borrow:IWM",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.01100820754702863,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-08/open/pretrade",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -13.558456364498852
+      },
+      {
+        "id": "fill/2022-06-07/close/QQQ",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "fill",
+        "cash_change": -1932.617227005544,
+        "instrument_id": "QQQ",
+        "quantity": 6.250287659941407,
+        "price": 309.204525,
+        "reference_mark": 309.05,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-07/close/QQQ:fee",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-07/close/QQQ:proceeds",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -1930.5606323539141
+      },
+      {
+        "id": "margin/2022-06-08/open/postfill/2022-06-07/close/QQQ",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -386.330280260976
+      },
+      {
+        "id": "margin/2022-06-08/open/post_execution",
+        "time": "2022-06-08T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/close:interest",
+        "time": "2022-06-08T20:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/close:borrow:QQQ",
+        "time": "2022-06-08T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.12914338715911908,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-08/close:borrow:IWM",
+        "time": "2022-06-08T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.004068629555225064,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-08/close/pretrade",
+        "time": "2022-06-08T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -5.945523762957237
+      },
+      {
+        "id": "margin/2022-06-08/close/post_execution",
+        "time": "2022-06-08T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/open:interest",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/open:borrow:QQQ",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.3461074276995504,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/open:borrow:IWM",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.01083809642987968,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "dividend/2022-06-09/open/IWM",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "dividend",
+        "cash_change": -1.4261125281899563,
+        "instrument_id": "IWM",
+        "quantity": -2.8865344043095353,
+        "price": 0.494057,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-09/open/pretrade",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -29.398993540039555
+      },
+      {
+        "id": "fill/2022-06-08/close/QQQ",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 316.9305937911996,
+        "instrument_id": "QQQ",
+        "quantity": -1.0365438800966942,
+        "price": 305.75704500000006,
+        "reference_mark": 305.91,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-08/close/QQQ:fee",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-06-08/close/QQQ:proceeds",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 316.9305937911995
+      },
+      {
+        "id": "margin/2022-06-09/open/postfill/2022-06-08/close/QQQ",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 63.417827672074054
+      },
+      {
+        "id": "margin/2022-06-09/open/post_execution",
+        "time": "2022-06-09T13:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/close:interest",
+        "time": "2022-06-09T20:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/close:borrow:QQQ",
+        "time": "2022-06-09T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.13018409898077696,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-06-09/close:borrow:IWM",
+        "time": "2022-06-09T20:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.003995592985508716,
+        "instrument_id": "IWM",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-06-09/close/pretrade",
+        "time": "2022-06-09T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -64.51465855670403
+      },
+      {
+        "id": "margin/2022-06-09/close/post_execution",
+        "time": "2022-06-09T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      }
+    ],
+    "settlements": {},
+    "order_outcomes": [
+      {
+        "event_id": "2022-06-02/close",
+        "time": "2022-06-02T20:00:00+00:00",
+        "order_id": "2022-06-02/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -56.741223997801164,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-03/open",
+        "time": "2022-06-03T13:30:00+00:00",
+        "order_id": "2022-06-02/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -56.741223997801164,
+        "price": 308.87548499999997,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-06-03/open/QQQ",
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-03/close",
+        "time": "2022-06-03T20:00:00+00:00",
+        "order_id": "2022-06-03/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -5.825371529370237,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-06/open",
+        "time": "2022-06-06T13:30:00+00:00",
+        "order_id": "2022-06-03/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -5.825371529370237,
+        "price": 310.594625,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-06-06/open/QQQ",
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-06/close",
+        "time": "2022-06-06T20:00:00+00:00",
+        "order_id": "2022-06-06/close/IWM",
+        "instrument_id": "IWM",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -2.8865344043095353,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-07/open",
+        "time": "2022-06-07T13:30:00+00:00",
+        "order_id": "2022-06-06/close/IWM",
+        "instrument_id": "IWM",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -2.8865344043095353,
+        "price": 186.316795,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-06-07/open/IWM",
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-07/close",
+        "time": "2022-06-07T20:00:00+00:00",
+        "order_id": "2022-06-07/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": 6.250287659941407,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-08/open",
+        "time": "2022-06-08T13:30:00+00:00",
+        "order_id": "2022-06-07/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": 6.250287659941407,
+        "price": 309.204525,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-06-08/open/QQQ",
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-08/close",
+        "time": "2022-06-08T20:00:00+00:00",
+        "order_id": "2022-06-08/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -1.0365438800966942,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-06-09/open",
+        "time": "2022-06-09T13:30:00+00:00",
+        "order_id": "2022-06-08/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -1.0365438800966942,
+        "price": 305.75704500000006,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-06-09/open/QQQ",
+        "projected_risk": null
+      }
+    ],
+    "decisions": [
+      {
+        "event_id": "2022-06-02/close",
+        "time": "2022-06-02T20:00:00+00:00",
+        "earliest_execution": "2022-06-03T13:30:00+00:00",
+        "next_rebalance_time": "2022-06-03T20:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -56.741223997801164,
+          "IWM": 0.0
+        }
+      },
+      {
+        "event_id": "2022-06-03/open",
+        "time": "2022-06-03T13:30:00+00:00",
+        "earliest_execution": "2022-06-03T13:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      },
+      {
+        "event_id": "2022-06-03/close",
+        "time": "2022-06-03T20:00:00+00:00",
+        "earliest_execution": "2022-06-06T13:30:00+00:00",
+        "next_rebalance_time": "2022-06-06T20:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -62.5665955271714,
+          "IWM": 0.0
+        }
+      },
+      {
+        "event_id": "2022-06-06/open",
+        "time": "2022-06-06T13:30:00+00:00",
+        "earliest_execution": "2022-06-06T13:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      },
+      {
+        "event_id": "2022-06-06/close",
+        "time": "2022-06-06T20:00:00+00:00",
+        "earliest_execution": "2022-06-07T13:30:00+00:00",
+        "next_rebalance_time": "2022-06-07T20:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -62.5665955271714,
+          "IWM": -2.8865344043095353
+        }
+      },
+      {
+        "event_id": "2022-06-07/open",
+        "time": "2022-06-07T13:30:00+00:00",
+        "earliest_execution": "2022-06-07T13:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      },
+      {
+        "event_id": "2022-06-07/close",
+        "time": "2022-06-07T20:00:00+00:00",
+        "earliest_execution": "2022-06-08T13:30:00+00:00",
+        "next_rebalance_time": "2022-06-08T20:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -56.316307867229995,
+          "IWM": -2.8865344043095353
+        }
+      },
+      {
+        "event_id": "2022-06-08/open",
+        "time": "2022-06-08T13:30:00+00:00",
+        "earliest_execution": "2022-06-08T13:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      },
+      {
+        "event_id": "2022-06-08/close",
+        "time": "2022-06-08T20:00:00+00:00",
+        "earliest_execution": "2022-06-09T13:30:00+00:00",
+        "next_rebalance_time": "2022-06-09T20:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -57.35285174732669,
+          "IWM": -2.8865344043095353
+        }
+      },
+      {
+        "event_id": "2022-06-09/open",
+        "time": "2022-06-09T13:30:00+00:00",
+        "earliest_execution": "2022-06-09T13:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      }
+    ],
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2022-09-01",
+    "policy": "volgan",
+    "status": "FAILED_OPTIMIZER",
+    "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 4.72515e-09 exceeds 1e-09",
+    "last_valid_checkpoint": {
+      "event_id": "2022-09-01/close",
+      "time": "2022-09-01T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "post_execution",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100000.0,
+        "cash": 100863.11059973613,
+        "posted_margin_cash": 6008.782781343492,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94854.32781839263,
+        "eligible_cash_capacity": 100863.11059973613,
+        "required_margin": 6008.782781343492,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 0.0,
+        "liability_pnl": 0.0,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 0.0
+      },
+      "residual_delta": {
+        "SPY": 12.052266312143828,
+        "QQQ": 15.810178492852293,
+        "IWM": 26.130854259194724
+      }
+    },
+    "baseline": 100000.0,
+    "cash": 100863.11059973613,
+    "positions": {
+      "B": -1
+    },
+    "marks": {
+      "SPY": 396.42,
+      "QQQ": 299.4,
+      "IWM": 181.5,
+      "B": 8.631105997361319
+    },
+    "posted_margin_cash": 6008.782781343492,
+    "restricted_short_proceeds": 0,
+    "available_cash": 94854.32781839263,
+    "short_lots": [],
+    "pending_orders": [],
+    "postings": [
+      {
+        "id": "origination",
+        "time": "2022-09-01T20:00:00+00:00",
+        "kind": "origination",
+        "cash_change": 863.1105997361319,
+        "instrument_id": "B",
+        "quantity": -1,
+        "price": 8.631105997361319,
+        "reference_mark": 8.631105997361319,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "origination:fee",
+        "time": "2022-09-01T20:00:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "B",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-09-01/close/pretrade",
+        "time": "2022-09-01T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 6008.782781343492
+      },
+      {
+        "id": "margin/2022-09-01/close/post_execution",
+        "time": "2022-09-01T20:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      }
+    ],
+    "settlements": {},
+    "order_outcomes": [],
+    "decisions": [],
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2022-12-01",
+    "policy": "volgan",
+    "status": "FAILED_OPTIMIZER",
+    "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.94458e-08 exceeds 1e-09",
+    "last_valid_checkpoint": {
+      "event_id": "2022-12-02/close",
+      "time": "2022-12-02T21:00:00+00:00",
+      "sequence": 0,
+      "phase": "post_execution",
+      "positions": {
+        "B": -1,
+        "QQQ": -52.59052841198603
+      },
+      "risk": {
+        "equity": 99774.50015513704,
+        "cash": 115921.26196739906,
+        "posted_margin_cash": 3077.2912831348867,
+        "restricted_short_proceeds": 15166.883832460453,
+        "available_cash": 97677.08685180372,
+        "eligible_cash_capacity": 100754.3781349386,
+        "required_margin": 3077.2912831348867,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -225.49984486296307,
+        "liability_pnl": -6.911994435791712,
+        "hedge_pnl": -210.88801893206437,
+        "execution_cost": 7.587235533996136,
+        "fees": 0.0,
+        "trading_costs": 7.587235533996136,
+        "interest": 0.0,
+        "borrow_charges": 0.11259596112096339,
+        "financing_costs": 0.11259596112096339,
+        "stock_turnover": 15166.883832460453,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 1.0118128557223827e-11
+      },
+      "residual_delta": {
+        "SPY": 11.954265554155057,
+        "QQQ": -36.182878113635226,
+        "IWM": 25.88246601032107
+      }
+    },
+    "baseline": 100000.0,
+    "cash": 115921.26196739906,
+    "positions": {
+      "B": -1,
+      "QQQ": -52.59052841198603
+    },
+    "marks": {
+      "SPY": 406.91,
+      "QQQ": 292.55,
+      "IWM": 188.05,
+      "B": 7.614027253355063
+    },
+    "posted_margin_cash": 3077.2912831348867,
+    "restricted_short_proceeds": 15166.883832460453,
+    "available_cash": 97677.08685180372,
+    "short_lots": [
+      {
+        "id": "fill/2022-12-01/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 52.59052841198603,
+        "sale_price": 288.39573,
+        "opened_at": "2022-12-02T14:30:00+00:00"
+      }
+    ],
+    "pending_orders": [],
+    "postings": [
+      {
+        "id": "origination",
+        "time": "2022-12-01T21:00:00+00:00",
+        "kind": "origination",
+        "cash_change": 754.4907308997147,
+        "instrument_id": "B",
+        "quantity": -1,
+        "price": 7.544907308997146,
+        "reference_mark": 7.544907308997146,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "origination:fee",
+        "time": "2022-12-01T21:00:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "B",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-12-01/close/pretrade",
+        "time": "2022-12-01T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 6001.8225196556505
+      },
+      {
+        "id": "margin/2022-12-01/close/post_execution",
+        "time": "2022-12-01T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-12-02/open:interest",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-12-02/open/pretrade",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 345.2439973993405
+      },
+      {
+        "id": "fill/2022-12-01/close/QQQ",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 15166.883832460453,
+        "instrument_id": "QQQ",
+        "quantity": -52.59052841198603,
+        "price": 288.39573,
+        "reference_mark": 288.54,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-12-01/close/QQQ:fee",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2022-12-01/close/QQQ:proceeds",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 15166.883832460453
+      },
+      {
+        "id": "margin/2022-12-02/open/postfill/2022-12-01/close/QQQ",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -3034.894213598889
+      },
+      {
+        "id": "margin/2022-12-02/open/post_execution",
+        "time": "2022-12-02T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-12-02/close:interest",
+        "time": "2022-12-02T21:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2022-12-02/close:borrow:QQQ",
+        "time": "2022-12-02T21:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.11259596112096339,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2022-12-02/close/pretrade",
+        "time": "2022-12-02T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -234.88102032121515
+      },
+      {
+        "id": "margin/2022-12-02/close/post_execution",
+        "time": "2022-12-02T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      }
+    ],
+    "settlements": {},
+    "order_outcomes": [
+      {
+        "event_id": "2022-12-01/close",
+        "time": "2022-12-01T21:00:00+00:00",
+        "order_id": "2022-12-01/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -52.59052841198603,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2022-12-02/open",
+        "time": "2022-12-02T14:30:00+00:00",
+        "order_id": "2022-12-01/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -52.59052841198603,
+        "price": 288.39573,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2022-12-02/open/QQQ",
+        "projected_risk": null
+      }
+    ],
+    "decisions": [
+      {
+        "event_id": "2022-12-01/close",
+        "time": "2022-12-01T21:00:00+00:00",
+        "earliest_execution": "2022-12-02T14:30:00+00:00",
+        "next_rebalance_time": "2022-12-02T21:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -52.59052841198603,
+          "IWM": 0.0
+        }
+      },
+      {
+        "event_id": "2022-12-02/open",
+        "time": "2022-12-02T14:30:00+00:00",
+        "earliest_execution": "2022-12-02T14:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      }
+    ],
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2023-02-02",
+    "policy": "volgan",
+    "status": "FAILED_OPTIMIZER",
+    "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.07574e-09 exceeds 1e-09",
+    "last_valid_checkpoint": {
+      "event_id": "2023-02-06/close",
+      "time": "2023-02-06T21:00:00+00:00",
+      "sequence": 0,
+      "phase": "post_execution",
+      "positions": {
+        "B": -1,
+        "QQQ": -56.41950398893086
+      },
+      "risk": {
+        "equity": 99808.72839947639,
+        "cash": 117947.48664624746,
+        "posted_margin_cash": 3426.7532144734014,
+        "restricted_short_proceeds": 17183.318252825677,
+        "available_cash": 97337.41517894839,
+        "eligible_cash_capacity": 100764.16839342179,
+        "required_margin": 3426.7532144734014,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -191.27160052361432,
+        "liability_pnl": -244.86879644905025,
+        "hedge_pnl": 63.516993931122215,
+        "execution_cost": 8.595957104965237,
+        "fees": 0.0,
+        "trading_costs": 8.595957104965237,
+        "interest": 0.0,
+        "borrow_charges": 1.3238409007381038,
+        "financing_costs": 1.3238409007381038,
+        "stock_turnover": 17183.318252825677,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 1.7053025658242404e-11
+      },
+      "residual_delta": {
+        "SPY": 15.599523034577404,
+        "QQQ": -35.75566033929057,
+        "IWM": 32.64713612103597
+      }
+    },
+    "baseline": 100000.0,
+    "cash": 117947.48664624746,
+    "positions": {
+      "B": -1,
+      "QQQ": -56.41950398893086
+    },
+    "marks": {
+      "SPY": 409.83,
+      "QQQ": 303.59,
+      "IWM": 194.14,
+      "B": 10.103610307715588
+    },
+    "posted_margin_cash": 3426.7532144734014,
+    "restricted_short_proceeds": 17183.318252825677,
+    "available_cash": 97337.41517894839,
+    "short_lots": [
+      {
+        "id": "fill/2023-02-02/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 47.57381416100523,
+        "sale_price": 304.78753,
+        "opened_at": "2023-02-03T14:30:00+00:00"
+      },
+      {
+        "id": "fill/2023-02-03/close/QQQ:lot",
+        "stock_id": "QQQ",
+        "quantity": 8.845689827925632,
+        "sale_price": 303.358245,
+        "opened_at": "2023-02-06T14:30:00+00:00"
+      }
+    ],
+    "pending_orders": [],
+    "postings": [
+      {
+        "id": "origination",
+        "time": "2023-02-02T21:00:00+00:00",
+        "kind": "origination",
+        "cash_change": 765.4922343225086,
+        "instrument_id": "B",
+        "quantity": -1,
+        "price": 7.654922343225086,
+        "reference_mark": 7.654922343225086,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "origination:fee",
+        "time": "2023-02-02T21:00:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "B",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2023-02-02/close/pretrade",
+        "time": "2023-02-02T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 5996.744496842885
+      },
+      {
+        "id": "margin/2023-02-02/close/post_execution",
+        "time": "2023-02-02T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-03/open:interest",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2023-02-03/open/pretrade",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 365.37434149643923
+      },
+      {
+        "id": "fill/2023-02-02/close/QQQ",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 14499.905310811806,
+        "instrument_id": "QQQ",
+        "quantity": -47.57381416100523,
+        "price": 304.78753,
+        "reference_mark": 304.94,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2023-02-02/close/QQQ:fee",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2023-02-02/close/QQQ:proceeds",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 14499.905310811806
+      },
+      {
+        "id": "margin/2023-02-03/open/postfill/2023-02-02/close/QQQ",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -2901.4317780513866
+      },
+      {
+        "id": "margin/2023-02-03/open/post_execution",
+        "time": "2023-02-03T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-03/close:interest",
+        "time": "2023-02-03T21:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-03/close:borrow:QQQ",
+        "time": "2023-02-03T21:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.10764444382039966,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2023-02-03/close/pretrade",
+        "time": "2023-02-03T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -88.72098829966444
+      },
+      {
+        "id": "margin/2023-02-03/close/post_execution",
+        "time": "2023-02-03T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-06/open:interest",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-06/open:borrow:QQQ",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "borrow",
+        "cash_change": -1.0891356763675641,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2023-02-06/open/pretrade",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 191.68236982102417
+      },
+      {
+        "id": "fill/2023-02-03/close/QQQ",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "fill",
+        "cash_change": 2683.412942013872,
+        "instrument_id": "QQQ",
+        "quantity": -8.845689827925632,
+        "price": 303.358245,
+        "reference_mark": 303.51,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2023-02-03/close/QQQ:fee",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "fee",
+        "cash_change": -0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "fill/2023-02-03/close/QQQ:proceeds",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "short_proceeds",
+        "cash_change": 0.0,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 2683.4129420138706
+      },
+      {
+        "id": "margin/2023-02-06/open/postfill/2023-02-03/close/QQQ",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": -138.14223772387777
+      },
+      {
+        "id": "margin/2023-02-06/open/post_execution",
+        "time": "2023-02-06T14:30:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-06/close:interest",
+        "time": "2023-02-06T21:00:00+00:00",
+        "kind": "interest",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "accrual/2023-02-06/close:borrow:QQQ",
+        "time": "2023-02-06T21:00:00+00:00",
+        "kind": "borrow",
+        "cash_change": -0.12706078055014,
+        "instrument_id": "QQQ",
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      {
+        "id": "margin/2023-02-06/close/pretrade",
+        "time": "2023-02-06T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 1.2470103879813905
+      },
+      {
+        "id": "margin/2023-02-06/close/post_execution",
+        "time": "2023-02-06T21:00:00+00:00",
+        "kind": "collateral",
+        "cash_change": 0.0,
+        "instrument_id": null,
+        "quantity": 0.0,
+        "price": 0.0,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      }
+    ],
+    "settlements": {},
+    "order_outcomes": [
+      {
+        "event_id": "2023-02-02/close",
+        "time": "2023-02-02T21:00:00+00:00",
+        "order_id": "2023-02-02/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -47.57381416100523,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2023-02-03/open",
+        "time": "2023-02-03T14:30:00+00:00",
+        "order_id": "2023-02-02/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -47.57381416100523,
+        "price": 304.78753,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2023-02-03/open/QQQ",
+        "projected_risk": null
+      },
+      {
+        "event_id": "2023-02-03/close",
+        "time": "2023-02-03T21:00:00+00:00",
+        "order_id": "2023-02-03/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "submitted",
+        "reason": "target minus holdings minus compatible pending quantity",
+        "quantity": -8.845689827925632,
+        "price": null,
+        "fee": null,
+        "quote_id": null,
+        "projected_risk": null
+      },
+      {
+        "event_id": "2023-02-06/open",
+        "time": "2023-02-06T14:30:00+00:00",
+        "order_id": "2023-02-03/close/QQQ",
+        "instrument_id": "QQQ",
+        "outcome": "filled",
+        "reason": "whole order",
+        "quantity": -8.845689827925632,
+        "price": 303.358245,
+        "fee": 0.0,
+        "quote_id": "assumed-execution/2023-02-06/open/QQQ",
+        "projected_risk": null
+      }
+    ],
+    "decisions": [
+      {
+        "event_id": "2023-02-02/close",
+        "time": "2023-02-02T21:00:00+00:00",
+        "earliest_execution": "2023-02-03T14:30:00+00:00",
+        "next_rebalance_time": "2023-02-03T21:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -47.57381416100523,
+          "IWM": 0.0
+        }
+      },
+      {
+        "event_id": "2023-02-03/open",
+        "time": "2023-02-03T14:30:00+00:00",
+        "earliest_execution": "2023-02-03T14:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      },
+      {
+        "event_id": "2023-02-03/close",
+        "time": "2023-02-03T21:00:00+00:00",
+        "earliest_execution": "2023-02-06T14:30:00+00:00",
+        "next_rebalance_time": "2023-02-06T21:00:00+00:00",
+        "status": "targets",
+        "targets": {
+          "SPY": 0.0,
+          "QQQ": -56.41950398893086,
+          "IWM": 0.0
+        }
+      },
+      {
+        "event_id": "2023-02-06/open",
+        "time": "2023-02-06T14:30:00+00:00",
+        "earliest_execution": "2023-02-06T14:30:00+00:00",
+        "next_rebalance_time": null,
+        "status": "no_decision"
+      }
+    ],
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  }
+]

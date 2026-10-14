@@ -81,7 +81,9 @@ beta_i != 0: abs(g_i + lambda_i * sign(beta_i))
 beta_i == 0: max(abs(g_i) - lambda_i, 0)
 ```
 
-Each violation is divided by `max(1, abs(2 * Xc[:, i].T @ yc / N), lambda_i)`. The maximum must be at most `1e-9` by default; the default limit is 20,000 sweeps. Failure to satisfy the tolerance raises a convergence error. These are documented floating-point checks, not exact optimality certificates.
+Each violation is divided by `max(1, abs(2 * Xc[:, i].T @ yc / N), lambda_i)`. The maximum must be at most `1e-9` by default; the default limit is 20,000 sweeps. Successful coordinate-descent and zero-penalty solves retain their original path. If penalized coordinate descent exhausts its budget and fails this check, problems with at most three instruments receive deterministic active-set polishing: enumerate at most 27 negative/zero/positive change patterns and solve their active equations using QR and linear solves. Redundant active supports are skipped in favor of independent smaller supports. Every candidate must pass the same full-problem KKT check, including inactive inequalities, after reconstructing the intercept and absolute holdings. No penalty, objective or tolerance is changed.
+
+If no candidate passes, or the problem has more than three instruments, the explicit convergence failure remains. Diagnostics record `polish_attempted`, `polish_succeeded`, the original coordinate-descent `iterations` and final `kkt_residual`; on failure the residual describes the last coordinate-descent iterate. These are floating-point checks, not exact optimality certificates. The original historical benchmark stays frozen; the four affected episodes and a successful control are rerun separately with `examples/validate_solver_polish.py`.
 
 `A` estimates the scenario mean residual. It is never booked as cash, financing income or external capital. The engine alone maintains the self-financing cash account. The penalty uses current **actual holdings**, not the previous requested targets or unfilled orders; the engine separately reconciles compatible pending quantities.
 

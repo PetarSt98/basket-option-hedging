@@ -6,6 +6,21 @@ The financial contract is [the specification](docs/backtest_spec.md), with [shor
 
 ## Install, test and reproduce
 
+The new **historical SPY/QQQ/IWM VolGAN adaptation** has a separate
+[data and run guide](docs/historical_benchmark.md). It uses the specified six
+hash-verified release files and a joint adversarial return/surface generator.
+The original files lack IWM dividend and split history. A separate verified
+iShares distribution supplement and two-source split check supply those fields;
+prices, model inputs and original file hashes are preserved. The historical
+command uses the frozen trained models. The synthetic demonstration below
+remains separate and unchanged.
+
+The [completed historical comparison](reports/historical/benchmark/benchmark.md)
+contains 71 scheduled contracts and five policies. Its common terminal sample
+has 62 episodes: five shared data-gap episodes and four additional VolGAN solver
+failures remain visible. Delta has lower hedge-error SD than VolGAN on this
+sample. The guide explains the four charts and the unchanged weak calibration.
+
 For the **Cont–Vuletić workflow demonstration**, run [examples/paper_demo.py](examples/paper_demo.py):
 
 ```powershell
@@ -74,7 +89,7 @@ terminal P&L. Open `summary.json`, `orders.csv` or `postings.csv` to inspect a n
 The engine demonstration is optional background for the paper-focused walkthrough;
 rerunning training is unnecessary during a short presentation.
 
-Run from this repository. Python 3.11 or newer is supported; this implementation was tested with Python 3.13.3, NumPy 2.3.1 and pytest 9.1.1. Runtime dependency: NumPy `>=1.26,<3`. Tests use pytest `>=8,<10`; setuptools builds the small installable package. No lint or static-type checker is configured.
+Run from this repository. Python 3.11 or newer is supported; this implementation was tested with Python 3.13.3, NumPy 2.3.1 and pytest 9.1.1. Runtime dependencies: NumPy `>=1.26,<3` and, on Windows, `tzdata>=2024.1` for historical market time zones. Tests use pytest `>=8,<10`; setuptools builds the small installable package. No lint or static-type checker is configured.
 
 ```powershell
 python -m pip install -e ".[test]"

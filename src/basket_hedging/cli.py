@@ -13,6 +13,11 @@ from .risk import UnnettedLiabilityStressMargin
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Keep optional historical dependencies out of the original synthetic CLI.
+    provided = list(sys.argv[1:] if argv is None else argv)
+    if provided and provided[0] == "historical":
+        from .historical_cli import main as historical_main
+        return historical_main(provided[1:])
     parser = argparse.ArgumentParser(prog="basket-hedging", description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     deterministic = commands.add_parser("make-deterministic", help="write the small hand-authored fixtures")

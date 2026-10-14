@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "instruments": [
+    {
+      "id": "S1",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "S2",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "S3",
+      "kind": "stock",
+      "currency": "USD",
+      "multiplier": 1.0,
+      "strike": null,
+      "expiry": null,
+      "underlying": null,
+      "coefficients": []
+    },
+    {
+      "id": "BASKET",
+      "kind": "basket_put",
+      "currency": "USD",
+      "multiplier": 100,
+      "strike": 100,
+      "expiry": "2026-01-07T16:00:00+00:00",
+      "underlying": null,
+      "coefficients": [
+        [
+          "S1",
+          0.3333333333333333
+        ],
+        [
+          "S2",
+          0.3333333333333333
+        ],
+        [
+          "S3",
+          0.3333333333333333
+        ]
+      ]
+    }
+  ],
+  "opening": {
+    "mode": "ORIGINATE",
+    "initial_capital": 1000,
+    "cash": 0.0,
+    "positions": {},
+    "marks": {},
+    "posted_margin_cash": 0.0,
+    "restricted_short_proceeds": 0.0,
+    "short_lots": [],
+    "opening_equity": null,
+    "liability_id": "BASKET",
+    "liability_quantity": -1,
+    "original_premium": null
+  },
+  "rules": {
+    "horizon": "2026-01-08T09:00:00+00:00",
+    "hedge_universe": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "safety_buffer": 50,
+    "funding": {
+      "cash_rate": 0,
+      "collateral_rate": 0,
+      "borrow_rates": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0
+      }
+    },
+    "borrow": {
+      "S1": {
+        "located": true,
+        "limit": 1000
+      },
+      "S2": {
+        "located": true,
+        "limit": 1000
+      },
+      "S3": {
+        "located": true,
+        "limit": 1000
+      }
+    },
+    "fee_per_order": 1,
+    "fee_per_unit": 0.0,
+    "slippage_per_unit": 0.0,
+    "origination_fee": 0.0,
+    "settlement_fee": 0.0,
+    "lot_sizes": {},
+    "maximum_order_quantities": {
+      "S1": 1000,
+      "S2": 1000,
+      "S3": 1000
+    },
+    "max_mark_age_seconds": 0.0,
+    "start_time": "2026-01-05T16:00:00+00:00",
+    "expected_stress_scenarios": ["unchanged", "toy_down", "toy_up"]
+  },
+  "events_file": "deterministic_gap.jsonl",
+  "metadata": {
+    "source": "hand-authored deterministic fixture v1",
+    "kind": "gap",
+    "margin_label": "uncalibrated research margin proxy",
+    "stress": "unchanged; stocks +/-10%, option marks +/-2 floored at zero",
+    "purpose": "accounting and timing only; no profitability inference"
+  }
+}

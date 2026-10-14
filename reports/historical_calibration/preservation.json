@@ -1,0 +1,2330 @@
+{
+  "checked_at": "2026-10-04T14:49:05.731528+00:00",
+  "baseline_inventory_sha256": "14a0f62300b5fa1063b76b562609d3f014542afc9bab2be6af32f5db3c0ce020",
+  "checked_files": 331,
+  "unchanged_files": 329,
+  "allowed_source_changes": [
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\generator_validation.py",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\volgan.py"
+  ],
+  "unexpected_changes": [],
+  "files": [
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\api.py",
+      "before_sha256": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+      "after_sha256": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\cli.py",
+      "before_sha256": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+      "after_sha256": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\contracts.py",
+      "before_sha256": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+      "after_sha256": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\corporate_actions.py",
+      "before_sha256": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+      "after_sha256": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\deterministic.py",
+      "before_sha256": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+      "after_sha256": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\engine.py",
+      "before_sha256": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+      "after_sha256": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\etf_data.py",
+      "before_sha256": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+      "after_sha256": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\generator_validation.py",
+      "before_sha256": "339584b11acb9faaec136605bf41ee8d20cc43a93fc5713231362ca3317246d4",
+      "after_sha256": "bfbb96e07b7bfff2d06cfe894199690a5bbd1a5fc5b80c45df3dbd3ca2a0e16c",
+      "unchanged": false,
+      "allowed_source_edit": true
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical.py",
+      "before_sha256": "d24a2aaa4d01909d181e31dff41b67bc5933def3ba875d9c46ba5644393a5472",
+      "after_sha256": "d24a2aaa4d01909d181e31dff41b67bc5933def3ba875d9c46ba5644393a5472",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_actions.py",
+      "before_sha256": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+      "after_sha256": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_cli.py",
+      "before_sha256": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+      "after_sha256": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_hedge.py",
+      "before_sha256": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+      "after_sha256": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_plots.py",
+      "before_sha256": "7b9c09df3878413e7250b114d2683ed605be0d7e2e7cb37156b03e1d562913a4",
+      "after_sha256": "7b9c09df3878413e7250b114d2683ed605be0d7e2e7cb37156b03e1d562913a4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_report.py",
+      "before_sha256": "566b2c6a86291299b6d5e3ae8a042293b0717f1774c1ca1b090a8f38966fa84e",
+      "after_sha256": "566b2c6a86291299b6d5e3ae8a042293b0717f1774c1ca1b090a8f38966fa84e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_training.py",
+      "before_sha256": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+      "after_sha256": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learned_model.py",
+      "before_sha256": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+      "after_sha256": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learned_scenarios.py",
+      "before_sha256": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+      "after_sha256": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learning_data.py",
+      "before_sha256": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+      "after_sha256": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\ledger.py",
+      "before_sha256": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+      "after_sha256": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\market.py",
+      "before_sha256": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+      "after_sha256": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\optimization.py",
+      "before_sha256": "801d57194bbe5724646d9ecd30ac76baff2b7291d9423d97fba47167b60a8348",
+      "after_sha256": "801d57194bbe5724646d9ecd30ac76baff2b7291d9423d97fba47167b60a8348",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\orders.py",
+      "before_sha256": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+      "after_sha256": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\policies.py",
+      "before_sha256": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+      "after_sha256": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\replay.py",
+      "before_sha256": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+      "after_sha256": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\reporting.py",
+      "before_sha256": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+      "after_sha256": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\risk.py",
+      "before_sha256": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+      "after_sha256": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenarios.py",
+      "before_sha256": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+      "after_sha256": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenario_comparison.py",
+      "before_sha256": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+      "after_sha256": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenario_hedge.py",
+      "before_sha256": "03a69b36d54a7cc3733b47126b29ada29fdf9fa11addf639073be75e1dc16e4b",
+      "after_sha256": "03a69b36d54a7cc3733b47126b29ada29fdf9fa11addf639073be75e1dc16e4b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\stage2.py",
+      "before_sha256": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+      "after_sha256": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\surfaces.py",
+      "before_sha256": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+      "after_sha256": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\synthetic.py",
+      "before_sha256": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+      "after_sha256": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\valuation.py",
+      "before_sha256": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+      "after_sha256": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\volgan.py",
+      "before_sha256": "45a844e29f003ae8f8e79cc4bf7d0eb1fec01f3af8d2728c709b6e76461cbc3b",
+      "after_sha256": "5dfc35f89dd24067a2608633cbc23b769dca3b8233f7c14d5c25643ba7ab1115",
+      "unchanged": false,
+      "allowed_source_edit": true
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\__init__.py",
+      "before_sha256": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+      "after_sha256": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\__main__.py",
+      "before_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "after_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\dependency_links.txt",
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "after_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\entry_points.txt",
+      "before_sha256": "d4528876131a0c51cf47007b604b144f480f64bb87e3673fe1570f90a918892a",
+      "after_sha256": "d4528876131a0c51cf47007b604b144f480f64bb87e3673fe1570f90a918892a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\PKG-INFO",
+      "before_sha256": "d2876cd01d384d11417099d45134ce9c77037b9c4b980018268b966cfd96a730",
+      "after_sha256": "d2876cd01d384d11417099d45134ce9c77037b9c4b980018268b966cfd96a730",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\requires.txt",
+      "before_sha256": "d22439ac4422e6dae9e59f424ebfda0bbd0e933583a7134187471778c143ed19",
+      "after_sha256": "d22439ac4422e6dae9e59f424ebfda0bbd0e933583a7134187471778c143ed19",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\SOURCES.txt",
+      "before_sha256": "3dc32080d0aed097c222d7dfa0db4dd71687d98f3840d83dc1ee6961a94d2ba7",
+      "after_sha256": "3dc32080d0aed097c222d7dfa0db4dd71687d98f3840d83dc1ee6961a94d2ba7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging.egg-info\\top_level.txt",
+      "before_sha256": "33b3688e299466b9b462c1e6bb3a53612ad0a6743053393e9227b0bd257c1427",
+      "after_sha256": "33b3688e299466b9b462c1e6bb3a53612ad0a6743053393e9227b0bd257c1427",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\comparison.json",
+      "before_sha256": "b4ccdca43a69382c18da27b6e6a2e0095e80c7bcf20c0de035130ad08103c58f",
+      "after_sha256": "b4ccdca43a69382c18da27b6e6a2e0095e80c7bcf20c0de035130ad08103c58f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\optimization_examples.json",
+      "before_sha256": "ff0a0f923cec1f37c345be1043e72eeb07caab06e439c5880e431cc77962ff43",
+      "after_sha256": "ff0a0f923cec1f37c345be1043e72eeb07caab06e439c5880e431cc77962ff43",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\research_summary.json",
+      "before_sha256": "61f13549a2c2bf46b686f91e64ff49d8fc6a2cf8a34e0508d426eee9bf5c8816",
+      "after_sha256": "61f13549a2c2bf46b686f91e64ff49d8fc6a2cf8a34e0508d426eee9bf5c8816",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\comparison.json",
+      "before_sha256": "d429c72fd031cde05dca1a846c67bb7d126caf62493cef612ddc20809ef56c77",
+      "after_sha256": "d429c72fd031cde05dca1a846c67bb7d126caf62493cef612ddc20809ef56c77",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\comparison.json",
+      "before_sha256": "0b189f3b62c85108065c1ef16e9103c9a30a4a06f000ff982a5d2bdc403106b7",
+      "after_sha256": "0b189f3b62c85108065c1ef16e9103c9a30a4a06f000ff982a5d2bdc403106b7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\corporate_action_validation.json",
+      "before_sha256": "540225af1c081d07ba4e704c8e86b338462823beb56e593ae1a3ceb62e677363",
+      "after_sha256": "540225af1c081d07ba4e704c8e86b338462823beb56e593ae1a3ceb62e677363",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\data_check.json",
+      "before_sha256": "89d115402866ac010c68ce4abb7b96aeab47eb942c5430210f4ac06bcf3cff1a",
+      "after_sha256": "89d115402866ac010c68ce4abb7b96aeab47eb942c5430210f4ac06bcf3cff1a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\validation_status.json",
+      "before_sha256": "ad28ff81ffc2f6181dc23f251eb64122ed0302625e202dceb0bdf2f74436503d",
+      "after_sha256": "ad28ff81ffc2f6181dc23f251eb64122ed0302625e202dceb0bdf2f74436503d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes.csv",
+      "before_sha256": "e065fb201b19ce018acfe7b84d380bb8a67fd0d1eac035a4c7d5601c757e8e8d",
+      "after_sha256": "e065fb201b19ce018acfe7b84d380bb8a67fd0d1eac035a4c7d5601c757e8e8d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\frozen_hashes.json",
+      "before_sha256": "3d380000ae1a630cd104dbfdd6af3b9ec818ee4c02661de2a79e55721270787a",
+      "after_sha256": "3d380000ae1a630cd104dbfdd6af3b9ec818ee4c02661de2a79e55721270787a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\original_failures.json",
+      "before_sha256": "1045437394aaa45f2f563c167dffde15d3418eb7550d6dd8ae14c4983bb8937d",
+      "after_sha256": "1045437394aaa45f2f563c167dffde15d3418eb7550d6dd8ae14c4983bb8937d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\README.md",
+      "before_sha256": "e3f8aa01abc0c5adf695a1aebf75482ddac707b65424d2334884741b907977f1",
+      "after_sha256": "e3f8aa01abc0c5adf695a1aebf75482ddac707b65424d2334884741b907977f1",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\validation.json",
+      "before_sha256": "b823ee43bb52b0844ce1273c1a95ca7c253cd3bdffb69a6ee1334b036c353284",
+      "after_sha256": "b823ee43bb52b0844ce1273c1a95ca7c253cd3bdffb69a6ee1334b036c353284",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\comparison.json",
+      "before_sha256": "b21cf18044e4449bc817f9998a3f79b5445652fd8b4e2732a4ac2918a2a1b4b5",
+      "after_sha256": "b21cf18044e4449bc817f9998a3f79b5445652fd8b4e2732a4ac2918a2a1b4b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\backtest.png",
+      "before_sha256": "ab42bec7c47a3e6b4896e6b35c969b524e8f6c38cd2a48abfd3ce8a3b6435377",
+      "after_sha256": "ab42bec7c47a3e6b4896e6b35c969b524e8f6c38cd2a48abfd3ce8a3b6435377",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\comparison.json",
+      "before_sha256": "a19527b6f5729fb48ff82e9a507127bbfc6776b45820890486ee7d1032f9eded",
+      "after_sha256": "a19527b6f5729fb48ff82e9a507127bbfc6776b45820890486ee7d1032f9eded",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\first_decision.json",
+      "before_sha256": "9f3afe590b39934c09f4f1731806a7f948d754bb819aa5bf5453a4975179b325",
+      "after_sha256": "9f3afe590b39934c09f4f1731806a7f948d754bb819aa5bf5453a4975179b325",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\model_and_decisions.json",
+      "before_sha256": "545fa3addc30509ffe43da03b8fe95f05cde689d1644c372aaba9aea0d9159d7",
+      "after_sha256": "545fa3addc30509ffe43da03b8fe95f05cde689d1644c372aaba9aea0d9159d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\next_day.png",
+      "before_sha256": "cfe52c916ae789ea76a7384907264b7ad2d86c0c16c2650c19b6200dbe6e806b",
+      "after_sha256": "cfe52c916ae789ea76a7384907264b7ad2d86c0c16c2650c19b6200dbe6e806b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\comparison.json",
+      "before_sha256": "857bcd7f6077518b9e9cd34aa1d90fed0d6c2dc6ba9891d8e3629514369f49dd",
+      "after_sha256": "857bcd7f6077518b9e9cd34aa1d90fed0d6c2dc6ba9891d8e3629514369f49dd",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\experiment.json",
+      "before_sha256": "e5f0be6cd6a41177cdd4778da47a822bb1aab2d76f03a021f24efeba99d67b5a",
+      "after_sha256": "e5f0be6cd6a41177cdd4778da47a822bb1aab2d76f03a021f24efeba99d67b5a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\generator_validation.json",
+      "before_sha256": "7f4cef69b2c72b580d51e221a2f6d7503373db6e6505cadc8898f0d5fbc95f46",
+      "after_sha256": "7f4cef69b2c72b580d51e221a2f6d7503373db6e6505cadc8898f0d5fbc95f46",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\hedging_summary.json",
+      "before_sha256": "57c8ea045b32e2f4d0682db9ab2102be022bab5ffe9e8d7dd5ef5d6bad45f9ee",
+      "after_sha256": "57c8ea045b32e2f4d0682db9ab2102be022bab5ffe9e8d7dd5ef5d6bad45f9ee",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\model.json",
+      "before_sha256": "2994d85f3ab13638b268ca08d31891720e4a6bbc44d106d52b7fc9f283c649f8",
+      "after_sha256": "2994d85f3ab13638b268ca08d31891720e4a6bbc44d106d52b7fc9f283c649f8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\path_results.csv",
+      "before_sha256": "4f12bac57496ad734491d22c8e2563ce4204654303de4a172c83b0ddd477e37d",
+      "after_sha256": "4f12bac57496ad734491d22c8e2563ce4204654303de4a172c83b0ddd477e37d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\test_manifest.json",
+      "before_sha256": "f9297dd2e51ee12bb61e5d7358319a28f564a06e7f785cda191bc86d9c8b4fe4",
+      "after_sha256": "f9297dd2e51ee12bb61e5d7358319a28f564a06e7f785cda191bc86d9c8b4fe4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\training_history.csv",
+      "before_sha256": "63e8115f98fb9d892c3c04cd5f98f27f1480abed552eae322c4abf01c3883e25",
+      "after_sha256": "63e8115f98fb9d892c3c04cd5f98f27f1480abed552eae322c4abf01c3883e25",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\stage2\\validation_report.md",
+      "before_sha256": "3d3fae8c003aa8e4c419de9d9066aad07802554ddf00a71396117e40167767e6",
+      "after_sha256": "3d3fae8c003aa8e4c419de9d9066aad07802554ddf00a71396117e40167767e6",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\comparison.json",
+      "before_sha256": "a02e431514b6a479a9b8eaea2f4475e614373b1e2480aa99956beba06da6a859",
+      "after_sha256": "a02e431514b6a479a9b8eaea2f4475e614373b1e2480aa99956beba06da6a859",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\account.csv",
+      "before_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "after_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\orders.csv",
+      "before_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "after_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\postings.csv",
+      "before_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "after_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\summary.json",
+      "before_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "after_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\delta\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\account.csv",
+      "before_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "after_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\postings.csv",
+      "before_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "after_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\summary.json",
+      "before_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "after_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\synthetic\\unhedged\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\account.csv",
+      "before_sha256": "4e4fbde786aa2e3700f79a4bd353549d4ac7469bf86baab73c67d6f84fa2bf33",
+      "after_sha256": "4e4fbde786aa2e3700f79a4bd353549d4ac7469bf86baab73c67d6f84fa2bf33",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\orders.csv",
+      "before_sha256": "6ea7d58eac425549fed5661a6fb43f19c8508293b2e20aa3d77b2394e0043ed0",
+      "after_sha256": "6ea7d58eac425549fed5661a6fb43f19c8508293b2e20aa3d77b2394e0043ed0",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\postings.csv",
+      "before_sha256": "8bdc65b8ef68a81bc0a460ac6acee373160feb91eb264b6954eced1fc0c38972",
+      "after_sha256": "8bdc65b8ef68a81bc0a460ac6acee373160feb91eb264b6954eced1fc0c38972",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\summary.json",
+      "before_sha256": "000f11c1849d505814d4d1bfd316c9469db556a860dd4d073ba27dfe03906692",
+      "after_sha256": "000f11c1849d505814d4d1bfd316c9469db556a860dd4d073ba27dfe03906692",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\delta\\valuation_audit.csv",
+      "before_sha256": "b04a9c5516cabd503c6e38a0520648e9c5c51f35873fc1b5ff1acf3ea15ea2f9",
+      "after_sha256": "b04a9c5516cabd503c6e38a0520648e9c5c51f35873fc1b5ff1acf3ea15ea2f9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\account.csv",
+      "before_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "after_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\postings.csv",
+      "before_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "after_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\summary.json",
+      "before_sha256": "fcb8a82895ceecc27a4bb931027b42a92ff6a626c6dabf0428cf8bbf712c8cc9",
+      "after_sha256": "fcb8a82895ceecc27a4bb931027b42a92ff6a626c6dabf0428cf8bbf712c8cc9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\rejected_exit\\unhedged\\valuation_audit.csv",
+      "before_sha256": "b04a9c5516cabd503c6e38a0520648e9c5c51f35873fc1b5ff1acf3ea15ea2f9",
+      "after_sha256": "b04a9c5516cabd503c6e38a0520648e9c5c51f35873fc1b5ff1acf3ea15ea2f9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\account.csv",
+      "before_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "after_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\orders.csv",
+      "before_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "after_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\postings.csv",
+      "before_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "after_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\summary.json",
+      "before_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "after_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\delta\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\account.csv",
+      "before_sha256": "570bcb14114a4844504dbda33515fb9b4cfaaa5d30bd6fc6ff06dcbc7bebc201",
+      "after_sha256": "570bcb14114a4844504dbda33515fb9b4cfaaa5d30bd6fc6ff06dcbc7bebc201",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\orders.csv",
+      "before_sha256": "ce1f5f762e9daf5c4d537fc3fadd42fc5de2e50adb7b7d3413902770ebba9ae0",
+      "after_sha256": "ce1f5f762e9daf5c4d537fc3fadd42fc5de2e50adb7b7d3413902770ebba9ae0",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\postings.csv",
+      "before_sha256": "539a0674cb7d7c5559e62eacefb8d793892bc0bc1cb3dcc28cc488dfb44da2d9",
+      "after_sha256": "539a0674cb7d7c5559e62eacefb8d793892bc0bc1cb3dcc28cc488dfb44da2d9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\summary.json",
+      "before_sha256": "3969a05d00ca28c441ce77d34daf92ffcc0c32717b9c81070fa8d2469f514409",
+      "after_sha256": "3969a05d00ca28c441ce77d34daf92ffcc0c32717b9c81070fa8d2469f514409",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\learned_generator\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\account.csv",
+      "before_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "after_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\postings.csv",
+      "before_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "after_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\summary.json",
+      "before_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "after_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\paper_demo\\unhedged\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\account.csv",
+      "before_sha256": "4e4fbde786aa2e3700f79a4bd353549d4ac7469bf86baab73c67d6f84fa2bf33",
+      "after_sha256": "4e4fbde786aa2e3700f79a4bd353549d4ac7469bf86baab73c67d6f84fa2bf33",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\orders.csv",
+      "before_sha256": "8a5107c4aab59131bea61df6157d3b0b82a5305327263ddc186f49f2bbe57cd8",
+      "after_sha256": "8a5107c4aab59131bea61df6157d3b0b82a5305327263ddc186f49f2bbe57cd8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\postings.csv",
+      "before_sha256": "8bdc65b8ef68a81bc0a460ac6acee373160feb91eb264b6954eced1fc0c38972",
+      "after_sha256": "8bdc65b8ef68a81bc0a460ac6acee373160feb91eb264b6954eced1fc0c38972",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\summary.json",
+      "before_sha256": "aaa17cfd99488f0973e269c20d80659ade9eaa21155a9afa924619d4588d37f5",
+      "after_sha256": "aaa17cfd99488f0973e269c20d80659ade9eaa21155a9afa924619d4588d37f5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\delta\\valuation_audit.csv",
+      "before_sha256": "3f3911a2f707257bbeec2a70177123a5243f26f39dce6ff5c784d7e353a0f067",
+      "after_sha256": "3f3911a2f707257bbeec2a70177123a5243f26f39dce6ff5c784d7e353a0f067",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\account.csv",
+      "before_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "after_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\postings.csv",
+      "before_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "after_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\summary.json",
+      "before_sha256": "7f6bf4eea466833784b71dabd060f0aaf16b320eed353a479a2d93af5cd76e25",
+      "after_sha256": "7f6bf4eea466833784b71dabd060f0aaf16b320eed353a479a2d93af5cd76e25",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\missing_exit\\unhedged\\valuation_audit.csv",
+      "before_sha256": "3f3911a2f707257bbeec2a70177123a5243f26f39dce6ff5c784d7e353a0f067",
+      "after_sha256": "3f3911a2f707257bbeec2a70177123a5243f26f39dce6ff5c784d7e353a0f067",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\comparison.json",
+      "before_sha256": "ee0d463eaf2a164c2ede1a1ea3c0a429199cecdac628c3ffc475fb737ae50d8a",
+      "after_sha256": "ee0d463eaf2a164c2ede1a1ea3c0a429199cecdac628c3ffc475fb737ae50d8a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\events.jsonl",
+      "before_sha256": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66",
+      "after_sha256": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\solver_diagnostics.json",
+      "before_sha256": "998a81e8e19178f322f3496a8f524e84cac3ac9b7edffa6a21bf6a982ec5ced1",
+      "after_sha256": "998a81e8e19178f322f3496a8f524e84cac3ac9b7edffa6a21bf6a982ec5ced1",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\comparison.json",
+      "before_sha256": "497b74f8725e303a3e58a3ecf7247324e4e46477b7c05e286a739e99085d9894",
+      "after_sha256": "497b74f8725e303a3e58a3ecf7247324e4e46477b7c05e286a739e99085d9894",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\events.jsonl",
+      "before_sha256": "70a7e0431cd5d1e4c9d979bd5bd24e082d3209cc829cce141720a2cc03706aac",
+      "after_sha256": "70a7e0431cd5d1e4c9d979bd5bd24e082d3209cc829cce141720a2cc03706aac",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\solver_diagnostics.json",
+      "before_sha256": "63b071f5e1b2dd711086974d3aa15f74bc05e73fed3dee0d774493997784a09b",
+      "after_sha256": "63b071f5e1b2dd711086974d3aa15f74bc05e73fed3dee0d774493997784a09b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\comparison.json",
+      "before_sha256": "74dc70f0fe5d8cd7da192f46c0f96e27c936d9d0e816b6254ae27668e96f4d56",
+      "after_sha256": "74dc70f0fe5d8cd7da192f46c0f96e27c936d9d0e816b6254ae27668e96f4d56",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\events.jsonl",
+      "before_sha256": "ba119c6ba14ce8451ba655c28b2f460fa2cfda090d761b8c985eded36d6ea619",
+      "after_sha256": "ba119c6ba14ce8451ba655c28b2f460fa2cfda090d761b8c985eded36d6ea619",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\solver_diagnostics.json",
+      "before_sha256": "08a7dbecebaef0007651a1b005a0470e7433c921f3fd0c6c9c8e4aeb2b866f03",
+      "after_sha256": "08a7dbecebaef0007651a1b005a0470e7433c921f3fd0c6c9c8e4aeb2b866f03",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\comparison.json",
+      "before_sha256": "e9ac0f41da5b71eb869cf92b631112454caf202a4577c21cc83372e869df310a",
+      "after_sha256": "e9ac0f41da5b71eb869cf92b631112454caf202a4577c21cc83372e869df310a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\events.jsonl",
+      "before_sha256": "aaca920f1d940a4b1315aada2d7ad9d72fa20165c4d4acd7eab44d07afeaf80b",
+      "after_sha256": "aaca920f1d940a4b1315aada2d7ad9d72fa20165c4d4acd7eab44d07afeaf80b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\solver_diagnostics.json",
+      "before_sha256": "442124c4ec444f3b91bc3dd2810a0f1ca6add6f872dff1a563a95c6ba26d6b8b",
+      "after_sha256": "442124c4ec444f3b91bc3dd2810a0f1ca6add6f872dff1a563a95c6ba26d6b8b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\comparison.json",
+      "before_sha256": "7847a6781a8d69373913b96b9bfec29f2e2ccbe02516a8e1ab054df7ab0ac120",
+      "after_sha256": "7847a6781a8d69373913b96b9bfec29f2e2ccbe02516a8e1ab054df7ab0ac120",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\events.jsonl",
+      "before_sha256": "c8ead5422d70ba489354f1ecf6552b3a5c56f9710a58f808cf287f386df8200c",
+      "after_sha256": "c8ead5422d70ba489354f1ecf6552b3a5c56f9710a58f808cf287f386df8200c",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\solver_diagnostics.json",
+      "before_sha256": "d536c05463a10444b4e27cddaabfdc3cd1ecdb52da0ebed98fad18d7c9f680c3",
+      "after_sha256": "d536c05463a10444b4e27cddaabfdc3cd1ecdb52da0ebed98fad18d7c9f680c3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\account.csv",
+      "before_sha256": "d30257e0f3918bb95f5560ff031fa8e73675a97f6df3b6834c88b6199087944f",
+      "after_sha256": "d30257e0f3918bb95f5560ff031fa8e73675a97f6df3b6834c88b6199087944f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\orders.csv",
+      "before_sha256": "ec92211b02ad70168689c7208a742b01cf9777827c1d57e5dcc33adac2fce15d",
+      "after_sha256": "ec92211b02ad70168689c7208a742b01cf9777827c1d57e5dcc33adac2fce15d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\postings.csv",
+      "before_sha256": "1a66bd9090beab947aecd202c299799fc56d00a344d62dc5fefbe96c80ae4945",
+      "after_sha256": "1a66bd9090beab947aecd202c299799fc56d00a344d62dc5fefbe96c80ae4945",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\settlements.csv",
+      "before_sha256": "e3cf43e6293cb4feaf93322c207052a4abb1567ba49c76ee43a855fce976e038",
+      "after_sha256": "e3cf43e6293cb4feaf93322c207052a4abb1567ba49c76ee43a855fce976e038",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\summary.json",
+      "before_sha256": "3c2bd3a64ded1f5e3009554aa5cdbb53825340082ab850d06f2267f2431e7088",
+      "after_sha256": "3c2bd3a64ded1f5e3009554aa5cdbb53825340082ab850d06f2267f2431e7088",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2023-02-02\\volgan\\valuation_audit.csv",
+      "before_sha256": "a9afb0b9fa856c9241c525899ef098eaed3d2fee94cfc2c10272d3e7ea11df7e",
+      "after_sha256": "a9afb0b9fa856c9241c525899ef098eaed3d2fee94cfc2c10272d3e7ea11df7e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\account.csv",
+      "before_sha256": "17b0b9890a098ef78e7f4881974498a00c8b36b3555b837ece9473ecd99725f7",
+      "after_sha256": "17b0b9890a098ef78e7f4881974498a00c8b36b3555b837ece9473ecd99725f7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\orders.csv",
+      "before_sha256": "9b11144e42e4e4a05358ee0c2c4a6120009e509e56429062f4add4edf6989ba8",
+      "after_sha256": "9b11144e42e4e4a05358ee0c2c4a6120009e509e56429062f4add4edf6989ba8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\postings.csv",
+      "before_sha256": "70a2ef9c21a5c7cd0dee2a6b63c9b6d09708e3f6c8f6bf7375ab6f7ba729cbbd",
+      "after_sha256": "70a2ef9c21a5c7cd0dee2a6b63c9b6d09708e3f6c8f6bf7375ab6f7ba729cbbd",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\settlements.csv",
+      "before_sha256": "37d2d4ccfad8f5d5741f3c7f9a501033465c99787427759b689afc72bd1f7baa",
+      "after_sha256": "37d2d4ccfad8f5d5741f3c7f9a501033465c99787427759b689afc72bd1f7baa",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\summary.json",
+      "before_sha256": "0b0c64c720412bb08c04fda2a4463c38d77aed03ec6c0c2ad94944644fc41561",
+      "after_sha256": "0b0c64c720412bb08c04fda2a4463c38d77aed03ec6c0c2ad94944644fc41561",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-12-01\\volgan\\valuation_audit.csv",
+      "before_sha256": "3a76e3af7c0fe4c9d6009a5143231ca9b6d3b74f661447f05981df24afb44ae2",
+      "after_sha256": "3a76e3af7c0fe4c9d6009a5143231ca9b6d3b74f661447f05981df24afb44ae2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\account.csv",
+      "before_sha256": "43142a3678172b854970f8551efcbe2bfe38ae94616b1a565b52df1b84adfc97",
+      "after_sha256": "43142a3678172b854970f8551efcbe2bfe38ae94616b1a565b52df1b84adfc97",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\orders.csv",
+      "before_sha256": "e145a6f9c0fb71679aa1b83920b95656814a853262325812ee196a9c5a466ec2",
+      "after_sha256": "e145a6f9c0fb71679aa1b83920b95656814a853262325812ee196a9c5a466ec2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\postings.csv",
+      "before_sha256": "24bc083dff9a312da14dc990eb6a1e835187ec595a88a302de960f516b28e67c",
+      "after_sha256": "24bc083dff9a312da14dc990eb6a1e835187ec595a88a302de960f516b28e67c",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\settlements.csv",
+      "before_sha256": "3203c0e4c7b1822ada4e3a0a4aea3b82d7d37bb17bb7c47fd932f79088ec939c",
+      "after_sha256": "3203c0e4c7b1822ada4e3a0a4aea3b82d7d37bb17bb7c47fd932f79088ec939c",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\summary.json",
+      "before_sha256": "03e0f253930687aff53dece23f14aee530f5204e13878b5621b556581487146c",
+      "after_sha256": "03e0f253930687aff53dece23f14aee530f5204e13878b5621b556581487146c",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-09-01\\volgan\\valuation_audit.csv",
+      "before_sha256": "4201253a3bc184f38595033fa61a7f7a3877e95f8c7f0a2d7b7907080003284f",
+      "after_sha256": "4201253a3bc184f38595033fa61a7f7a3877e95f8c7f0a2d7b7907080003284f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\account.csv",
+      "before_sha256": "d8b625d4b0739fe3bc5ad47db4ee15f89b856af349586720b863f240e5de530f",
+      "after_sha256": "d8b625d4b0739fe3bc5ad47db4ee15f89b856af349586720b863f240e5de530f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\orders.csv",
+      "before_sha256": "8034f3782df1267053306f69ac2780b4d9ab481e546dc1673f2eb34556708152",
+      "after_sha256": "8034f3782df1267053306f69ac2780b4d9ab481e546dc1673f2eb34556708152",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\postings.csv",
+      "before_sha256": "a105b5c36808aaf72ca9bfd0a5a3b27cd212b6f6b140837745415bc9116286a8",
+      "after_sha256": "a105b5c36808aaf72ca9bfd0a5a3b27cd212b6f6b140837745415bc9116286a8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\settlements.csv",
+      "before_sha256": "97bc201146182be93c43f5974653bbefb924434445e9884ddea13891162c959c",
+      "after_sha256": "97bc201146182be93c43f5974653bbefb924434445e9884ddea13891162c959c",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\summary.json",
+      "before_sha256": "657e5b4b19e7370a36099ca57317dc93612d70e6fdbff903afffc53108a33878",
+      "after_sha256": "657e5b4b19e7370a36099ca57317dc93612d70e6fdbff903afffc53108a33878",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2022-06-02\\volgan\\valuation_audit.csv",
+      "before_sha256": "c732e66ea59cdd2c9e489c5647869f3b6383a809a3f6779082da739cfc272db9",
+      "after_sha256": "c732e66ea59cdd2c9e489c5647869f3b6383a809a3f6779082da739cfc272db9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\account.csv",
+      "before_sha256": "d8bbad8a69de50684e824a89336cda5884b32e3a9968e85697e52a0874958d5f",
+      "after_sha256": "d8bbad8a69de50684e824a89336cda5884b32e3a9968e85697e52a0874958d5f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\orders.csv",
+      "before_sha256": "cfa76d36e7e4434e1083d1c84e36028fd95127258184ccb204d39d010c82df94",
+      "after_sha256": "cfa76d36e7e4434e1083d1c84e36028fd95127258184ccb204d39d010c82df94",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\postings.csv",
+      "before_sha256": "6619f60ba00118f444ae1fd6be9ba3170afeff339b36c679d18d3de80e7d9188",
+      "after_sha256": "6619f60ba00118f444ae1fd6be9ba3170afeff339b36c679d18d3de80e7d9188",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\summary.json",
+      "before_sha256": "5516e226d821ca80787f17707da97eb1a289db88903cb359dbadcae32c3f1cd7",
+      "after_sha256": "5516e226d821ca80787f17707da97eb1a289db88903cb359dbadcae32c3f1cd7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical_solver_polish\\episodes\\2020-01-02\\volgan\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\benchmark.md",
+      "before_sha256": "253435375db130e2bde6c0e820adab9b42c7d6e06b76d50f27c63f3eb296940d",
+      "after_sha256": "253435375db130e2bde6c0e820adab9b42c7d6e06b76d50f27c63f3eb296940d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\blocked.json",
+      "before_sha256": "c53c74dacf06715823d0f72f8cecd9b458fa9d7b72497608a39cb2c431ecae59",
+      "after_sha256": "c53c74dacf06715823d0f72f8cecd9b458fa9d7b72497608a39cb2c431ecae59",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\episodes.csv",
+      "before_sha256": "ef9a623c0c195e71adbe94a9b1de5fc9c9daafdb204b81451eaf5e030aca53fc",
+      "after_sha256": "ef9a623c0c195e71adbe94a9b1de5fc9c9daafdb204b81451eaf5e030aca53fc",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\failed_runs.json",
+      "before_sha256": "72502c9ad36563b986cf8b6369f51bca2749f613f5d00bd95f02339d47836399",
+      "after_sha256": "72502c9ad36563b986cf8b6369f51bca2749f613f5d00bd95f02339d47836399",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\independent_checks.json",
+      "before_sha256": "b490d4508515fc6c91bea34d1d48e24c5dc2f05835470f2fae9c69f183c83607",
+      "after_sha256": "b490d4508515fc6c91bea34d1d48e24c5dc2f05835470f2fae9c69f183c83607",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\metrics.csv",
+      "before_sha256": "6e409803e93fd7921bddb9df255a9b2cb7efd01d85840dd5cc7f403fe9da3449",
+      "after_sha256": "6e409803e93fd7921bddb9df255a9b2cb7efd01d85840dd5cc7f403fe9da3449",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\paired_differences.csv",
+      "before_sha256": "a3b0bbff888950b3f47b44c810f08379026944040bf18a645ca7bdfea21bbb59",
+      "after_sha256": "a3b0bbff888950b3f47b44c810f08379026944040bf18a645ca7bdfea21bbb59",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\paired_differences.json",
+      "before_sha256": "0f863222c19a9f5a98deeee46a7cf2ad4021bd50125f886d4318c67d6f34439e",
+      "after_sha256": "0f863222c19a9f5a98deeee46a7cf2ad4021bd50125f886d4318c67d6f34439e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative.csv",
+      "before_sha256": "3bd1ae92c123f980ecd0c89d0aaad3964c3dba115a7d7941b31a0279c818c347",
+      "after_sha256": "3bd1ae92c123f980ecd0c89d0aaad3964c3dba115a7d7941b31a0279c818c347",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative.jsonl",
+      "before_sha256": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66",
+      "after_sha256": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\summary.json",
+      "before_sha256": "a20ac1fad7445aa018fe56815fd6863b06f018e3891cb0696d56499c44e36db9",
+      "after_sha256": "a20ac1fad7445aa018fe56815fd6863b06f018e3891cb0696d56499c44e36db9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\gaussian\\model.json",
+      "before_sha256": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+      "after_sha256": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\gaussian\\training_history.csv",
+      "before_sha256": "ea9fef623d9731a9a1b542c7a57b7fc16dc0b7fecaacac2c3bee5315ffb55873",
+      "after_sha256": "ea9fef623d9731a9a1b542c7a57b7fc16dc0b7fecaacac2c3bee5315ffb55873",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\models\\gaussian.json",
+      "before_sha256": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+      "after_sha256": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\models\\volgan.json",
+      "before_sha256": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+      "after_sha256": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\models\\volgan_validation.json",
+      "before_sha256": "9dc0b0793922a6f596b7d26c26f49b3e2bd73501b6900f176bd132a6835af6b0",
+      "after_sha256": "9dc0b0793922a6f596b7d26c26f49b3e2bd73501b6900f176bd132a6835af6b0",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\01_error_distribution.png",
+      "before_sha256": "728b74e60ec74c3dd3639bc327c28959cb346b299b9cd608be1ffae2d7e6bf92",
+      "after_sha256": "728b74e60ec74c3dd3639bc327c28959cb346b299b9cd608be1ffae2d7e6bf92",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\01_error_distribution.svg",
+      "before_sha256": "b84cb49be8d2a81d67891e58f13345e5e4403b9fc835f52d31788b9db07f0d6b",
+      "after_sha256": "b84cb49be8d2a81d67891e58f13345e5e4403b9fc835f52d31788b9db07f0d6b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\02_error_through_time.png",
+      "before_sha256": "9cdb58edd2c48713d85eea9958a6917d089511872617793f06bc7fa5492e0999",
+      "after_sha256": "9cdb58edd2c48713d85eea9958a6917d089511872617793f06bc7fa5492e0999",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\02_error_through_time.svg",
+      "before_sha256": "49286ed09a91230e5593e606de77bafd44e05319208c31c8fcc3f39ad3184973",
+      "after_sha256": "49286ed09a91230e5593e606de77bafd44e05319208c31c8fcc3f39ad3184973",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\03_risk_cost.png",
+      "before_sha256": "76e9c9f8e32f40901a1e02f67cd63633ef16c8927b36a0ed44f12a34fbe5d5f8",
+      "after_sha256": "76e9c9f8e32f40901a1e02f67cd63633ef16c8927b36a0ed44f12a34fbe5d5f8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\03_risk_cost.svg",
+      "before_sha256": "8765ebd5d8445459fa6f098b7d5807941ec9b0e62ffb5c86ba38e3efbd3ad2cc",
+      "after_sha256": "8765ebd5d8445459fa6f098b7d5807941ec9b0e62ffb5c86ba38e3efbd3ad2cc",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\04_representative_episode.png",
+      "before_sha256": "6dd87ea40b17cd9f1e9e23f1989f5a36b217f06b63e2f137140d8c2664b1574d",
+      "after_sha256": "6dd87ea40b17cd9f1e9e23f1989f5a36b217f06b63e2f137140d8c2664b1574d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\figures\\04_representative_episode.svg",
+      "before_sha256": "6bdd309530eb46ef224840a1b135aca5771ee6635ccc286a1ece2022c62e1aa5",
+      "after_sha256": "6bdd309530eb46ef224840a1b135aca5771ee6635ccc286a1ece2022c62e1aa5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\comparison.json",
+      "before_sha256": "01f719c11b01a13ecd35ad5a90e635e9b509dd3b94e73909ea0d52117784511e",
+      "after_sha256": "01f719c11b01a13ecd35ad5a90e635e9b509dd3b94e73909ea0d52117784511e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\account.csv",
+      "before_sha256": "d6836e140fc3b73695b766df1569830d55db20153ef0ecd01ef904eefbe1a169",
+      "after_sha256": "d6836e140fc3b73695b766df1569830d55db20153ef0ecd01ef904eefbe1a169",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\orders.csv",
+      "before_sha256": "7ba66088a9155ca92d56fc4a6618037295adf0c70665aa1e28f4a0130748d1e2",
+      "after_sha256": "7ba66088a9155ca92d56fc4a6618037295adf0c70665aa1e28f4a0130748d1e2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\postings.csv",
+      "before_sha256": "da76511f3acaefa8741d2ad97619c27dbe5d4d0cf993f9792d428ddfd00400fe",
+      "after_sha256": "da76511f3acaefa8741d2ad97619c27dbe5d4d0cf993f9792d428ddfd00400fe",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\summary.json",
+      "before_sha256": "56df34c3981361e7bc8cb3510e593bf34f8f7a280597b619573e25dd47e2308a",
+      "after_sha256": "56df34c3981361e7bc8cb3510e593bf34f8f7a280597b619573e25dd47e2308a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\account.csv",
+      "before_sha256": "c7f577eb3cdb236d01633c231c9996e7fdfafefaaddd1d34a3de40cb22439b10",
+      "after_sha256": "c7f577eb3cdb236d01633c231c9996e7fdfafefaaddd1d34a3de40cb22439b10",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\orders.csv",
+      "before_sha256": "397f4e3bb5a6cc1b812b0beacccff98cd7850dcd40778c963b1ac4ff00e24993",
+      "after_sha256": "397f4e3bb5a6cc1b812b0beacccff98cd7850dcd40778c963b1ac4ff00e24993",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\postings.csv",
+      "before_sha256": "41daa0e71c1c6939775b233b9f38d1f7f9d3bc36df9488ee75263ee9712ac741",
+      "after_sha256": "41daa0e71c1c6939775b233b9f38d1f7f9d3bc36df9488ee75263ee9712ac741",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\summary.json",
+      "before_sha256": "892f487434506fd02f6d8d477a6e6afb3dd413189bf71de0763de80081bcb9df",
+      "after_sha256": "892f487434506fd02f6d8d477a6e6afb3dd413189bf71de0763de80081bcb9df",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\account.csv",
+      "before_sha256": "87195448667b31ef35bf04f1eb2f15bec069ab5f85ec5c3c8c78f6890c334e79",
+      "after_sha256": "87195448667b31ef35bf04f1eb2f15bec069ab5f85ec5c3c8c78f6890c334e79",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\orders.csv",
+      "before_sha256": "539db41ae8be543f8db7a6100b972c9a77cf506e6bb8e36880929b61fb89dce7",
+      "after_sha256": "539db41ae8be543f8db7a6100b972c9a77cf506e6bb8e36880929b61fb89dce7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\postings.csv",
+      "before_sha256": "426ba629b0439eb4f2ea241424b7d35b62ab0e448c7dd4468208fb67f2288bcb",
+      "after_sha256": "426ba629b0439eb4f2ea241424b7d35b62ab0e448c7dd4468208fb67f2288bcb",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\summary.json",
+      "before_sha256": "2ca114b7bb68be92a7f33abeb7e10c4093cf747f3065f6c4c986231462a0b202",
+      "after_sha256": "2ca114b7bb68be92a7f33abeb7e10c4093cf747f3065f6c4c986231462a0b202",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\account.csv",
+      "before_sha256": "f3de930849d854fe5a6607cb8999f0c08c4bcf4f252f5b7aad49acf054e7a3a8",
+      "after_sha256": "f3de930849d854fe5a6607cb8999f0c08c4bcf4f252f5b7aad49acf054e7a3a8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\postings.csv",
+      "before_sha256": "9775d23d9bb7cac502cd444e8afd485d937f17ef7ada044456f5f89408377088",
+      "after_sha256": "9775d23d9bb7cac502cd444e8afd485d937f17ef7ada044456f5f89408377088",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\summary.json",
+      "before_sha256": "e07fde6a59b7e14f433249120f203c42c0d837d2569b71e14a146ecff7a662c2",
+      "after_sha256": "e07fde6a59b7e14f433249120f203c42c0d837d2569b71e14a146ecff7a662c2",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\account.csv",
+      "before_sha256": "d8bbad8a69de50684e824a89336cda5884b32e3a9968e85697e52a0874958d5f",
+      "after_sha256": "d8bbad8a69de50684e824a89336cda5884b32e3a9968e85697e52a0874958d5f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\orders.csv",
+      "before_sha256": "cfa76d36e7e4434e1083d1c84e36028fd95127258184ccb204d39d010c82df94",
+      "after_sha256": "cfa76d36e7e4434e1083d1c84e36028fd95127258184ccb204d39d010c82df94",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\postings.csv",
+      "before_sha256": "6619f60ba00118f444ae1fd6be9ba3170afeff339b36c679d18d3de80e7d9188",
+      "after_sha256": "6619f60ba00118f444ae1fd6be9ba3170afeff339b36c679d18d3de80e7d9188",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\settlements.csv",
+      "before_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "after_sha256": "27fe9cb597095fb63da3a4f7273d3e941a291ccfc87f70b204abcd0c1b003f35",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\summary.json",
+      "before_sha256": "548b1abb8c93aa1bfe4c86910ea667a22b211d9ec667a659112e52bb68b10982",
+      "after_sha256": "548b1abb8c93aa1bfe4c86910ea667a22b211d9ec667a659112e52bb68b10982",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\valuation_audit.csv",
+      "before_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "after_sha256": "e0488390d0741eb8130da544004c4b993de67ca0093b3fe88b03a3ac54a7bc88",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\account.csv",
+      "before_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "after_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\orders.csv",
+      "before_sha256": "13825b84511b19b6fc188a3c9265b026f440e470a01712cd0c7665e07dca2296",
+      "after_sha256": "13825b84511b19b6fc188a3c9265b026f440e470a01712cd0c7665e07dca2296",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\postings.csv",
+      "before_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "after_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\settlements.csv",
+      "before_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "after_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\summary.json",
+      "before_sha256": "2c5e66207feb68a6fa99f5c0643ca4a823d86583fb8fd7866ad5eba448d689bd",
+      "after_sha256": "2c5e66207feb68a6fa99f5c0643ca4a823d86583fb8fd7866ad5eba448d689bd",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\delta\\valuation_audit.csv",
+      "before_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "after_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\account.csv",
+      "before_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "after_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\postings.csv",
+      "before_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "after_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\settlements.csv",
+      "before_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "after_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\summary.json",
+      "before_sha256": "a8307fdff6fd0eb5704725a903b1cca5d0a3c6912ea82c9d6fe230ac56e841c9",
+      "after_sha256": "a8307fdff6fd0eb5704725a903b1cca5d0a3c6912ea82c9d6fe230ac56e841c9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\gap\\unhedged\\valuation_audit.csv",
+      "before_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "after_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\account.csv",
+      "before_sha256": "bd4dd7b87c243297dc99978cef234c7b71ee45ca6c2b7fd36778c037710166ac",
+      "after_sha256": "bd4dd7b87c243297dc99978cef234c7b71ee45ca6c2b7fd36778c037710166ac",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\orders.csv",
+      "before_sha256": "3b923117c406acc08265d253e16fa66b4e53cad77d4e9ae71260f52374eb50b9",
+      "after_sha256": "3b923117c406acc08265d253e16fa66b4e53cad77d4e9ae71260f52374eb50b9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\postings.csv",
+      "before_sha256": "26043b0d314597d8771f7f2d52c8f8978de6566ac617a3dcba696ec70943738a",
+      "after_sha256": "26043b0d314597d8771f7f2d52c8f8978de6566ac617a3dcba696ec70943738a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\summary.json",
+      "before_sha256": "54385fe9e387fbc9026f89b5cc16157c4d5bddaa395de8889c4c9e0f22e45ce4",
+      "after_sha256": "54385fe9e387fbc9026f89b5cc16157c4d5bddaa395de8889c4c9e0f22e45ce4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\delta\\valuation_audit.csv",
+      "before_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "after_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\account.csv",
+      "before_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "after_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\postings.csv",
+      "before_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "after_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\summary.json",
+      "before_sha256": "56dd10e537e0573b2b4fe716c42e14783f1b764188b7d1ad072c3ee072913da4",
+      "after_sha256": "56dd10e537e0573b2b4fe716c42e14783f1b764188b7d1ad072c3ee072913da4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\deterministic\\unhedged\\valuation_audit.csv",
+      "before_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "after_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\comparison.json",
+      "before_sha256": "c065637cc28e59b883936feedfad1c486584e8fd2f2d9184e602ace4b1480289",
+      "after_sha256": "c065637cc28e59b883936feedfad1c486584e8fd2f2d9184e602ace4b1480289",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\run.png",
+      "before_sha256": "7a6e303298e6923c757aa6d83a8670ced46e9f260fab1807eef204f16b410f57",
+      "after_sha256": "7a6e303298e6923c757aa6d83a8670ced46e9f260fab1807eef204f16b410f57",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\comparison.json",
+      "before_sha256": "4572c021ed6c7b6b6cf082428b8e152bb4f3470383d17e0fdc05a1ebd9001b31",
+      "after_sha256": "4572c021ed6c7b6b6cf082428b8e152bb4f3470383d17e0fdc05a1ebd9001b31",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\run.png",
+      "before_sha256": "a1c5a78a90e887b1df4233978b957f64fc8bd456c4d4bb20feaa37401ef00624",
+      "after_sha256": "a1c5a78a90e887b1df4233978b957f64fc8bd456c4d4bb20feaa37401ef00624",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\comparison.json",
+      "before_sha256": "8b9ba4615cf9c3151e6bb257b33d8b9b562c0d9b6ec4b711a2b675bb861d9d73",
+      "after_sha256": "8b9ba4615cf9c3151e6bb257b33d8b9b562c0d9b6ec4b711a2b675bb861d9d73",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\run.png",
+      "before_sha256": "b49020d4b373583ca7b9fa08e9dc807f62efd5dce2c88891d726fa75a67d6373",
+      "after_sha256": "b49020d4b373583ca7b9fa08e9dc807f62efd5dce2c88891d726fa75a67d6373",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\account.csv",
+      "before_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "after_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\orders.csv",
+      "before_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "after_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\postings.csv",
+      "before_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "after_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\summary.json",
+      "before_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "after_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\delta\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\account.csv",
+      "before_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "after_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\postings.csv",
+      "before_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "after_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\summary.json",
+      "before_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "after_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\synthetic\\unhedged\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\account.csv",
+      "before_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "after_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\orders.csv",
+      "before_sha256": "13825b84511b19b6fc188a3c9265b026f440e470a01712cd0c7665e07dca2296",
+      "after_sha256": "13825b84511b19b6fc188a3c9265b026f440e470a01712cd0c7665e07dca2296",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\postings.csv",
+      "before_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "after_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\settlements.csv",
+      "before_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "after_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\summary.json",
+      "before_sha256": "d6f433fdc2d5db3b484e4427bcbc4bd6dbae1daf64be6540919592684c0947ca",
+      "after_sha256": "d6f433fdc2d5db3b484e4427bcbc4bd6dbae1daf64be6540919592684c0947ca",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\delta\\valuation_audit.csv",
+      "before_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "after_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\account.csv",
+      "before_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "after_sha256": "b72f9797641dda418ef3d02bd5babe94a874f77471fd09c9f1c584fef1d7c991",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\postings.csv",
+      "before_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "after_sha256": "ded224eac78ecc4bfebb2282c7cdd8513e3d3539b19f894c17870a20dd89d919",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\settlements.csv",
+      "before_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "after_sha256": "b0c1c47c2e0dd40a046ba1fa77b913b002dea4e14a0a58214f6d23c32c40fde4",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\summary.json",
+      "before_sha256": "bd4152405ff9927f506840dae7ec2e36b25aef92bdbf05edcb141b8321a1185e",
+      "after_sha256": "bd4152405ff9927f506840dae7ec2e36b25aef92bdbf05edcb141b8321a1185e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\gap\\unhedged\\valuation_audit.csv",
+      "before_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "after_sha256": "ac018ce6bf427586f33dc39595544d683acb81ffc2f73249aa5182ebdef644d9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\account.csv",
+      "before_sha256": "bd4dd7b87c243297dc99978cef234c7b71ee45ca6c2b7fd36778c037710166ac",
+      "after_sha256": "bd4dd7b87c243297dc99978cef234c7b71ee45ca6c2b7fd36778c037710166ac",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\orders.csv",
+      "before_sha256": "3b923117c406acc08265d253e16fa66b4e53cad77d4e9ae71260f52374eb50b9",
+      "after_sha256": "3b923117c406acc08265d253e16fa66b4e53cad77d4e9ae71260f52374eb50b9",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\postings.csv",
+      "before_sha256": "26043b0d314597d8771f7f2d52c8f8978de6566ac617a3dcba696ec70943738a",
+      "after_sha256": "26043b0d314597d8771f7f2d52c8f8978de6566ac617a3dcba696ec70943738a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\summary.json",
+      "before_sha256": "fb6dc643a1ffe273a7f0f5bb87daf989d2b1b7b07b9404c342243dd24edd2865",
+      "after_sha256": "fb6dc643a1ffe273a7f0f5bb87daf989d2b1b7b07b9404c342243dd24edd2865",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\delta\\valuation_audit.csv",
+      "before_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "after_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\account.csv",
+      "before_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "after_sha256": "5f13ce8e2c70e9cf4b12ae69bbd44da283e2847ee4cc2f8fe6b3b573338864e6",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\postings.csv",
+      "before_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "after_sha256": "32370699f7e1e0465bc10b2ffe4b904ca50af7cafa74fba507c317acd4a913b5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\settlements.csv",
+      "before_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "after_sha256": "301f0ea196345884cdd518d9079f3e4112895a81aa0fe22bda15b3e6b272d761",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\summary.json",
+      "before_sha256": "3fc17ba255d5c8a4f6e889e05a5483751ab4cb66b33eebe1f5fe79f73ba606cb",
+      "after_sha256": "3fc17ba255d5c8a4f6e889e05a5483751ab4cb66b33eebe1f5fe79f73ba606cb",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\demo\\deterministic\\unhedged\\valuation_audit.csv",
+      "before_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "after_sha256": "6fb01ffd2537146ae3c026d7176ed59c663ce5863da9d039098247bee381f1c8",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\account.csv",
+      "before_sha256": "c0e09aaae38e5e738cb1fbe67a28259ad1dd8420cdc4e8e2eb3150d912350d92",
+      "after_sha256": "c0e09aaae38e5e738cb1fbe67a28259ad1dd8420cdc4e8e2eb3150d912350d92",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\orders.csv",
+      "before_sha256": "14717a856d6d5cff12a4797535ce4186121f54df74c3130ed35408b62104ef49",
+      "after_sha256": "14717a856d6d5cff12a4797535ce4186121f54df74c3130ed35408b62104ef49",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\postings.csv",
+      "before_sha256": "fdff33d77d2f5e2fa897709d6f65f93b7f81b302b83d717b32398f0e4808fb6e",
+      "after_sha256": "fdff33d77d2f5e2fa897709d6f65f93b7f81b302b83d717b32398f0e4808fb6e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\summary.json",
+      "before_sha256": "1bc5ccee64c37775862ce859490fd7d482d462e7a413906725f3356ccab3d380",
+      "after_sha256": "1bc5ccee64c37775862ce859490fd7d482d462e7a413906725f3356ccab3d380",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\cont_vuletic_l1\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\account.csv",
+      "before_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "after_sha256": "663b113fec152b570b7d5e2d774b60799bb24f76d7c99d4826942fd9c6218340",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\orders.csv",
+      "before_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "after_sha256": "66bf3e4108d44eaa0e5fcc3d2194163b9d8b154f375a185d6019f26c0f15a2d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\postings.csv",
+      "before_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "after_sha256": "3a28d07d4c103e5d358c2a470d8095be1aec8a8b38778865693bd470ec49021b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\summary.json",
+      "before_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "after_sha256": "17c4f0ba6561f3437be29e153ea21f5028c0d47001a75efcb54e9d75ffdc4c74",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\delta\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\account.csv",
+      "before_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "after_sha256": "855ed2313150d4f38a3adeb669e1808586c281dd072e925ccbeb85b205007ab3",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\orders.csv",
+      "before_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "after_sha256": "b35d85767c8ae8a107fecd987057ed86c9d644c38de24b81bf54765b69c630d7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\postings.csv",
+      "before_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "after_sha256": "223bf3d78c0d0daa0dd42f5561593dd37a2f3da06ac660c84b0a128fe7eb701f",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\summary.json",
+      "before_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "after_sha256": "04579c6b47cc6d10c6d6ba65e8af4d9125ba767abca9fdd8bad35ffaa45cd125",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\unhedged\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\account.csv",
+      "before_sha256": "77d342aad3cfcb37d105a955d73615c44894063e271260c1606f63600ef46120",
+      "after_sha256": "77d342aad3cfcb37d105a955d73615c44894063e271260c1606f63600ef46120",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\orders.csv",
+      "before_sha256": "64f67a6370318d4ec6eb0c7b9617b20a787cc458dc0047891ac860c870ebd88d",
+      "after_sha256": "64f67a6370318d4ec6eb0c7b9617b20a787cc458dc0047891ac860c870ebd88d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\postings.csv",
+      "before_sha256": "1a5e55e6027fff6ac7b3e0f1103379f4e16d2f5812f80559495722e8508b26a7",
+      "after_sha256": "1a5e55e6027fff6ac7b3e0f1103379f4e16d2f5812f80559495722e8508b26a7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\settlements.csv",
+      "before_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "after_sha256": "0222e01df2140114919c855309235b3330e13898a169fcda00828de82fccb518",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\summary.json",
+      "before_sha256": "50bd32d96ef2f6d5fc95ca62c1afa6ee82ad08c145207934e3bb6d9ea38b8a33",
+      "after_sha256": "50bd32d96ef2f6d5fc95ca62c1afa6ee82ad08c145207934e3bb6d9ea38b8a33",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\cont_vuletic_stage1\\variance\\valuation_audit.csv",
+      "before_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "after_sha256": "b1f5edd1aa44613cd11ea522fa336cc1c2816d5fbf30c9b15481bcd7556a481d",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions\\distributions.csv",
+      "before_sha256": "7e07e3a11542a756c4c14d393e437b745e8f1313f65750b328887fe1b97a9e9b",
+      "after_sha256": "7e07e3a11542a756c4c14d393e437b745e8f1313f65750b328887fe1b97a9e9b",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions\\distributions_manifest.json",
+      "before_sha256": "530a5958b71ec21ee40c4dd4ec30a3b4287e494244fc74f64b5c6f26fe58be09",
+      "after_sha256": "530a5958b71ec21ee40c4dd4ec30a3b4287e494244fc74f64b5c6f26fe58be09",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions\\README.md",
+      "before_sha256": "ae3e697ba6ea0da8372d992176be6b676b1acfecc6d7a63df70b4482e50c00e7",
+      "after_sha256": "ae3e697ba6ea0da8372d992176be6b676b1acfecc6d7a63df70b4482e50c00e7",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions\\split_verification.json",
+      "before_sha256": "fd139269175d85c2630252a75596c28aefdf45bea929db527e33d3227e0fa51e",
+      "after_sha256": "fd139269175d85c2630252a75596c28aefdf45bea929db527e33d3227e0fa51e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\prepared-etf-v1-actions\\manifest.json",
+      "before_sha256": "731964564a34bbf853fe42bc34f869b863edade838c1be96efb37a5d0476ca48",
+      "after_sha256": "731964564a34bbf853fe42bc34f869b863edade838c1be96efb37a5d0476ca48",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\prepared-etf-v1-actions\\surfaces.npz",
+      "before_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+      "after_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\prepared-etf-v1\\manifest.json",
+      "before_sha256": "f454bee1380aa99db8b759bba3b51b47d970576674b0656738441fd45c7cdae1",
+      "after_sha256": "f454bee1380aa99db8b759bba3b51b47d970576674b0656738441fd45c7cdae1",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\prepared-etf-v1\\surfaces.npz",
+      "before_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+      "after_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\inspection.json",
+      "before_sha256": "b282a05db57c5f9a34c1f5c4c9268666556dc07db9cf7c0a78b16768541c9153",
+      "after_sha256": "b282a05db57c5f9a34c1f5c4c9268666556dc07db9cf7c0a78b16768541c9153",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\IWM_options.parquet",
+      "before_sha256": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "after_sha256": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\IWM_underlying.parquet",
+      "before_sha256": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940",
+      "after_sha256": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\QQQ_options.parquet",
+      "before_sha256": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "after_sha256": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\QQQ_underlying.parquet",
+      "before_sha256": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "after_sha256": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\SPY_options.parquet",
+      "before_sha256": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "after_sha256": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\SPY_underlying.parquet",
+      "before_sha256": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "after_sha256": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "unchanged": true,
+      "allowed_source_edit": false
+    },
+    {
+      "path": "C:\\Users\\petar\\.cache\\basket-hedging\\data-v1\\verified_downloads.json",
+      "before_sha256": "9cd225fc4ee9795244bbdcf9b14700f3bf3604d22bff211f96ccd66090d2f86e",
+      "after_sha256": "9cd225fc4ee9795244bbdcf9b14700f3bf3604d22bff211f96ccd66090d2f86e",
+      "unchanged": true,
+      "allowed_source_edit": false
+    }
+  ]
+}

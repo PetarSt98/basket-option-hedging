@@ -1,0 +1,7 @@
+event_id,time,order_id,instrument_id,outcome,reason,quantity,price,fee,quote_id,projected_risk
+hand/0,2026-01-05T16:00:00+00:00,hand/0/S1,S1,submitted,target minus holdings minus compatible pending quantity,-10.0,,,,
+hand/0,2026-01-05T16:00:00+00:00,hand/0/S2,S2,submitted,target minus holdings minus compatible pending quantity,-10.0,,,,
+hand/0,2026-01-05T16:00:00+00:00,hand/0/S3,S3,submitted,target minus holdings minus compatible pending quantity,-10.0,,,,
+hand/1,2026-01-06T09:00:00+00:00,hand/0/S1,S1,cancelled,account breach,-10.0,,,,
+hand/1,2026-01-06T09:00:00+00:00,hand/0/S2,S2,cancelled,account breach,-10.0,,,,
+hand/1,2026-01-06T09:00:00+00:00,hand/0/S3,S3,cancelled,account breach,-10.0,,,,

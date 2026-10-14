@@ -1,0 +1,9 @@
+{
+  "reason": "Do not present stopped-book stale-mark P&L as current or terminal P&L; posted costs remain known",
+  "rows": 355,
+  "stopped_rows": 25,
+  "before_sha256": "82e24ef37ba1a0bb1c404fc8e5aed8e852fafb4dd5c4b166c9f179e89617ef50",
+  "after_sha256": "93bfa6af0353897cf846c6a6dda1c76a1692fadf25a04830c125089e00e71ead",
+  "financial_results_changed": false,
+  "final_runner_source_sha256": "3d5be222acc36e136ff0c6e50d028fcf8c47df7e95bb1523d00aecabd96a5f27"
+}

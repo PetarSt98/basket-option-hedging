@@ -1,0 +1,9 @@
+{
+  "label": "Solver-reliability v1 | original frozen VolGAN",
+  "policy_labels": {
+    "volgan": "Original frozen VolGAN"
+  },
+  "correction": "Verified active-set polish after coordinate descent budget exhaustion; unchanged objective/tolerance",
+  "calibration_result": "NO CONFIRMED IMPROVEMENT",
+  "retrospective": true
+}

@@ -138,6 +138,7 @@ class Event:
     borrow: Mapping[str, Borrow] | None = None
     origination_price: float | None = None
     next_rebalance_time: datetime | None = None
+    dividends: Mapping[str, float] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         timestamp(self.time)
@@ -168,6 +169,11 @@ class Event:
             object.__setattr__(self, name, tuple(getattr(self, name)))
         if self.borrow is not None:
             object.__setattr__(self, "borrow", readonly(self.borrow))
+        for stock, amount in self.dividends.items():
+            if not isinstance(stock, str) or not stock:
+                raise InputError("dividends require stock IDs")
+            number(amount, "cash dividend per share", minimum=0)
+        object.__setattr__(self, "dividends", readonly(self.dividends))
 
 
 @dataclass(frozen=True)

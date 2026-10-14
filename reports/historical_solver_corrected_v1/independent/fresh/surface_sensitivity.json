@@ -1,0 +1,23 @@
+{
+  "note": "Audit-only sensitivity, not a new benchmark run or accepted holdings. Model and accounting settings unchanged.",
+  "same_spots": true,
+  "same_noise_seed": true,
+  "same_horizon": true,
+  "same_delta_h": true,
+  "surface_scale": 1.1,
+  "maximum_response_change": 52.913619276574025,
+  "original_optimizer_holdings": [
+    0.0,
+    -39.93532195278285,
+    -36.700909199830065
+  ],
+  "perturbed_optimizer_holdings": [
+    0.0,
+    -38.093485059726895,
+    -40.423760707044245
+  ],
+  "independent_scenario0_unit_put_price": 4.435651602340756,
+  "independent_scenario0_delta_v": -16.446566770562665,
+  "actual_delta_v": -16.446566770562576,
+  "unit_delta_v_error": 8.881784197001252e-14
+}

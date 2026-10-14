@@ -1,0 +1,2300 @@
+{
+  "stage": "Synthetic-scenario prototype of the Eq. (20) optimization layer; no generative model",
+  "configuration": {
+    "scenarios": 256,
+    "scenario_seed": 9173,
+    "pricing_parameters": {
+      "stock_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "volatilities": [
+        0.2,
+        0.225,
+        0.25
+      ],
+      "correlation": [
+        [
+          1.0,
+          0.35,
+          0.35
+        ],
+        [
+          0.35,
+          1.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.35,
+          1.0
+        ]
+      ],
+      "risk_free_rate": 0.01,
+      "available_at": "2026-01-05T16:00:00+00:00",
+      "pricing_seed": 731,
+      "samples": 1024,
+      "bump_relative": 0.0001
+    },
+    "scenario_model": "conditional-zero-drift-gbm-v1",
+    "scenario_seed_derivation": "SHA256(root seed, UTC decision time, model tag, scenario index), first 128 bits",
+    "replay_volatilities": [
+      0.2,
+      0.225,
+      0.25
+    ],
+    "replay_correlation": [
+      [
+        1.0,
+        0.35,
+        0.35
+      ],
+      [
+        0.35,
+        1.0,
+        0.35
+      ],
+      [
+        0.35,
+        0.35,
+        1.0
+      ]
+    ],
+    "replay_drift": "zero",
+    "horizon_rule": "Next declared rebalance capped by relevant expiry; strictly after execution eligibility",
+    "alpha": 0.1,
+    "cost_weights": {
+      "S1": 0.02,
+      "S2": 0.02,
+      "S3": 0.02
+    },
+    "gross_scale": "Initial sum of absolute marked fixed target legs, captured at the first policy callback",
+    "candidate_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ]
+  },
+  "definitions": {
+    "gross_hedge_error_currency": "-(liability P&L + hedge P&L); actual gross tracking residual, excluding trading/financing costs",
+    "hedge_instruments_used": "Number of distinct instruments with accepted hedge fills, including exits",
+    "turnover": "Currency traded on both sides; stock and option-premium amounts reported separately",
+    "scenario_residual_mse": "In-sample conditional fit diagnostic, not observed or out-of-sample hedge performance"
+  },
+  "outcomes": [
+    {
+      "policy": "unhedged",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "net_pnl": -55.381271844977164,
+      "gross_hedge_error_currency": 62.67175748527424,
+      "stock_turnover_currency": 0.0,
+      "option_premium_turnover_currency": 0.0,
+      "transaction_costs": 0.0,
+      "financing_costs": -7.290485640303076,
+      "hedge_instruments_used": 0,
+      "accepted_hedge_fill_count": 0,
+      "breach_count": 0,
+      "margin_label": "uncalibrated research margin proxy",
+      "current_risk": {
+        "equity": 9944.618728155023,
+        "cash": 9944.618728155023,
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0,
+        "available_cash": 9944.618728155023,
+        "eligible_cash_capacity": 9944.618728155023,
+        "required_margin": 0.0,
+        "safety_buffer": 50,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "residual_positions": {}
+    },
+    {
+      "policy": "delta",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "net_pnl": -144.60052300051757,
+      "gross_hedge_error_currency": 137.96503510871216,
+      "stock_turnover_currency": 29746.397363295117,
+      "option_premium_turnover_currency": 0.0,
+      "transaction_costs": 9.06173807095014,
+      "financing_costs": -2.4262501791025217,
+      "hedge_instruments_used": 3,
+      "accepted_hedge_fill_count": 63,
+      "breach_count": 0,
+      "margin_label": "uncalibrated research margin proxy",
+      "current_risk": {
+        "equity": 9855.399476999482,
+        "cash": 9855.399476999482,
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0,
+        "available_cash": 9855.399476999482,
+        "eligible_cash_capacity": 9855.399476999482,
+        "required_margin": 0.0,
+        "safety_buffer": 50,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "residual_positions": {}
+    },
+    {
+      "policy": "variance",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "net_pnl": -146.75473135926404,
+      "gross_hedge_error_currency": 139.84191357619338,
+      "stock_turnover_currency": 30997.98081907489,
+      "option_premium_turnover_currency": 0.0,
+      "transaction_costs": 9.320643981810214,
+      "financing_costs": -2.4078261986971423,
+      "hedge_instruments_used": 3,
+      "accepted_hedge_fill_count": 63,
+      "breach_count": 0,
+      "margin_label": "uncalibrated research margin proxy",
+      "current_risk": {
+        "equity": 9853.245268640736,
+        "cash": 9853.245268640736,
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0,
+        "available_cash": 9853.245268640736,
+        "eligible_cash_capacity": 9853.245268640736,
+        "required_margin": 0.0,
+        "safety_buffer": 50,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "residual_positions": {}
+    },
+    {
+      "policy": "cont_vuletic_l1",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "observed_at": "2026-02-03T09:00:00+00:00",
+      "net_pnl": -146.51888956215043,
+      "gross_hedge_error_currency": 139.7680749967145,
+      "stock_turnover_currency": 30520.09779019773,
+      "option_premium_turnover_currency": 0.0,
+      "transaction_costs": 9.168512958586117,
+      "financing_costs": -2.417698393111417,
+      "hedge_instruments_used": 3,
+      "accepted_hedge_fill_count": 62,
+      "breach_count": 0,
+      "margin_label": "uncalibrated research margin proxy",
+      "current_risk": {
+        "equity": 9853.48111043785,
+        "cash": 9853.48111043785,
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0,
+        "available_cash": 9853.48111043785,
+        "eligible_cash_capacity": 9853.48111043785,
+        "required_margin": 0.0,
+        "safety_buffer": 50,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "residual_positions": {}
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2026-02-03T09:00:00+00:00",
+    "sequence": 41,
+    "event_id": "synthetic/41",
+    "phase": "pretrade",
+    "policies": {
+      "unhedged": {
+        "equity": 9944.618728155023,
+        "net_pnl": -55.381271844977164,
+        "pnl_components": {
+          "net_pnl": -55.381271844977164,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": 0.0,
+          "execution_cost": 0.0,
+          "fees": 0.0,
+          "trading_costs": 0.0,
+          "interest": 7.290485640303076,
+          "borrow_charges": 0.0,
+          "financing_costs": -7.290485640303076,
+          "stock_turnover": 0.0,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": -5.9969806898152456e-12
+        }
+      },
+      "delta": {
+        "equity": 9856.899482620609,
+        "net_pnl": -143.10051737939102,
+        "pnl_components": {
+          "net_pnl": -143.10051737939102,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": -75.29327762343917,
+          "execution_cost": 4.561732449821186,
+          "fees": 2.9999999999999973,
+          "trading_costs": 7.561732449821183,
+          "interest": 7.44550274743467,
+          "borrow_charges": 5.019252568332148,
+          "financing_costs": -2.4262501791025217,
+          "stock_turnover": 23092.21363719577,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 4.106937012693379e-11
+        }
+      },
+      "variance": {
+        "equity": 9854.81707895608,
+        "net_pnl": -145.18292104391912,
+        "pnl_components": {
+          "net_pnl": -145.18292104391912,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": -77.17015609092039,
+          "execution_cost": 4.748833666461979,
+          "fees": 2.9999999999999973,
+          "trading_costs": 7.748833666461977,
+          "interest": 7.443623683319218,
+          "borrow_charges": 5.035797484622075,
+          "financing_costs": -2.4078261986971423,
+          "stock_turnover": 24023.87478243457,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 4.0330405681743287e-11
+        }
+      },
+      "cont_vuletic_l1": {
+        "equity": 9855.050957769676,
+        "net_pnl": -144.94904223032427,
+        "pnl_components": {
+          "net_pnl": -144.94904223032427,
+          "liability_pnl": -62.67175748527424,
+          "hedge_pnl": -77.096317511439,
+          "execution_cost": 4.648665626756633,
+          "fees": 2.9499999999999975,
+          "trading_costs": 7.59866562675663,
+          "interest": 7.444883673373987,
+          "borrow_charges": 5.02718528026257,
+          "financing_costs": -2.417698393111417,
+          "stock_turnover": 23554.31902089135,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 3.416289473534562e-11
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "variance": [
+      {
+        "event_id": "synthetic/0",
+        "time": "2026-01-05T16:00:00+00:00",
+        "horizon": "2026-01-06T16:00:00+00:00",
+        "earliest_execution": "2026-01-06T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-06T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/0/S1",
+          "synthetic/0/S2",
+          "synthetic/0/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": 0.0,
+          "S2": 0.0,
+          "S3": 0.0
+        },
+        "targets": {
+          "S1": -16.068395371791315,
+          "S2": -15.78473099887098,
+          "S3": -16.156276978973963
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 8.158736614318054,
+        "scenario_residual_mse": 15.737433842594077,
+        "turnover_penalty": 0.0,
+        "objective": 15.737433842594077,
+        "iterations": 0,
+        "kkt_residual": 2.8109717017947437e-16
+      },
+      {
+        "event_id": "synthetic/2",
+        "time": "2026-01-06T16:00:00+00:00",
+        "horizon": "2026-01-07T16:00:00+00:00",
+        "earliest_execution": "2026-01-07T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-07T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/2/S1",
+          "synthetic/2/S2",
+          "synthetic/2/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -16.068395371791315,
+          "S2": -15.78473099887098,
+          "S3": -16.156276978973963
+        },
+        "targets": {
+          "S1": -11.842575526789172,
+          "S2": -11.7464229140472,
+          "S3": -11.51510015060233
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 14.100366365179264,
+        "scenario_residual_mse": 23.215604076007416,
+        "turnover_penalty": 0.0,
+        "objective": 23.215604076007416,
+        "iterations": 0,
+        "kkt_residual": 6.674521910571691e-16
+      },
+      {
+        "event_id": "synthetic/4",
+        "time": "2026-01-07T16:00:00+00:00",
+        "horizon": "2026-01-08T16:00:00+00:00",
+        "earliest_execution": "2026-01-08T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-08T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/4/S1",
+          "synthetic/4/S2",
+          "synthetic/4/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -11.842575526789172,
+          "S2": -11.7464229140472,
+          "S3": -11.51510015060233
+        },
+        "targets": {
+          "S1": -9.859939979382531,
+          "S2": -9.783873476950244,
+          "S3": -9.650714991966696
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -12.523178838032425,
+        "scenario_residual_mse": 22.008720877459446,
+        "turnover_penalty": 0.0,
+        "objective": 22.008720877459446,
+        "iterations": 0,
+        "kkt_residual": 2.544908984957526e-16
+      },
+      {
+        "event_id": "synthetic/6",
+        "time": "2026-01-08T16:00:00+00:00",
+        "horizon": "2026-01-09T16:00:00+00:00",
+        "earliest_execution": "2026-01-09T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-09T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/6/S1",
+          "synthetic/6/S2",
+          "synthetic/6/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -9.859939979382531,
+          "S2": -9.783873476950244,
+          "S3": -9.650714991966696
+        },
+        "targets": {
+          "S1": -10.249660919675128,
+          "S2": -9.632130301352282,
+          "S3": -9.54482555570648
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 2.9099219210803082,
+        "scenario_residual_mse": 11.117362310018454,
+        "turnover_penalty": 0.0,
+        "objective": 11.117362310018454,
+        "iterations": 0,
+        "kkt_residual": 1.3600232051658168e-15
+      },
+      {
+        "event_id": "synthetic/8",
+        "time": "2026-01-09T16:00:00+00:00",
+        "horizon": "2026-01-12T16:00:00+00:00",
+        "earliest_execution": "2026-01-12T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-12T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/8/S1",
+          "synthetic/8/S2",
+          "synthetic/8/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -10.249660919675128,
+          "S2": -9.632130301352282,
+          "S3": -9.54482555570648
+        },
+        "targets": {
+          "S1": -9.520818500504353,
+          "S2": -10.282709492858249,
+          "S3": -9.777450204596443
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -7.607942181772231,
+        "scenario_residual_mse": 164.22241955404746,
+        "turnover_penalty": 0.0,
+        "objective": 164.22241955404746,
+        "iterations": 0,
+        "kkt_residual": 2.988625909661301e-15
+      },
+      {
+        "event_id": "synthetic/10",
+        "time": "2026-01-12T16:00:00+00:00",
+        "horizon": "2026-01-13T16:00:00+00:00",
+        "earliest_execution": "2026-01-13T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-13T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/10/S1",
+          "synthetic/10/S2",
+          "synthetic/10/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -9.520818500504353,
+          "S2": -10.282709492858249,
+          "S3": -9.777450204596443
+        },
+        "targets": {
+          "S1": -14.660413996676684,
+          "S2": -13.954901655650627,
+          "S3": -13.892300807439437
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -4.263412113910435,
+        "scenario_residual_mse": 24.41651483074765,
+        "turnover_penalty": 0.0,
+        "objective": 24.41651483074765,
+        "iterations": 0,
+        "kkt_residual": 7.034176392198887e-16
+      },
+      {
+        "event_id": "synthetic/12",
+        "time": "2026-01-13T16:00:00+00:00",
+        "horizon": "2026-01-14T16:00:00+00:00",
+        "earliest_execution": "2026-01-14T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-14T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/12/S1",
+          "synthetic/12/S2",
+          "synthetic/12/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -14.660413996676684,
+          "S2": -13.954901655650627,
+          "S3": -13.892300807439437
+        },
+        "targets": {
+          "S1": -15.932197756062488,
+          "S2": -15.49687635795579,
+          "S3": -15.944668658834669
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.4017825446823013,
+        "scenario_residual_mse": 32.473450764034354,
+        "turnover_penalty": 0.0,
+        "objective": 32.473450764034354,
+        "iterations": 0,
+        "kkt_residual": 6.596298321054683e-16
+      },
+      {
+        "event_id": "synthetic/14",
+        "time": "2026-01-14T16:00:00+00:00",
+        "horizon": "2026-01-15T16:00:00+00:00",
+        "earliest_execution": "2026-01-15T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-15T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/14/S1",
+          "synthetic/14/S2",
+          "synthetic/14/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -15.932197756062488,
+          "S2": -15.49687635795579,
+          "S3": -15.944668658834669
+        },
+        "targets": {
+          "S1": -16.78274119976232,
+          "S2": -16.756469447620564,
+          "S3": -16.24313719703535
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 3.8881287242566285,
+        "scenario_residual_mse": 25.091215380149563,
+        "turnover_penalty": 0.0,
+        "objective": 25.091215380149563,
+        "iterations": 0,
+        "kkt_residual": 1.908479573400278e-15
+      },
+      {
+        "event_id": "synthetic/16",
+        "time": "2026-01-15T16:00:00+00:00",
+        "horizon": "2026-01-16T16:00:00+00:00",
+        "earliest_execution": "2026-01-16T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-16T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/16/S1",
+          "synthetic/16/S2",
+          "synthetic/16/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -16.78274119976232,
+          "S2": -16.756469447620564,
+          "S3": -16.24313719703535
+        },
+        "targets": {
+          "S1": -17.205204490616936,
+          "S2": -17.086483387092642,
+          "S3": -16.845721710081598
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 6.642765550842983,
+        "scenario_residual_mse": 30.70712630079706,
+        "turnover_penalty": 0.0,
+        "objective": 30.70712630079706,
+        "iterations": 0,
+        "kkt_residual": 2.8542069225169755e-15
+      },
+      {
+        "event_id": "synthetic/18",
+        "time": "2026-01-16T16:00:00+00:00",
+        "horizon": "2026-01-19T16:00:00+00:00",
+        "earliest_execution": "2026-01-19T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-19T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/18/S1",
+          "synthetic/18/S2",
+          "synthetic/18/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -17.205204490616936,
+          "S2": -17.086483387092642,
+          "S3": -16.845721710081598
+        },
+        "targets": {
+          "S1": -15.917547750266909,
+          "S2": -18.00986935187269,
+          "S3": -18.18662617596765
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -2.1949201093050017,
+        "scenario_residual_mse": 333.14803920014856,
+        "turnover_penalty": 0.0,
+        "objective": 333.14803920014856,
+        "iterations": 0,
+        "kkt_residual": 4.111062031542965e-15
+      },
+      {
+        "event_id": "synthetic/20",
+        "time": "2026-01-19T16:00:00+00:00",
+        "horizon": "2026-01-20T16:00:00+00:00",
+        "earliest_execution": "2026-01-20T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-20T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/20/S1",
+          "synthetic/20/S2",
+          "synthetic/20/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -15.917547750266909,
+          "S2": -18.00986935187269,
+          "S3": -18.18662617596765
+        },
+        "targets": {
+          "S1": -5.305394545034801,
+          "S2": -5.357166921792885,
+          "S3": -4.9734232419652695
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -3.329318113488784,
+        "scenario_residual_mse": 17.48321945605869,
+        "turnover_penalty": 0.0,
+        "objective": 17.48321945605869,
+        "iterations": 0,
+        "kkt_residual": 6.537779467148549e-16
+      },
+      {
+        "event_id": "synthetic/22",
+        "time": "2026-01-20T16:00:00+00:00",
+        "horizon": "2026-01-21T16:00:00+00:00",
+        "earliest_execution": "2026-01-21T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-21T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/22/S1",
+          "synthetic/22/S2",
+          "synthetic/22/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.305394545034801,
+          "S2": -5.357166921792885,
+          "S3": -4.9734232419652695
+        },
+        "targets": {
+          "S1": -8.041144776933606,
+          "S2": -6.609057183430223,
+          "S3": -6.899799046482875
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -2.0056563782702583,
+        "scenario_residual_mse": 27.094061364689747,
+        "turnover_penalty": 0.0,
+        "objective": 27.094061364689747,
+        "iterations": 0,
+        "kkt_residual": 5.394167488285389e-16
+      },
+      {
+        "event_id": "synthetic/24",
+        "time": "2026-01-21T16:00:00+00:00",
+        "horizon": "2026-01-22T16:00:00+00:00",
+        "earliest_execution": "2026-01-22T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-22T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/24/S1",
+          "synthetic/24/S2",
+          "synthetic/24/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -8.041144776933606,
+          "S2": -6.609057183430223,
+          "S3": -6.899799046482875
+        },
+        "targets": {
+          "S1": -5.667517480032599,
+          "S2": -6.513241856395002,
+          "S3": -6.311103312406481
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.9679470800631016,
+        "scenario_residual_mse": 31.003592347798953,
+        "turnover_penalty": 0.0,
+        "objective": 31.003592347798953,
+        "iterations": 0,
+        "kkt_residual": 2.758674181448482e-16
+      },
+      {
+        "event_id": "synthetic/26",
+        "time": "2026-01-22T16:00:00+00:00",
+        "horizon": "2026-01-23T16:00:00+00:00",
+        "earliest_execution": "2026-01-23T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-23T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/26/S1",
+          "synthetic/26/S2",
+          "synthetic/26/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.667517480032599,
+          "S2": -6.513241856395002,
+          "S3": -6.311103312406481
+        },
+        "targets": {
+          "S1": -2.9616091626132124,
+          "S2": -3.799524589960333,
+          "S3": -3.2558165483761394
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -0.04668349400845587,
+        "scenario_residual_mse": 18.348040088771555,
+        "turnover_penalty": 0.0,
+        "objective": 18.348040088771555,
+        "iterations": 0,
+        "kkt_residual": 7.068313167712006e-17
+      },
+      {
+        "event_id": "synthetic/28",
+        "time": "2026-01-23T16:00:00+00:00",
+        "horizon": "2026-01-26T16:00:00+00:00",
+        "earliest_execution": "2026-01-26T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-26T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/28/S1",
+          "synthetic/28/S2",
+          "synthetic/28/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -2.9616091626132124,
+          "S2": -3.799524589960333,
+          "S3": -3.2558165483761394
+        },
+        "targets": {
+          "S1": -2.231752311581806,
+          "S2": -2.6153632275201204,
+          "S3": -2.360973075675549
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.370886175825257,
+        "scenario_residual_mse": 87.05152779165553,
+        "turnover_penalty": 0.0,
+        "objective": 87.05152779165553,
+        "iterations": 0,
+        "kkt_residual": 4.860465052676718e-16
+      },
+      {
+        "event_id": "synthetic/30",
+        "time": "2026-01-26T16:00:00+00:00",
+        "horizon": "2026-01-27T16:00:00+00:00",
+        "earliest_execution": "2026-01-27T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-27T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/30/S1",
+          "synthetic/30/S2",
+          "synthetic/30/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -2.231752311581806,
+          "S2": -2.6153632275201204,
+          "S3": -2.360973075675549
+        },
+        "targets": {
+          "S1": -5.950523344657755,
+          "S2": -7.516783486431555,
+          "S3": -6.242189958769886
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.3739280067971291,
+        "scenario_residual_mse": 52.69863925237719,
+        "turnover_penalty": 0.0,
+        "objective": 52.69863925237719,
+        "iterations": 0,
+        "kkt_residual": 7.919797013069663e-16
+      },
+      {
+        "event_id": "synthetic/32",
+        "time": "2026-01-27T16:00:00+00:00",
+        "horizon": "2026-01-28T16:00:00+00:00",
+        "earliest_execution": "2026-01-28T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-28T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/32/S1",
+          "synthetic/32/S2",
+          "synthetic/32/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.950523344657755,
+          "S2": -7.516783486431555,
+          "S3": -6.242189958769886
+        },
+        "targets": {
+          "S1": -2.594870581579824,
+          "S2": -2.9572636726588035,
+          "S3": -2.7907563918629954
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -0.5807412788798978,
+        "scenario_residual_mse": 17.82206906515877,
+        "turnover_penalty": 0.0,
+        "objective": 17.82206906515877,
+        "iterations": 0,
+        "kkt_residual": 2.9216945749828563e-16
+      },
+      {
+        "event_id": "synthetic/34",
+        "time": "2026-01-28T16:00:00+00:00",
+        "horizon": "2026-01-29T16:00:00+00:00",
+        "earliest_execution": "2026-01-29T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-29T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/34/S1",
+          "synthetic/34/S2",
+          "synthetic/34/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -2.594870581579824,
+          "S2": -2.9572636726588035,
+          "S3": -2.7907563918629954
+        },
+        "targets": {
+          "S1": -5.9167672061902135,
+          "S2": -5.095541469624328,
+          "S3": -5.826873505614785
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.70637029613401,
+        "scenario_residual_mse": 50.90319103351861,
+        "turnover_penalty": 0.0,
+        "objective": 50.90319103351861,
+        "iterations": 0,
+        "kkt_residual": 3.994829500534648e-17
+      },
+      {
+        "event_id": "synthetic/36",
+        "time": "2026-01-29T16:00:00+00:00",
+        "horizon": "2026-01-30T16:00:00+00:00",
+        "earliest_execution": "2026-01-30T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-30T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/36/S1",
+          "synthetic/36/S2",
+          "synthetic/36/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.9167672061902135,
+          "S2": -5.095541469624328,
+          "S3": -5.826873505614785
+        },
+        "targets": {
+          "S1": -14.458503497940088,
+          "S2": -14.449271829855737,
+          "S3": -14.25416797635078
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 2.083428962678937,
+        "scenario_residual_mse": 155.18438106840546,
+        "turnover_penalty": 0.0,
+        "objective": 155.18438106840546,
+        "iterations": 0,
+        "kkt_residual": 1.3335764662319309e-15
+      },
+      {
+        "event_id": "synthetic/38",
+        "time": "2026-01-30T16:00:00+00:00",
+        "horizon": "2026-02-02T16:00:00+00:00",
+        "earliest_execution": "2026-02-02T09:00:00+00:00",
+        "next_rebalance_time": "2026-02-02T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/38/S1",
+          "synthetic/38/S2",
+          "synthetic/38/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -14.458503497940088,
+          "S2": -14.449271829855737,
+          "S3": -14.25416797635078
+        },
+        "targets": {
+          "S1": -23.289378248975574,
+          "S2": -24.684275072895623,
+          "S3": -23.116862445580125
+        },
+        "alpha": 0.0,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.7069072919004749,
+        "scenario_residual_mse": 1923.7833726734343,
+        "turnover_penalty": 0.0,
+        "objective": 1923.7833726734343,
+        "iterations": 0,
+        "kkt_residual": 5.24491813694481e-16
+      }
+    ],
+    "cont_vuletic_l1": [
+      {
+        "event_id": "synthetic/0",
+        "time": "2026-01-05T16:00:00+00:00",
+        "horizon": "2026-01-06T16:00:00+00:00",
+        "earliest_execution": "2026-01-06T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-06T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/0/S1",
+          "synthetic/0/S2",
+          "synthetic/0/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": 0.0,
+          "S2": 0.0,
+          "S3": 0.0
+        },
+        "targets": {
+          "S1": -15.961954348264735,
+          "S2": -15.64127678953258,
+          "S3": -16.128594445785307
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 8.153572564139957,
+        "scenario_residual_mse": 15.789586552451205,
+        "turnover_penalty": 17.93619152637891,
+        "objective": 33.72577807883012,
+        "iterations": 14,
+        "kkt_residual": 3.1309585713667207e-10
+      },
+      {
+        "event_id": "synthetic/2",
+        "time": "2026-01-06T16:00:00+00:00",
+        "horizon": "2026-01-07T16:00:00+00:00",
+        "earliest_execution": "2026-01-07T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-07T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/2/S1",
+          "synthetic/2/S2",
+          "synthetic/2/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -15.961954348264735,
+          "S2": -15.64127678953258,
+          "S3": -16.128594445785307
+        },
+        "targets": {
+          "S1": -11.954217819284235,
+          "S2": -11.894967153069132,
+          "S3": -11.51745700027736
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 14.106341450364063,
+        "scenario_residual_mse": 23.264932049003768,
+        "turnover_penalty": 4.646465933227525,
+        "objective": 27.911397982231293,
+        "iterations": 17,
+        "kkt_residual": 2.725311413062346e-10
+      },
+      {
+        "event_id": "synthetic/4",
+        "time": "2026-01-07T16:00:00+00:00",
+        "horizon": "2026-01-08T16:00:00+00:00",
+        "earliest_execution": "2026-01-08T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-08T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/4/S1",
+          "synthetic/4/S2",
+          "synthetic/4/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -11.954217819284235,
+          "S2": -11.894967153069132,
+          "S3": -11.51745700027736
+        },
+        "targets": {
+          "S1": -9.977950938962405,
+          "S2": -9.91839511627316,
+          "S3": -9.66513185678233
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -12.514785600113875,
+        "scenario_residual_mse": 22.05887668712048,
+        "turnover_penalty": 2.1814069158296823,
+        "objective": 24.240283602950164,
+        "iterations": 14,
+        "kkt_residual": 4.0879037534080793e-10
+      },
+      {
+        "event_id": "synthetic/6",
+        "time": "2026-01-08T16:00:00+00:00",
+        "horizon": "2026-01-09T16:00:00+00:00",
+        "earliest_execution": "2026-01-09T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-09T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/6/S1",
+          "synthetic/6/S2",
+          "synthetic/6/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -9.977950938962405,
+          "S2": -9.91839511627316,
+          "S3": -9.66513185678233
+        },
+        "targets": {
+          "S1": -10.006779938676026,
+          "S2": -9.873425229793604,
+          "S3": -9.61157976048224
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 2.900842125783032,
+        "scenario_residual_mse": 11.220873834321537,
+        "turnover_penalty": 0.04785468783447079,
+        "objective": 11.268728522156009,
+        "iterations": 10,
+        "kkt_residual": 3.159544292863359e-10
+      },
+      {
+        "event_id": "synthetic/8",
+        "time": "2026-01-09T16:00:00+00:00",
+        "horizon": "2026-01-12T16:00:00+00:00",
+        "earliest_execution": "2026-01-12T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-12T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/8/S1",
+          "synthetic/8/S2",
+          "synthetic/8/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -10.006779938676026,
+          "S2": -9.873425229793604,
+          "S3": -9.61157976048224
+        },
+        "targets": {
+          "S1": -9.616597426160126,
+          "S2": -10.201851139334149,
+          "S3": -9.748176236626058
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -7.594665177694827,
+        "scenario_residual_mse": 164.26110719606095,
+        "turnover_penalty": 0.3213604059948886,
+        "objective": 164.58246760205583,
+        "iterations": 12,
+        "kkt_residual": 4.284722096810306e-10
+      },
+      {
+        "event_id": "synthetic/10",
+        "time": "2026-01-12T16:00:00+00:00",
+        "horizon": "2026-01-13T16:00:00+00:00",
+        "earliest_execution": "2026-01-13T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-13T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/10/S1",
+          "synthetic/10/S2",
+          "synthetic/10/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -9.616597426160126,
+          "S2": -10.201851139334149,
+          "S3": -9.748176236626058
+        },
+        "targets": {
+          "S1": -14.549298682973316,
+          "S2": -13.711939472370357,
+          "S3": -13.876400343296961
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -4.238712847321285,
+        "scenario_residual_mse": 24.486028153406068,
+        "turnover_penalty": 4.723810719258833,
+        "objective": 29.2098388726649,
+        "iterations": 12,
+        "kkt_residual": 5.615832996893131e-10
+      },
+      {
+        "event_id": "synthetic/12",
+        "time": "2026-01-13T16:00:00+00:00",
+        "horizon": "2026-01-14T16:00:00+00:00",
+        "earliest_execution": "2026-01-14T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-14T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/12/S1",
+          "synthetic/12/S2",
+          "synthetic/12/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -14.549298682973316,
+          "S2": -13.711939472370357,
+          "S3": -13.876400343296961
+        },
+        "targets": {
+          "S1": -15.81011000188071,
+          "S2": -15.330615265324578,
+          "S3": -15.929771343769524
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.3844150502693242,
+        "scenario_residual_mse": 32.530426180189586,
+        "turnover_penalty": 1.8536204470190922,
+        "objective": 34.384046627208676,
+        "iterations": 13,
+        "kkt_residual": 3.6860557854832133e-10
+      },
+      {
+        "event_id": "synthetic/14",
+        "time": "2026-01-14T16:00:00+00:00",
+        "horizon": "2026-01-15T16:00:00+00:00",
+        "earliest_execution": "2026-01-15T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-15T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/14/S1",
+          "synthetic/14/S2",
+          "synthetic/14/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -15.81011000188071,
+          "S2": -15.330615265324578,
+          "S3": -15.929771343769524
+        },
+        "targets": {
+          "S1": -16.670334049594977,
+          "S2": -16.582881561785996,
+          "S3": -16.22515102028404
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 3.8933518950845674,
+        "scenario_residual_mse": 25.148328901048174,
+        "turnover_penalty": 0.9048054905442352,
+        "objective": 26.05313439159241,
+        "iterations": 12,
+        "kkt_residual": 7.195970736333645e-10
+      },
+      {
+        "event_id": "synthetic/16",
+        "time": "2026-01-15T16:00:00+00:00",
+        "horizon": "2026-01-16T16:00:00+00:00",
+        "earliest_execution": "2026-01-16T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-16T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/16/S1",
+          "synthetic/16/S2",
+          "synthetic/16/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -16.670334049594977,
+          "S2": -16.582881561785996,
+          "S3": -16.22515102028404
+        },
+        "targets": {
+          "S1": -17.09174013380732,
+          "S2": -16.88490563932953,
+          "S3": -16.837558005333165
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 6.653912686984833,
+        "scenario_residual_mse": 30.76785183575869,
+        "turnover_penalty": 0.5019676205593746,
+        "objective": 31.269819456318064,
+        "iterations": 13,
+        "kkt_residual": 7.216160209317951e-10
+      },
+      {
+        "event_id": "synthetic/18",
+        "time": "2026-01-16T16:00:00+00:00",
+        "horizon": "2026-01-19T16:00:00+00:00",
+        "earliest_execution": "2026-01-19T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-19T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/18/S1",
+          "synthetic/18/S2",
+          "synthetic/18/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -17.09174013380732,
+          "S2": -16.88490563932953,
+          "S3": -16.837558005333165
+        },
+        "targets": {
+          "S1": -16.02447899138958,
+          "S2": -17.908526684880727,
+          "S3": -18.161036075761167
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -2.2004690864652807,
+        "scenario_residual_mse": 333.1919787477061,
+        "turnover_penalty": 1.2830143994267798,
+        "objective": 334.4749931471329,
+        "iterations": 16,
+        "kkt_residual": 8.244184902493407e-10
+      },
+      {
+        "event_id": "synthetic/20",
+        "time": "2026-01-19T16:00:00+00:00",
+        "horizon": "2026-01-20T16:00:00+00:00",
+        "earliest_execution": "2026-01-20T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-20T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/20/S1",
+          "synthetic/20/S2",
+          "synthetic/20/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -16.02447899138958,
+          "S2": -17.908526684880727,
+          "S3": -18.161036075761167
+        },
+        "targets": {
+          "S1": -5.431559869465195,
+          "S2": -5.51962667936996,
+          "S3": -4.987450571544727
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -3.326607439214434,
+        "scenario_residual_mse": 17.54008331622012,
+        "turnover_penalty": 13.586118994159705,
+        "objective": 31.126202310379824,
+        "iterations": 13,
+        "kkt_residual": 4.778705610408244e-10
+      },
+      {
+        "event_id": "synthetic/22",
+        "time": "2026-01-20T16:00:00+00:00",
+        "horizon": "2026-01-21T16:00:00+00:00",
+        "earliest_execution": "2026-01-21T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-21T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/22/S1",
+          "synthetic/22/S2",
+          "synthetic/22/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.431559869465195,
+          "S2": -5.51962667936996,
+          "S3": -4.987450571544727
+        },
+        "targets": {
+          "S1": -7.96408638481277,
+          "S2": -6.456335171741448,
+          "S3": -6.882064332386437
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.9868356663748319,
+        "scenario_residual_mse": 27.140565751878004,
+        "turnover_penalty": 2.015573836851698,
+        "objective": 29.1561395887297,
+        "iterations": 17,
+        "kkt_residual": 7.098207038062728e-10
+      },
+      {
+        "event_id": "synthetic/24",
+        "time": "2026-01-21T16:00:00+00:00",
+        "horizon": "2026-01-22T16:00:00+00:00",
+        "earliest_execution": "2026-01-22T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-22T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/24/S1",
+          "synthetic/24/S2",
+          "synthetic/24/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -7.96408638481277,
+          "S2": -6.456335171741448,
+          "S3": -6.882064332386437
+        },
+        "targets": {
+          "S1": -5.831036681142353,
+          "S2": -6.456335171741448,
+          "S3": -6.346799667150956
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.972197264073607,
+        "scenario_residual_mse": 31.038733057336295,
+        "turnover_penalty": 1.0026726819714666,
+        "objective": 32.04140573930776,
+        "iterations": 12,
+        "kkt_residual": 5.493107192121342e-10
+      },
+      {
+        "event_id": "synthetic/26",
+        "time": "2026-01-22T16:00:00+00:00",
+        "horizon": "2026-01-23T16:00:00+00:00",
+        "earliest_execution": "2026-01-23T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-23T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/26/S1",
+          "synthetic/26/S2",
+          "synthetic/26/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.831036681142353,
+          "S2": -6.456335171741448,
+          "S3": -6.346799667150956
+        },
+        "targets": {
+          "S1": -3.0734017389327644,
+          "S2": -3.960240839879272,
+          "S3": -3.2424995916789587
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -0.04041821020920178,
+        "scenario_residual_mse": 18.3967383634007,
+        "turnover_penalty": 3.1406972887304576,
+        "objective": 21.53743565213116,
+        "iterations": 18,
+        "kkt_residual": 8.926165294647397e-10
+      },
+      {
+        "event_id": "synthetic/28",
+        "time": "2026-01-23T16:00:00+00:00",
+        "horizon": "2026-01-26T16:00:00+00:00",
+        "earliest_execution": "2026-01-26T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-26T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/28/S1",
+          "synthetic/28/S2",
+          "synthetic/28/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -3.0734017389327644,
+          "S2": -3.960240839879272,
+          "S3": -3.2424995916789587
+        },
+        "targets": {
+          "S1": -2.2629224897971354,
+          "S2": -2.6762592818710287,
+          "S3": -2.362883394995367
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.3725435705042923,
+        "scenario_residual_mse": 87.0691845793383,
+        "turnover_penalty": 1.117569129247721,
+        "objective": 88.18675370858602,
+        "iterations": 14,
+        "kkt_residual": 7.251288644865152e-10
+      },
+      {
+        "event_id": "synthetic/30",
+        "time": "2026-01-26T16:00:00+00:00",
+        "horizon": "2026-01-27T16:00:00+00:00",
+        "earliest_execution": "2026-01-27T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-27T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/30/S1",
+          "synthetic/30/S2",
+          "synthetic/30/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -2.2629224897971354,
+          "S2": -2.6762592818710287,
+          "S3": -2.362883394995367
+        },
+        "targets": {
+          "S1": -5.8310951335877075,
+          "S2": -7.366575933294653,
+          "S3": -6.2398703286224055
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 1.3803359667245005,
+        "scenario_residual_mse": 52.749735602525334,
+        "turnover_penalty": 4.5601487737603,
+        "objective": 57.30988437628564,
+        "iterations": 16,
+        "kkt_residual": 9.83501341863691e-10
+      },
+      {
+        "event_id": "synthetic/32",
+        "time": "2026-01-27T16:00:00+00:00",
+        "horizon": "2026-01-28T16:00:00+00:00",
+        "earliest_execution": "2026-01-28T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-28T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/32/S1",
+          "synthetic/32/S2",
+          "synthetic/32/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.8310951335877075,
+          "S2": -7.366575933294653,
+          "S3": -6.2398703286224055
+        },
+        "targets": {
+          "S1": -2.6697137985293518,
+          "S2": -3.121107156478912,
+          "S3": -2.8084017305032787
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -0.5721861312345737,
+        "scenario_residual_mse": 17.870230019853363,
+        "turnover_penalty": 4.0727157997752705,
+        "objective": 21.942945819628633,
+        "iterations": 15,
+        "kkt_residual": 2.7836259678542783e-10
+      },
+      {
+        "event_id": "synthetic/34",
+        "time": "2026-01-28T16:00:00+00:00",
+        "horizon": "2026-01-29T16:00:00+00:00",
+        "earliest_execution": "2026-01-29T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-29T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/34/S1",
+          "synthetic/34/S2",
+          "synthetic/34/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -2.6697137985293518,
+          "S2": -3.121107156478912,
+          "S3": -2.8084017305032787
+        },
+        "targets": {
+          "S1": -5.846646627130367,
+          "S2": -4.893418191871791,
+          "S3": -5.808896614436801
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.6990740562023499,
+        "scenario_residual_mse": 50.95771916951382,
+        "turnover_penalty": 2.9872739000484616,
+        "objective": 53.94499306956229,
+        "iterations": 15,
+        "kkt_residual": 4.5020822210762525e-10
+      },
+      {
+        "event_id": "synthetic/36",
+        "time": "2026-01-29T16:00:00+00:00",
+        "horizon": "2026-01-30T16:00:00+00:00",
+        "earliest_execution": "2026-01-30T09:00:00+00:00",
+        "next_rebalance_time": "2026-01-30T16:00:00+00:00",
+        "scenario_seconds": 86400.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/36/S1",
+          "synthetic/36/S2",
+          "synthetic/36/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -5.846646627130367,
+          "S2": -4.893418191871791,
+          "S3": -5.808896614436801
+        },
+        "targets": {
+          "S1": -14.341714282682133,
+          "S2": -14.288089455750864,
+          "S3": -14.237422829620371
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": 2.0696421444901754,
+        "scenario_residual_mse": 155.23975393458903,
+        "turnover_penalty": 9.889616379115111,
+        "objective": 165.12937031370416,
+        "iterations": 14,
+        "kkt_residual": 9.902885497110599e-10
+      },
+      {
+        "event_id": "synthetic/38",
+        "time": "2026-01-30T16:00:00+00:00",
+        "horizon": "2026-02-02T16:00:00+00:00",
+        "earliest_execution": "2026-02-02T09:00:00+00:00",
+        "next_rebalance_time": "2026-02-02T16:00:00+00:00",
+        "scenario_seconds": 259200.0,
+        "scenario_seed": 9173,
+        "scenario_count": 256,
+        "input_ids": [
+          "synthetic/38/S1",
+          "synthetic/38/S2",
+          "synthetic/38/S3"
+        ],
+        "solver_tolerance": 1e-09,
+        "max_iterations": 20000,
+        "fixed_positions": {
+          "BASKET": -1
+        },
+        "previous_holdings": {
+          "S1": -14.341714282682133,
+          "S2": -14.288089455750864,
+          "S3": -14.237422829620371
+        },
+        "targets": {
+          "S1": -23.2674309357246,
+          "S2": -24.615173008860534,
+          "S3": -23.1097626469044
+        },
+        "alpha": 0.1,
+        "gross_scale": 187.88503589676307,
+        "cost_weights": {
+          "S1": 0.02,
+          "S2": 0.02,
+          "S3": 0.02
+        },
+        "intercept": -1.7023894445571186,
+        "scenario_residual_mse": 1923.8018134353997,
+        "turnover_penalty": 10.568585885809583,
+        "objective": 1934.3703993212093,
+        "iterations": 15,
+        "kkt_residual": 3.4899522902926223e-10
+      }
+    ]
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "case_configuration",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.json",
+        "sha256": "edb4d7ef8b66ba4ea56a708b1b365a3537041980132ca692a0d47d2807a9cf3f"
+      },
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\fixtures\\synthetic.jsonl",
+        "sha256": "e674981af350b2bbec1c8c84fa0b2f0f09e7bffb9d58e614e72380c3ccef6cef"
+      }
+    ],
+    "metadata": {
+      "source": "synthetic correlated GBM fixture v1; not historical market data",
+      "purpose": "mechanics only, no calibration or profitability claim",
+      "basket_kind": "put",
+      "replay_seed": 20260912,
+      "replay_rng": "NumPy PCG64",
+      "replay_drift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "replay_volatilities": [
+        0.2,
+        0.225,
+        0.25
+      ],
+      "replay_correlation": [
+        [
+          1.0,
+          0.35,
+          0.35
+        ],
+        [
+          0.35,
+          1.0,
+          0.35
+        ],
+        [
+          0.35,
+          0.35,
+          1.0
+        ]
+      ],
+      "initial_spots": [
+        100.0,
+        80.0,
+        120.0
+      ],
+      "pricing_parameters": {
+        "stock_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "volatilities": [
+          0.2,
+          0.225,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.35,
+            0.35
+          ],
+          [
+            0.35,
+            1.0,
+            0.35
+          ],
+          [
+            0.35,
+            0.35,
+            1.0
+          ]
+        ],
+        "risk_free_rate": 0.01,
+        "available_at": "2026-01-05T16:00:00+00:00",
+        "pricing_seed": 731,
+        "samples": 8192,
+        "bump_relative": 0.0001
+      },
+      "stress_scenarios": [
+        {
+          "name": "unchanged",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_down_20pct",
+          "spot_multiplier": 0.8,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "spot_up_20pct",
+          "spot_multiplier": 1.2,
+          "volatility_multiplier": 1.0
+        },
+        {
+          "name": "vol_up_25pct",
+          "spot_multiplier": 1.0,
+          "volatility_multiplier": 1.25
+        }
+      ],
+      "margin_label": "uncalibrated research margin proxy",
+      "numpy_version": "2.3.1",
+      "calendar": "twenty toy business days by default; weekdays only, no holiday calendar",
+      "days": 20,
+      "execution_half_spread": 0.02,
+      "scenario_timing": "Next scheduled business-day close, declared in the current event; no future prices",
+      "funding": "declared toy cash 1%, collateral 0.5%, stock borrow 2%; no proceeds rebate"
+    },
+    "configuration": {
+      "instruments": {
+        "S1": {
+          "id": "S1",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S2": {
+          "id": "S2",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "S3": {
+          "id": "S3",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "BASKET": {
+          "id": "BASKET",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100,
+          "strike": 100.0,
+          "expiry": "2026-02-02T16:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "S1",
+              0.3333333333333333
+            ],
+            [
+              "S2",
+              0.3333333333333333
+            ],
+            [
+              "S3",
+              0.3333333333333333
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 10000,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "BASKET",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2026-02-03T09:00:00+00:00",
+        "hedge_universe": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "safety_buffer": 50,
+        "funding": {
+          "cash_rate": 0.01,
+          "collateral_rate": 0.005,
+          "borrow_rates": {
+            "S1": 0.02,
+            "S2": 0.02,
+            "S3": 0.02
+          }
+        },
+        "borrow": {
+          "S1": {
+            "located": true,
+            "limit": 1000
+          },
+          "S2": {
+            "located": true,
+            "limit": 1000
+          },
+          "S3": {
+            "located": true,
+            "limit": 1000
+          }
+        },
+        "fee_per_order": 0.05,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {
+          "S1": 1000,
+          "S2": 1000,
+          "S3": 1000
+        },
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2026-01-05T16:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20pct",
+          "spot_up_20pct",
+          "vol_up_25pct"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "interpretation": "One synthetic path; no distributional or profitability claim. Compare different stopping times only at matched valid checkpoints."
+}

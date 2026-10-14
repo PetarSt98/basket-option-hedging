@@ -17,6 +17,31 @@ if TYPE_CHECKING:
 QUANTILES = (0.01, 0.05, 0.5, 0.95, 0.99)
 
 
+def energy_score(observation: np.ndarray, samples: np.ndarray) -> float:
+    """Lower-is-better joint score of an equally weighted empirical forecast.
+
+    ES = mean_i ||x_i-y|| - sum_ij ||x_i-x_j|| / (2*N**2), with Euclidean
+    distances in the input return units. This is the energy score of the
+    empirical distribution (including diagonal pairs), not the unbiased
+    estimator of an underlying continuous distribution's score. Compare
+    forecasts using the same ensemble size; no marginal standardization is
+    applied. See Gneiting and Raftery (2007), doi:10.1198/016214506000001437.
+    """
+    observation = np.asarray(observation, dtype=float)
+    samples = np.asarray(samples, dtype=float)
+    if (observation.ndim != 1 or samples.ndim != 2 or samples.shape[0] < 2
+            or observation.size < 1 or samples.shape[1] != observation.size
+            or not np.isfinite(observation).all() or not np.isfinite(samples).all()):
+        raise InputError("energy score requires finite D-vector and N-by-D samples with N >= 2")
+    with np.errstate(over="ignore", invalid="ignore"):
+        outcome_distance = np.linalg.norm(samples - observation, axis=1).mean()
+        pair_distance = np.linalg.norm(samples[:, None, :] - samples[None, :, :], axis=2).mean()
+        score = float(outcome_distance - 0.5 * pair_distance)
+    if not np.isfinite(score):
+        raise InputError("energy score distances exceed finite numerical range")
+    return score
+
+
 def _json_numbers(value):
     """Undefined correlations/relative errors are null, never JSON NaN."""
     array = np.asarray(value, dtype=float)

@@ -1,0 +1,401 @@
+{
+  "symbol": "IWM",
+  "currency": "USD",
+  "source_url": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+  "retrieved_at": "2026-10-04T08:08:35.661113+00:00",
+  "raw_sha256": "12db425d2b1cc4451adf07d48654769a8a7c5e168bc8cfa0b8060ccbe344de7e",
+  "distributions_sha256": "7e07e3a11542a756c4c14d393e437b745e8f1313f65750b328887fe1b97a9e9b",
+  "coverage_start": "2011-03-23",
+  "coverage_end": "2025-12-12",
+  "distribution_count": 59,
+  "source_distribution_count": 106,
+  "source_first_ex_date": "2000-06-21",
+  "source_last_ex_date": "2026-09-15",
+  "first_ex_date": "2011-03-24",
+  "last_ex_date": "2025-09-16",
+  "count_by_year": {
+    "2011": 4,
+    "2012": 4,
+    "2013": 4,
+    "2014": 4,
+    "2015": 4,
+    "2016": 4,
+    "2017": 4,
+    "2018": 4,
+    "2019": 4,
+    "2020": 4,
+    "2021": 4,
+    "2022": 4,
+    "2023": 4,
+    "2024": 4,
+    "2025": 3
+  },
+  "parsing_assumptions": [
+    "Parse complete distributionTableData from HTML-decoded componentprops JSON, not the first visible page.",
+    "Raw exDate/payableDate integers are calendar YYYYMMDD; filter inclusively on ex-date.",
+    "Use totalDistribution (all cash components), not incomeAmount; USD per ETF share as published.",
+    "Preserve decimal strings without rounding or price/split adjustment; reject duplicate ex-dates.",
+    "The full publisher history spans both boundaries; omitted days have no published distribution.",
+    "Payable dates are retained; the fixed benchmark books cash on ex-date using its pre-existing cash-timing proxy.",
+    "Future rows are excluded. Distribution amounts are accounting inputs released on ex-date, never strategy features."
+  ],
+  "yahoo_crosscheck": {
+    "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/IWM?period1=1300838400&period2=1765584000&interval=1mo&events=div%2Csplits",
+    "raw_sha256": "dbd24a878f817ba4daaefd349e284756574ee58734e1e743648401087a14a010",
+    "matching_date_count": 59,
+    "missing_from_yahoo": [],
+    "missing_from_ishares": [],
+    "amount_differences": [
+      {
+        "ex_date": "2011-03-24",
+        "ishares_cash_per_share": "0.168933",
+        "yahoo_cash_per_share": "0.169",
+        "yahoo_minus_ishares": "0.000067"
+      },
+      {
+        "ex_date": "2011-07-05",
+        "ishares_cash_per_share": "0.25183",
+        "yahoo_cash_per_share": "0.252",
+        "yahoo_minus_ishares": "0.00017"
+      },
+      {
+        "ex_date": "2011-09-23",
+        "ishares_cash_per_share": "0.249838",
+        "yahoo_cash_per_share": "0.25",
+        "yahoo_minus_ishares": "0.000162"
+      },
+      {
+        "ex_date": "2011-12-22",
+        "ishares_cash_per_share": "0.359546",
+        "yahoo_cash_per_share": "0.36",
+        "yahoo_minus_ishares": "0.000454"
+      },
+      {
+        "ex_date": "2012-03-23",
+        "ishares_cash_per_share": "0.251347",
+        "yahoo_cash_per_share": "0.251",
+        "yahoo_minus_ishares": "-0.000347"
+      },
+      {
+        "ex_date": "2012-06-26",
+        "ishares_cash_per_share": "0.377165",
+        "yahoo_cash_per_share": "0.377",
+        "yahoo_minus_ishares": "-0.000165"
+      },
+      {
+        "ex_date": "2012-09-24",
+        "ishares_cash_per_share": "0.331634",
+        "yahoo_cash_per_share": "0.332",
+        "yahoo_minus_ishares": "0.000366"
+      },
+      {
+        "ex_date": "2012-12-19",
+        "ishares_cash_per_share": "0.726609",
+        "yahoo_cash_per_share": "0.727",
+        "yahoo_minus_ishares": "0.000391"
+      },
+      {
+        "ex_date": "2013-07-02",
+        "ishares_cash_per_share": "0.430151",
+        "yahoo_cash_per_share": "0.43",
+        "yahoo_minus_ishares": "-0.000151"
+      },
+      {
+        "ex_date": "2013-09-24",
+        "ishares_cash_per_share": "0.283384",
+        "yahoo_cash_per_share": "0.283",
+        "yahoo_minus_ishares": "-0.000384"
+      },
+      {
+        "ex_date": "2013-12-23",
+        "ishares_cash_per_share": "0.436734",
+        "yahoo_cash_per_share": "0.437",
+        "yahoo_minus_ishares": "0.000266"
+      },
+      {
+        "ex_date": "2014-03-25",
+        "ishares_cash_per_share": "0.302091",
+        "yahoo_cash_per_share": "0.302",
+        "yahoo_minus_ishares": "-0.000091"
+      },
+      {
+        "ex_date": "2014-07-02",
+        "ishares_cash_per_share": "0.459278",
+        "yahoo_cash_per_share": "0.459",
+        "yahoo_minus_ishares": "-0.000278"
+      },
+      {
+        "ex_date": "2014-09-24",
+        "ishares_cash_per_share": "0.304608",
+        "yahoo_cash_per_share": "0.305",
+        "yahoo_minus_ishares": "0.000392"
+      },
+      {
+        "ex_date": "2014-12-24",
+        "ishares_cash_per_share": "0.445013",
+        "yahoo_cash_per_share": "0.445",
+        "yahoo_minus_ishares": "-0.000013"
+      },
+      {
+        "ex_date": "2015-03-25",
+        "ishares_cash_per_share": "0.383175",
+        "yahoo_cash_per_share": "0.383",
+        "yahoo_minus_ishares": "-0.000175"
+      },
+      {
+        "ex_date": "2015-07-02",
+        "ishares_cash_per_share": "0.529172",
+        "yahoo_cash_per_share": "0.529",
+        "yahoo_minus_ishares": "-0.000172"
+      },
+      {
+        "ex_date": "2015-09-25",
+        "ishares_cash_per_share": "0.324229",
+        "yahoo_cash_per_share": "0.324",
+        "yahoo_minus_ishares": "-0.000229"
+      },
+      {
+        "ex_date": "2015-12-24",
+        "ishares_cash_per_share": "0.495829",
+        "yahoo_cash_per_share": "0.496",
+        "yahoo_minus_ishares": "0.000171"
+      },
+      {
+        "ex_date": "2016-03-23",
+        "ishares_cash_per_share": "0.326642",
+        "yahoo_cash_per_share": "0.327",
+        "yahoo_minus_ishares": "0.000358"
+      },
+      {
+        "ex_date": "2016-07-06",
+        "ishares_cash_per_share": "0.620541",
+        "yahoo_cash_per_share": "0.621",
+        "yahoo_minus_ishares": "0.000459"
+      },
+      {
+        "ex_date": "2016-09-26",
+        "ishares_cash_per_share": "0.344256",
+        "yahoo_cash_per_share": "0.344",
+        "yahoo_minus_ishares": "-0.000256"
+      },
+      {
+        "ex_date": "2016-12-22",
+        "ishares_cash_per_share": "0.562956",
+        "yahoo_cash_per_share": "0.563",
+        "yahoo_minus_ishares": "0.000044"
+      },
+      {
+        "ex_date": "2017-03-24",
+        "ishares_cash_per_share": "0.386774",
+        "yahoo_cash_per_share": "0.387",
+        "yahoo_minus_ishares": "0.000226"
+      },
+      {
+        "ex_date": "2017-07-06",
+        "ishares_cash_per_share": "0.609105",
+        "yahoo_cash_per_share": "0.609",
+        "yahoo_minus_ishares": "-0.000105"
+      },
+      {
+        "ex_date": "2017-09-26",
+        "ishares_cash_per_share": "0.348518",
+        "yahoo_cash_per_share": "0.349",
+        "yahoo_minus_ishares": "0.000482"
+      },
+      {
+        "ex_date": "2017-12-21",
+        "ishares_cash_per_share": "0.5793",
+        "yahoo_cash_per_share": "0.579",
+        "yahoo_minus_ishares": "-0.0003"
+      },
+      {
+        "ex_date": "2018-03-22",
+        "ishares_cash_per_share": "0.362366",
+        "yahoo_cash_per_share": "0.362",
+        "yahoo_minus_ishares": "-0.000366"
+      },
+      {
+        "ex_date": "2018-07-03",
+        "ishares_cash_per_share": "0.595159",
+        "yahoo_cash_per_share": "0.595",
+        "yahoo_minus_ishares": "-0.000159"
+      },
+      {
+        "ex_date": "2018-09-26",
+        "ishares_cash_per_share": "0.450367",
+        "yahoo_cash_per_share": "0.45",
+        "yahoo_minus_ishares": "-0.000367"
+      },
+      {
+        "ex_date": "2018-12-17",
+        "ishares_cash_per_share": "0.469335",
+        "yahoo_cash_per_share": "0.469",
+        "yahoo_minus_ishares": "-0.000335"
+      },
+      {
+        "ex_date": "2019-03-20",
+        "ishares_cash_per_share": "0.412056",
+        "yahoo_cash_per_share": "0.412",
+        "yahoo_minus_ishares": "-0.000056"
+      },
+      {
+        "ex_date": "2019-06-17",
+        "ishares_cash_per_share": "0.532987",
+        "yahoo_cash_per_share": "0.533",
+        "yahoo_minus_ishares": "0.000013"
+      },
+      {
+        "ex_date": "2019-09-24",
+        "ishares_cash_per_share": "0.543712",
+        "yahoo_cash_per_share": "0.544",
+        "yahoo_minus_ishares": "0.000288"
+      },
+      {
+        "ex_date": "2019-12-16",
+        "ishares_cash_per_share": "0.597343",
+        "yahoo_cash_per_share": "0.597",
+        "yahoo_minus_ishares": "-0.000343"
+      },
+      {
+        "ex_date": "2020-03-25",
+        "ishares_cash_per_share": "0.41988",
+        "yahoo_cash_per_share": "0.42",
+        "yahoo_minus_ishares": "0.00012"
+      },
+      {
+        "ex_date": "2020-06-15",
+        "ishares_cash_per_share": "0.465775",
+        "yahoo_cash_per_share": "0.466",
+        "yahoo_minus_ishares": "0.000225"
+      },
+      {
+        "ex_date": "2020-09-23",
+        "ishares_cash_per_share": "0.566445",
+        "yahoo_cash_per_share": "0.566",
+        "yahoo_minus_ishares": "-0.000445"
+      },
+      {
+        "ex_date": "2020-12-14",
+        "ishares_cash_per_share": "0.592476",
+        "yahoo_cash_per_share": "0.592",
+        "yahoo_minus_ishares": "-0.000476"
+      },
+      {
+        "ex_date": "2021-03-25",
+        "ishares_cash_per_share": "0.398096",
+        "yahoo_cash_per_share": "0.398",
+        "yahoo_minus_ishares": "-0.000096"
+      },
+      {
+        "ex_date": "2021-06-10",
+        "ishares_cash_per_share": "0.34716",
+        "yahoo_cash_per_share": "0.347",
+        "yahoo_minus_ishares": "-0.00016"
+      },
+      {
+        "ex_date": "2021-09-24",
+        "ishares_cash_per_share": "0.678967",
+        "yahoo_cash_per_share": "0.679",
+        "yahoo_minus_ishares": "0.000033"
+      },
+      {
+        "ex_date": "2021-12-13",
+        "ishares_cash_per_share": "0.66552",
+        "yahoo_cash_per_share": "0.666",
+        "yahoo_minus_ishares": "0.00048"
+      },
+      {
+        "ex_date": "2022-03-24",
+        "ishares_cash_per_share": "0.399649",
+        "yahoo_cash_per_share": "0.4",
+        "yahoo_minus_ishares": "0.000351"
+      },
+      {
+        "ex_date": "2022-06-09",
+        "ishares_cash_per_share": "0.494057",
+        "yahoo_cash_per_share": "0.494",
+        "yahoo_minus_ishares": "-0.000057"
+      },
+      {
+        "ex_date": "2022-09-26",
+        "ishares_cash_per_share": "0.861438",
+        "yahoo_cash_per_share": "0.861",
+        "yahoo_minus_ishares": "-0.000438"
+      },
+      {
+        "ex_date": "2022-12-13",
+        "ishares_cash_per_share": "0.829513",
+        "yahoo_cash_per_share": "0.83",
+        "yahoo_minus_ishares": "0.000487"
+      },
+      {
+        "ex_date": "2023-03-23",
+        "ishares_cash_per_share": "0.630667",
+        "yahoo_cash_per_share": "0.631",
+        "yahoo_minus_ishares": "0.000333"
+      },
+      {
+        "ex_date": "2023-06-07",
+        "ishares_cash_per_share": "0.508675",
+        "yahoo_cash_per_share": "0.509",
+        "yahoo_minus_ishares": "0.000325"
+      },
+      {
+        "ex_date": "2023-09-26",
+        "ishares_cash_per_share": "0.828876",
+        "yahoo_cash_per_share": "0.829",
+        "yahoo_minus_ishares": "0.000124"
+      },
+      {
+        "ex_date": "2023-12-20",
+        "ishares_cash_per_share": "0.733879",
+        "yahoo_cash_per_share": "0.734",
+        "yahoo_minus_ishares": "0.000121"
+      },
+      {
+        "ex_date": "2024-03-21",
+        "ishares_cash_per_share": "0.522126",
+        "yahoo_cash_per_share": "0.522",
+        "yahoo_minus_ishares": "-0.000126"
+      },
+      {
+        "ex_date": "2024-06-11",
+        "ishares_cash_per_share": "0.562204",
+        "yahoo_cash_per_share": "0.562",
+        "yahoo_minus_ishares": "-0.000204"
+      },
+      {
+        "ex_date": "2024-09-25",
+        "ishares_cash_per_share": "0.752193",
+        "yahoo_cash_per_share": "0.752",
+        "yahoo_minus_ishares": "-0.000193"
+      },
+      {
+        "ex_date": "2024-12-17",
+        "ishares_cash_per_share": "0.694004",
+        "yahoo_cash_per_share": "0.694",
+        "yahoo_minus_ishares": "-0.000004"
+      },
+      {
+        "ex_date": "2025-03-18",
+        "ishares_cash_per_share": "0.459853",
+        "yahoo_cash_per_share": "0.46",
+        "yahoo_minus_ishares": "0.000147"
+      },
+      {
+        "ex_date": "2025-06-16",
+        "ishares_cash_per_share": "0.575625",
+        "yahoo_cash_per_share": "0.576",
+        "yahoo_minus_ishares": "0.000375"
+      },
+      {
+        "ex_date": "2025-09-16",
+        "ishares_cash_per_share": "0.676797",
+        "yahoo_cash_per_share": "0.677",
+        "yahoo_minus_ishares": "0.000203"
+      }
+    ],
+    "maximum_absolute_difference": 0.000487,
+    "interpretation": "Yahoo values are rounded to 0.001 USD; retain official iShares values."
+  }
+}

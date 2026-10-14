@@ -1,0 +1,109 @@
+{
+  "unchanged_hashes": {
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\api.py": "7877031081c4ff3b957678806909372615423881172097ccf6b5575bc2b48022",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\cli.py": "55f02d3bdff369c5279acdcf7565b171715e2a9527eca55ac02c2b36e7cb83cf",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\contracts.py": "d0c8e875bd4c55f537fcb179cc0a51c02cb7686172924259d8c049000c3e96e0",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\corporate_actions.py": "e8d8e8e1c65f8f0515e8b29a30a2cb1a542fc3f07592b0fa72b1099d262163e4",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\deterministic.py": "899e4d6135e70876a9a0ad1901c711ba2d48a794f535d4eaac3d9af8605ff68a",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\etf_data.py": "ea4c176d82eb3a83963012479da55e8d07a64e7685f49f112a0abf73eb6b30b2",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\generator_validation.py": "bfbb96e07b7bfff2d06cfe894199690a5bbd1a5fc5b80c45df3dbd3ca2a0e16c",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical.py": "c11c598ad73818ca1f8bcd82192661eff78ed6ccde504ff64c2ce02518feccf5",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_actions.py": "89ae91fc3ee9d27b0736ca2f8d78f372a74c4cfc7f1e4b4241bd357f0242b55f",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_cli.py": "01678c7a882b17ddb7f36c1ffea8dd1c2afb5979103ac1bc3349b9fa20045c35",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_hedge.py": "24c87b2089572566ce7395cc21b18bb5dca9427eea6af12863c75cd0593f29ac",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_plots.py": "0fc6265c7f16862646062271a773295481c27c17de955a24cfb9f922b8628cde",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_report.py": "cbfc748118e2f09c5ee767b6c702731ccdacd5bd2be14bfc99b85140f6385b13",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\historical_training.py": "9a59193e90f46ded71b6cf62b80a16762c242bace64f9788ff55cb3813579c97",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learned_model.py": "0932ca37987803c7af12f06be68e196189eb7bbfd1e3c699223d19f3823701f3",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learned_scenarios.py": "61267b8703a85d1bdc978e6fab61f4b947855ff7cae66cebf3230019bfba0b29",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\learning_data.py": "1db526a0070bc78bb86048e53868b0e1efd0d15987ebd5802f36ee6b01f3fe39",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\optimization.py": "801d57194bbe5724646d9ecd30ac76baff2b7291d9423d97fba47167b60a8348",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\orders.py": "215bde3f784209896666fcf3cb09a4130dbe2cf9fef174676e391972d00d7385",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\policies.py": "51681d183c9ffcfd4c466f11f5ac5d7fc69306383c075b375204715951cd2937",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\replay.py": "f24006696639ddc5fab9e10e326435e9959ddef7f724d4f62d4b2d7fee5933ae",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\reporting.py": "da83274a72943b8dafb5b946ec7f9d40469bbb28cc009a03e97d59aa35a2c4e2",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\risk.py": "b9230a80540147383bec5edb4f970b9e42526d5587ba2504924cf231a44e3249",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenarios.py": "d5815040751e3f6856060bac92406cbc4e7990beff6d884d3b4a15bcea21dac2",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenario_comparison.py": "a9240f8c419b5a67e2c805b432f2aaa3cab1f895ec0fcf2f00c2a51af7812079",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\scenario_hedge.py": "03a69b36d54a7cc3733b47126b29ada29fdf9fa11addf639073be75e1dc16e4b",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\stage2.py": "a992885eb077708ff4b621e6bfaacb91758adca9d3b9939614ac9c52470411b5",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\surfaces.py": "3cb9a31b0dd3d5e046c15dfc8cd7c56eb6ac2d7b98a84c4a20faf5f32ffa6370",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\synthetic.py": "5c326dd96dd0d8f2c7e3b24ea4f004b01eeb699413b166dd1e6cbf812e96823f",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\volgan.py": "5dfc35f89dd24067a2608633cbc23b769dca3b8233f7c14d5c25643ba7ab1115",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\__init__.py": "f5ccd743455cfb2b0674e20799f9ca67fee47cd260b2118aa0ce1a779cdc839b",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\src\\basket_hedging\\__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\models\\volgan.json": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\data\\iwm_corporate_actions\\distributions.csv": "7e07e3a11542a756c4c14d393e437b745e8f1313f65750b328887fe1b97a9e9b",
+    "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\episodes.csv": "ef9a623c0c195e71adbe94a9b1de5fc9c9daafdb204b81451eaf5e030aca53fc"
+  },
+  "checks": [
+    {
+      "policy": "delta",
+      "status": "COMPLETED",
+      "net_pnl": -1331.003010124463,
+      "all_summary_fields_equal_frozen": true,
+      "official_action": {
+        "ex_date": "2020-03-25",
+        "payable_date": "2020-03-31",
+        "cash_per_share": "0.41988"
+      },
+      "opening_dividend_post": {
+        "id": "dividend/2020-03-25/open/IWM",
+        "time": "2020-03-25T13:30:00+00:00",
+        "kind": "dividend",
+        "cash_change": -27.543682107224573,
+        "instrument_id": "IWM",
+        "quantity": -65.59893804711959,
+        "price": 0.41988,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      "independently_summed_pre_ex_holdings": -65.59893804711959,
+      "same_open_later_IWM_fills": [
+        {
+          "id": "fill/2020-03-24/close/IWM",
+          "time": "2020-03-25T13:30:00+00:00",
+          "kind": "fill",
+          "cash_change": -19.10175370868573,
+          "instrument_id": "IWM",
+          "quantity": 0.17438991235735557,
+          "price": 109.53474,
+          "reference_mark": 109.48,
+          "restriction_change": 0.0
+        }
+      ],
+      "no_payable_date_recredit": true,
+      "total_dividend_cashflow": -87.99364335540594
+    },
+    {
+      "policy": "volgan",
+      "status": "COMPLETED",
+      "net_pnl": 1010.9825624607183,
+      "all_summary_fields_equal_frozen": true,
+      "official_action": {
+        "ex_date": "2020-03-25",
+        "payable_date": "2020-03-31",
+        "cash_per_share": "0.41988"
+      },
+      "opening_dividend_post": {
+        "id": "dividend/2020-03-25/open/IWM",
+        "time": "2020-03-25T13:30:00+00:00",
+        "kind": "dividend",
+        "cash_change": -46.35403056335746,
+        "instrument_id": "IWM",
+        "quantity": -110.39828180279476,
+        "price": 0.41988,
+        "reference_mark": 0.0,
+        "restriction_change": 0.0
+      },
+      "independently_summed_pre_ex_holdings": -110.39828180279476,
+      "same_open_later_IWM_fills": [],
+      "no_payable_date_recredit": true,
+      "total_dividend_cashflow": -97.80813522911733
+    }
+  ]
+}

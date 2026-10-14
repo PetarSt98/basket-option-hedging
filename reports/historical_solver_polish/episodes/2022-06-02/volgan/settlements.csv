@@ -1,0 +1,2 @@
+id,time,instrument_id,quantity,payoff,cashflow,funded,funding_convention,official_fixing_id,fixing_observed_at,fixing_available_at,official_spots
+settlement/B,2022-07-01T20:00:00+00:00,B,-1,28.11081672578058,-2811.081672578058,True,"atomic same-event net cash, released old margin available",fixing/B,2022-07-01T20:00:00+00:00,2022-07-01T20:00:00+00:00,"{""IWM"":171.41,""QQQ"":282.13,""SPY"":381.24}"

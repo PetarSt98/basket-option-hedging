@@ -1,0 +1,30 @@
+[
+  {
+    "episode": "2022-06-02",
+    "iterations": 20000,
+    "kkt_residual": 1.5604606627775405e-08,
+    "error": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.56046e-08 exceeds 1e-09",
+    "input_sha256": "3ff555b5a892dec188d8056fd37be8f472380b087f1f4172341d0baa622d1899"
+  },
+  {
+    "episode": "2022-09-01",
+    "iterations": 20000,
+    "kkt_residual": 4.725150301078445e-09,
+    "error": "hedge regression did not converge after 20000 iterations: scaled KKT residual 4.72515e-09 exceeds 1e-09",
+    "input_sha256": "6512b6c22f1fd07d6a8921a4960bb9b30cf25d8e17da565f68ed23c31f6a4984"
+  },
+  {
+    "episode": "2022-12-01",
+    "iterations": 20000,
+    "kkt_residual": 1.9445781939488943e-08,
+    "error": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.94458e-08 exceeds 1e-09",
+    "input_sha256": "71ba190ddbc42e0e9392cdc28d02bc6ca75aeb896d42547478c34d2408201a38"
+  },
+  {
+    "episode": "2023-02-02",
+    "iterations": 20000,
+    "kkt_residual": 1.0757443896014757e-09,
+    "error": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.07574e-09 exceeds 1e-09",
+    "input_sha256": "550681242a6f1733a6369387e874efada6d518f7fd0e6eed411fde6986b79163"
+  }
+]

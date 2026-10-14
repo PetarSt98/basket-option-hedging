@@ -1,0 +1,4 @@
+{
+  "historical_py_sha256": "c11c598ad73818ca1f8bcd82192661eff78ed6ccde504ff64c2ce02518feccf5",
+  "note": "Reporting-only nulling of unavailable stopped-book P&L components applied after this run; financial code unchanged."
+}

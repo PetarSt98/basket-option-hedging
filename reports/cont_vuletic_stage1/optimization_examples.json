@@ -1,0 +1,76 @@
+{
+  "perfect": {
+    "delta_v": [
+      -2,
+      2
+    ],
+    "delta_h": [
+      [
+        -1
+      ],
+      [
+        1
+      ]
+    ],
+    "expected_holdings": [
+      2
+    ],
+    "solution": {
+      "holdings": [
+        1.9999999999999996
+      ],
+      "changes": [
+        1.9999999999999996
+      ],
+      "intercept": 0.0,
+      "mse": 1.9721522630525295e-31,
+      "penalty": 0.0,
+      "objective": 1.9721522630525295e-31,
+      "iterations": 0,
+      "kkt_residual": 2.220446049250313e-16
+    }
+  },
+  "redundant": {
+    "delta_v": [
+      -2,
+      2
+    ],
+    "delta_h": [
+      [
+        -1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "cost_weights": [
+      1,
+      2
+    ],
+    "alpha": 1,
+    "gross_scale": 1,
+    "expected_holdings": [
+      1.5,
+      0
+    ],
+    "explanation": "For total b>=0, use the cheaper identical instrument: (2-b)^2+b minimizes at b=1.5.",
+    "solution": {
+      "holdings": [
+        1.5,
+        0.0
+      ],
+      "changes": [
+        1.5,
+        0.0
+      ],
+      "intercept": 0.0,
+      "mse": 0.25,
+      "penalty": 1.5,
+      "objective": 1.75,
+      "iterations": 1,
+      "kkt_residual": 0.0
+    }
+  }
+}

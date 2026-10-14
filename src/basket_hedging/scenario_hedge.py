@@ -88,5 +88,6 @@ class ScenarioHedge:
             intercept=solution.intercept, scenario_residual_mse=solution.mse,
             turnover_penalty=solution.penalty, objective=solution.objective,
             iterations=solution.iterations, kkt_residual=solution.kkt_residual,
+            polish_attempted=solution.polish_attempted, polish_succeeded=solution.polish_succeeded,
         ))
         return targets

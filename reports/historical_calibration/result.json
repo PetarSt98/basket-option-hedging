@@ -1,0 +1,10 @@
+{
+  "status": "NO CONFIRMED IMPROVEMENT",
+  "frozen_at": "2026-10-04T14:44:28.003145+00:00",
+  "plan_sha256": "5422ad43aed576243e96f68b899eeddb9d90d729fdf6c8163b9880034f658cb1",
+  "both_seeds_have_eligible_checkpoints": false,
+  "selected_seed": null,
+  "selected_epoch": null,
+  "checkpoint_sha256": null,
+  "reason": "No eligible checkpoint for both seeds; confirmation not inspected."
+}

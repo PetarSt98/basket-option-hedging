@@ -1,0 +1,305 @@
+{
+  "checked_at": "2026-10-04T08:30:27.810534+00:00",
+  "method": "Independent read-only recomputation from CSV/JSON with Python standard-library csv, json, math, statistics; no engine, ledger, optimization, NumPy or reporting calculation functions imported.",
+  "tolerance": {
+    "relative": 1e-10,
+    "absolute_usd": 1e-07
+  },
+  "numeric_comparisons": 1887,
+  "max_absolute_difference": 2.3283064365386963e-10,
+  "financial_rows": 355,
+  "scheduled_episodes": 71,
+  "matched_completed_episodes": 62,
+  "summary_metrics": {
+    "unhedged": {
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 1174.4055952541412,
+      "hedge_error_rmse": 1184.6425007636983,
+      "net_pnl_sd": 1174.4055952541412,
+      "cvar95": 2995.4454946841724,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 0.0,
+      "mean_transaction_costs": 0.0,
+      "mean_fills": 0.0,
+      "total_turnover_all_runs": 0.0,
+      "total_trading_costs_all_runs": 0.0,
+      "total_fills_all_runs": 0,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324,
+      "mean_net_pnl": 215.39492439257776,
+      "mean_hedge_error": -215.39492439257708,
+      "statuses": {
+        "COMPLETED": 66,
+        "STOP_DATA_GAP": 5
+      }
+    },
+    "delta": {
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 395.04485595131047,
+      "hedge_error_rmse": 392.0990740956877,
+      "net_pnl_sd": 400.8673110453229,
+      "cvar95": 1316.632416794433,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 61722.18220537254,
+      "mean_transaction_costs": 30.861043596258483,
+      "mean_fills": 59.95161290322581,
+      "total_turnover_all_runs": 4259882.740702831,
+      "total_trading_costs_all_runs": 2129.956385064879,
+      "total_fills_all_runs": 4101,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 0,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324,
+      "mean_net_pnl": -26.007934731598652,
+      "mean_hedge_error": -14.083661997456755,
+      "statuses": {
+        "COMPLETED": 66,
+        "STOP_DATA_GAP": 5
+      }
+    },
+    "parametric": {
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 428.929329134819,
+      "hedge_error_rmse": 427.91639988054874,
+      "net_pnl_sd": 436.6627133756491,
+      "cvar95": 1345.6551075424104,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 56861.601029076715,
+      "mean_transaction_costs": 28.430760910792266,
+      "mean_fills": 45.66129032258065,
+      "total_turnover_all_runs": 3914353.406183761,
+      "total_trading_costs_all_runs": 1957.1872078304636,
+      "total_fills_all_runs": 3085,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324,
+      "mean_net_pnl": 8.431770721234047,
+      "mean_hedge_error": -45.8203143535567,
+      "statuses": {
+        "COMPLETED": 66,
+        "STOP_DATA_GAP": 5
+      }
+    },
+    "gaussian": {
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 418.25424823699416,
+      "hedge_error_rmse": 417.2028474450665,
+      "net_pnl_sd": 424.9916109502882,
+      "cvar95": 1298.9699994381954,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 45643.1806471308,
+      "mean_transaction_costs": 22.821550392509856,
+      "mean_fills": 35.403225806451616,
+      "total_turnover_all_runs": 3153012.0632007136,
+      "total_trading_costs_all_runs": 1576.5156227022192,
+      "total_fills_all_runs": 2399,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 0,
+      "completion_rate": 0.9295774647887324,
+      "mean_net_pnl": 12.074989007299601,
+      "mean_hedge_error": -44.08126669315818,
+      "statuses": {
+        "COMPLETED": 66,
+        "STOP_DATA_GAP": 5
+      }
+    },
+    "volgan": {
+      "episodes": 71,
+      "matched_completed": 62,
+      "hedge_error_sd": 407.87421329227834,
+      "hedge_error_rmse": 410.47784809987763,
+      "net_pnl_sd": 412.92762126289364,
+      "cvar95": 1017.3269909163319,
+      "cvar95_tail_episodes": 4,
+      "mean_turnover": 67611.5202167272,
+      "mean_transaction_costs": 33.805725752346746,
+      "mean_fills": 22.983870967741936,
+      "total_turnover_all_runs": 4372086.86421578,
+      "total_trading_costs_all_runs": 2186.0657344621436,
+      "total_fills_all_runs": 1475,
+      "rejected_orders_all_runs": 0,
+      "skipped_decisions_all_runs": 42,
+      "margin_breaches": 0,
+      "data_gaps": 5,
+      "optimizer_failures": 4,
+      "completion_rate": 0.8732394366197183,
+      "mean_net_pnl": 25.124043390682463,
+      "mean_hedge_error": -69.38254735549117,
+      "statuses": {
+        "COMPLETED": 62,
+        "STOP_DATA_GAP": 5,
+        "FAILED_OPTIMIZER": 4
+      }
+    }
+  },
+  "paired_rows_verified": 12,
+  "technical_failure_accounts_verified": [
+    {
+      "episode": "2022-06-02",
+      "policy": "volgan",
+      "failure_time": "2022-06-09T20:00:00+00:00",
+      "cash": 119153.0349952397,
+      "equity": 99937.62196157021,
+      "retained_positions": {
+        "B": -1,
+        "QQQ": -57.35285174732669,
+        "IWM": -2.8865344043095353
+      },
+      "retained_pending_orders": 0,
+      "retained_postings": 69,
+      "terminal_pnl": null,
+      "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.56046e-08 exceeds 1e-09"
+    },
+    {
+      "episode": "2022-09-01",
+      "policy": "volgan",
+      "failure_time": "2022-09-01T20:00:00+00:00",
+      "cash": 100863.11059973613,
+      "equity": 100000.0,
+      "retained_positions": {
+        "B": -1
+      },
+      "retained_pending_orders": 0,
+      "retained_postings": 4,
+      "terminal_pnl": null,
+      "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 4.72515e-09 exceeds 1e-09"
+    },
+    {
+      "episode": "2022-12-01",
+      "policy": "volgan",
+      "failure_time": "2022-12-02T21:00:00+00:00",
+      "cash": 115921.26196739904,
+      "equity": 99774.50015513702,
+      "retained_positions": {
+        "B": -1,
+        "QQQ": -52.59052841198603
+      },
+      "retained_pending_orders": 0,
+      "retained_postings": 15,
+      "terminal_pnl": null,
+      "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.94458e-08 exceeds 1e-09"
+    },
+    {
+      "episode": "2023-02-02",
+      "policy": "volgan",
+      "failure_time": "2023-02-06T21:00:00+00:00",
+      "cash": 117947.48664624745,
+      "equity": 99808.72839947637,
+      "retained_positions": {
+        "B": -1,
+        "QQQ": -56.41950398893086
+      },
+      "retained_pending_orders": 0,
+      "retained_postings": 27,
+      "terminal_pnl": null,
+      "reason": "hedge regression did not converge after 20000 iterations: scaled KKT residual 1.07574e-09 exceeds 1e-09"
+    }
+  ],
+  "representative_snapshot_count": 811,
+  "representative_episode": "2020-01-02; first test episode selected before outcomes",
+  "representative": [
+    {
+      "policy": "unhedged",
+      "snapshots_checked": 126,
+      "fills_checked": 0,
+      "initial_capital": 100000,
+      "terminal_cash": 100181.29541968241,
+      "liability_pnl": 181.295419682408,
+      "hedge_pnl": 0.0,
+      "trading_costs": 0.0,
+      "financing_costs": -0.0,
+      "terminal_pnl": 181.295419682408,
+      "settlements": 1,
+      "terminal_inventory_zero": true
+    },
+    {
+      "policy": "delta",
+      "snapshots_checked": 189,
+      "fills_checked": 63,
+      "initial_capital": 100000,
+      "terminal_cash": 99600.44050165295,
+      "liability_pnl": 181.295419682408,
+      "hedge_pnl": -540.4956050812875,
+      "trading_costs": 32.083207427600726,
+      "financing_costs": 8.276105520574916,
+      "terminal_pnl": -399.5594983470551,
+      "settlements": 1,
+      "terminal_inventory_zero": true
+    },
+    {
+      "policy": "parametric",
+      "snapshots_checked": 173,
+      "fills_checked": 47,
+      "initial_capital": 100000,
+      "terminal_cash": 99619.26465462531,
+      "liability_pnl": 181.295419682408,
+      "hedge_pnl": -523.3584146352028,
+      "trading_costs": 30.554678203422753,
+      "financing_costs": 8.117672218467984,
+      "terminal_pnl": -380.7353453746856,
+      "settlements": 1,
+      "terminal_inventory_zero": true
+    },
+    {
+      "policy": "gaussian",
+      "snapshots_checked": 174,
+      "fills_checked": 48,
+      "initial_capital": 100000,
+      "terminal_cash": 99586.3919704359,
+      "liability_pnl": 181.295419682408,
+      "hedge_pnl": -557.6440136735558,
+      "trading_costs": 29.431816741933087,
+      "financing_costs": 7.827618831018355,
+      "terminal_pnl": -413.60802956409924,
+      "settlements": 1,
+      "terminal_inventory_zero": true
+    },
+    {
+      "policy": "volgan",
+      "snapshots_checked": 149,
+      "fills_checked": 23,
+      "initial_capital": 100000,
+      "terminal_cash": 99560.69171332724,
+      "liability_pnl": 181.295419682408,
+      "hedge_pnl": -566.2396346710707,
+      "trading_costs": 43.62548871309289,
+      "financing_costs": 10.73858297100765,
+      "terminal_pnl": -439.3082866727632,
+      "settlements": 1,
+      "terminal_inventory_zero": true
+    }
+  ],
+  "checks": [
+    "all policy/episode outcomes present and unique",
+    "sample SD, RMSE, empirical CVaR95, turnover/cost/fill means and totals, status counts and completion rates independently recomputed",
+    "all paired CSV differences independently recomputed on identical all-five completed intersection",
+    "failed account cash reconstructed from opening capital plus postings, equity from signed quantities and current marks, restrictions from remaining FIFO short lots",
+    "failed options remain unsettled and terminal metrics absent",
+    "representative cash/equity/restrictions checked across every recorded snapshot",
+    "representative liability/hedge/trading/funding components reconstructed from postings",
+    "every representative hedge fill follows submission; one settlement and zero terminal inventory"
+  ],
+  "input_sha256": {
+    "episodes.csv": "ef9a623c0c195e71adbe94a9b1de5fc9c9daafdb204b81451eaf5e030aca53fc",
+    "summary.json": "a20ac1fad7445aa018fe56815fd6863b06f018e3891cb0696d56499c44e36db9",
+    "paired_differences.csv": "a3b0bbff888950b3f47b44c810f08379026944040bf18a645ca7bdfea21bbb59",
+    "failed_runs.json": "72502c9ad36563b986cf8b6369f51bca2749f613f5d00bd95f02339d47836399",
+    "representative.jsonl": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66"
+  }
+}

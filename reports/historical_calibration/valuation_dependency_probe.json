@@ -1,0 +1,42 @@
+{
+  "scope": "Read-only generated-surface dependency diagnostic, no trades/P&L/backtest; probe basket only",
+  "checkpoint_sha256": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+  "decision": "2018-01-02T21:00:00+00:00",
+  "earliest_execution": "2018-01-03T14:30:00+00:00",
+  "endpoint": "2018-01-03T21:00:00+00:00",
+  "pricing_calibration_end": "2017-12-29",
+  "pricing_samples": 512,
+  "pricing_seed": 731,
+  "scenario_seed": 1730,
+  "scenarios": 256,
+  "contract": {
+    "kind": "European arithmetic basket put",
+    "expiry": "2018-02-01T21:00:00+00:00",
+    "strike": 300,
+    "multiplier": 100,
+    "quantity": -1,
+    "coefficients": [
+      [
+        "SPY",
+        0.3720653346727686
+      ],
+      [
+        "QQQ",
+        0.6309546343617893
+      ],
+      [
+        "IWM",
+        0.649772579597141
+      ]
+    ]
+  },
+  "current_basket_put_unit_mark": 3.7222116480780087,
+  "generated_spot_hash": "4f79d16759e823cb923429f7a83f05d969430c97f755fec93f0facfa43dfeb93",
+  "stock_hedge_changes_identical": true,
+  "max_liability_change_difference": 75.0086432300152,
+  "mean_abs_liability_change_difference": 7.63438451225282,
+  "liability_change_sd_generated_iv": 68.35667424342437,
+  "liability_change_sd_carried_iv": 58.32667015632907,
+  "conclusion": "The actual frozen generator surfaces change the liability response supplied to the unchanged optimizer; stock hedge regressors stay exactly fixed.",
+  "caveat": "Comparing generated versus carried IV here is a dependency probe, not a changed benchmark or model-selection metric."
+}

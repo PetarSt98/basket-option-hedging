@@ -1,0 +1,2146 @@
+[
+  {
+    "episode": "2020-06-03",
+    "policy": "unhedged",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2020-06-22/close",
+      "time": "2020-06-22T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100506.1725014369,
+        "cash": 100989.89211091858,
+        "posted_margin_cash": 5835.826791705427,
+        "restricted_short_proceeds": 0,
+        "available_cash": 95154.06531921314,
+        "eligible_cash_capacity": 100989.89211091858,
+        "required_margin": 5835.826791705427,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 506.17250143690035,
+        "liability_pnl": 506.1725014369007,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -3.410605131648481e-13
+      },
+      "residual_delta": {
+        "SPY": 13.855655832290578,
+        "QQQ": 18.289888443032776,
+        "IWM": 29.32691012260078
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2020-06-23/open",
+        "time": "2020-06-23T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2020-06-22T20:00:00+00:00",
+        "accrual_interval_end": "2020-06-23T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2020-07-02T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2020-06-03",
+    "policy": "delta",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2020-06-22/close",
+      "time": "2020-06-22T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -34.51254636488682,
+        "QQQ": -21.548927525734662,
+        "SPY": -16.305113213184676
+      },
+      "risk": {
+        "equity": 99994.73897668492,
+        "cash": 115774.72183250567,
+        "posted_margin_cash": 3059.252649267814,
+        "restricted_short_proceeds": 15117.785993816518,
+        "available_cash": 97597.68318942134,
+        "eligible_cash_capacity": 100656.93583868915,
+        "required_margin": 3059.252649267814,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -5.261023315077182,
+        "liability_pnl": 506.1725014369007,
+        "hedge_pnl": -483.5913554281306,
+        "execution_cost": 20.573154713435073,
+        "fees": 0.0,
+        "trading_costs": 20.573154713435073,
+        "interest": 0.0,
+        "borrow_charges": 7.2690146104320155,
+        "financing_costs": 7.2690146104320155,
+        "stock_turnover": 41138.87819573969,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 1.9830359576644696e-11
+      },
+      "residual_delta": {
+        "SPY": -2.4494573808940974,
+        "QQQ": -3.259039082701886,
+        "IWM": -5.185636242286044
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2020-06-23/open",
+        "time": "2020-06-23T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -34.51254636488682,
+          "QQQ": -21.548927525734662,
+          "SPY": -16.305113213184676
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2020-06-22T20:00:00+00:00",
+        "accrual_interval_end": "2020-06-23T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2020-07-02T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -34.51254636488682,
+      "QQQ": -21.548927525734662,
+      "SPY": -16.305113213184676
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2020-06-03",
+    "policy": "parametric",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2020-06-22/close",
+      "time": "2020-06-22T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -31.687256078434636,
+        "QQQ": -20.129389612617395,
+        "SPY": -17.008408540905002
+      },
+      "risk": {
+        "equity": 99939.93412539597,
+        "cash": 115185.79645443987,
+        "posted_margin_cash": 2952.4285439124437,
+        "restricted_short_proceeds": 14545.114656744387,
+        "available_cash": 97688.25325378304,
+        "eligible_cash_capacity": 100640.68179769549,
+        "required_margin": 2952.4285439124437,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -60.06587460402807,
+        "liability_pnl": 506.1725014369007,
+        "hedge_pnl": -540.0986798933803,
+        "execution_cost": 18.95245501489104,
+        "fees": 0.0,
+        "trading_costs": 18.95245501489104,
+        "interest": 0.0,
+        "borrow_charges": 7.187241132657455,
+        "financing_costs": 7.187241132657455,
+        "stock_turnover": 37897.773003051414,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 7.815970093361102e-14
+      },
+      "residual_delta": {
+        "SPY": -3.1527527086144236,
+        "QQQ": -1.8395011695846186,
+        "IWM": -2.360345955833857
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2020-06-23/open",
+        "time": "2020-06-23T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -31.687256078434636,
+          "QQQ": -20.129389612617395,
+          "SPY": -17.008408540905002
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2020-06-22T20:00:00+00:00",
+        "accrual_interval_end": "2020-06-23T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2020-07-02T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -31.687256078434636,
+      "QQQ": -20.129389612617395,
+      "SPY": -17.008408540905002
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2020-06-03",
+    "policy": "gaussian",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2020-06-22/close",
+      "time": "2020-06-22T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -33.69844734260069,
+        "QQQ": -21.00147690388449,
+        "SPY": -17.549769635798985
+      },
+      "risk": {
+        "equity": 100077.23513306721,
+        "cash": 115992.82749967156,
+        "posted_margin_cash": 3086.3745514245334,
+        "restricted_short_proceeds": 15225.443860095387,
+        "available_cash": 97681.00908815164,
+        "eligible_cash_capacity": 100767.38363957618,
+        "required_margin": 3086.3745514245334,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 77.23513306720997,
+        "liability_pnl": 506.1725014369007,
+        "hedge_pnl": -407.64298734739475,
+        "execution_cost": 13.892443237323523,
+        "fees": 0.0,
+        "trading_costs": 13.892443237323523,
+        "interest": 0.0,
+        "borrow_charges": 7.401937784950703,
+        "financing_costs": 7.401937784950703,
+        "stock_turnover": 27777.34699754761,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -2.1742607714259066e-11
+      },
+      "residual_delta": {
+        "SPY": -3.6941138035084062,
+        "QQQ": -2.711588460851715,
+        "IWM": -4.371537219999908
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2020-06-23/open",
+        "time": "2020-06-23T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -33.69844734260069,
+          "QQQ": -21.00147690388449,
+          "SPY": -17.549769635798985
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2020-06-22T20:00:00+00:00",
+        "accrual_interval_end": "2020-06-23T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2020-07-02T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -33.69844734260069,
+      "QQQ": -21.00147690388449,
+      "SPY": -17.549769635798985
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2020-06-03",
+    "policy": "volgan",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2020-06-22/close",
+      "time": "2020-06-22T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -52.61436031811816,
+        "QQQ": -22.20357362571119,
+        "SPY": -0.6497746067245218
+      },
+      "risk": {
+        "equity": 99728.087175785,
+        "cash": 113384.43443931545,
+        "posted_margin_cash": 3201.301260895673,
+        "restricted_short_proceeds": 13033.696859077316,
+        "available_cash": 97149.43631934245,
+        "eligible_cash_capacity": 100350.73758023813,
+        "required_margin": 3201.301260895673,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -271.91282421500364,
+        "liability_pnl": 506.1725014369007,
+        "hedge_pnl": -742.8815390020017,
+        "execution_cost": 27.310101775120643,
+        "fees": 0.0,
+        "trading_costs": 27.310101775120643,
+        "interest": 0.0,
+        "borrow_charges": 7.893684874827514,
+        "financing_costs": 7.893684874827514,
+        "stock_turnover": 54613.97330662248,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 4.547473508864641e-11
+      },
+      "residual_delta": {
+        "SPY": 13.205881225566056,
+        "QQQ": -3.913685182678414,
+        "IWM": -23.28745019551738
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2020-06-23/open",
+        "time": "2020-06-23T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -52.61436031811816,
+          "QQQ": -22.20357362571119,
+          "SPY": -0.6497746067245218
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2020-06-22T20:00:00+00:00",
+        "accrual_interval_end": "2020-06-23T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2020-07-02T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -52.61436031811816,
+      "QQQ": -22.20357362571119,
+      "SPY": -0.6497746067245218
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-04-05",
+    "policy": "unhedged",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-04-30/close",
+      "time": "2021-04-30T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100637.49868510572,
+        "cash": 100681.90938923048,
+        "posted_margin_cash": 5620.287988424465,
+        "restricted_short_proceeds": 0,
+        "available_cash": 95061.62140080602,
+        "eligible_cash_capacity": 100681.90938923048,
+        "required_margin": 5620.287988424465,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 637.4986851057183,
+        "liability_pnl": 637.4986851057195,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -1.1368683772161603e-12
+      },
+      "residual_delta": {
+        "SPY": 4.19686828995231,
+        "QQQ": 5.123191437394673,
+        "IWM": 7.503634819481163
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-03/open",
+        "time": "2021-05-03T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-04-30T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-03T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-05-04T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-04-05",
+    "policy": "delta",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-04-30/close",
+      "time": "2021-04-30T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -4.501707607858095,
+        "QQQ": -3.07338263964473,
+        "SPY": -2.526138338715265
+      },
+      "risk": {
+        "equity": 100183.19533249072,
+        "cash": 103332.92518766609,
+        "posted_margin_cash": 4999.224158214343,
+        "restricted_short_proceeds": 3076.693668220689,
+        "available_cash": 95257.00736123105,
+        "eligible_cash_capacity": 100256.2315194454,
+        "required_margin": 4999.224158214343,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 183.19533249072265,
+        "liability_pnl": 637.4986851057195,
+        "hedge_pnl": -421.151248026934,
+        "execution_cost": 25.343003135813227,
+        "fees": 0.0,
+        "trading_costs": 25.343003135813227,
+        "interest": 0.0,
+        "borrow_charges": 7.809101452287279,
+        "financing_costs": 7.809101452287279,
+        "stock_turnover": 50684.66418768116,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 3.771560841414612e-11
+      },
+      "residual_delta": {
+        "SPY": 1.6707299512370453,
+        "QQQ": 2.0498087977499426,
+        "IWM": 3.0019272116230677
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-03/open",
+        "time": "2021-05-03T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -4.501707607858095,
+          "QQQ": -3.07338263964473,
+          "SPY": -2.526138338715265
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-04-30T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-03T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-05-04T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -4.501707607858095,
+      "QQQ": -3.07338263964473,
+      "SPY": -2.526138338715265
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-04-05",
+    "policy": "parametric",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-04-30/close",
+      "time": "2021-04-30T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -4.845805447102276,
+        "QQQ": -1.2518713891633184,
+        "SPY": -3.2516290472426563
+      },
+      "risk": {
+        "equity": 100207.6770916066,
+        "cash": 103121.88579496786,
+        "posted_margin_cash": 5046.328388577165,
+        "restricted_short_proceeds": 2842.9926455101618,
+        "available_cash": 95232.56476088053,
+        "eligible_cash_capacity": 100278.8931494577,
+        "required_margin": 5046.328388577165,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 207.6770916066016,
+        "liability_pnl": 637.4986851057195,
+        "hedge_pnl": -399.5849898061667,
+        "execution_cost": 22.469772059323702,
+        "fees": 0.0,
+        "trading_costs": 22.469772059323702,
+        "interest": 0.0,
+        "borrow_charges": 7.766831633712788,
+        "financing_costs": 7.766831633712788,
+        "stock_turnover": 44938.30901214763,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 8.532197171007283e-11
+      },
+      "residual_delta": {
+        "SPY": 0.9452392427096541,
+        "QQQ": 3.8713200482313543,
+        "IWM": 2.6578293723788873
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-03/open",
+        "time": "2021-05-03T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -4.845805447102276,
+          "QQQ": -1.2518713891633184,
+          "SPY": -3.2516290472426563
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-04-30T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-03T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-05-04T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -4.845805447102276,
+      "QQQ": -1.2518713891633184,
+      "SPY": -3.2516290472426563
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-04-05",
+    "policy": "gaussian",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-04-30/close",
+      "time": "2021-04-30T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -4.582785632461425,
+        "QQQ": -2.5023215054964996,
+        "SPY": -4.017242131686128
+      },
+      "risk": {
+        "equity": 100256.71336311457,
+        "cash": 103853.90151531897,
+        "posted_margin_cash": 4909.7324988085375,
+        "restricted_short_proceeds": 3474.3148474195805,
+        "available_cash": 95469.85416909086,
+        "eligible_cash_capacity": 100379.58666789939,
+        "required_margin": 4909.7324988085375,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 256.7133631145698,
+        "liability_pnl": 637.4986851057195,
+        "hedge_pnl": -356.3110228962214,
+        "execution_cost": 16.711865924676488,
+        "fees": 0.0,
+        "trading_costs": 16.711865924676488,
+        "interest": 0.0,
+        "borrow_charges": 7.762433170267191,
+        "financing_costs": 7.762433170267191,
+        "stock_turnover": 33422.133616144856,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 1.5404566511278972e-11
+      },
+      "residual_delta": {
+        "SPY": 0.17962615826618222,
+        "QQQ": 2.620869931898173,
+        "IWM": 2.920849187019738
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-03/open",
+        "time": "2021-05-03T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -4.582785632461425,
+          "QQQ": -2.5023215054964996,
+          "SPY": -4.017242131686128
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-04-30T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-03T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-05-04T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -4.582785632461425,
+      "QQQ": -2.5023215054964996,
+      "SPY": -4.017242131686128
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-04-05",
+    "policy": "volgan",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-04-30/close",
+      "time": "2021-04-30T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "QQQ": -10.037108412103748,
+        "SPY": 1.4446114556660423
+      },
+      "risk": {
+        "equity": 100151.5910864198,
+        "cash": 102985.60770230206,
+        "posted_margin_cash": 5062.366806072963,
+        "restricted_short_proceeds": 3363.399552636306,
+        "available_cash": 94559.8413435928,
+        "eligible_cash_capacity": 99622.20814966576,
+        "required_margin": 5062.366806072963,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 151.591086419794,
+        "liability_pnl": 637.4986851057195,
+        "hedge_pnl": -458.81635626236243,
+        "execution_cost": 19.39976843661836,
+        "fees": 0.0,
+        "trading_costs": 19.39976843661836,
+        "interest": 0.0,
+        "borrow_charges": 7.691473986933862,
+        "financing_costs": 7.691473986933862,
+        "stock_turnover": 38798.371478460685,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -1.0800249583553523e-11
+      },
+      "residual_delta": {
+        "SPY": 5.641479745618353,
+        "QQQ": -4.913916974709076,
+        "IWM": 7.503634819481163
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-03/open",
+        "time": "2021-05-03T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "QQQ": -10.037108412103748,
+          "SPY": 1.4446114556660423
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-04-30T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-03T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-05-04T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "QQQ": -10.037108412103748,
+      "SPY": 1.4446114556660423
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-05-04",
+    "policy": "unhedged",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-05-14/close",
+      "time": "2021-05-14T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100067.75681706297,
+        "cash": 100739.2517189399,
+        "posted_margin_cash": 6152.783259523964,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94586.46845941593,
+        "eligible_cash_capacity": 100739.2517189399,
+        "required_margin": 6152.783259523964,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 67.75681706296746,
+        "liability_pnl": 67.7568170629745,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -7.048583938740194e-12
+      },
+      "residual_delta": {
+        "SPY": 12.969931293319824,
+        "QQQ": 16.189444095438038,
+        "IWM": 23.855398589848278
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-17/open",
+        "time": "2021-05-17T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-05-14T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-17T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-06-03T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-05-04",
+    "policy": "delta",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-05-14/close",
+      "time": "2021-05-14T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -28.879957709907373,
+        "QQQ": -19.61860420631142,
+        "SPY": -15.68000331554342
+      },
+      "risk": {
+        "equity": 99988.64001718246,
+        "cash": 119978.47518019017,
+        "posted_margin_cash": 3863.6680522261568,
+        "restricted_short_proceeds": 19214.17754722864,
+        "available_cash": 96900.62958073537,
+        "eligible_cash_capacity": 100764.29763296153,
+        "required_margin": 3863.6680522261568,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -11.359982817535638,
+        "liability_pnl": 67.7568170629745,
+        "hedge_pnl": -60.894526153819584,
+        "execution_cost": 14.341828284623922,
+        "fees": 0.0,
+        "trading_costs": 14.341828284623922,
+        "interest": 0.0,
+        "borrow_charges": 3.8804454420201675,
+        "financing_costs": 3.8804454420201675,
+        "stock_turnover": 28674.02784638701,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -4.646949491871055e-11
+      },
+      "residual_delta": {
+        "SPY": -2.7100720222235957,
+        "QQQ": -3.429160110873383,
+        "IWM": -5.024559120059095
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-17/open",
+        "time": "2021-05-17T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -28.879957709907373,
+          "QQQ": -19.61860420631142,
+          "SPY": -15.68000331554342
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-05-14T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-17T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-06-03T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -28.879957709907373,
+      "QQQ": -19.61860420631142,
+      "SPY": -15.68000331554342
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-05-04",
+    "policy": "parametric",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-05-14/close",
+      "time": "2021-05-14T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100067.75681706297,
+        "cash": 100739.2517189399,
+        "posted_margin_cash": 6152.783259523964,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94586.46845941593,
+        "eligible_cash_capacity": 100739.2517189399,
+        "required_margin": 6152.783259523964,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 67.75681706296746,
+        "liability_pnl": 67.7568170629745,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -7.048583938740194e-12
+      },
+      "residual_delta": {
+        "SPY": 12.969931293319824,
+        "QQQ": 16.189444095438038,
+        "IWM": 23.855398589848278
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-17/open",
+        "time": "2021-05-17T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-05-14T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-17T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-06-03T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-05-04",
+    "policy": "gaussian",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-05-14/close",
+      "time": "2021-05-14T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100067.75681706297,
+        "cash": 100739.2517189399,
+        "posted_margin_cash": 6152.783259523964,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94586.46845941593,
+        "eligible_cash_capacity": 100739.2517189399,
+        "required_margin": 6152.783259523964,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 67.75681706296746,
+        "liability_pnl": 67.7568170629745,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -7.048583938740194e-12
+      },
+      "residual_delta": {
+        "SPY": 12.969931293319824,
+        "QQQ": 16.189444095438038,
+        "IWM": 23.855398589848278
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-17/open",
+        "time": "2021-05-17T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-05-14T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-17T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-06-03T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-05-04",
+    "policy": "volgan",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-05-14/close",
+      "time": "2021-05-14T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100067.75681706297,
+        "cash": 100739.2517189399,
+        "posted_margin_cash": 6152.783259523964,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94586.46845941593,
+        "eligible_cash_capacity": 100739.2517189399,
+        "required_margin": 6152.783259523964,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 67.75681706296746,
+        "liability_pnl": 67.7568170629745,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -7.048583938740194e-12
+      },
+      "residual_delta": {
+        "SPY": 12.969931293319824,
+        "QQQ": 16.189444095438038,
+        "IWM": 23.855398589848278
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-05-17/open",
+        "time": "2021-05-17T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-05-14T20:00:00+00:00",
+        "accrual_interval_end": "2021-05-17T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-06-03T13:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-11-01",
+    "policy": "unhedged",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-11-03/close",
+      "time": "2021-11-03T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 100274.2259099732,
+        "cash": 100631.37585767543,
+        "posted_margin_cash": 5640.354672581311,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94991.02118509413,
+        "eligible_cash_capacity": 100631.37585767543,
+        "required_margin": 5640.354672581311,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 274.22590997320367,
+        "liability_pnl": 274.2259099732084,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -4.718003765447065e-12
+      },
+      "residual_delta": {
+        "SPY": 7.914236113487008,
+        "QQQ": 9.297161921394645,
+        "IWM": 15.229722419700689
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-11-04/open",
+        "time": "2021-11-04T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-11-03T20:00:00+00:00",
+        "accrual_interval_end": "2021-11-04T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-12-01T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-11-01",
+    "policy": "delta",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-11-03/close",
+      "time": "2021-11-03T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -19.603632445066026,
+        "QQQ": -11.859018400742409,
+        "SPY": -10.066793229892536
+      },
+      "risk": {
+        "equity": 100058.52604563652,
+        "cash": 114434.85584462887,
+        "posted_margin_cash": 2836.518702323288,
+        "restricted_short_proceeds": 13807.79991650781,
+        "available_cash": 97790.53722579777,
+        "eligible_cash_capacity": 100627.05592812106,
+        "required_margin": 2836.518702323288,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 58.5260456365213,
+        "liability_pnl": 274.2259099732084,
+        "hedge_pnl": -207.31557971332535,
+        "execution_cost": 7.8755540016002215,
+        "fees": 0.0,
+        "trading_costs": 7.8755540016002215,
+        "interest": 0.0,
+        "borrow_charges": 0.508730621753255,
+        "financing_costs": 0.508730621753255,
+        "stock_turnover": 15744.202071065918,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -8.256506589532364e-12
+      },
+      "residual_delta": {
+        "SPY": -2.1525571164055277,
+        "QQQ": -2.561856479347764,
+        "IWM": -4.373910025365337
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-11-04/open",
+        "time": "2021-11-04T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -19.603632445066026,
+          "QQQ": -11.859018400742409,
+          "SPY": -10.066793229892536
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-11-03T20:00:00+00:00",
+        "accrual_interval_end": "2021-11-04T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-12-01T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -19.603632445066026,
+      "QQQ": -11.859018400742409,
+      "SPY": -10.066793229892536
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-11-01",
+    "policy": "parametric",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-11-03/close",
+      "time": "2021-11-03T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -19.6195149246728,
+        "QQQ": -12.38926059292947,
+        "SPY": -10.127226208269528
+      },
+      "risk": {
+        "equity": 100056.52185732327,
+        "cash": 114673.20689008445,
+        "posted_margin_cash": 2851.907017011786,
+        "restricted_short_proceeds": 14044.314280984252,
+        "available_cash": 97776.9855920884,
+        "eligible_cash_capacity": 100628.89260910019,
+        "required_margin": 2851.907017011786,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 56.521857323270524,
+        "liability_pnl": 274.2259099732084,
+        "hedge_pnl": -209.5657066052231,
+        "execution_cost": 7.631281454328615,
+        "fees": 0.0,
+        "trading_costs": 7.631281454328615,
+        "interest": 0.0,
+        "borrow_charges": 0.5070645903587722,
+        "financing_costs": 0.5070645903587722,
+        "stock_turnover": 15255.537923969681,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -2.7363000754121458e-11
+      },
+      "residual_delta": {
+        "SPY": -2.21299009478252,
+        "QQQ": -3.092098671534824,
+        "IWM": -4.38979250497211
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-11-04/open",
+        "time": "2021-11-04T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -19.6195149246728,
+          "QQQ": -12.38926059292947,
+          "SPY": -10.127226208269528
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-11-03T20:00:00+00:00",
+        "accrual_interval_end": "2021-11-04T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-12-01T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -19.6195149246728,
+      "QQQ": -12.38926059292947,
+      "SPY": -10.127226208269528
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-11-01",
+    "policy": "gaussian",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-11-03/close",
+      "time": "2021-11-03T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -17.1285237117479,
+        "QQQ": -10.624449339813635,
+        "SPY": -7.20319063161109
+      },
+      "risk": {
+        "equity": 100095.30669305823,
+        "cash": 112064.7952810822,
+        "posted_margin_cash": 3317.8869445169635,
+        "restricted_short_proceeds": 11433.816816263727,
+        "available_cash": 97313.0915203015,
+        "eligible_cash_capacity": 100630.97846481847,
+        "required_margin": 3317.8869445169635,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 95.30669305822812,
+        "liability_pnl": 274.2259099732084,
+        "hedge_pnl": -172.80205576574556,
+        "execution_cost": 5.719768292277436,
+        "fees": 0.0,
+        "trading_costs": 5.719768292277436,
+        "interest": 0.0,
+        "borrow_charges": 0.3973928569786044,
+        "financing_costs": 0.3973928569786044,
+        "stock_turnover": 11433.816816263727,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 2.1330492927518208e-11
+      },
+      "residual_delta": {
+        "SPY": 0.7110454818759182,
+        "QQQ": -1.3272874184189902,
+        "IWM": -1.8988012920472102
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-11-04/open",
+        "time": "2021-11-04T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -17.1285237117479,
+          "QQQ": -10.624449339813635,
+          "SPY": -7.20319063161109
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-11-03T20:00:00+00:00",
+        "accrual_interval_end": "2021-11-04T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-12-01T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -17.1285237117479,
+      "QQQ": -10.624449339813635,
+      "SPY": -7.20319063161109
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2021-11-01",
+    "policy": "volgan",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2021-11-03/close",
+      "time": "2021-11-03T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -15.241317237161056,
+        "QQQ": -30.69764781076037
+      },
+      "risk": {
+        "equity": 100005.18405629742,
+        "cash": 116069.22311571053,
+        "posted_margin_cash": 3141.3778223421755,
+        "restricted_short_proceeds": 15438.387052194295,
+        "available_cash": 97489.45824117406,
+        "eligible_cash_capacity": 100630.83606351624,
+        "required_margin": 3141.3778223421755,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": 5.184056297424831,
+        "liability_pnl": 274.2259099732084,
+        "hedge_pnl": -260.77900446295826,
+        "execution_cost": 7.723055053623284,
+        "fees": 0.0,
+        "trading_costs": 7.723055053623284,
+        "interest": 0.0,
+        "borrow_charges": 0.5397941591924356,
+        "financing_costs": 0.5397941591924356,
+        "stock_turnover": 15438.387052194295,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -9.581668791724951e-12
+      },
+      "residual_delta": {
+        "SPY": 7.914236113487008,
+        "QQQ": -21.400485889365726,
+        "IWM": -0.011594817460366613
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2021-11-04/open",
+        "time": "2021-11-04T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -15.241317237161056,
+          "QQQ": -30.69764781076037
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2021-11-03T20:00:00+00:00",
+        "accrual_interval_end": "2021-11-04T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2021-12-01T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -15.241317237161056,
+      "QQQ": -30.69764781076037
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2024-10-04",
+    "policy": "unhedged",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2024-10-08/close",
+      "time": "2024-10-08T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1
+      },
+      "risk": {
+        "equity": 99913.86748246939,
+        "cash": 100588.9755509507,
+        "posted_margin_cash": 6017.461429907562,
+        "restricted_short_proceeds": 0,
+        "available_cash": 94571.51412104313,
+        "eligible_cash_capacity": 100588.9755509507,
+        "required_margin": 6017.461429907562,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -86.13251753061195,
+        "liability_pnl": -86.13251753060808,
+        "hedge_pnl": 0.0,
+        "execution_cost": 0.0,
+        "fees": 0.0,
+        "trading_costs": 0.0,
+        "interest": 0.0,
+        "borrow_charges": 0.0,
+        "financing_costs": 0.0,
+        "stock_turnover": 0.0,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -3.865352482534945e-12
+      },
+      "residual_delta": {
+        "SPY": 8.625928748217362,
+        "QQQ": 10.096306026524209,
+        "IWM": 22.24004685836088
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2024-10-09/open",
+        "time": "2024-10-09T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2024-10-08T20:00:00+00:00",
+        "accrual_interval_end": "2024-10-09T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2024-11-04T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2024-10-04",
+    "policy": "delta",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2024-10-08/close",
+      "time": "2024-10-08T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -24.87121740031563,
+        "QQQ": -11.223460500469336,
+        "SPY": -9.609358601124848
+      },
+      "risk": {
+        "equity": 99865.29790859461,
+        "cash": 116951.32075132297,
+        "posted_margin_cash": 3282.1829548494097,
+        "restricted_short_proceeds": 16362.866208497095,
+        "available_cash": 97306.27158797646,
+        "eligible_cash_capacity": 100588.45454282587,
+        "required_margin": 3282.1829548494097,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -134.70209140538645,
+        "liability_pnl": -86.13251753060808,
+        "hedge_pnl": -39.86303988277575,
+        "execution_cost": 8.185525867181354,
+        "fees": 0.0,
+        "trading_costs": 8.185525867181354,
+        "interest": 0.0,
+        "borrow_charges": 0.5210081248193038,
+        "financing_costs": 0.5210081248193038,
+        "stock_turnover": 16362.866208497097,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -1.9610979506978765e-12
+      },
+      "residual_delta": {
+        "SPY": -0.9834298529074861,
+        "QQQ": -1.1271544739451276,
+        "IWM": -2.6311705419547486
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2024-10-09/open",
+        "time": "2024-10-09T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -24.87121740031563,
+          "QQQ": -11.223460500469336,
+          "SPY": -9.609358601124848
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2024-10-08T20:00:00+00:00",
+        "accrual_interval_end": "2024-10-09T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2024-11-04T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -24.87121740031563,
+      "QQQ": -11.223460500469336,
+      "SPY": -9.609358601124848
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2024-10-04",
+    "policy": "parametric",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2024-10-08/close",
+      "time": "2024-10-08T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -24.48244232900372,
+        "QQQ": -10.996989191904865,
+        "SPY": -9.810493962352869
+      },
+      "risk": {
+        "equity": 99863.3621353576,
+        "cash": 116869.26764178438,
+        "posted_margin_cash": 3266.1594875890987,
+        "restricted_short_proceeds": 16280.804163924402,
+        "available_cash": 97322.30399027087,
+        "eligible_cash_capacity": 100588.46347785997,
+        "required_margin": 3266.1594875890987,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -136.6378646423982,
+        "liability_pnl": -86.13251753060808,
+        "hedge_pnl": -41.84879970195129,
+        "execution_cost": 8.14447431912106,
+        "fees": 0.0,
+        "trading_costs": 8.14447431912106,
+        "interest": 0.0,
+        "borrow_charges": 0.5120730907250509,
+        "financing_costs": 0.5120730907250509,
+        "stock_turnover": 16280.8041639244,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 7.275957614183426e-12
+      },
+      "residual_delta": {
+        "SPY": -1.1845652141355067,
+        "QQQ": -0.9006831653806557,
+        "IWM": -2.2423954706428404
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2024-10-09/open",
+        "time": "2024-10-09T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -24.48244232900372,
+          "QQQ": -10.996989191904865,
+          "SPY": -9.810493962352869
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2024-10-08T20:00:00+00:00",
+        "accrual_interval_end": "2024-10-09T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2024-11-04T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -24.48244232900372,
+      "QQQ": -10.996989191904865,
+      "SPY": -9.810493962352869
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2024-10-04",
+    "policy": "gaussian",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2024-10-08/close",
+      "time": "2024-10-08T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -21.56168044284235,
+        "QQQ": -10.190596757365755,
+        "SPY": -7.180821994282698
+      },
+      "risk": {
+        "equity": 99873.84441390343,
+        "cash": 114342.43364898046,
+        "posted_margin_cash": 3258.765196588418,
+        "restricted_short_proceeds": 13753.912361986622,
+        "available_cash": 97329.75609040543,
+        "eligible_cash_capacity": 100588.52128699384,
+        "required_margin": 3258.765196588418,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -126.15558609657455,
+        "liability_pnl": -86.13251753060808,
+        "hedge_pnl": -32.68840822991308,
+        "execution_cost": 6.8803963791816045,
+        "fees": 0.0,
+        "trading_costs": 6.8803963791816045,
+        "interest": 0.0,
+        "borrow_charges": 0.4542639568717504,
+        "financing_costs": 0.4542639568717504,
+        "stock_turnover": 13753.912361986622,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": -2.842170943040401e-14
+      },
+      "residual_delta": {
+        "SPY": 1.445106753934664,
+        "QQQ": -0.09429073084154638,
+        "IWM": 0.678366415518532
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2024-10-09/open",
+        "time": "2024-10-09T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -21.56168044284235,
+          "QQQ": -10.190596757365755,
+          "SPY": -7.180821994282698
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2024-10-08T20:00:00+00:00",
+        "accrual_interval_end": "2024-10-09T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2024-11-04T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -21.56168044284235,
+      "QQQ": -10.190596757365755,
+      "SPY": -7.180821994282698
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  },
+  {
+    "episode": "2024-10-04",
+    "policy": "volgan",
+    "status": "STOP_DATA_GAP",
+    "reason": "missing valuation packet; clock boundaries require as-of pricing",
+    "last_valid_checkpoint": {
+      "event_id": "2024-10-08/close",
+      "time": "2024-10-08T20:00:00+00:00",
+      "sequence": 0,
+      "phase": "event",
+      "positions": {
+        "B": -1,
+        "IWM": -15.25373629251259,
+        "QQQ": -27.861705333535163
+      },
+      "risk": {
+        "equity": 99810.68545138658,
+        "cash": 117437.43388209153,
+        "posted_margin_cash": 3390.328072444725,
+        "restricted_short_proceeds": 16849.017029000905,
+        "available_cash": 97198.08878064589,
+        "eligible_cash_capacity": 100588.41685309063,
+        "required_margin": 3390.328072444725,
+        "safety_buffer": 1000.0,
+        "margin_equity_shortfall": 0.0,
+        "margin_cash_shortfall": 0.0,
+        "buffer_equity_shortfall": 0.0,
+        "buffer_cash_shortfall": 0.0,
+        "equity_requirement_shortfall": 0.0,
+        "cash_requirement_shortfall": 0.0,
+        "available_cash_deficit": 0.0,
+        "equity_deficit": 0.0,
+        "unencumbered_cash_deficit": 0.0,
+        "borrow_failures": [],
+        "maximum_shortfall": 0.0,
+        "feasible": true,
+        "position_failures": [],
+        "cash_requirement_shortfall_lower_bound": 0.0
+      },
+      "pnl": {
+        "net_pnl": -189.31454861341626,
+        "liability_pnl": -86.13251753060808,
+        "hedge_pnl": -94.19461034680342,
+        "execution_cost": 8.428722875938092,
+        "fees": 0.0,
+        "trading_costs": 8.428722875938092,
+        "interest": 0.0,
+        "borrow_charges": 0.5586978600794719,
+        "financing_costs": 0.5586978600794719,
+        "stock_turnover": 16849.017029000905,
+        "option_premium_turnover": 0.0,
+        "reconciliation_error": 1.2789769243681803e-11
+      },
+      "residual_delta": {
+        "SPY": 8.625928748217362,
+        "QQQ": -17.765399307010952,
+        "IWM": 6.9863105658482905
+      }
+    },
+    "data_gaps": [
+      {
+        "event_id": "missing-joint-session/2024-10-09/open",
+        "time": "2024-10-09T13:30:00+00:00",
+        "reason": "missing valuation packet; clock boundaries require as-of pricing",
+        "outstanding_positions": {
+          "B": -1,
+          "IWM": -15.25373629251259,
+          "QQQ": -27.861705333535163
+        },
+        "mandatory_phase": "committed",
+        "accrual_interval_start": "2024-10-08T20:00:00+00:00",
+        "accrual_interval_end": "2024-10-09T13:30:00+00:00",
+        "due_option_ids": [],
+        "required_horizon": "2024-11-04T14:30:00+00:00"
+      }
+    ],
+    "breaches": [],
+    "positions": {
+      "B": -1,
+      "IWM": -15.25373629251259,
+      "QQQ": -27.861705333535163
+    },
+    "settlements": {},
+    "terminal_pnl": null,
+    "terminal_hedge_error": null
+  }
+]

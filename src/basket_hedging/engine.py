@@ -238,6 +238,9 @@ class Engine:
 
     def _mandatory(self, event: Event, previous: datetime | None) -> list[Settlement]:
         # Validate the ENTIRE mandatory phase before touching the actual ledger.
+        for stock in event.dividends:
+            if stock not in self.instruments or self.instruments[stock].kind != "stock":
+                raise InputError("cash distributions must reference known stocks")
         if previous is None and any(lot.opened_at > event.time for lot in self.ledger.short_lots):
             raise InputError("imported short lot cannot originate after inception")
         payoffs: dict[str, float] = {}
@@ -267,6 +270,8 @@ class Engine:
         prospective = self.ledger.clone()
         if previous is not None:
             prospective.accrue(f"accrual/{event.id}", previous, event.time, self.funding)
+        for stock, per_share in sorted(event.dividends.items()):
+            prospective.dividend(f"dividend/{event.id}/{stock}", event.time, stock, per_share)
         if previous is None and self.opening.mode == "ORIGINATE":
             key = self.opening.liability_id
             prospective.originate("origination", event.time, key, self.opening.liability_quantity,

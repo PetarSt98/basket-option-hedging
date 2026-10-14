@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED",
+  "reason": "unknown dividends for ['IWM']; financial benchmark blocked",
+  "financial_results_generated": false,
+  "substitute_dataset_used": false
+}

@@ -1,0 +1,68 @@
+{
+  "original_raw_files": {
+    "SPY_options.parquet": {
+      "sha256": "a7152991b45b81f090f970e945bf88def8093b8ecb9b250e9891cb6d88041f0a",
+      "matches": true
+    },
+    "SPY_underlying.parquet": {
+      "sha256": "847e60a441eb10969d87cd4a6da604257b782d9076168f68d5730b84096c79db",
+      "matches": true
+    },
+    "QQQ_options.parquet": {
+      "sha256": "1f831556cd87ec9d7af43d3b47a69a829ffb2fb199cfcef4ff55d289badf8734",
+      "matches": true
+    },
+    "QQQ_underlying.parquet": {
+      "sha256": "78c015fd7fa9d493cd798d5ae81b3c2ae6dc3b8176e25e7bb90cd4114b103351",
+      "matches": true
+    },
+    "IWM_options.parquet": {
+      "sha256": "d16a728116f8095c97c39ed66e75000bf66a0ab422b678002eb9f6086fd10ee5",
+      "matches": true
+    },
+    "IWM_underlying.parquet": {
+      "sha256": "e980f50473a8c346ba9ac8b05dcf3da691581dae742f649cb3608d0efe2ef940",
+      "matches": true
+    }
+  },
+  "original_prepared_sha256": "e27787d2ae0bf7f488a5b2d641c695b7c40a13197e4678f9bf96faad5c8dd631",
+  "supplemented_prepared_sha256": "f9d091fc11c0ca39277e447523f178cce90928b2799ace9b577d4742f4147778",
+  "market_prices_surfaces_dates_unchanged": true,
+  "spy_qqq_actions_unchanged": true,
+  "iwm_nonzero_distribution_dates": 59,
+  "iwm_split_factors": [
+    1.0
+  ],
+  "unchanged_configuration": {
+    "holding_sessions": 20,
+    "capital": 100000.0,
+    "basket_initial_value": 300.0,
+    "multiplier": 100.0,
+    "half_spread": 0.0005,
+    "quote_size": 10000.0,
+    "borrow_rate": 0.01,
+    "safety_buffer": 1000.0,
+    "alpha": 0.1,
+    "scenarios": 256,
+    "pricing_samples": 512,
+    "pricing_seed": 731,
+    "scenario_seed": 9173
+  },
+  "model_hashes": {
+    "gaussian.json": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+    "volgan.json": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+    "volgan_validation.json": "9dc0b0793922a6f596b7d26c26f49b3e2bd73501b6900f176bd132a6835af6b0"
+  },
+  "unchanged_from_partial_run": {
+    "src/basket_hedging/engine.py": "042fb76f9d6066385aea84dce10aca35bd470d9ac6e758a0e271fa0b39195be8",
+    "src/basket_hedging/ledger.py": "3268fe91fdbef1c4fce976e26a54eac5dda1261c8613f7de162b0740d5daf18b",
+    "src/basket_hedging/market.py": "17215ac9cd4fd4f607c855c7adcc946a44743e76c943396f8a705426d53cb57f",
+    "src/basket_hedging/valuation.py": "cb3a4aea5153f3bf8ebb52259786ad4d7aeaca62a26e6207523a552b65b20ef5",
+    "src/basket_hedging/optimization.py": "8f105bfcb7ffa8214313e1d3380f4b58b7aaf7c3dfa8d543d1af4648faa5ae82",
+    "src/basket_hedging/scenario_hedge.py": "b14c7d85d98dcbd96f7c5b3ccf188921d5f133ba18139ebe04241762f60fb22e",
+    "src/basket_hedging/volgan.py": "45a844e29f003ae8f8e79cc4bf7d0eb1fec01f3af8d2728c709b6e76461cbc3b",
+    "reports/historical/models/volgan.json": "04e3a56793f3a3bf9b7c1ff11c1bf162c8ac497f44d92c80480a093d51d1c12b",
+    "reports/historical/models/gaussian.json": "199f0db9f33334600b8d117e18f45e5a49f8b4c0e098bb1864358a19b967c18a",
+    "reports/historical/models/volgan_validation.json": "9dc0b0793922a6f596b7d26c26f49b3e2bd73501b6900f176bd132a6835af6b0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "full_suite": {
+    "command": "python -B -m pytest -q",
+    "passed": 624,
+    "elapsed_seconds": 42.11
+  },
+  "focused_historical_solver": {
+    "command": "python -B -m pytest tests/test_historical.py tests/test_optimization_polish.py -q",
+    "passed": 25,
+    "elapsed_seconds": 13.31
+  },
+  "focused_reporting": {
+    "command": "python -B -m pytest tests/test_historical_report.py -q",
+    "passed": 14,
+    "elapsed_seconds": 1.16
+  },
+  "final_plot_check": {
+    "command": "python -B -m pytest tests/test_historical_plots.py -q",
+    "passed": 2,
+    "elapsed_seconds": 8.19
+  },
+  "git_diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0,
+    "warnings": "Existing LF/CRLF conversion warnings"
+  },
+  "historical": {
+    "attempted": 355,
+    "episodes": 71,
+    "policies": 5,
+    "completed_per_policy": 66,
+    "data_gap_per_policy": 5,
+    "optimizer_failures": 0
+  },
+  "models_trained": 0,
+  "accepted_calibration_checkpoint_used": false
+}

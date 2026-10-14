@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "outcomes": [
+    {
+      "policy": "unhedged",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2020-02-03T14:30:00+00:00",
+      "equity": 100181.2954196824,
+      "marked_pnl": 181.29541968239937,
+      "terminal_pnl": 181.29541968239937,
+      "premium_retention_ratio": 0.39411043032077175,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\unhedged\\summary.json"
+    },
+    {
+      "policy": "delta",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2020-02-03T14:30:00+00:00",
+      "equity": 99600.44050165299,
+      "marked_pnl": -399.5594983470073,
+      "terminal_pnl": -399.5594983470073,
+      "premium_retention_ratio": -0.8685854618288429,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\delta\\summary.json"
+    },
+    {
+      "policy": "parametric",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2020-02-03T14:30:00+00:00",
+      "equity": 99619.2646546253,
+      "marked_pnl": -380.7353453747055,
+      "terminal_pnl": -380.7353453747055,
+      "premium_retention_ratio": -0.827664433369688,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\parametric\\summary.json"
+    },
+    {
+      "policy": "gaussian",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2020-02-03T14:30:00+00:00",
+      "equity": 99586.39197043589,
+      "marked_pnl": -413.608029564115,
+      "terminal_pnl": -413.608029564115,
+      "premium_retention_ratio": -0.8991249685248668,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\gaussian\\summary.json"
+    },
+    {
+      "policy": "volgan",
+      "status": "COMPLETED",
+      "reason": "settled, zero inventory",
+      "opening_mode": "ORIGINATE",
+      "pnl_baseline": 100000.0,
+      "observed_at": "2020-02-03T14:30:00+00:00",
+      "equity": 99560.69171332725,
+      "marked_pnl": -439.3082866727491,
+      "terminal_pnl": -439.3082866727491,
+      "premium_retention_ratio": -0.9549936683860226,
+      "summary_path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative\\volgan\\summary.json"
+    }
+  ],
+  "matched_checkpoint": {
+    "time": "2020-02-03T14:30:00+00:00",
+    "sequence": 0,
+    "event_id": "2020-02-03/open",
+    "phase": "pretrade",
+    "policies": {
+      "unhedged": {
+        "equity": 100181.2954196824,
+        "net_pnl": 181.29541968239937,
+        "pnl_components": {
+          "net_pnl": 181.29541968239937,
+          "liability_pnl": 181.295419682408,
+          "hedge_pnl": 0.0,
+          "execution_cost": 0.0,
+          "fees": 0.0,
+          "trading_costs": 0.0,
+          "interest": 0.0,
+          "borrow_charges": 0.0,
+          "financing_costs": 0.0,
+          "stock_turnover": 0.0,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": -8.640199666842818e-12
+        }
+      },
+      "delta": {
+        "equity": 99602.95249679162,
+        "net_pnl": -397.04750320837775,
+        "pnl_components": {
+          "net_pnl": -397.04750320837775,
+          "liability_pnl": 181.295419682408,
+          "hedge_pnl": -540.4956050812912,
+          "execution_cost": 29.571212288970546,
+          "fees": 0.0,
+          "trading_costs": 29.571212288970546,
+          "interest": 0.0,
+          "borrow_charges": 8.27610552057492,
+          "financing_costs": 8.27610552057492,
+          "stock_turnover": 59140.18283061031,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 5.0874859880423173e-11
+        }
+      },
+      "parametric": {
+        "equity": 99621.76278155693,
+        "net_pnl": -378.23721844307147,
+        "pnl_components": {
+          "net_pnl": -378.23721844307147,
+          "liability_pnl": 181.295419682408,
+          "hedge_pnl": -523.3584146352031,
+          "execution_cost": 28.056551271790326,
+          "fees": 0.0,
+          "trading_costs": 28.056551271790326,
+          "interest": 0.0,
+          "borrow_charges": 8.117672218467984,
+          "financing_costs": 8.117672218467984,
+          "stock_turnover": 56110.86609586163,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": -1.807620719773695e-11
+        }
+      },
+      "gaussian": {
+        "equity": 99586.94156572367,
+        "net_pnl": -413.05843427633226,
+        "pnl_components": {
+          "net_pnl": -413.05843427633226,
+          "liability_pnl": 181.295419682408,
+          "hedge_pnl": -557.6440136735605,
+          "execution_cost": 28.882221454145085,
+          "fees": 0.0,
+          "trading_costs": 28.882221454145085,
+          "interest": 0.0,
+          "borrow_charges": 7.827618831018355,
+          "financing_costs": 7.827618831018355,
+          "stock_turnover": 57764.172135016546,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": -1.63140612130519e-11
+        }
+      },
+      "volgan": {
+        "equity": 99570.60024796473,
+        "net_pnl": -429.3997520352714,
+        "pnl_components": {
+          "net_pnl": -429.3997520352714,
+          "liability_pnl": 181.295419682408,
+          "hedge_pnl": -566.2396346710702,
+          "execution_cost": 33.71695407562197,
+          "fees": 0.0,
+          "trading_costs": 33.71695407562197,
+          "interest": 0.0,
+          "borrow_charges": 10.738582971007643,
+          "financing_costs": 10.738582971007643,
+          "stock_turnover": 67433.46685019549,
+          "option_premium_turnover": 0.0,
+          "reconciliation_error": 2.0463630789890885e-11
+        }
+      }
+    }
+  },
+  "provenance": {
+    "files": [
+      {
+        "role": "replay_events",
+        "path": "C:\\Users\\petar\\Desktop\\basket-option-hedging\\reports\\historical\\benchmark\\representative.jsonl",
+        "sha256": "262ee8677b6160621bfc877ccbf193c3509eab3aa6bda63a6480a318091dce66"
+      }
+    ],
+    "metadata": {
+      "label": "Real historical constituent prices and option surfaces; model-valued non-traded basket option. European lognormal ATM-IV basket proxy; frozen historical correlation; zero pricing rates and dividend yields; ACT/365.",
+      "representative": "first test episode, selected before results"
+    },
+    "configuration": {
+      "instruments": {
+        "SPY": {
+          "id": "SPY",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "QQQ": {
+          "id": "QQQ",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "IWM": {
+          "id": "IWM",
+          "kind": "stock",
+          "currency": "USD",
+          "multiplier": 1.0,
+          "strike": null,
+          "expiry": null,
+          "underlying": null,
+          "coefficients": []
+        },
+        "B": {
+          "id": "B",
+          "kind": "basket_put",
+          "currency": "USD",
+          "multiplier": 100.0,
+          "strike": 300.0,
+          "expiry": "2020-01-31T21:00:00+00:00",
+          "underlying": null,
+          "coefficients": [
+            [
+              "SPY",
+              0.307815433865854
+            ],
+            [
+              "QQQ",
+              0.46262028127313104
+            ],
+            [
+              "IWM",
+              0.6032090722644469
+            ]
+          ]
+        }
+      },
+      "opening": {
+        "mode": "ORIGINATE",
+        "initial_capital": 100000.0,
+        "cash": 0.0,
+        "positions": {},
+        "marks": {},
+        "posted_margin_cash": 0.0,
+        "restricted_short_proceeds": 0.0,
+        "short_lots": [],
+        "opening_equity": null,
+        "liability_id": "B",
+        "liability_quantity": -1,
+        "original_premium": null
+      },
+      "rules": {
+        "horizon": "2020-02-03T14:30:00+00:00",
+        "hedge_universe": [
+          "SPY",
+          "QQQ",
+          "IWM"
+        ],
+        "safety_buffer": 1000.0,
+        "funding": {
+          "cash_rate": 0.0,
+          "collateral_rate": 0.0,
+          "borrow_rates": {
+            "SPY": 0.01,
+            "QQQ": 0.01,
+            "IWM": 0.01
+          }
+        },
+        "borrow": {
+          "SPY": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "QQQ": {
+            "located": true,
+            "limit": 10000.0
+          },
+          "IWM": {
+            "located": true,
+            "limit": 10000.0
+          }
+        },
+        "fee_per_order": 0.0,
+        "fee_per_unit": 0.0,
+        "slippage_per_unit": 0.0,
+        "origination_fee": 0.0,
+        "settlement_fee": 0.0,
+        "lot_sizes": {},
+        "maximum_order_quantities": {},
+        "max_mark_age_seconds": 0.0,
+        "start_time": "2020-01-02T21:00:00+00:00",
+        "execution_delay_seconds": 0.0,
+        "order_lifetime_seconds": null,
+        "maximum_position_quantities": {},
+        "expected_stress_scenarios": [
+          "unchanged",
+          "spot_down_20",
+          "spot_up_20",
+          "vol_up_25"
+        ]
+      }
+    },
+    "hash_timing": "File hashes are computed after the run for provenance; the engine never receives them."
+  },
+  "comparison_rule": "Compare the latest common valid pretrade checkpoint. Outcome marked P&L and completed horizon P&L are separate; unequal stopping times are not ranked."
+}

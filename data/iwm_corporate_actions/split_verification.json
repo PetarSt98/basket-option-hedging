@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "symbol": "IWM",
+  "coverage_start": "2011-03-23",
+  "coverage_end": "2025-12-12",
+  "verified_no_splits": true,
+  "split_factor": 1.0,
+  "in_period_events": [],
+  "last_known_split": {
+    "date": "2005-06-09",
+    "new_shares": 2,
+    "old_shares": 1
+  },
+  "sources": [
+    {
+      "publisher": "SplitHistory / BNK Invest",
+      "url": "https://www.splithistory.com/iwm/",
+      "retrieved_at_utc": "2026-10-04T08:06:00.677059+00:00",
+      "response_sha256": "d76f76658d931d8ae76078368b6025715df5d75d846fce76461d8d0e190be664",
+      "response_bytes": 53094,
+      "scope": "Public IWM lifetime split history, read after benchmark end",
+      "observed_events": [
+        {
+          "date": "2005-06-09",
+          "new_shares": 2,
+          "old_shares": 1
+        }
+      ],
+      "short_excerpt": "IWM Split History Table: 06/09/2005 2 for 1",
+      "parsing_assumptions": "Read the explicit lifetime split-count statement and IWM split table; require exactly one event and June 09, 2005, 2 for 1. The page carries 2026 data and copyright; the 2016 assets paragraph is not used to date split coverage."
+    },
+    {
+      "publisher": "Twelve Data",
+      "url": "https://twelvedata.com/markets/141255/etf/nyse/iwm/historical-data/splits",
+      "retrieved_at_utc": "2026-10-04T08:06:01.726994+00:00",
+      "response_sha256": "117470b5e7f8e32e6b06c1c8d490bda11a1411ce1b6b8d770779a72e5bd2fbe0",
+      "response_bytes": 145719,
+      "scope": "Public IWM lifetime split history, read after benchmark end",
+      "observed_events": [
+        {
+          "date": "2005-06-09",
+          "new_shares": 2,
+          "old_shares": 1
+        }
+      ],
+      "short_excerpt": "Jun 09, 2005 | 2-for-1 split",
+      "parsing_assumptions": "Read every tbody row of the public statistics-splits-table; require one row, Jun 09, 2005, 2-for-1 split. No date filter or pagination is exposed for this table; the surrounding page carries October market information and 2026 copyright."
+    }
+  ],
+  "primary_historical_corroboration": {
+    "publisher": "U.S. SEC, Boston Stock Exchange filing",
+    "url": "https://www.sec.gov/rules/sro/bse/2007/34-56051.pdf",
+    "publication_date": "2007-07-12",
+    "accessed_at_utc": "2026-10-04T08:06:01.728018+00:00",
+    "access_method": "Web text extraction; direct urllib download returned HTTP 403, so no response hash is claimed.",
+    "location": "Pages 2-3, June 2005 split discussion",
+    "finding": "IWM underwent a 2-for-1 split in June 2005.",
+    "limitation": "A 2007 filing corroborates the old event only; it does not establish absence of later splits."
+  },
+  "conclusion_basis": "Two independently operated public historical split tables agree on exactly one split, before the coverage interval. No split event is synthesized inside the interval.",
+  "limitations": [
+    "The two public providers are separate organizations, but upstream vendor independence is not established.",
+    "Public history tables are not a formal exchange completeness certificate. The conclusion is the documented research-data verification, not a guarantee for future dates."
+  ],
+  "integration_rule": "For dates within the closed verified interval only, supplement IWM split_coefficient with 1.0. Do not infer coverage outside this interval, insert dummy events, or change prices, options, basket units, or SPY/QQQ records."
+}

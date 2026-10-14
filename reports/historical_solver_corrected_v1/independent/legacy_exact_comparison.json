@@ -1,0 +1,176 @@
+[
+  {
+    "case": "deterministic",
+    "policy": "unhedged",
+    "status": "COMPLETED",
+    "marked_pnl": -200.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "deterministic",
+    "policy": "delta",
+    "status": "COMPLETED",
+    "marked_pnl": -371.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "synthetic",
+    "policy": "unhedged",
+    "status": "COMPLETED",
+    "marked_pnl": -55.381271844977164,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": []
+  },
+  {
+    "case": "synthetic",
+    "policy": "delta",
+    "status": "COMPLETED",
+    "marked_pnl": -144.60052300051757,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": []
+  },
+  {
+    "case": "gap",
+    "policy": "unhedged",
+    "status": "STOP_WITH_BREACH",
+    "marked_pnl": -400.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "gap",
+    "policy": "delta",
+    "status": "STOP_WITH_BREACH",
+    "marked_pnl": -400.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "missing_exit",
+    "policy": "unhedged",
+    "status": "COMPLETED",
+    "marked_pnl": -200.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "missing_exit",
+    "policy": "delta",
+    "status": "INCOMPLETE_EXIT",
+    "marked_pnl": -362.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "rejected_exit",
+    "policy": "unhedged",
+    "status": "COMPLETED",
+    "marked_pnl": -200.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  },
+  {
+    "case": "rejected_exit",
+    "policy": "delta",
+    "status": "INCOMPLETE_EXIT",
+    "marked_pnl": -362.0,
+    "identical_csvs": [
+      "account.csv",
+      "orders.csv",
+      "postings.csv",
+      "settlements.csv",
+      "valuation_audit.csv"
+    ],
+    "summary_original_fields_exact": true,
+    "added_decision_metadata": [
+      "earliest_execution",
+      "next_rebalance_time"
+    ]
+  }
+]

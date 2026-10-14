@@ -1,0 +1,31 @@
+{
+  "events_exactly_equal_before_cutoff": true,
+  "event_count": 11,
+  "checks": [
+    {
+      "policy": "delta",
+      "cutoff": "2020-01-09T21:00:00+00:00",
+      "exact_before_cutoff": true,
+      "counts": {
+        "postings": 121,
+        "order_outcomes": 33,
+        "snapshots": 48,
+        "decisions": 11,
+        "valuations": 11
+      }
+    },
+    {
+      "policy": "volgan",
+      "cutoff": "2020-01-09T21:00:00+00:00",
+      "exact_before_cutoff": true,
+      "counts": {
+        "postings": 72,
+        "order_outcomes": 11,
+        "snapshots": 38,
+        "decisions": 11,
+        "valuations": 11
+      }
+    }
+  ],
+  "mutation": "Only dates after Jan09: opens*1.15, closes*.92, IV*1.2, all constituent dividends+.123. Same clocks, terms, model, prior state."
+}
